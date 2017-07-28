@@ -192,6 +192,7 @@ Create Audio connectors</h1>
 <p>You can remove an audio stream from a connector by calling the <a class="el" href="le__audio__interface_8h.html#a6b88df9301038375701e4c15a4c8aaf0">le_audio_Disconnect()</a> function.</p>
 <p>When finished with it, delete it using the <a class="el" href="le__audio__interface_8h.html#a3f40b13ff980040503927f59bb3e86a9">le_audio_DeleteConnector()</a> function.</p>
 <p>A sample code that implements audio connectors and audio streams during voice call can be found in <b>audioMccTest.c</b> file (please refer to <a class="el" href="c_audio_mcc.html">Sample code of audio settings for a dialing call</a> page).</p>
+<dl class="section note"><dt>Note</dt><dd>It is recommended to set the connectors before the connected streams are used. In particular, a connector using Modem Voice Rx or Tx interfaces has to be created before dialing or answering the call if the application needs to customize the audio path.</dd></dl>
 <h1><a class="anchor" id="le_audio_pb_playback"></a>
 Playback</h1>
 <p>An audio file can be played to any active output interfaces.</p>

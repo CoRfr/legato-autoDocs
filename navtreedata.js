@@ -11,18 +11,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "about_docs.html",
-"c_hashmap.html#c_hashmap_create",
-"c_temp.html#c_temp_platform",
-"how_to_a_v_data.html",
-"le__audio__interface_8h.html#accd7fae61b50dcd68bf722e243bc5cb7a757a18a9f17e6152f77645bcc05c8dfb",
-"le__clock_8h.html#aff1e2aba0e4cf5d71a6a5cf50d13063a",
-"le__gnss__interface_8h.html",
-"le__limit__interface_8h_source.html",
-"le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723",
-"le__mrc__interface_8h.html#ad33fbe1d2b7acee0e47f3e54cab78274",
-"le__singly_linked_list_8h.html#afe3717aca964a13cdc8e9bf234dea6fc",
-"le__sup__wdog__interface_8h.html#a6e4c46fecf8cd5d49b490f01cfc4d739",
-"platform_constraints.html"
+"c_info.html",
+"c_test.html#c_test_multiProcess",
+"how_to_customize_u_s_b.html#howToCustomizeUSB_customizeEndpoints",
+"le__audio__interface_8h.html#accd7fae61b50dcd68bf722e243bc5cb7ac9a2144d8bc2842e4fa16e5d80633ac2",
+"le__data__interface_8h.html#ab49aba86538b51fbfb0efdafa21f5363",
+"le__gnss__interface_8h.html#a29602d1e12325d0076802af0db7f23ca",
+"le__log_8h.html#a2a91ea8857cf190fde71d85ba930a498",
+"le__mdc__interface_8h_source.html",
+"le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61",
+"le__sms__interface_8h.html#a1437987e5017d2159dc8dcbbbc50b953",
+"le__temp__interface_8h.html#a275ce92a6ed5376a978b5be5687f6cd1",
+"sample_apps_av_apps_info.html#sampleApps_avAppsInfo_Desc"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -8,6 +8,7 @@ var c_mdc =
       [ "Network interface settings", "c_mdc.html#le_mdc_session_networkItf", null ]
     ] ],
     [ "Data Statistics", "c_mdc.html#le_mdc_dataStatistics", null ],
-    [ "Sample code", "c_mdc.html#le_mdc_sampleCode", null ],
-    [ "Sample code for Data modem service", "c_mdc_sample_code.html", null ]
+    [ "Sample code for Data Profiles", "c_mdc_data_profiles.html", null ],
+    [ "Sample code for network interface settings", "c_mdc_data_sessions.html", null ],
+    [ "Sample code for Data Statistics", "c_mdc_data_statistics.html", null ]
 ];

@@ -710,7 +710,6 @@ $(document).ready(function(){initNavTree('c_audio_mcc.html','');});
 <div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (callEvent == <a class="code" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa86702531207c50314b10ae3278c7ca0d">LE_MCC_EVENT_CONNECTED</a>)</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="le__log_8h.html#a23e6d206faa64f612045d688cdde5808">LE_INFO</a>(<span class="stringliteral">&quot;Call event is LE_MCC_EVENT_CONNECTED.&quot;</span>);</div>
-<div class="line">        ConnectAudio();</div>
 <div class="line">    }</div>
 <div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (callEvent == <a class="code" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfa38b7c4ab21fa9828be8169372e41ae98">LE_MCC_EVENT_TERMINATED</a>)</div>
 <div class="line">    {</div>
@@ -754,12 +753,9 @@ $(document).ready(function(){initNavTree('c_audio_mcc.html','');});
 <div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (callEvent == <a class="code" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cfab37936f33d31259ea0c16169ba852bd0">LE_MCC_EVENT_INCOMING</a>)</div>
 <div class="line">    {</div>
 <div class="line">        <a class="code" href="le__log_8h.html#a23e6d206faa64f612045d688cdde5808">LE_INFO</a>(<span class="stringliteral">&quot;Call event is LE_MCC_EVENT_INCOMING.&quot;</span>);</div>
+<div class="line"></div>
 <div class="line">        res = <a class="code" href="le__mcc__interface_8h.html#a598349c6ccfa151dbd1d2f2a9c293ca4">le_mcc_Answer</a>(callRef);</div>
-<div class="line">        <span class="keywordflow">if</span> (res == LE_OK)</div>
-<div class="line">        {</div>
-<div class="line">            ConnectAudio();</div>
-<div class="line">        }</div>
-<div class="line">        <span class="keywordflow">else</span></div>
+<div class="line">        <span class="keywordflow">if</span> (res != LE_OK)</div>
 <div class="line">        {</div>
 <div class="line">            <a class="code" href="le__log_8h.html#a23e6d206faa64f612045d688cdde5808">LE_INFO</a>(<span class="stringliteral">&quot;Failed to answer the call.&quot;</span>);</div>
 <div class="line">        }</div>
@@ -839,6 +835,9 @@ $(document).ready(function(){initNavTree('c_audio_mcc.html','');});
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <a class="code" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler</a>( MyCallEventHandler, NULL);</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// Configure the audio</span></div>
+<div class="line">        ConnectAudio();</div>
 <div class="line"></div>
 <div class="line">        TestCallRef = <a class="code" href="le__mcc__interface_8h.html#aeee65430506230b5744701d08ff8dac4">le_mcc_Create</a>(DestinationNumber);</div>
 <div class="line">        <a class="code" href="le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70">le_mcc_Start</a>(TestCallRef);</div>

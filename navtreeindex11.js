@@ -1,12 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"le__sup__wdog__interface_8h.html#a6e4c46fecf8cd5d49b490f01cfc4d739":[3,60,1],
-"le__sup__wdog__interface_8h.html#a93632ebe6cf1c1ce6f58e6514e9aa95a":[3,60,2],
-"le__sup__wdog__interface_8h.html#ada5b18c0c0b37c5346931bef53c84c24":[3,60,0],
-"le__sup__wdog__interface_8h_source.html":[3,60],
-"le__temp__interface_8h.html":[3,61],
-"le__temp__interface_8h.html#a00a364d667662c110b51fa1475dcc39f":[3,61,7],
-"le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0":[3,61,1],
 "le__temp__interface_8h.html#a275ce92a6ed5376a978b5be5687f6cd1":[3,61,9],
 "le__temp__interface_8h.html#a29fa7d59baed8a6ee058e32e2cddbd74":[3,61,10],
 "le__temp__interface_8h.html#a2c535dc58fa4f9d63fb50621ec87905e":[3,61,2],
@@ -218,7 +211,7 @@ var NAVTREEINDEX11 =
 "legato_8h.html":[3,71],
 "legato_8h.html#a369266c24eacffb87046522897a570d5":[3,71,0],
 "legato_8h_source.html":[3,71],
-"legato_rel_notes_beta.html":[0,0,2],
+"legato_rel_notes_beta.html":[0,0,1],
 "legato_services.html":[0,1,1,0],
 "legato_services_air_vantage.html":[0,1,1,0,1],
 "legato_services_config_tree.html":[0,1,1,0,4],
@@ -242,12 +235,19 @@ var NAVTREEINDEX11 =
 "legato_services_update_pack.html#updatePack_updateApp":[0,1,1,0,13,2,4,0,1],
 "legato_services_update_pack.html#updatePack_updateFirmware":[0,1,1,0,13,2,4,0,3],
 "legato_services_update_pack.html#updatePack_updateSystem":[0,1,1,0,13,2,4,0,0],
-"legato_upgrade_beta.html":[0,0,3],
+"legato_upgrade_beta.html":[0,0,2],
 "log_fd__interface_8h.html":[3,72],
 "log_fd__interface_8h.html#a7ac001e4cb9e2886fc725bb5ee19811c":[3,72,1],
 "log_fd__interface_8h.html#abb2bd7282fb7a053fcc7631f895d7df9":[3,72,2],
 "log_fd__interface_8h.html#ad759a8d51d9326481f33f9bf1804e1a0":[3,72,0],
 "log_fd__interface_8h.html#af581fe99558218a92d8d5eda9e88e208":[3,72,3],
 "log_fd__interface_8h_source.html":[3,72],
-"pages.html":[]
+"pages.html":[],
+"platform_constraints.html":[1,0],
+"platform_constraints_audio.html":[1,0,0],
+"platform_constraints_sec_storage.html":[1,0,1],
+"sample_apps.html":[0,0,5],
+"sample_apps.html#sampleApps_startApp":[0,0,5,0],
+"sample_apps__a_v.html":[0,0,5,2],
+"sample_apps_av_apps_info.html":[0,0,5,1]
 };

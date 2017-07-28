@@ -1,6 +1,6 @@
 var app_smack__interface_8h =
 [
-    [ "APPSMACK_LABEL_LEN", "app_smack__interface_8h.html#a85a91187e19bedb818fc29ef4bba1722", null ],
+    [ "APPSMACK_MAX_LABEL_LEN", "app_smack__interface_8h.html#a41342324fe2599a79a42da6c998a7667", null ],
     [ "appSmack_AccessFlags_t", "app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d", [
       [ "APPSMACK_ACCESS_FLAG_READ", "app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3da8b9c5946c49a17f6dce75bacc53c03f0", null ],
       [ "APPSMACK_ACCESS_FLAG_WRITE", "app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3da36a1402bfa077b84101015c95060e9e9", null ],

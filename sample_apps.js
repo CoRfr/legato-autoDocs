@@ -20,6 +20,7 @@ var sample_apps =
     [ "Hello IPC", "sample_apps_hello_ipc.html", null ],
     [ "Hello World", "sample_apps_hello_world.html", null ],
     [ "Legacy C", "sample_apps_legacy.html", null ],
+    [ "Low Power", "sample_apps_low_power.html", null ],
     [ "Modem Demo", "sample_apps_modem_demo.html", [
       [ "Commands", "sample_apps_modem_demo.html#sampleApps_modemDemoCmds", null ],
       [ "Customization", "sample_apps_modem_demo.html#sampleApps_modemDemoCustom", null ]

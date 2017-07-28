@@ -8,8 +8,6 @@ var searchData=
   ['data_20connection',['Data Connection',['../c_le_data.html',1,'legatoServices']]],
   ['dynamic_20memory_20allocation_20api',['Dynamic Memory Allocation API',['../c_memory.html',1,'c_APIs']]],
   ['definition_20files',['Definition Files',['../def_files.html',1,'learnMain']]],
-  ['developer_20studio',['Developer Studio',['../getstarted_d_sinstall.html',1,'getstartedSetupHost']]],
-  ['developer_20studio_20ide',['Developer Studio IDE',['../getstarted_d_slinux_i_d_e.html',1,'getstartedDSlinux']]],
   ['download_20files',['Download Files',['../getstarted_dwn_ld.html',1,'getstartedCLinstallMain']]],
   ['debug_20apps',['Debug Apps',['../how_to_debug.html',1,'howToMain']]],
   ['docs',['Docs',['../index.html',1,'']]]

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Advanced SMACK</title>
+<title>Implementing SMACK</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="fonts.css" rel="stylesheet" type="text/css" />
 <link href="legato.css" rel="stylesheet" type="text/css" />
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('basic_security_smack_advanced.html','');});
+$(document).ready(function(){initNavTree('how_to_security_smack.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -109,11 +109,12 @@ $(document).ready(function(){initNavTree('basic_security_smack_advanced.html',''
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Advanced SMACK </div>  </div>
+<div class="title">Implementing SMACK </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="basicSecuritySmackAdvanced_implementation"></a>
-Implementation</h1>
+<div class="textblock"><p>See <a class="el" href="basic_security_smack.html">SMACK</a> basics.</p>
+<h1><a class="anchor" id="howToSandboxSmack_overview"></a>
+Overview</h1>
 <p>Simplified Mandatory Access Control Kernel (SMACK) provides a simple solution for mandatory access control (MAC). MAC provides the ability for a centralized entity to set access policy for system resources.</p>
 <p>Linux's default access control policy is governed by permission bits on system resources (files, directories, devices, etc.). Permission bits can be modified by the resource owner (process with the same user ID as the resource). The access control policy is at the discretion of the resource owner; this system is classified as DAC (discretionary access control). With DAC, policies are set in a distributed manner as there are often many system users, each setting the access policy for its own resources.</p>
 <p>In contrast, MAC policies are set for all system resources by a centralized entity.</p>
@@ -132,17 +133,17 @@ Implementation</h1>
 <li>Any other access is denied.</li>
 </ol>
 <p>Rule 6 lets us use explicit rules through adding specific labels. Explicit rules define the access rights a subject label can have on an object label. Only privileged processes can set rules.</p>
-<h1><a class="anchor" id="c_smack_privProcess"></a>
+<h1><a class="anchor" id="howToSandboxSmack_privProcess"></a>
 Privileged Processess</h1>
 <p>Privileged processes use the CAP_MAC_OVERRIDE capability. It's also possible to configure the system so the CAP_MAC_OVERRIDE is honoured only for processes with a specific label. This configuration allows the system to restrict root processes (have CAP_MAC_OVERRIDE) that don't have the proper SMACK label.</p>
-<h1><a class="anchor" id="c_smack_assignLabels"></a>
+<h1><a class="anchor" id="howToSandboxSmack_assignLabels"></a>
 Assigning Labels</h1>
 <p>Use smack_SetMyLabel() to set the SMACK label for the calling process. The calling process must be a privileged process. Setting SMACK labels for other processes isn't possible.</p>
 <p>To set the SMACK label for file system objects use smack_SetLabel(), again the calling process must be privileged.</p>
-<h1><a class="anchor" id="basicSecuritySmackAdvanced_setRules"></a>
+<h1><a class="anchor" id="howToSandboxSmack_setRules"></a>
 Set Rules</h1>
 <p>Use smack_SetRule() to set an explicit SMACK rule that gives a specified subject access to a specified object.</p>
-<h1><a class="anchor" id="basicSecuritySmackAdvanced_supervisor"></a>
+<h1><a class="anchor" id="howToSandboxSmack_supervisor"></a>
 Supervisor</h1>
 <p>SMACK policies are set by the Legato startup scripts, the Legato Installer, and the Legato Supervisor.</p>
 <p>By default system files have the "_" SMACK label meaning everyone has read and execute access to them. The Legato startup scripts are responsible for setting SMACK labels for system files that require special permission handling (e.g., <code>/dev/null</code> file is given the label "*" by the start up scripts so the file is fully accessible to everyone. The Legato startup scripts also ensure the Legato Supervisor and Installer have the 'admin' SMACK label.</p>
@@ -159,7 +160,7 @@ Supervisor</h1>
 <p>'AppLabel' rx 'AppLabelrx'</p>
 <p>App's directories are given different labels than the app itself so that if an IPC binding is present, the remote app has access to the local app but doesn't have direct access to the local app's files.</p>
 <p>All bundled files within an app's sandbox are given the app's SMACK label. This supports passing file descriptors from one app to another. However, the file descriptor can't be passed onto a third app.</p>
-<h1><a class="anchor" id="basicSecuritySmackAdvanced_limitations"></a>
+<h1><a class="anchor" id="howToSandboxSmack_limitations"></a>
 Limitations</h1>
 <p>Extended attributes used to store the SMACK label are available on all file systems we currently use with one key feature is missing: when a new file is created, the file should inherit the SMACK label of the creator. Because this feature is missing, our current implementation of SMACK has the following limitations:</p>
 <ul>
@@ -169,7 +170,7 @@ Limitations</h1>
 <li>QMI sockets are currently set to "*" because some apps need to write to them. Ideally, the QMI socket file would be given a label such as "qmi" and a rule would be created to only allow access to the app that requires it. However, there currently isn't a way to specify this in the xdef file.</li>
 </ul>
 <hr/>
-<p>Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
    <div class="footer">

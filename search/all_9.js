@@ -11,6 +11,7 @@ var searchData=
   ['install_20apps',['Install apps',['../how_to_a_v_install_app.html',1,'howToAV']]],
   ['import_2fexport_20config_20trees',['Import/Export Config Trees',['../how_to_config_tree_import_export.html',1,'howToConfigTree']]],
   ['ipc_20binding_20configuration_20data',['IPC Binding Configuration Data',['../how_to_config_tree_schema_binding_config.html',1,'howToConfigTreeSchema']]],
+  ['implementing_20smack',['Implementing SMACK',['../how_to_security_smack.html',1,'howToSecurity']]],
   ['index_5fof_5farray_5fmember',['INDEX_OF_ARRAY_MEMBER',['../le__basics_8h.html#a2a5704b99c30d8dddf1227af229bb9df',1,'le_basics.h']]],
   ['instapp',['instapp',['../tools_host_instapp.html',1,'toolsHost']]],
   ['instlegato',['instlegato',['../tools_host_instlegato.html',1,'toolsHost']]],

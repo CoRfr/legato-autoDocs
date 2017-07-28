@@ -1,5 +1,6 @@
 var how_to_main =
 [
+    [ "Configure Security", "how_to_security.html", "how_to_security" ],
     [ "Customize UART", "how_to_customize_u_a_r_t.html", [
       [ "Syntax", "how_to_customize_u_a_r_t.html#howToCustomizeUART_syntax", null ],
       [ "Service Type", "how_to_customize_u_a_r_t.html#howToCustomizeUART_serviceType", null ]

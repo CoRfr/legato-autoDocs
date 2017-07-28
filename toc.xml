@@ -1,6 +1,12 @@
 <toc label="Doxygen generated documentation" topic="index.html">
   <topic label="Build Apps" href="build_apps_main.html">
     <topic label="Get Started" href="getstarted_main.html">
+      <topic label="App Dev Quick Start" href="get_started_quick.html">
+        <topic label="Linux ADK" href="get_started_quick_linux_a_d_k.html"/>
+        <topic label="Windows ADK" href="get_started_quick_windows_a_d_k.html"/>
+      </topic>
+      <topic label="Release Notes" href="legato_rel_notes_beta.html"/>
+      <topic label="Upgrade Notes" href="legato_upgrade_beta.html"/>
       <topic label="Setup Target Device" href="getstarted_target_main.html">
         <topic label="MangOH" href="getstarted_mang_o_h.html">
           <topic label="Assemble" href="getstarted_mang_o_h_assemble.html">
@@ -19,9 +25,6 @@
         <topic label="Advanced" href="getstarted_advanced.html">
           <topic label="Config ECM IPv6" href="getstarted_target_i_pv6.html"/>
           <topic label="Upgrade or Restore" href="getstarted_restore_upgrade.html">
-            <topic label="Windows Dev Host" href="getstarted_windows_host.html">
-              <topic label="Windows Android Tools" href="getstarted_windows_host.html#getstartedWindowsHost_instAndroidtools"/>
-            </topic>
             <topic label="Linux Android SDK" href="getstarted_linux_android.html">
               <topic label="Setup fastboot" href="getstarted_linux_android.html#instLinuxAndroid"/>
               <topic label="Create Udev Rules" href="getstarted_linux_android.html#createDevRules"/>
@@ -30,32 +33,9 @@
         </topic>
       </topic>
       <topic label="Setup Dev Host PC" href="getstarted_setup_host.html">
-        <topic label="Developer Studio" href="getstarted_d_sinstall.html">
-          <topic label="Requirements" href="getstarted_d_srequirements.html">
-            <topic label="Hardware" href="getstarted_d_srequirements.html#getstartedDSrequirements_hardware"/>
-            <topic label="Software" href="getstarted_d_srequirements.html#getstartedDSrequirements_software"/>
-          </topic>
-          <topic label="Windows Host" href="getstarted_d_swindows.html">
-            <topic label="Legato ADK Installer" href="getstarted_d_swindows.html#getstartedDSwindows_adkInstaller"/>
-            <topic label="Cheat Sheet" href="getstarted_d_swindows.html#getstartedDSwindows_cheatSheet"/>
-          </topic>
-          <topic label="Linux Host" href="getstarted_d_slinux.html">
-            <topic label="Developer Studio IDE" href="getstarted_d_slinux_i_d_e.html">
-              <topic label="Setup apt sources" href="getstarted_d_slinux_i_d_e.html#getstartedDSlinuxIDE_debian"/>
-              <topic label="Install Packages" href="getstarted_d_slinux_i_d_e.html#getstartedDSlinuxIDE_packets"/>
-              <topic label="Get Latest Version" href="getstarted_d_slinux_i_d_e.html#getstartedDSlinuxIDE_latestVersion"/>
-              <topic label="Native or Docker Version" href="getstarted_d_slinux_i_d_e.html#getstartedDSlinuxIDE_choice"/>
-            </topic>
-            <topic label="Software Package Manager" href="getstarted_d_sspm.html">
-              <topic label="Setup apt sources" href="getstarted_d_sspm.html#getstartedDSspm_installSPMapt"/>
-              <topic label="Install Packages" href="getstarted_d_sspm.html#getstartedDSspm_installSPM"/>
-              <topic label="Use SPM" href="getstarted_d_sspm.html#getstartedDSspm_useSPM">
-                <topic label="Run Options" href="getstarted_d_sspm.html#getstartedComLine_useSPMoptions"/>
-                <topic label="Packages Installed" href="getstarted_d_sspm.html#getstartedDSspm_useSPMpkgs"/>
-                <topic label="Config Legato" href="getstarted_d_sspm.html#getstartedDSspm_useSPMconfig"/>
-              </topic>
-            </topic>
-          </topic>
+        <topic label="App Dev Quick Start" href="get_started_quick.html">
+          <topic label="Linux ADK" href="get_started_quick_linux_a_d_k.html"/>
+          <topic label="Windows ADK" href="get_started_quick_windows_a_d_k.html"/>
         </topic>
         <topic label="Command-line" href="getstarted_c_linstall_main.html">
           <topic label="Requirements" href="getstarted_c_lrequirements.html">
@@ -90,8 +70,35 @@
           </topic>
         </topic>
       </topic>
-      <topic label="Release Notes" href="legato_rel_notes_beta.html"/>
-      <topic label="Upgrade Notes" href="legato_upgrade_beta.html"/>
+      <topic label="Sample Apps" href="sample_apps.html">
+        <topic label="Start App" href="sample_apps.html#sampleApps_startApp"/>
+        <topic label="AirVantage Apps Info" href="sample_apps_av_apps_info.html">
+          <topic label="Background info" href="sample_apps_av_apps_info.html#sampleApps_avAppsInfo_background"/>
+          <topic label="Description" href="sample_apps_av_apps_info.html#sampleApps_avAppsInfo_Desc"/>
+        </topic>
+        <topic label="AirVantage Control" href="sample_apps__a_v.html"/>
+        <topic label="AirVantage System Info" href="sample_apps_av_system_info.html">
+          <topic label="references" href="sample_apps_av_system_info.html#sample_Apps_avSystemInfo_Ref"/>
+          <topic label="description" href="sample_apps_av_system_info.html#sampleApps_avSystemInfo_Desc"/>
+        </topic>
+        <topic label="Command Line" href="sample_apps_command_line.html"/>
+        <topic label="eCall" href="sample_apps_e_call.html">
+          <topic label="eCall Session" href="sample_apps_e_call.html#sampleApps_eCallSession"/>
+          <topic label="Config Tree Path" href="sample_apps_e_call.html#sampleApps_eCall_ConfigTreePath"/>
+          <topic label="trig utility" href="sample_apps_e_call.html#sampleApps_eCallTrig"/>
+        </topic>
+        <topic label="GPIO for CF3" href="sample_apps_gpio_cf3.html"/>
+        <topic label="Hello IPC" href="sample_apps_hello_ipc.html"/>
+        <topic label="Hello World" href="sample_apps_hello_world.html"/>
+        <topic label="Legacy C" href="sample_apps_legacy.html"/>
+        <topic label="Low Power" href="sample_apps_low_power.html"/>
+        <topic label="Modem Demo" href="sample_apps_modem_demo.html">
+          <topic label="Commands" href="sample_apps_modem_demo.html#sampleApps_modemDemoCmds"/>
+          <topic label="Customization" href="sample_apps_modem_demo.html#sampleApps_modemDemoCustom"/>
+        </topic>
+        <topic label="Shell Piping" href="sample_apps_shell_piping.html"/>
+        <topic label="SMS" href="sample_apps_sms.html"/>
+      </topic>
       <topic label="Uninstall Legato" href="getstarted_uninstall.html"/>
     </topic>
     <topic label="Documentation" href="build_apps_documentation.html">
@@ -109,16 +116,7 @@
             </topic>
             <topic label="Security" href="basic_security.html">
               <topic label="Sandboxes" href="basic_security_sandbox.html"/>
-              <topic label="SMACK" href="basic_security_smack.html">
-                <topic label="Advanced SMACK" href="basic_security_smack_advanced.html">
-                  <topic label="Implementation" href="basic_security_smack_advanced.html#basicSecuritySmackAdvanced_implementation"/>
-                  <topic label="Privileged Processess" href="basic_security_smack_advanced.html#c_smack_privProcess"/>
-                  <topic label="Assigning Labels" href="basic_security_smack_advanced.html#c_smack_assignLabels"/>
-                  <topic label="Set Rules" href="basic_security_smack_advanced.html#basicSecuritySmackAdvanced_setRules"/>
-                  <topic label="Supervisor" href="basic_security_smack_advanced.html#basicSecuritySmackAdvanced_supervisor"/>
-                  <topic label="Limitations" href="basic_security_smack_advanced.html#basicSecuritySmackAdvanced_limitations"/>
-                </topic>
-              </topic>
+              <topic label="SMACK" href="basic_security_smack.html"/>
             </topic>
             <topic label="Components" href="basic_components.html">
               <topic label="Rationale" href="basic_components.html#basicComponentsRationale"/>
@@ -230,35 +228,26 @@
             <topic label="Abbreviations" href="ccoding_stds_abbr.html"/>
           </topic>
         </topic>
-        <topic label="Sample Apps" href="sample_apps.html">
-          <topic label="Start App" href="sample_apps.html#sampleApps_startApp"/>
-          <topic label="AirVantage Apps Info" href="sample_apps_av_apps_info.html">
-            <topic label="Background info" href="sample_apps_av_apps_info.html#sampleApps_avAppsInfo_background"/>
-            <topic label="Description" href="sample_apps_av_apps_info.html#sampleApps_avAppsInfo_Desc"/>
-          </topic>
-          <topic label="AirVantage Control" href="sample_apps__a_v.html"/>
-          <topic label="AirVantage System Info" href="sample_apps_av_system_info.html">
-            <topic label="references" href="sample_apps_av_system_info.html#sample_Apps_avSystemInfo_Ref"/>
-            <topic label="description" href="sample_apps_av_system_info.html#sampleApps_avSystemInfo_Desc"/>
-          </topic>
-          <topic label="Command Line" href="sample_apps_command_line.html"/>
-          <topic label="eCall" href="sample_apps_e_call.html">
-            <topic label="eCall Session" href="sample_apps_e_call.html#sampleApps_eCallSession"/>
-            <topic label="Config Tree Path" href="sample_apps_e_call.html#sampleApps_eCall_ConfigTreePath"/>
-            <topic label="trig utility" href="sample_apps_e_call.html#sampleApps_eCallTrig"/>
-          </topic>
-          <topic label="GPIO for CF3" href="sample_apps_gpio_cf3.html"/>
-          <topic label="Hello IPC" href="sample_apps_hello_ipc.html"/>
-          <topic label="Hello World" href="sample_apps_hello_world.html"/>
-          <topic label="Legacy C" href="sample_apps_legacy.html"/>
-          <topic label="Modem Demo" href="sample_apps_modem_demo.html">
-            <topic label="Commands" href="sample_apps_modem_demo.html#sampleApps_modemDemoCmds"/>
-            <topic label="Customization" href="sample_apps_modem_demo.html#sampleApps_modemDemoCustom"/>
-          </topic>
-          <topic label="Shell Piping" href="sample_apps_shell_piping.html"/>
-          <topic label="SMS" href="sample_apps_sms.html"/>
-        </topic>
         <topic label="How To" href="how_to_main.html">
+          <topic label="Configure Security" href="how_to_security.html">
+            <topic label="Config Sandbox" href="how_to_security_sandbox.html">
+              <topic label="Overview" href="how_to_security_sandbox.html#howToSecuritySandbox_oveview"/>
+              <topic label="Common Problems" href="how_to_security_sandbox.html#howToSecuritySandbox_probs"/>
+              <topic label="Sandbox Sample Apps" href="how_to_security_sandbox.html#howToSecuritySandbox_sampleApps">
+                <topic label="Sample Code" href="how_to_security_sandbox.html#howToSecuritySandbox_sampleAppsCode"/>
+              </topic>
+              <topic label="Access Services Outside" href="how_to_security_sandbox.html#howToSandbox_servicesOutside"/>
+              <topic label="Unsandbox" href="how_to_security_sandbox.html#howToSandbox_unsandbox"/>
+            </topic>
+            <topic label="Implementing SMACK" href="how_to_security_smack.html">
+              <topic label="Overview" href="how_to_security_smack.html#howToSandboxSmack_overview"/>
+              <topic label="Privileged Processess" href="how_to_security_smack.html#howToSandboxSmack_privProcess"/>
+              <topic label="Assigning Labels" href="how_to_security_smack.html#howToSandboxSmack_assignLabels"/>
+              <topic label="Set Rules" href="how_to_security_smack.html#howToSandboxSmack_setRules"/>
+              <topic label="Supervisor" href="how_to_security_smack.html#howToSandboxSmack_supervisor"/>
+              <topic label="Limitations" href="how_to_security_smack.html#howToSandboxSmack_limitations"/>
+            </topic>
+          </topic>
           <topic label="Customize UART" href="how_to_customize_u_a_r_t.html">
             <topic label="Syntax" href="how_to_customize_u_a_r_t.html#howToCustomizeUART_syntax"/>
             <topic label="Service Type" href="how_to_customize_u_a_r_t.html#howToCustomizeUART_serviceType"/>
@@ -590,8 +579,9 @@
                 <topic label="Network interface settings" href="c_mdc.html#le_mdc_session_networkItf"/>
               </topic>
               <topic label="Data Statistics" href="c_mdc.html#le_mdc_dataStatistics"/>
-              <topic label="Sample code" href="c_mdc.html#le_mdc_sampleCode"/>
-              <topic label="Sample code for Data modem service" href="c_mdc_sample_code.html"/>
+              <topic label="Sample code for Data Profiles" href="c_mdc_data_profiles.html"/>
+              <topic label="Sample code for network interface settings" href="c_mdc_data_sessions.html"/>
+              <topic label="Sample code for Data Statistics" href="c_mdc_data_statistics.html"/>
             </topic>
             <topic label="Modem Information" href="c_info.html">
               <topic label="IPC interfaces binding" href="c_info.html#le_info_binding"/>
@@ -1054,31 +1044,28 @@
         </topic>
         <topic label="Host" href="tools_host.html">
           <topic label="av-pack" href="tools_host_av-pack.html"/>
-          <topic label="configlegatoenv" href="tools_host_configlegatoenv.html"/>
           <topic label="configtargetssh" href="tools_host_configtargetssh.html"/>
+          <topic label="createsdk" href="tools_host_createsdk.html"/>
+          <topic label="fwupdate" href="tools_host_fwupdate.html"/>
           <topic label="gettargettype" href="tools_host_gettargettype.html"/>
+          <topic label="instapp" href="tools_host_instapp.html"/>
+          <topic label="instlegato" href="tools_host_instlegato.html"/>
+          <topic label="instsys" href="tools_host_instsys.html"/>
           <topic label="legato-qemu" href="tools_host_legato-qemu.html"/>
+          <topic label="lsapp" href="tools_host_lsapp.html"/>
+          <topic label="mklegatoimg" href="tools_host_mklegatoimg.html"/>
+          <topic label="releaselegato" href="tools_host_releaselegato.html"/>
+          <topic label="rmapp" href="tools_host_rmapp.html"/>
           <topic label="security-pack" href="tools_host_security-pack.html"/>
           <topic label="setname" href="tools_host_setname.html"/>
           <topic label="settime" href="tools_host_settime.html"/>
           <topic label="settz" href="tools_host_settz.html"/>
           <topic label="simu" href="tools_host_simu.html"/>
-          <topic label="stoplegato" href="tools_host_stoplegato.html"/>
-          <topic label="configToolchainDirEnvVars" href="tools_host_config_toolchain_dir_env_vars.html"/>
-          <topic label="createsdk" href="tools_host_createsdk.html"/>
-          <topic label="fwupdate" href="tools_host_fwupdate.html"/>
-          <topic label="instapp" href="tools_host_instapp.html"/>
-          <topic label="instlegato" href="tools_host_instlegato.html"/>
-          <topic label="instsys" href="tools_host_instsys.html"/>
-          <topic label="lsapp" href="tools_host_lsapp.html"/>
-          <topic label="mklegatoimg" href="tools_host_mklegatoimg.html"/>
-          <topic label="releaselegato" href="tools_host_releaselegato.html"/>
-          <topic label="rmapp" href="tools_host_rmapp.html"/>
-          <topic label="shlib" href="tools_host_shlib.html"/>
           <topic label="startapp" href="tools_host_startapp.html"/>
           <topic label="startlegato" href="tools_host_startlegato.html"/>
           <topic label="statapp" href="tools_host_statapp.html"/>
           <topic label="stopapp" href="tools_host_stopapp.html"/>
+          <topic label="stoplegato" href="tools_host_stoplegato.html"/>
           <topic label="update" href="tools_host_update.html"/>
           <topic label="update-pack" href="tools_host_update-pack.html"/>
         </topic>
@@ -1129,7 +1116,7 @@
   </topic>
   <topic label="Reference" href="files.html">
     <topic label="appSmack_interface.h" href="app_smack__interface_8h.html">
-      <topic label="APPSMACK_LABEL_LEN" href="app_smack__interface_8h.html#a85a91187e19bedb818fc29ef4bba1722"/>
+      <topic label="APPSMACK_MAX_LABEL_LEN" href="app_smack__interface_8h.html#a41342324fe2599a79a42da6c998a7667"/>
       <topic label="appSmack_AccessFlags_t" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3d">
         <topic label="APPSMACK_ACCESS_FLAG_READ" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3da8b9c5946c49a17f6dce75bacc53c03f0"/>
         <topic label="APPSMACK_ACCESS_FLAG_WRITE" href="app_smack__interface_8h.html#a333d2301d2d23e6b74bd6bb9b383aa3da36a1402bfa077b84101015c95060e9e9"/>
