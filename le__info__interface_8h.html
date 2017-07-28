@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -119,6 +119,14 @@ Macros</h2></td></tr>
 <tr class="separator:a192b34e9261e8cd9f9c4efdef73ee8cb"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab4d8b473371f9e44d917434c1b49f9e8"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#ab4d8b473371f9e44d917434c1b49f9e8">LE_INFO_MAX_PRIID_REV_BYTES</a>   6</td></tr>
 <tr class="separator:ab4d8b473371f9e44d917434c1b49f9e8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a17fe85857e73e9a9a2cf8584c9a0f9b6"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a17fe85857e73e9a9a2cf8584c9a0f9b6">LE_INFO_MAX_CAPRI_NAME_LEN</a>   16</td></tr>
+<tr class="separator:a17fe85857e73e9a9a2cf8584c9a0f9b6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6f158084894ccedcc4bae3a888a6cab2"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a6f158084894ccedcc4bae3a888a6cab2">LE_INFO_MAX_CAPRI_NAME_BYTES</a>   17</td></tr>
+<tr class="separator:a6f158084894ccedcc4bae3a888a6cab2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a62a88f000b3c8cc3a4b05b388f00fd01"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a62a88f000b3c8cc3a4b05b388f00fd01">LE_INFO_MAX_CAPRI_REV_LEN</a>   12</td></tr>
+<tr class="separator:a62a88f000b3c8cc3a4b05b388f00fd01"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abb6969e118273de0efa114d550a8e383"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#abb6969e118273de0efa114d550a8e383">LE_INFO_MAX_CAPRI_REV_BYTES</a>   13</td></tr>
+<tr class="separator:abb6969e118273de0efa114d550a8e383"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aab6506ff3345e8394420c9c6a7d95b42"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#aab6506ff3345e8394420c9c6a7d95b42">LE_INFO_MAX_PSN_LEN</a>   14</td></tr>
 <tr class="separator:aab6506ff3345e8394420c9c6a7d95b42"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a4973cb81db0e55be350d3cfee7e75772"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a4973cb81db0e55be350d3cfee7e75772">LE_INFO_MAX_PSN_BYTES</a>   15</td></tr>
@@ -173,6 +181,8 @@ Functions</h2></td></tr>
 <tr class="separator:a94b60d7b13674b4253bebaa52401747d"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae2cc81573158df20f6196c43dc4b936d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#ae2cc81573158df20f6196c43dc4b936d">le_info_GetPriId</a> (char *priIdPnStr, size_t priIdPnStrSize, char *priIdRevStr, size_t priIdRevStrSize)</td></tr>
 <tr class="separator:ae2cc81573158df20f6196c43dc4b936d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a943165dadc90bf9cef367b707eb9bcab"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a943165dadc90bf9cef367b707eb9bcab">le_info_GetCarrierPri</a> (char *capriNameStr, size_t capriNameStrSize, char *capriRevStr, size_t capriRevStrSize)</td></tr>
+<tr class="separator:a943165dadc90bf9cef367b707eb9bcab"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab61ead104b938d1b5ba038bcde7f1954"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#ab61ead104b938d1b5ba038bcde7f1954">le_info_GetPlatformSerialNumber</a> (char *platformSerialNumberStr, size_t platformSerialNumberStrSize)</td></tr>
 <tr class="separator:ab61ead104b938d1b5ba038bcde7f1954"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac84294095316b12bb28aaeb4de82e660"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#ac84294095316b12bb28aaeb4de82e660">le_info_GetRfDeviceStatus</a> (uint16_t *manufacturedIdPtr, size_t *manufacturedIdSizePtr, uint8_t *productIdPtr, size_t *productIdSizePtr, bool *statusPtr, size_t *statusSizePtr)</td></tr>
@@ -230,6 +240,54 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Maximum length of the IMEISV string, excluding any termination character. </p>
+</div>
+</div>
+<a class="anchor" id="a6f158084894ccedcc4bae3a888a6cab2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_MAX_CAPRI_NAME_BYTES   17</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the Carrier Product Requirement Information (CAPRI) Name string. One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="a17fe85857e73e9a9a2cf8584c9a0f9b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_MAX_CAPRI_NAME_LEN   16</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the Carrier Product Requirement Information (CAPRI) Name string. , excluding any termination character. </p>
+</div>
+</div>
+<a class="anchor" id="abb6969e118273de0efa114d550a8e383"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_MAX_CAPRI_REV_BYTES   13</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the Carrier Product Requirement Information (CAPRI) Revision Number string. One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="a62a88f000b3c8cc3a4b05b388f00fd01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_MAX_CAPRI_REV_LEN   12</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the Carrier Product Requirement Information (CAPRI) Revision Number string. , excluding any termination character. </p>
 </div>
 </div>
 <a class="anchor" id="aa8eac6b398b60896ddbeb07826c7faea"></a>
@@ -618,6 +676,60 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">version</td><td>Bootloader version string </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">versionSize</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a943165dadc90bf9cef367b707eb9bcab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_info_GetCarrierPri </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>capriNameStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>capriNameStrSize</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>capriRevStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>capriRevStrSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Carrier PRI Name and Revision Number strings in ASCII text.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK The function succeeded.</li>
+<li>LE_FAULT The function failed to get the value.</li>
+<li>LE_OVERFLOW The Part or the Revision Number strings length exceed the maximum length.</li>
+<li>LE_UNSUPPORTED The function is not supported on the platform. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">capriNameStr</td><td>The Carrier Product Requirement Information (CAPRI) Name string (null-terminated). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">capriNameStrSize</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">capriRevStr</td><td>The Carrier Product Requirement Information (CAPRI) Revision Number string (null-terminated). </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">capriRevStrSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1123,7 +1235,7 @@ LE_OK Function succeeded.</dd></dl>
 <p>Get the CDMA Preferred Roaming List (PRL) only preferences status.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK The function succeeded.</li>
-<li>LE_NOT_FOUND The information is not availble.</li>
+<li>LE_NOT_FOUND The information is not available.</li>
 <li>LE_FAULT The function failed to get the value. </li>
 </ul>
 </dd></dl>
@@ -1151,7 +1263,7 @@ LE_OK Function succeeded.</dd></dl>
 <p>Get the CDMA version of Preferred Roaming List (PRL).</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK The function succeeded.</li>
-<li>LE_NOT_FOUND The information is not availble.</li>
+<li>LE_NOT_FOUND The information is not available.</li>
 <li>LE_FAULT The function failed to get the value. </li>
 </ul>
 </dd></dl>

@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -1845,9 +1845,7 @@ Msg Message object reference.</dd></dl>
 </div><div class="memdoc">
 <p>Get the message format.</p>
 <dl class="section return"><dt>Returns</dt><dd>Message format.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return.</dd>
-<dd>
-For incoming SMS, format returned by le_sms_GetFormat is never LE_SMS_FORMAT_PDU. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>

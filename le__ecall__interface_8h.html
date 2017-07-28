@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -1175,9 +1175,10 @@ Functions</h2></td></tr>
 <p>Get the configured Operation mode.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
-<li>LE_FAULT for other failures </li>
+<li>LE_FAULT for other failures</li>
 </ul>
 </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">opModePtr</td><td>Operation mode </td></tr>
@@ -1310,9 +1311,10 @@ Functions</h2></td></tr>
 <p>Get the push/pull transmission mode.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
-<li>LE_FAULT for other failures </li>
+<li>LE_FAULT for other failures</li>
 </ul>
 </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing a bad pointer into this function, it is a fatal error, the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">modePtr</td><td>Transmission mode </td></tr>

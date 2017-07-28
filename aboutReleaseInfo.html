@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink selected" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink selected" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -62,13 +62,15 @@
 <h1 class="title">Releases </h1> </div>
 </div><div class="contents">
 <div class="textblock"><p>Legato Application Framework Release Information</p>
-<p><b>Current Stable Release: 17.05.0</b></p>
+<p><b>Current Stable Release: 17.06.0</b></p>
 <p>Legato AF release notes contain information on new features and resolved outstanding issues. To download the release either download the tarball or clone the tagged repo from GitHub. If you are upgrading from an earlier version of Legato, you will find essential information in our upgrade notes and user docs. The <a class="el" href="basicBuildLegato.html">build Legato</a> page will walk you through making a release and uploading it to a target device.</p>
 <table class="doxtable">
 <tr>
 <th>Version </th><th>Date </th><th>Notes </th><th>GitHub </th><th>Tarball </th><th>User Docs  </th></tr>
 <tr>
-<td>17.05.0 </td><td>Jun 9, 2017 </td><td><a class="el" href="releaseNotes17050.html">17.05.0 Release Notes</a> </td><td><a href="https://github.com/legatoproject/legato-af/tree/17.05.0">17.05.0 tag</a> </td><td><a href="https://downloads.sierrawireless.com/legato/1705/legato-17.05.0.tar.bz2">legato-17.05.0.tar.bz2</a> </td><td><a href="http://legato.io/legato-docs/latest/buildAppsMain.html">latest legato.io</a> </td></tr>
+<td>17.06.0 </td><td>July 7, 2017 </td><td><a class="el" href="releaseNotes17060.html">17.06.0 Release Notes</a> </td><td><a href="https://github.com/legatoproject/legato-af/tree/17.06.0">17.06.0 tag</a> </td><td><a href="https://downloads.sierrawireless.com/legato/1706/legato-17.06.0.tar.bz2">legato-17.06.0.tar.bz2</a> </td><td><a href="http://legato.io/legato-docs/latest/buildAppsMain.html">latest legato.io</a> </td></tr>
+<tr>
+<td>17.05.0 </td><td>Jun 23, 2017 </td><td><a class="el" href="releaseNotes17050.html">17.05.0 Release Notes</a> </td><td><a href="https://github.com/legatoproject/legato-af/tree/17.05.0">17.05.0 tag</a> </td><td><a href="https://downloads.sierrawireless.com/legato/1705/legato-17.05.0.tar.bz2">legato-17.05.0.tar.bz2</a> </td><td><a href="http://legato.io/legato-docs/17_05/buildAppsMain.html">latest legato.io</a> </td></tr>
 <tr>
 <td>16.10.3 </td><td>Apr 28, 2017 </td><td><a class="el" href="releaseNotes16_10_3.html">16.10.3 Release Notes</a> </td><td><a href="https://github.com/legatoproject/legato-af/tree/16.10.3">16.10.3 tag</a> </td><td><a href="https://downloads.sierrawireless.com/legato/16103/legato-16.10.3.tar.bz2">legato-16.10.3.tar.bz2</a> </td><td><a href="http://legato.io/legato-docs/16_10_3/buildAppsMain.html">16.10.3 legato.io</a> </td></tr>
 <tr>
@@ -83,9 +85,25 @@
 <td>15.10.0 Beta </td><td>Nov 15, 2015 </td><td><a href="http://legato.io/legato-docs/15_10/Legato_15_10_ReleaseNotes.pdf">15.10.0 Release Notes</a> </td><td><a href="https://github.com/legatoproject/legato-af/tree/15.10.2.Beta">15.10.0 tag</a> </td><td><a href="https://downloads.sierrawireless.com/legato/1510/legato-15.10.0.Beta.tar.bz2">legato-15.10.0.Beta.tar.bz2</a> </td><td><a href="http://legato.io/legato-docs/15_10/basic_apps.html">15.10.0 Beta legato.io</a> </td></tr>
 </table>
 <p>For the latest (in progress) version of the Legato Application Framework clone it directly from <a href="https://github.com/legatoproject/legato-af#welcome-to-legato">GitHub.</a></p>
-<dl class="section warning"><dt>Warning</dt><dd>Please check with your Module Vendor to verify which versions of Legato AF will work with which Module firmware versions. There may be some incompatibilities with versions of modem libraries. (e.g., <a href="https://source.sierrawireless.com/resources/legato/wpfirmwarerelease14/">Sierra Wireless WP85xx modules</a> need to be updated with Release 14 before working with Legato AF 16.10.3 or later)</dd></dl>
 <p>The Legato Application Framework is licensed under the <a class="el" href="aboutLicenses.html">MPLv2</a>.</p>
 <p>The Legato team welcomes <a class="el" href="aboutLegatoContributing.html">contributions</a> to the project.</p>
+<h1><a class="anchor" id="releaseInfo_LegatoAFReleases"></a>
+Legato Application Framework Release Process</h1>
+<p>Legato AF releases are not tied to any specific module product release. Once we have released Legato AF, module vendors (like Sierra Wireless) will take the Legato AF and integrate it into their own product release.</p>
+<p><b> Legato AF Release Schedule VS Module Vendor Release Schedule </b>4</p>
+<div class="image">
+<img alt="LegatoReleaseVSModuleVendorRelease.png" src="LegatoReleaseVSModuleVendorRelease.png"/>
+</div>
+<p>Example:</p><ul>
+<li>Legato AF Team posts release 17.07</li>
+<li>Module Vendor takes release 17.07 and builds an associated Linux Distro to create a "Legato
+   Platform"</li>
+<li>Module Vendor tests and releases a "Legato Platform" with their Modem Firmware as "Product
+   Release Y"</li>
+<li>Legato AF Team posts release 17.08, 17.09 and 17.10 without the Module Vendor packaging it into a Product Release. Releases are able to installed with the vendor's Product Release Y, but <b> may not be officially supported by the Module Vendor. </b></li>
+<li>Module Vendor takes release 17.11 and creates a "Legato Platform" and "Product Release Z", and so on..</li>
+</ul>
+<p>For any questions about the Product Releases please contact your Module Vendor directly.</p>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>

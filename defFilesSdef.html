@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -75,27 +75,7 @@ apps</h1>
 <p>The <code>apps:</code> section can override limits and other app settings.</p>
 <p>Here's a code sample to deploy a web server limiting its share of the CPU under heavy load to 500 (see <a class="el" href="defFilesAdef.html#defFilesAdef_cpuShare">cpuShare</a>):</p>
 <pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webServer</div><div class="line">    {</div><div class="line">        cpuShare: 500</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>Any of the following subsections can be used in an <code></code>.sdef <code>apps:</code> section, and will override the .adef setting for all processes in that app:</p>
-<p><a class="el" href="defFilesAdef.html#defFilesAdef_cpuShare">cpuShare</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_processFaultAction">faultAction</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_groups">groups</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_processMaxCoreDumpFileBytes">maxCoreDumpFileBytes</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_processMaxFileBytes">maxFileBytes</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_processMaxFileDescriptors">maxFileDescriptors</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_maxFileSystemBytes">maxFileSystemBytes</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_processMaxLockedMemoryBytes">maxLockedMemoryBytes</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_maxMemoryBytes">maxMemoryBytes</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_maxMQueueBytes">maxMQueueBytes</a> <br/>
-<a class="el" href="defFilesSdef.html#defFilesSdef_appsMaxPriority">maxPriority</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_maxQueuedSignals">maxQueuedSignals</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_maxThreads">maxThreads</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_maxSecureStorageBytes">maxSecureStorage Bytes</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_pools">pools</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_sandboxed">sandboxed</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_start">start</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_watchdogAction">watchdogAction</a> <br/>
-<a class="el" href="defFilesAdef.html#defFilesAdef_watchdogTimeout">watchdogTimeout</a> <br/>
-</p>
-<h2><a class="anchor" id="defFilesSdef_appsInterfaceSearch"></a>
+<div id="defFilesSdef_cpuShare"> <a class="el" href="defFilesAdef.html#defFilesAdef_cpuShare">cpuShare</a> </div> <div id="defFilesSdef_processFaultAction"> <a class="el" href="defFilesAdef.html#defFilesAdef_processFaultAction">faultAction</a> </div> <div id="defFilesSdef_groups"> <a class="el" href="defFilesAdef.html#defFilesAdef_groups">groups</a> </div> <div id="defFilesSdef_processMaxCoreDumpFileBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_processMaxCoreDumpFileBytes">maxCoreDumpFileBytes</a> </div> <div id="defFilesSdef_processMaxFileBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_processMaxFileBytes">maxFileBytes</a> </div> <div id="defFilesSdef_processMaxFileDescriptors"> <a class="el" href="defFilesAdef.html#defFilesAdef_processMaxFileDescriptors">maxFileDescriptors</a> </div> <div id="defFilesSdef_maxFileSystemBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxFileSystemBytes">maxFileSystemBytes</a> </div> <div id="defFilesSdef_processMaxLockedMemoryBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_processMaxLockedMemoryBytes">maxLockedMemoryBytes</a> </div> <div id="defFilesSdef_maxMemoryBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxMemoryBytes">maxMemoryBytes</a> </div> <div id="defFilesSdef_maxMQueueBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxMQueueBytes">maxMQueueBytes</a> </div><div> <a class="el" href="defFilesSdef.html#defFilesSdef_appsMaxPriority">maxPriority</a> </div> <div id="defFilesSdef_maxQueuedSignals"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxQueuedSignals">maxQueuedSignals</a> </div> <div id="defFilesSdef_maxThreads"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxThreads">maxThreads</a> </div> <div id="defFilesSdef_maxSecureStorageBytes"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxSecureStorageBytes">maxSecureStorage Bytes</a> </div> <div id="defFilesSdef_pools"> <a class="el" href="defFilesAdef.html#defFilesAdef_pools">pools</a> </div> <div id="defFilesSdef_sandboxed"> <a class="el" href="defFilesAdef.html#defFilesAdef_sandboxed">sandboxed</a> </div> <div id="defFilesSdef_start"> <a class="el" href="defFilesAdef.html#defFilesAdef_start">start</a> </div> <div id="defFilesSdef_watchdogAction"> <a class="el" href="defFilesAdef.html#defFilesAdef_watchdogAction">watchdogAction</a> </div> <div id="defFilesSdef_watchdogTimeout"> <a class="el" href="defFilesAdef.html#defFilesAdef_watchdogTimeout">watchdogTimeout</a> </div> <div id="defFilesSdef_maxWatchdogTimeout"> <a class="el" href="defFilesAdef.html#defFilesAdef_maxWatchdogTimeout">maxWatchdogTimeout</a> </div><h2><a class="anchor" id="defFilesSdef_appsInterfaceSearch"></a>
 interfaceSearch</h2>
 <p>This section is used to specify directories in which <code>mksys</code> should look for interface files, such as <code></code>.api files and <code></code>.h files, when building components in the system.</p>
 <pre class="fragment">interfaceSearch:

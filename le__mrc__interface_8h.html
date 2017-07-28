@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -253,11 +253,12 @@ Enumerations</h2></td></tr>
 <tr class="memitem:af643c7005da7f2466302eebdf7a29d93"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93">le_mrc_RatBitMask_t</a> { <br/>
   <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93adefd7fd440669e204ca96f3af84bb629">LE_MRC_BITMASK_RAT_GSM</a> = 0x1, 
 <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a4d0e1bc92e81266f57c6c275234a0ed9">LE_MRC_BITMASK_RAT_UMTS</a> = 0x2, 
-<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a3994580fe36cd392a2e517b8cc1c3108">LE_MRC_BITMASK_RAT_LTE</a> = 0x4, 
-<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a1ca9ac815a59af6c10a4f759cef4df3c">LE_MRC_BITMASK_RAT_CDMA</a> = 0x8, 
+<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a704e1357fc74db4ae2fef1548aa18bcc">LE_MRC_BITMASK_RAT_TDSCDMA</a> = 0x4, 
+<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a3994580fe36cd392a2e517b8cc1c3108">LE_MRC_BITMASK_RAT_LTE</a> = 0x8, 
 <br/>
-  <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93aa6e87ad274b7f5011413ea0e8375300b">LE_MRC_BITMASK_RAT_ALL</a> = 0x10, 
-<b>LE_MRC_BITMASK_RAT_MAX</b> = 0x20
+  <a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93a1ca9ac815a59af6c10a4f759cef4df3c">LE_MRC_BITMASK_RAT_CDMA</a> = 0x10, 
+<a class="el" href="le__mrc__interface_8h.html#af643c7005da7f2466302eebdf7a29d93aa6e87ad274b7f5011413ea0e8375300b">LE_MRC_BITMASK_RAT_ALL</a> = 0x20, 
+<b>LE_MRC_BITMASK_RAT_MAX</b> = 0x40
 <br/>
  }</td></tr>
 <tr class="separator:af643c7005da7f2466302eebdf7a29d93"><td class="memSeparator" colspan="2"> </td></tr>
@@ -288,6 +289,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab62b444715b2b530efe5d397eb86a6e8"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ade04ec8db3b79c1555b3ab4bdb052216"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#ade04ec8db3b79c1555b3ab4bdb052216">le_mrc_RemoveSignalStrengthChangeHandler</a> (<a class="el" href="le__mrc__interface_8h.html#aac0e41200cd6bd03c178aeb7e3646744">le_mrc_SignalStrengthChangeHandlerRef_t</a> handlerRef)</td></tr>
 <tr class="separator:ade04ec8db3b79c1555b3ab4bdb052216"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa7883e8c1193c7c8efc87b42cd07c502"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#aa7883e8c1193c7c8efc87b42cd07c502">le_mrc_SetSignalStrengthIndThresholds</a> (<a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> rat, int32_t lowerRangeThreshold, int32_t upperRangeThreshold)</td></tr>
+<tr class="separator:aa7883e8c1193c7c8efc87b42cd07c502"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:acb434a9f91afb5b6639baf3678ee9388"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#acb434a9f91afb5b6639baf3678ee9388">le_mrc_SetAutomaticRegisterMode</a> (void)</td></tr>
 <tr class="separator:acb434a9f91afb5b6639baf3678ee9388"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a09b890f05a20f4b007d60e595026631f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mrc__interface_8h.html#a09b890f05a20f4b007d60e595026631f">le_mrc_SetManualRegisterMode</a> (const char *mcc, const char *mnc)</td></tr>
@@ -773,7 +776,7 @@ Functions</h2></td></tr>
 <p>GSM network. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43afe34c4f3a53aa717f5ecb94dd59bf728"></a>LE_MRC_RAT_UMTS </td><td class="fielddoc">
-<p>UMTS network. </p>
+<p>UMTS or TD-SCDMA networks. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="aaf23906c37ad59fb96a8a48f7fab5b43aaf2b25a8ec75f9bacb51967f23247176"></a>LE_MRC_RAT_LTE </td><td class="fielddoc">
 <p>LTE network. </p>
@@ -800,6 +803,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93a4d0e1bc92e81266f57c6c275234a0ed9"></a>LE_MRC_BITMASK_RAT_UMTS </td><td class="fielddoc">
 <p>UMTS RAT Bit Mask. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93a704e1357fc74db4ae2fef1548aa18bcc"></a>LE_MRC_BITMASK_RAT_TDSCDMA </td><td class="fielddoc">
+<p>TD-SCDMA RAT Bit Mask. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af643c7005da7f2466302eebdf7a29d93a3994580fe36cd392a2e517b8cc1c3108"></a>LE_MRC_BITMASK_RAT_LTE </td><td class="fielddoc">
 <p>LTE RAT Bit Mask. </p>
@@ -2658,7 +2664,7 @@ LE_OK The function succeeded.</dd></dl>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>This function returns the signal metrics measured on UMTS network.</p>
+<p>This function returns the signal metrics measured on UMTS or TD-SCDMA networks.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
 <li>LE_FAULT on failure</li>
@@ -3258,6 +3264,53 @@ LE_OK Function succeed.</dd></dl>
 </div><div class="memdoc">
 <p>Set handler called when server disconnection is detected.</p>
 <p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
+</div>
+</div>
+<a class="anchor" id="aa7883e8c1193c7c8efc87b42cd07c502"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_mrc_SetSignalStrengthIndThresholds </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mrc__interface_8h.html#aaf23906c37ad59fb96a8a48f7fab5b43">le_mrc_Rat_t</a> </td>
+<td class="paramname"><em>rat</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>lowerRangeThreshold</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t </td>
+<td class="paramname"><em>upperRangeThreshold</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set signal strength indication thresholds for a specific RAT.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK Function succeeded.</li>
+<li>LE_BAD_PARAMETER Bad parameters</li>
+<li>LE_FAULT Function failed.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd><b>NOT multi-app safe</b> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">rat</td><td>Radio Access Technology </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">lowerRangeThreshold</td><td>lower-range Signal strength threshold in dBm </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">upperRangeThreshold</td><td>upper-range Signal strength threshold in dBm </td></tr>
+</table>
+</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="a8765511597189b64e486fa8f17bcddcd"></a>

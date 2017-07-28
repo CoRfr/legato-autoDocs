@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -124,6 +124,15 @@ REFERENCE</h2>
 <p>A REFERENCE is specified as:</p>
 <pre class="fragment">REFERENCE &lt;name&gt;;
 </pre><p>The REFERENCE is used to define a reference to an object. The object reference is mapped to an opaque reference in C and an object instance or similar in other languages.</p>
+<h2><a class="anchor" id="apiFilesSyntax_typesHandler"></a>
+HANDLER</h2>
+<p>A HANDLER is specified as:</p>
+<pre class="fragment">HANDLER &lt;handlerType&gt;
+(
+     [&lt;parameterList&gt;]
+);
+</pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas, or can be empty if there are no parameters. It can only contain scalar types or string types, as described in <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_function">Specifying a Function</a>. All the parameters should be IN parameters.</p>
+<p>See <a class="el" href="apiFilesC.html#apiFilesC_handler">Handlers in C</a> for details on the C code generated from the above handler definition.</p>
 <h2><a class="anchor" id="apiFilesSyntax_typesUsetypes"></a>
 USETYPES</h2>
 <p>You can share type definitions between .api files with USETYPES. This is commonly referred to as importing, although only the type definitions are imported or used. Any code related definitions in a .api file, e.g. FUNCTION, are ignored. These USETYPES can even be nested.</p>
@@ -170,7 +179,7 @@ Specifying a Function</h1>
 </ul>
 <pre class="fragment"><div class="line">&lt;handlerType&gt; &lt;name&gt; </div></pre><!-- fragment --><ul>
 <li>a handler (callback) function.</li>
-<li>see <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_handler">Specifying a Handler</a> for info on how to declare a handler.</li>
+<li>see apiFilesSyntax_handler for info on how to declare a handler.</li>
 </ul>
 <p>The <code>returnType</code> is optional, and if specified, can be any type that's not an array, string, or handler.</p>
 <h1><a class="anchor" id="apiFilesSyntax_event"></a>
@@ -182,15 +191,6 @@ Specifying an Event</h1>
 );
 </pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas. It can contain anything that's valid for a function, but it must contain one handler parameter. The parameters are used when registering a handler for the specified event.</p>
 <p>See <a class="el" href="apiFilesC.html#apiFilesC_event">Events in C</a> for details on the C code generated from the above event definition.</p>
-<h1><a class="anchor" id="apiFilesSyntax_handler"></a>
-Specifying a Handler</h1>
-<p>Do this to specify a handler:</p>
-<pre class="fragment">HANDLER &lt;handlerType&gt;
-(
-    [&lt;parameterList&gt;]
-);
-</pre><p>The <code>parameterList</code> can contain one or more parameters separated by commas, or can be empty if there are no parameters. It can only contain scalar types or string types, as described above for <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_function">Specifying a Function</a>. All the parameters should be IN parameters.</p>
-<p>See <a class="el" href="apiFilesC.html#apiFilesC_handler">Handlers in C</a> for details on the C code generated from the above handler definition.</p>
 <h1><a class="anchor" id="apiFilesSyntax_comments"></a>
 Comments</h1>
 <p>The API file supports both C and C++ comment styles. Comments that use the doxygen formats </p><pre class="fragment">/** </pre><p> to start a multi-line comment or</p><pre class="fragment">///&lt; </pre><p> to start a one line comment receive special processing. Multi-line comments at the start of the API file will be copied directly to the start of the appropriate generated files.</p>

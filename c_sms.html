@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -128,7 +128,7 @@ Receiving a message</h1>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>- If two (or more) registered handler functions exist, they are all called and get a different message object reference.</dd>
 <dd>
-- For incoming SMS, format returned by le_sms_GetFormat is never LE_SMS_FORMAT_PDU.</dd></dl>
+- For incoming SMS, if the returned format is LE_SMS_FORMAT_PDU, the PDU length can be retrieved by calling <a class="el" href="le__sms__interface_8h.html#abb89b302e564f3d55d604bb0c0dda022">le_sms_GetPDULen()</a> and the content can be read by <a class="el" href="le__sms__interface_8h.html#a77555788d56f73fa52f56904cd39cd2f">le_sms_GetPDU()</a>.</dd></dl>
 <p>If a succession of messages is received, a new Message object is created for each, and the handler is called for each new message.</p>
 <p>Uninstall the handler function by calling <code><a class="el" href="le__sms__interface_8h.html#a469a4d08b9ccb8b61ed7b8294e6ee3ef">le_sms_RemoveRxMessageHandler()</a></code>. </p><dl class="section note"><dt>Note</dt><dd><code><a class="el" href="le__sms__interface_8h.html#a469a4d08b9ccb8b61ed7b8294e6ee3ef">le_sms_RemoveRxMessageHandler()</a></code> API does not delete the Message Object. The caller has to delete it.</dd></dl>
 <p>Please refer to <a class="el" href="c_smsSampleMT.html">Sample code for Mobile Terminated SMS message</a> page to get an example of SMS message reception handling.</p>
@@ -169,7 +169,6 @@ SMS Cell Broadcast</h1>
 <li><a class="el" href="le__sms__interface_8h.html#aa28c1d04ff19b88100b766737610b128">le_sms_GetCellBroadcastId()</a> - get the message identifier received (3GPP 23.41).</li>
 <li><a class="el" href="le__sms__interface_8h.html#aa3e075b4a9396b2e4af233e4543f40bd">le_sms_GetCellBroadcastSerialNumber()</a> get the message Serial Number received (3GPP 23.41).</li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>- Format returned by le_sms_GetFormat is never LE_SMS_FORMAT_PDU.</dd></dl>
 <p>A sample code that implements a function for SMS Cell Broadcast reception can be found in <b>smsCBTest.c</b> file (please refer to <a class="el" href="c_smsCbSample.html">Sample code for SMS Cell Broadcast reception</a> page).</p>
 <p><b>Serial</b> <b>Number</b> </p>
 <p>Cell Broadcast Serial Number parameter is a 16-bit integer which identifies a particular CBS message from the source and type indicated by the Message Identifier and is altered every time the CBS message with a given Message Identifier is changed.</p>

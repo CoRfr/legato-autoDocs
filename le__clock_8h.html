@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -99,6 +99,8 @@ Functions</h2></td></tr>
 <tr class="separator:a6f4bda0268cd9349b6eb81ae350575fc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac4a550ee8aa5fad9c81a33024946660a"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__clock_8h.html#ac4a550ee8aa5fad9c81a33024946660a">le_clk_GreaterThan</a> (<a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeA, <a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeB)</td></tr>
 <tr class="separator:ac4a550ee8aa5fad9c81a33024946660a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a164476582afdec88bdd48ad5255dce17"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__clock_8h.html#a164476582afdec88bdd48ad5255dce17">le_clk_Equal</a> (<a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeA, <a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeB)</td></tr>
+<tr class="separator:a164476582afdec88bdd48ad5255dce17"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac5b5ec6f462d598f4e5aa081224725ac"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__clock_8h.html#ac5b5ec6f462d598f4e5aa081224725ac">le_clk_Sub</a> (<a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeA, <a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeB)</td></tr>
 <tr class="separator:ac5b5ec6f462d598f4e5aa081224725ac"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a77961175ee422b1418a18eece5192c9c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__clock_8h.html#a77961175ee422b1418a18eece5192c9c">le_clk_Multiply</a> (<a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> timeA, int scaleFactor)</td></tr>
@@ -263,6 +265,37 @@ Functions</h2></td></tr>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a164476582afdec88bdd48ad5255dce17"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_clk_Equal </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> </td>
+<td class="paramname"><em>timeA</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> </td>
+<td class="paramname"><em>timeB</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Compare two time values.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>TRUE if TimeA == TimeB</li>
+<li>FALSE otherwise </li>
+</ul>
+</dd></dl>
 </div>
 </div>
 <a class="anchor" id="a33197dbd676a37b8c4d5de8f93edc1ee"></a>

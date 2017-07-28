@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -1230,7 +1230,8 @@ LE_OK Function succeeded. </dd></dl>
 <p>Get the encoding format of a recorder stream.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed. </dd>
 <dd>
-LE_OK Function succeeded. </dd></dl>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A client calling this function with either an invalid streamRef or null out pointer parameter will be killed and the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
@@ -1456,7 +1457,8 @@ LE_OK Function succeeded. </dd></dl>
 <p>Get the AMR mode for AMR encoder.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed. </dd>
 <dd>
-LE_OK Function succeeded. </dd></dl>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>A client calling this function with a null out pointer parameter will be killed and the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
@@ -1603,7 +1605,9 @@ LE_OK Function succeeded. </dd></dl>
 LE_BUSY Recorder interface is already active. </dd>
 <dd>
 LE_OK Function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>the fd is closed by the API. To use again the same pipe, the fd parameter can be set to LE_AUDIO_NO_FD: in this case, the previous file descriptor is re-used. If the fd as to be kept on its side, the application should duplicate the fd (e.g., using dup() ) before calling the API. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The fd is closed by the API. To use again the same pipe, the fd parameter can be set to LE_AUDIO_NO_FD: in this case, the previous file descriptor is re-used. If the fd as to be kept on its side, the application should duplicate the fd (e.g., using dup() ) before calling the API.</dd>
+<dd>
+When using this function recording must be stopped by calling <a class="el" href="le__audio__interface_8h.html#a4aebc6e8cdc4389c375e93418823af71">le_audio_Stop()</a>. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
@@ -2126,7 +2130,9 @@ LE_OK Function succeeded.</dd></dl>
 LE_BUSY Player interface is already active. </dd>
 <dd>
 LE_OK Function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>the fd is closed by the IPC API. To use again the same pipe, the fd parameter can be set to LE_AUDIO_NO_FD: in this case, the previous file descriptor is re-used. If the fd as to be kept on its side, the application should duplicate the fd (e.g., using dup() ) before calling the API. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The fd is closed by the IPC API. To use again the same pipe, the fd parameter can be set to LE_AUDIO_NO_FD: in this case, the previous file descriptor is re-used. If the fd as to be kept on its side, the application should duplicate the fd (e.g., using dup() ) before calling the API.</dd>
+<dd>
+Playback initiated with this function must be stopped by calling <a class="el" href="le__audio__interface_8h.html#a4aebc6e8cdc4389c375e93418823af71">le_audio_Stop()</a>. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>

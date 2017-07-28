@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -82,16 +82,18 @@ Sending commands</h1>
 <h1><a class="anchor" id="platformConstraintsSim_selectCard"></a>
 Select Card</h1>
 <p><a class="el" href="le__sim__interface_8h.html#a91a0f0399c89e466b9a8ccfab6de129d">le_sim_SelectCard()</a> and <a class="el" href="le__sim__interface_8h.html#a4c9e3ded0485f14c66e4d51763f2de57">le_sim_GetSelectedCard()</a> select and get the currently selected SIM card. The <a class="el" href="le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdd">le_sim_Id_t</a> parameters supported by these APIs depend on the platform.</p>
-<p>For WP76xx, AR759x and AR758x, only LE_SIM_EXTERNAL_SLOT_1 and LE_SIM_REMOTE types are supported.</p>
+<p>For WP76xx, WP77xx, AR759x and AR758x, only LE_SIM_EXTERNAL_SLOT_1 and LE_SIM_REMOTE types are supported.</p>
 <p>For AR755x, only LE_SIM_EXTERNAL_SLOT_1 and LE_SIM_EMBEDDED types are supported.</p>
 <p>For other products, only LE_SIM_EXTERNAL_SLOT_1 and LE_SIM_EXTERNAL_SLOT_2 types are supported.</p>
-<dl class="section note"><dt>Note</dt><dd>For the support of LE_SIM_EMBEDDED on AR755x platform, please refer to your platform documentation for further details.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>For the support of LE_SIM_EMBEDDED on AR755x platform, please refer to your platform documentation for further details.</dd>
+<dd>
+Switching between local and remote SIM card requires a reset to take effect, please refer to your platform documentation for further details.</dd></dl>
 <h1><a class="anchor" id="platformConstraintsSim_swap"></a>
 Hot-swap</h1>
 <p>Your platform might need a reboot to detect a SIM card insertion or removal.</p>
 <h2><a class="anchor" id="platformConstraintsSim_swapMangOH"></a>
 mangOH™</h2>
-<p>As indicated in the mangOH™ <a href="http://mangoh.io/documentation/user-developer-guide.html">User Guide</a>:</p>
+<p>As indicated in the mangOH™ <a href="http://mangoh.io/mangoh-green-resources-documentation">User Guide</a>:</p>
 <table class="doxtable">
 <tr>
 <th>SIM slot </th><th>Detection  </th></tr>

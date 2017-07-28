@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -120,6 +120,9 @@ Time To First Fix (TTFF)</h3>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_gnssSampleCodeReStart.html">Sample code for restart GNSS device and get TTFF</a></li>
 </ul>
+<h3><a class="anchor" id="le_gnss_InjectUtcTime"></a>
+Inject UTC time</h3>
+<p>The <a class="el" href="le__gnss__interface_8h.html#ab058224c242c97d458fcc8ad03b1f1c9">le_gnss_InjectUtcTime()</a> function injects the UTC time into the location engine. Providing an accurate UTC time reduces the time to find the first fix.</p>
 <h3><a class="anchor" id="le_gnss_ForceHotRestart"></a>
 Force HOT restart</h3>
 <p>The <a class="el" href="le__gnss__interface_8h.html#a29ff5b1e5bada1a9d15d19b3a0d2d4d1">le_gnss_ForceHotRestart()</a> function performs a "HOT" restart of the GNSS device. The current GNSS session is stopped, then started using the available <a class="el" href="c_gnss.html#le_gnss_Data">GNSS data</a>. Please refer to <a class="el" href="c_gnss.html#le_gnss_APIcallsRequirements">API calls Requirements</a>. Also see <a class="el" href="howToGNSS.html">Manage GNSS</a>.</p>
@@ -143,7 +146,7 @@ Acquisition rate</h2>
 GNSS constellation selection</h2>
 <p>The <a class="el" href="le__gnss__interface_8h.html#a6dbdc58f23e480e65ea16c583ef5340f">le_gnss_SetConstellation()</a> function selects the GNSS constellation(s) used in solution. If all GNSS constellations are disabled, the GNSS engine is disabled.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Your platform may require a reboot to take into account this change. Please refer to your platform documentation for further details.</dd></dl>
-<p>Combinations of constellation for GPS , GLONASS, BDS and GALILEO satellites are currently supported. Are not supported the constellations for SBAS and QZSS satellites.</p>
+<p>Combinations of constellation for GPS, GLONASS, BDS, GALILEO and QZSS satellites are currently supported. Constellation for SBAS satellites is not supported.</p>
 <p>All supported GNSS constellations are enabled by default. The <a class="el" href="le__gnss__interface_8h.html#a150835481ab3751e3ab1821362e34e84">le_gnss_GetConstellation()</a> function gets the GNSS constellation(s) enabled to be used in solution.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_gnssSampleCodeConstellation.html">Sample code for GNSS constellation selection</a></li>
@@ -223,12 +226,14 @@ Get position information</h2>
 <li><a class="el" href="le__gnss__interface_8h.html#a29602d1e12325d0076802af0db7f23ca">le_gnss_GetDate()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a0d014a96fc8b15b736d04747d51082d9">le_gnss_GetTime()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a4e9966df8185978aaef75399d5aff2d3">le_gnss_GetGpsTime()</a></li>
+<li><a class="el" href="le__gnss__interface_8h.html#a9e2b23f2420e53ca86f48a0f0c43f2d0">le_gnss_GetGpsLeapSeconds()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a38c21e7f7f7da5481f67e118fb3ea89c">le_gnss_GetEpochTime()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#ad41698ff4a68651b9fb81b862d4274f6">le_gnss_GetTimeAccuracy()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a483fba8fc6b0fa116bcbd889af95fc4f">le_gnss_GetHorizontalSpeed()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a37a370cec19610be1f99d9c9db291a1e">le_gnss_GetVerticalSpeed()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#aabc2432ec207a1e6cb74d444407aad11">le_gnss_GetDirection()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a08654437579b3e033ba1c54c860febab">le_gnss_GetSatellitesInfo()</a></li>
+<li><a class="el" href="le__gnss__interface_8h.html#a4ea5971e6495429ab28c41207cba37d7">le_gnss_GetSbasConstellationCategory()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a5ae945ad1921b621e9631e4286f40784">le_gnss_GetSatellitesStatus()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a70504e7c542d626aa07948d8330020c7">le_gnss_GetDop()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a59727ef079dc93dfadef75dd6a021cd0">le_gnss_GetAltitudeOnWgs84()</a></li>

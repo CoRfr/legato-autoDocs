@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -1251,7 +1251,7 @@ LE_FAULT The function failed to get the number of remaining PUK insertion tries.
 <p>This function must be called to get the current subscription.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
-<li>LE_BAD_PARAMETER invalid SIM identifier</li>
+<li>LE_BAD_PARAMETER invalid SIM identifier or null ECS pointer is passed</li>
 <li>LE_NOT_FOUND cannot determine the current selected subscription</li>
 <li>LE_FAULT for unexpected errors</li>
 </ul>

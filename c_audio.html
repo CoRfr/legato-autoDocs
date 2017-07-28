@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -158,7 +158,7 @@ Playback</h1>
 <li>AMR-WB (AMR Wideband) is an ITU-T standard speech codec which improved speech quality due to a wider speech bandwidth of 50--7000 Hz.</li>
 </ul>
 </li>
-<li><a class="el" href="le__audio__interface_8h.html#afd37d59ab8207338da197554f49d7ff0">le_audio_PlaySamples()</a>: initiates a playback using an audio flow. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. A play can be done only on a connected stream. For instance, the "I2S Tx", "Modem Voice Rx" and "Player" must be previously connected before playing a file.</li>
+<li><a class="el" href="le__audio__interface_8h.html#afd37d59ab8207338da197554f49d7ff0">le_audio_PlaySamples()</a>: initiates a playback using an audio flow. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. A play can be done only on a connected stream. For instance, the "I2S Tx", "Modem Voice Rx" and "Player" must be previously connected before playing a file. If there are no more PCM samples to be played, the playback must be stopped by calling <a class="el" href="le__audio__interface_8h.html#a4aebc6e8cdc4389c375e93418823af71">le_audio_Stop()</a>.</li>
 </ul>
 <h1><a class="anchor" id="le_audio_pb_rec"></a>
 Record</h1>
@@ -170,7 +170,7 @@ Record</h1>
 <li><a class="el" href="le__audio__interface_8h.html#a393a26f6cff7fe05c1813fcafeef50f3">le_audio_RecordFile()</a>: records in a specified file.</li>
 <li><a class="el" href="le__audio__interface_8h.html#aead87ec16d317bb4e4a8e7e9ea37550b">le_audio_SetEncodingFormat()</a>: sets the encoding format. The same formats as the player are supported.</li>
 <li><a class="el" href="le__audio__interface_8h.html#a62e45a441a7d7ab5b7d20b41849331a2">le_audio_GetEncodingFormat()</a>: gets the encoding format.</li>
-<li><a class="el" href="le__audio__interface_8h.html#a9c55a59849afcbb2ccef88cd4265782e">le_audio_GetSamples()</a>: gets the audio PCM samples. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. Recording can only be done on a connected stream. For example, the "I2S Rx", "Modem Voice Tx" and "Recorder" must be previously connected before recording a file.</li>
+<li><a class="el" href="le__audio__interface_8h.html#a9c55a59849afcbb2ccef88cd4265782e">le_audio_GetSamples()</a>: gets the audio PCM samples. A pipe has to be opened first, then the PCM samples are sent throught the opened pipe. Recording can only be done on a connected stream. For example, the "I2S Rx", "Modem Voice Tx" and "Recorder" must be previously connected before recording a file. If there are no more PCM samples to be retrieved, the recording must be stopped by calling <a class="el" href="le__audio__interface_8h.html#a4aebc6e8cdc4389c375e93418823af71">le_audio_Stop()</a>.</li>
 </ul>
 <p>A PCM configuration must be set with:</p><ul>
 <li><a class="el" href="le__audio__interface_8h.html#aae7db9f0933119fb5a61162722b3274a">le_audio_SetSamplePcmChannelNumber()</a>: sets the channel number of a PCM sample.</li>

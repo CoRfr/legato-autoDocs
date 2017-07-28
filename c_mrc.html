@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -191,12 +191,12 @@ Signal Quality</h1>
 <p>When the signal metrics are no longer needed, you must call <a class="el" href="le__mrc__interface_8h.html#a20addd98ee6cb07f9ee1a45be01b5203">le_mrc_DeleteSignalMetrics()</a> to free all allocated ressources associated with the Metrics object.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a5564bace31c937bcef096e597f33d3a4">le_mrc_GetRatOfSignalMetrics()</a> returns the Radio Access Technology of the signal measures.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a9d7243b29bf4c705c4eba83fa3799582">le_mrc_GetGsmSignalMetrics()</a> the signal strength in dBm and the bit error rate measured on GSM network.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#a456648564abfc8e9711b60a5d8bddc9b">le_mrc_GetUmtsSignalMetrics()</a> returns the signal metrics measured on UMTS network.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#a456648564abfc8e9711b60a5d8bddc9b">le_mrc_GetUmtsSignalMetrics()</a> returns the signal metrics measured on UMTS or TD-SCDMA networks.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a90b8085aa6d292bd50f8a0784e4e9c67">le_mrc_GetLteSignalMetrics()</a> returns the signal metrics measured on LTE network.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a09ff33b24fd01be18a145b2b3f1f579a">le_mrc_GetCdmaSignalMetrics()</a> returns the signal metrics measured on CDMA network.</p>
 <p>The application can register a handler function to get notifications when the signal strength changes of a certain threshold value.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#ab62b444715b2b530efe5d397eb86a6e8">le_mrc_AddSignalStrengthChangeHandler()</a> API installs a signal strength change handler. The RAT, the lower-range and the upper-range thresholds must be passed as input parameters. These parameters are updated each time the function is called, the previous thresholds are replaced by the new ones if the function is called with the same RAT.</p>
-<dl class="section warning"><dt>Warning</dt><dd>The threshold values must be in the allowed platform range.</dd></dl>
+<p><a class="el" href="le__mrc__interface_8h.html#ab62b444715b2b530efe5d397eb86a6e8">le_mrc_AddSignalStrengthChangeHandler()</a> API installs a signal strength change handler. The RAT, the lower-range and the upper-range thresholds must be passed as input parameters. These parameters are updated each time the function is called, the previous thresholds are replaced by the new ones if the function is called with the same RAT. <a class="el" href="le__mrc__interface_8h.html#aa7883e8c1193c7c8efc87b42cd07c502">le_mrc_SetSignalStrengthIndThresholds()</a> API changes or sets new thresholds.</p>
+<dl class="section warning"><dt>Warning</dt><dd>The threshold values must be in the allowed platform range and the RAT must be valid, else, it's a fatal error, le_mrc_AddSignalStrengthChangeHandler API won't return.</dd></dl>
 <p>The event is notified when we cross the range limits in both direction.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#ade04ec8db3b79c1555b3ab4bdb052216">le_mrc_RemoveSignalStrengthChangeHandler()</a> API uninstalls the handler function.</p>
 <p>A sample code can be seen in the following page:</p><ul>

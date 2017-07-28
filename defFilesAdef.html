@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink selected" href="buildAppsMain.html">Build Apps</a><a class="navlink" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -197,7 +197,7 @@ run</h2>
 <p>Names a process to be started by the Supervisor when the app is started. Also specifies executable and command-line arguments.</p>
 <pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    myProc1 = ( myExe --foo -b 43 )</div><div class="line">}</div></pre><!-- fragment --><p>Process name and command-line arguments are optional.</p>
 <pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myExe )</div><div class="line">}</div></pre><!-- fragment --><p>If the process name isn't specified, then the process will be given the same name as the executable it's running (e.g. <code>myExe</code>)</p>
-<p>A given executable can be launched multiple times. </p><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    process1 = ( myExe )</div><div class="line">    process2 = ( myExe )</div><div class="line">}</div></pre><!-- fragment --><p>Command-line arguments passed to the process when started can appear after the executable name. </p><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myExe --foo )</div><div class="line">}</div></pre><!-- fragment --><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myExe --bar  <span class="comment">// Note that the command-line can be broken into multiple lines for readability.</span></div><div class="line">            --toto ) <span class="comment">// And it can be commented too.</span></div><div class="line">}</div></pre><!-- fragment --><p>Executable names can be the ones listed in the app’s <code>executables:</code> section. They can also be the names of files that are bundled into the app with <code>[x]</code> (executable) permission.</p>
+<p>A given executable can be launched multiple times; each process needs a unique name. </p><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    process1 = ( myExe )</div><div class="line">    process2 = ( myExe )</div><div class="line">}</div></pre><!-- fragment --><p>Command-line arguments passed to the process when started can appear after the executable name. </p><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myExe --foo )</div><div class="line">}</div></pre><!-- fragment --><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myExe --bar  <span class="comment">// Note that the command-line can be broken into multiple lines for readability.</span></div><div class="line">            --toto ) <span class="comment">// And it can be commented too.</span></div><div class="line">}</div></pre><!-- fragment --><p>Executable names can be the ones listed in the app’s <code>executables:</code> section. They can also be the names of files that are bundled into the app with <code>[x]</code> (executable) permission.</p>
 <p>Quotation marks (either single <b>'</b> or double <b>"</b>) can be used if white-space (spaces, tabs, <code>//</code>, etc.) is needed inside a command-line argument, or if an empty argument is needed ("").</p>
 <h2><a class="anchor" id="defFilesAdef_processEnvVars"></a>
 envVars</h2>
@@ -388,7 +388,11 @@ watchdogAction</h1>
 <h1><a class="anchor" id="defFilesAdef_watchdogTimeout"></a>
 watchdogTimeout</h1>
 <p>The <code>watchdogTimeout</code> section sets the default timeout in milliseconds for processes in this app. Will be used if there's no value set in the processes section for a given process. See <a class="el" href="defFilesAdef.html#defFilesAdef_processWatchdogTimeout">watchdogTimeout</a> in the processes section.</p>
-<hr/>
+<h1><a class="anchor" id="defFilesAdef_maxWatchdogTimeout"></a>
+maxWatchdogTimeout</h1>
+<p>The <code>maxWatchdogTimeout</code> section should be set for critical services. If the <code>maxWatchdogTimeout</code> is set the watchdog will be started on system boot, and can't be stopped longer than the timeout given in <code>maxWatchdogTimeout</code>. This is to ensure that the service is running as long as the system is running.</p>
+<p>Unlike the <code>watchdogTimeout</code>, the <code>maxWatchdogTimeout</code> value can not be set to <code>never</code>. If a <code>maxWatchdogTimeout</code> is set then <a class="el" href="le__wdog__interface_8h.html#a041aed268270e1c3668b6ff28bee8fd7">le_wdog_Timeout()</a> can not exceed the <code>maxWatchdogTimeout</code> value.</p>
+<dl class="section note"><dt>Note</dt><dd>If <code>maxWatchdogTimeout</code> is not set, no more action is taken if performing the process' <code>watchdogAction</code> doesn't recover the process. If <code>maxWatchdogTimeout</code> is specified the system will be rebooted if the process does not recover.</dd></dl>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>

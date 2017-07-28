@@ -34,7 +34,7 @@
 <div id="top">
 <header>
 <nav>
-<a class="navlink" href="/index.html">Introduction</a><a class="navlink" href="buildAppsMain.html">Build Apps</a><a class="navlink selected" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
+<a class="navlink" href="/">Introduction</a><a class="navlink" href="buildAppsMain.html">Build Apps</a><a class="navlink selected" href="buildPlatformMain.html">Build Platform</a><a class="navlink" href="aboutMain.html">About</a>
 </nav>
 </header>
 </div>
@@ -114,6 +114,9 @@ Enabled NMEA sentences</h1>
 <li>Not all NMEA sentences supported by the AT!GPSNMEASENTENCE can be (de)activated through the Legato API: the <code>GPGSV_EXTENDED</code> and <code>GPGRS</code> NMEA sentences are not available.</li>
 <li>The Galileo NMEA sentences always appear as not enabled when retrieving their status, even if they are enabled. This concerns the <code>GAGGA</code>, <code>GAGSA</code>, <code>GAGSV</code>, <code>GARMC</code>, and <code>GAVTG</code> NMEA sentences.</li>
 </ul>
+<h1><a class="anchor" id="platformConstraintsGnss_SetConstellation"></a>
+Set constellations</h1>
+<p>The <a class="el" href="le__gnss__interface_8h.html#a6dbdc58f23e480e65ea16c583ef5340f">le_gnss_SetConstellation()</a> API sets the constellations used in the solution. Please note that on Qualcomm-based platform, a new constellation set by <a class="el" href="le__gnss__interface_8h.html#a6dbdc58f23e480e65ea16c583ef5340f">le_gnss_SetConstellation()</a> is valid only after a reboot of the module.</p>
 <h1><a class="anchor" id="References"></a>
 References</h1>
 <p>See <a class="el" href="c_gnss.html">GNSS</a> API</p>
