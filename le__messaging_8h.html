@@ -188,7 +188,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_messaging.html">Low-level Messaging API</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a24a72ef8cd95d79b40cacc008b8e1b5f"></a>
 <div class="memitem">
@@ -218,7 +218,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="le__messaging_8h_html_a1af0671de74160d99be5bfe212c39369"><div class="ttname"><a href="le__messaging_8h.html#a1af0671de74160d99be5bfe212c39369">le_msg_CloseSession</a></div><div class="ttdeci">void le_msg_CloseSession(le_msg_SessionRef_t sessionRef)</div></div>
 <div class="ttc" id="le__log_8h_html_a651e75cb4ec9d59f5ddc7bae2fbdde88"><div class="ttname"><a href="le__log_8h.html#a651e75cb4ec9d59f5ddc7bae2fbdde88">LE_EMERG</a></div><div class="ttdeci">#define LE_EMERG(formatString,...)</div><div class="ttdoc">Emergency. A fatal error has occurred. A process is being terminated. </div><div class="ttdef"><b>Definition:</b> le_log.h:496</div></div>
 <div class="ttc" id="le__log_8h_html_a7a3e66a87026cc9e57bcb748840ab41b"><div class="ttname"><a href="le__log_8h.html#a7a3e66a87026cc9e57bcb748840ab41b">LE_FATAL_IF</a></div><div class="ttdeci">#define LE_FATAL_IF(condition, formatString,...)</div><div class="ttdef"><b>Definition:</b> le_log.h:552</div></div>
-<div class="ttc" id="le__messaging_8h_html_a1e5c37fdd50a4d6d24cad82cb166f770"><div class="ttname"><a href="le__messaging_8h.html#a1e5c37fdd50a4d6d24cad82cb166f770">le_msg_MessageRef_t</a></div><div class="ttdeci">struct le_msg_Message * le_msg_MessageRef_t</div><div class="ttdef"><b>Definition:</b> le_messaging.h:865</div></div>
+<div class="ttc" id="le__messaging_8h_html_a1e5c37fdd50a4d6d24cad82cb166f770"><div class="ttname"><a href="le__messaging_8h.html#a1e5c37fdd50a4d6d24cad82cb166f770">le_msg_MessageRef_t</a></div><div class="ttdeci">struct le_msg_Message * le_msg_MessageRef_t</div><div class="ttdef"><b>Definition:</b> le_messaging.h:861</div></div>
 </pre><!-- fragment --><p>Logs an error message (at EMERGENCY level) and:</p><ul>
 <li>if the caller is running a server-side IPC function, kills the connection to the client and returns.</li>
 <li>if the caller is not running a server-side IPC function, kills the caller (doesn't return). </li>

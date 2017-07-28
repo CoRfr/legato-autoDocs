@@ -83,12 +83,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ae5e72936e106717ebb389a45a2e92f9f"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#ae5e72936e106717ebb389a45a2e92f9f">le_ecall_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:ae5e72936e106717ebb389a45a2e92f9f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8536728653b7b3cdd6b298c6e7b67705"><td align="right" class="memItemLeft" valign="top">typedef struct le_ecall_Call * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a></td></tr>
 <tr class="separator:a8536728653b7b3cdd6b298c6e7b67705"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a7e915557fce85b9b82017a80c0d32ddd"><td align="right" class="memItemLeft" valign="top">typedef struct le_ecall_StateChangeHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a></td></tr>
 <tr class="separator:a7e915557fce85b9b82017a80c0d32ddd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a33defe07c6bf58180a89b87fc5b6a5e1"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a33defe07c6bf58180a89b87fc5b6a5e1">le_ecall_StateChangeHandlerFunc_t</a>) (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dd">le_ecall_State_t</a> state, void *contextPtr)</td></tr>
-<tr class="separator:a33defe07c6bf58180a89b87fc5b6a5e1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a46e169cf5ef4be551cf9364e0cbe5527"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a46e169cf5ef4be551cf9364e0cbe5527">le_ecall_StateChangeHandlerFunc_t</a>) (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dd">le_ecall_State_t</a> state, void *contextPtr)</td></tr>
+<tr class="separator:a46e169cf5ef4be551cf9364e0cbe5527"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -258,6 +260,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab1863bdc62d46e8cf945b3e2fa92f556"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab546b43bee315c4cfc2d5697cad3cf4b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#ab546b43bee315c4cfc2d5697cad3cf4b">le_ecall_TryConnectService</a> (void)</td></tr>
 <tr class="separator:ab546b43bee315c4cfc2d5697cad3cf4b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab49454325f5f4dda485da0b4a2d2e4d9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#ab49454325f5f4dda485da0b4a2d2e4d9">le_ecall_SetServerDisconnectHandler</a> (<a class="el" href="le__ecall__interface_8h.html#ae5e72936e106717ebb389a45a2e92f9f">le_ecall_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:ab49454325f5f4dda485da0b4a2d2e4d9"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a3a4b00c07659de15e5e31da7d2703fd9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a3a4b00c07659de15e5e31da7d2703fd9">le_ecall_DisconnectService</a> (void)</td></tr>
 <tr class="separator:a3a4b00c07659de15e5e31da7d2703fd9"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a042d52c84b5b679ab32dd814c5b0be9e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a042d52c84b5b679ab32dd814c5b0be9e">le_ecall_ForceOnlyMode</a> (void)</td></tr>
@@ -268,10 +272,10 @@ Functions</h2></td></tr>
 <tr class="separator:a924114fa7fab10c3f351766a76134f34"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8e245065491b14f46405e415ea17b6b8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a8e245065491b14f46405e415ea17b6b8">le_ecall_GetConfiguredOperationMode</a> (<a class="el" href="le__ecall__interface_8h.html#af762f89b222e4cc18e9646c6e4b945b9">le_ecall_OpMode_t</a> *opModePtr)</td></tr>
 <tr class="separator:a8e245065491b14f46405e415ea17b6b8"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a453b64579f2884f1d26981bca38a201c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler</a> (<a class="el" href="le__ecall__interface_8h.html#a33defe07c6bf58180a89b87fc5b6a5e1">le_ecall_StateChangeHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a453b64579f2884f1d26981bca38a201c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler</a> (<a class="el" href="le__ecall__interface_8h.html#a46e169cf5ef4be551cf9364e0cbe5527">le_ecall_StateChangeHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a453b64579f2884f1d26981bca38a201c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6be1fd10666da25882a2c6f78c82664d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a6be1fd10666da25882a2c6f78c82664d">le_ecall_RemoveStateChangeHandler</a> (<a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a6be1fd10666da25882a2c6f78c82664d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa2eb6eb76611d78e27b71426b2160cb1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#aa2eb6eb76611d78e27b71426b2160cb1">le_ecall_RemoveStateChangeHandler</a> (<a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:aa2eb6eb76611d78e27b71426b2160cb1"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aad7fa3b34d9d72a2f1d4baa681ba25cc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#aad7fa3b34d9d72a2f1d4baa681ba25cc">le_ecall_Create</a> (void)</td></tr>
 <tr class="separator:aad7fa3b34d9d72a2f1d4baa681ba25cc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af1221deb68c46912748f65505b3e4919"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#af1221deb68c46912748f65505b3e4919">le_ecall_Delete</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef)</td></tr>
@@ -290,8 +294,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab7cdf7de011b9c8edaec790b360dded6"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af12e1f7dae1b1aa61d06e9ddb4591edc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#af12e1f7dae1b1aa61d06e9ddb4591edc">le_ecall_SetVIN</a> (const char *vin)</td></tr>
 <tr class="separator:af12e1f7dae1b1aa61d06e9ddb4591edc"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8a2f9c133af1a894b15f70d7013e4dda"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a8a2f9c133af1a894b15f70d7013e4dda">le_ecall_GetVIN</a> (char *vin, size_t vinNumElements)</td></tr>
-<tr class="separator:a8a2f9c133af1a894b15f70d7013e4dda"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acc26551a121b769ca0b358a8b6c47694"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#acc26551a121b769ca0b358a8b6c47694">le_ecall_GetVIN</a> (char *vin, size_t vinSize)</td></tr>
+<tr class="separator:acc26551a121b769ca0b358a8b6c47694"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:abb9c569b53f8c35b878c7c9ca159e1df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#abb9c569b53f8c35b878c7c9ca159e1df">le_ecall_SetPropulsionType</a> (<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> propulsionType)</td></tr>
 <tr class="separator:abb9c569b53f8c35b878c7c9ca159e1df"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aea86cec8465c43f4cc71ac3c7879965a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#aea86cec8465c43f4cc71ac3c7879965a">le_ecall_GetPropulsionType</a> (<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> *propulsionTypePtr)</td></tr>
@@ -308,10 +312,10 @@ Functions</h2></td></tr>
 <tr class="separator:a6b25b9b242ba114f31ae2f853070bf11"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8c009bb03d61dcd0ffbd9e986b692a85"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a8c009bb03d61dcd0ffbd9e986b692a85">le_ecall_SetMsdPassengersCount</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, uint32_t paxCount)</td></tr>
 <tr class="separator:a8c009bb03d61dcd0ffbd9e986b692a85"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a85c4c3b921b9a6b0bc10f9400e58113e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, const uint8_t *msdPtr, size_t msdNumElements)</td></tr>
-<tr class="separator:a85c4c3b921b9a6b0bc10f9400e58113e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aebdb7744c37081fda6398031d3ee1198"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#aebdb7744c37081fda6398031d3ee1198">le_ecall_ExportMsd</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, uint8_t *msdPtr, size_t *msdNumElementsPtr)</td></tr>
-<tr class="separator:aebdb7744c37081fda6398031d3ee1198"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a7d8d8c1e1f49af2f6145836975d20aeb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a7d8d8c1e1f49af2f6145836975d20aeb">le_ecall_ImportMsd</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, const uint8_t *msdPtr, size_t msdSize)</td></tr>
+<tr class="separator:a7d8d8c1e1f49af2f6145836975d20aeb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adc9610dae7a6ba87c064f8dd271a57b4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#adc9610dae7a6ba87c064f8dd271a57b4">le_ecall_ExportMsd</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, uint8_t *msdPtr, size_t *msdSizePtr)</td></tr>
+<tr class="separator:adc9610dae7a6ba87c064f8dd271a57b4"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a344e4c29208e576e81dda113f786529e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef)</td></tr>
 <tr class="separator:a344e4c29208e576e81dda113f786529e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa25256eeacefcf00c14763ef294c7667"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667">le_ecall_StartAutomatic</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef)</td></tr>
@@ -326,8 +330,8 @@ Functions</h2></td></tr>
 <tr class="separator:a7881e794b9249222edde10f76d7663c9"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a9c13a8582bca84c4ae77643e1f4cfd71"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71">le_ecall_SetPsapNumber</a> (const char *psap)</td></tr>
 <tr class="separator:a9c13a8582bca84c4ae77643e1f4cfd71"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a91c84ca3f4bb27844bfd2d14859bf31a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a91c84ca3f4bb27844bfd2d14859bf31a">le_ecall_GetPsapNumber</a> (char *psap, size_t psapNumElements)</td></tr>
-<tr class="separator:a91c84ca3f4bb27844bfd2d14859bf31a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a959c53f03bb85f1071fcf7cb58e3067e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a959c53f03bb85f1071fcf7cb58e3067e">le_ecall_GetPsapNumber</a> (char *psap, size_t psapSize)</td></tr>
+<tr class="separator:a959c53f03bb85f1071fcf7cb58e3067e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a034c442fd7c6650ed956822a561c0104"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a034c442fd7c6650ed956822a561c0104">le_ecall_UseUSimNumbers</a> (void)</td></tr>
 <tr class="separator:a034c442fd7c6650ed956822a561c0104"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a66e454e84db7d337d76bc867b57891a1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a66e454e84db7d337d76bc867b57891a1">le_ecall_SetNadDeregistrationTime</a> (uint16_t deregTime)</td></tr>
@@ -369,7 +373,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_ecall.html">eCall</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a287eeec0c34e2566297839227109fa62"></a>
 <div class="memitem">
@@ -420,24 +424,28 @@ Functions</h2></td></tr>
 <p>Reference returned by Create function and used by other functions </p>
 </div>
 </div>
-<a class="anchor" id="a33defe07c6bf58180a89b87fc5b6a5e1"></a>
+<a class="anchor" id="ae5e72936e106717ebb389a45a2e92f9f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_ecall_StateChangeHandlerFunc_t) (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef, <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dd">le_ecall_State_t</a> state, void *contextPtr)</td>
+<td class="memname">typedef void(* le_ecall_DisconnectHandler_t) (void *)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for eCall state changes.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">ecallRef</td><td>eCall reference </td></tr>
-<tr><td class="paramname">state</td><td>eCall state </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
+<p>Type for handler called when a server disconnects. </p>
+</div>
+</div>
+<a class="anchor" id="a46e169cf5ef4be551cf9364e0cbe5527"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_ecall_StateChangeHandlerFunc_t) (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef,<a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dd">le_ecall_State_t</a> state,void *contextPtr)</td>
+</tr>
 </table>
-</dd>
-</dl>
+</div><div class="memdoc">
+<p>Handler for eCall state changes. </p>
 </div>
 </div>
 <a class="anchor" id="a7e915557fce85b9b82017a80c0d32ddd"></a>
@@ -903,7 +911,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a> le_ecall_AddStateChangeHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a33defe07c6bf58180a89b87fc5b6a5e1">le_ecall_StateChangeHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a46e169cf5ef4be551cf9364e0cbe5527">le_ecall_StateChangeHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -1060,7 +1068,7 @@ Functions</h2></td></tr>
 </dd></dl>
 </div>
 </div>
-<a class="anchor" id="aebdb7744c37081fda6398031d3ee1198"></a>
+<a class="anchor" id="adc9610dae7a6ba87c064f8dd271a57b4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1080,7 +1088,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t * </td>
-<td class="paramname"><em>msdNumElementsPtr</em> </td>
+<td class="paramname"><em>msdSizePtr</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -1103,7 +1111,7 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">ecallRef</td><td>eCall reference </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">msdPtr</td><td>the encoded MSD </td></tr>
-<tr><td class="paramdir">[in,out]</td><td class="paramname">msdNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">msdSizePtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1421,7 +1429,7 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a91c84ca3f4bb27844bfd2d14859bf31a"></a>
+<a class="anchor" id="a959c53f03bb85f1071fcf7cb58e3067e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1435,7 +1443,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>psapNumElements</em> </td>
+<td class="paramname"><em>psapSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -1455,7 +1463,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">psap</td><td>Public Safely Answering Point telephone number </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">psapNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">psapSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1568,7 +1576,7 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a8a2f9c133af1a894b15f70d7013e4dda"></a>
+<a class="anchor" id="acc26551a121b769ca0b358a8b6c47694"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1582,7 +1590,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>vinNumElements</em> </td>
+<td class="paramname"><em>vinSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -1595,19 +1603,20 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
 <li>LE_NOT_FOUND if the value is not set.</li>
-<li>LE_BAD_PARAMETER parameter is NULL or to small </li>
+<li>LE_BAD_PARAMETER parameter is NULL or to small</li>
+<li>LE_FAULT for other failures </li>
 </ul>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">vin</td><td>VIN is gotten with a null termination. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">vinNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">vinSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a85c4c3b921b9a6b0bc10f9400e58113e"></a>
+<a class="anchor" id="a7d8d8c1e1f49af2f6145836975d20aeb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1627,7 +1636,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>msdNumElements</em> </td>
+<td class="paramname"><em>msdSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -1650,13 +1659,13 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">ecallRef</td><td>eCall reference </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">msdPtr</td><td>the prepared MSD </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">msdNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">msdSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a6be1fd10666da25882a2c6f78c82664d"></a>
+<a class="anchor" id="aa2eb6eb76611d78e27b71426b2160cb1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1664,7 +1673,7 @@ Functions</h2></td></tr>
 <td class="memname">void le_ecall_RemoveStateChangeHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a7e915557fce85b9b82017a80c0d32ddd">le_ecall_StateChangeHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -1672,7 +1681,7 @@ Functions</h2></td></tr>
 <p>Remove handler function for EVENT 'le_ecall_StateChange' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2350,6 +2359,33 @@ Functions</h2></td></tr>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="ab49454325f5f4dda485da0b4a2d2e4d9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_ecall_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#ae5e72936e106717ebb389a45a2e92f9f">le_ecall_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="a1b492b42490b319fcc228e52f8694307"></a>

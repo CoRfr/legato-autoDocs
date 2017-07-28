@@ -109,7 +109,7 @@ eCall Session</h1>
 </ul>
 </dd></dl>
 <p>When the eCall object is no longer needed, call <a class="el" href="le__ecall__interface_8h.html#af1221deb68c46912748f65505b3e4919">le_ecall_Delete()</a> to free all allocated resources associated with the object.</p>
-<p>The current state of an eCall session can be queried using <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a>. Alternatively, an application can register a handler be notified when the session state changes. The handler can be managed using <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a> and <a class="el" href="le__ecall__interface_8h.html#a6be1fd10666da25882a2c6f78c82664d">le_ecall_RemoveStateChangeHandler()</a>.</p>
+<p>The current state of an eCall session can be queried using <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a>. Alternatively, an application can register a handler be notified when the session state changes. The handler can be managed using <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a> and <a class="el" href="le__ecall__interface_8h.html#aa2eb6eb76611d78e27b71426b2160cb1">le_ecall_RemoveStateChangeHandler()</a>.</p>
 <p>An application can also call <a class="el" href="le__ecall__interface_8h.html#a771b2ef399a8fbf3b80c4eb11152c06a">le_ecall_GetTerminationReason()</a> to retrieve the reason of the call termination when call state is <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda085024eb3cca6b48f024f368c6b0f757">LE_ECALL_STATE_DISCONNECTED</a>, and also <a class="el" href="le__ecall__interface_8h.html#a8ffb7fb207537ea4574823285ebb6ca1">le_ecall_GetPlatformSpecificTerminationCode()</a> to get platform specific termination code (refer to your platform documentation for further details).</p>
 <h1><a class="anchor" id="le_ecall_concurrency"></a>
 Concurrency</h1>
@@ -123,7 +123,7 @@ Minimum Set of Data (MSD)</h1>
 <li><a class="el" href="le__ecall__interface_8h.html#a8c009bb03d61dcd0ffbd9e986b692a85">le_ecall_SetMsdPassengersCount()</a> sets the number of passengers.</li>
 </ul>
 <p>The MSD is automatically encoded with the values previously set.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Those functions return a LE_DUPLICATE error when the MSD has been already imported with <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Those functions return a LE_DUPLICATE error when the MSD has been already imported with <a class="el" href="le__ecall__interface_8h.html#a7d8d8c1e1f49af2f6145836975d20aeb">le_ecall_ImportMsd()</a> function.</dd></dl>
 <p>The MSD transmission mode can be set or get with:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#a00d3dbc99884375cf2487d6640767c40">le_ecall_SetMsdTxMode()</a></li>
 <li><a class="el" href="le__ecall__interface_8h.html#a4319df67dc451fecb72e4e60ba7b6f6e">le_ecall_GetMsdTxMode()</a></li>
@@ -132,11 +132,11 @@ Minimum Set of Data (MSD)</h1>
 <li><code>LE_ECALL_TX_MODE_PUSH</code> : the MSD is pushed by the IVS</li>
 <li><code>LE_ECALL_TX_MODE_PULL</code> : the MSD is sent when requested by the PSAP</li>
 </ul>
-<p>It's possible to import a prepared MSD using the <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function. The prepared MSD must answer the requirements described in the "EN 15722:2013" publication (this publication has been prepared by Technical Committee CEN/TC 278 “Intelligent Transport Systems").</p>
+<p>It's possible to import a prepared MSD using the <a class="el" href="le__ecall__interface_8h.html#a7d8d8c1e1f49af2f6145836975d20aeb">le_ecall_ImportMsd()</a> function. The prepared MSD must answer the requirements described in the "EN 15722:2013" publication (this publication has been prepared by Technical Committee CEN/TC 278 “Intelligent Transport Systems").</p>
 <dl class="section warning"><dt>Warning</dt><dd>The imported MSD doesn't take into account the values provided by the le_ecall_SetMsdXxx() functions. It overwrites any previous imported MSD or encoded MSD.</dd>
 <dd>
 The imported MSD overwrites the control flags (automaticActivation and testCall) set by le_ecall_StartXxx() functions (Manual, Automatic, Test). The User App is in charge of their correct settings.</dd></dl>
-<p>The encoded MSD can be retrieved with <a class="el" href="le__ecall__interface_8h.html#aebdb7744c37081fda6398031d3ee1198">le_ecall_ExportMsd()</a> function.</p>
+<p>The encoded MSD can be retrieved with <a class="el" href="le__ecall__interface_8h.html#adc9610dae7a6ba87c064f8dd271a57b4">le_ecall_ExportMsd()</a> function.</p>
 <dl class="section note"><dt>Note</dt><dd>The User app must perform the MSD transmission by calling <a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd()</a> when the LE_ECALL_STATE_PSAP_START_IND_RECEIVED event is received. The MSD can be updated before calling <a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd()</a>, using the e_ecall_ImportMsd() function or the le_ecall_SetMsdXxx() functions.</dd></dl>
 <h1><a class="anchor" id="le_ecall_eraglonass"></a>
 ERA-GLONASS compliancy</h1>
@@ -185,7 +185,7 @@ eCall configuration</h1>
 <p>By default, the number to dial is read from the FDN/SDN (Fixed Dialling Numbers/Service Dialling Numbers) of the U/SIM, depending upon the eCall operating mode.</p>
 <p>However, the PSAP telephone number can be specified and retrieved with:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71">le_ecall_SetPsapNumber()</a></li>
-<li><a class="el" href="le__ecall__interface_8h.html#a91c84ca3f4bb27844bfd2d14859bf31a">le_ecall_GetPsapNumber()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a959c53f03bb85f1071fcf7cb58e3067e">le_ecall_GetPsapNumber()</a></li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>That PSAP number is not applied to Manually or Automatically initiated eCall. For those modes, an emergency call is launched.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>These two functions don't modified the U/SIM content nor read the U/SIM content.</dd></dl>
@@ -224,14 +224,14 @@ eCall configuration</h1>
 </ul>
 <p>The vehicle identifier can be set and gotten with the following functions:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#af12e1f7dae1b1aa61d06e9ddb4591edc">le_ecall_SetVIN()</a></li>
-<li><a class="el" href="le__ecall__interface_8h.html#a8a2f9c133af1a894b15f70d7013e4dda">le_ecall_GetVIN()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#acc26551a121b769ca0b358a8b6c47694">le_ecall_GetVIN()</a></li>
 </ul>
 <p>The propulsion type can be set and gotten with the following functions:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#abb9c569b53f8c35b878c7c9ca159e1df">le_ecall_SetPropulsionType()</a></li>
 <li><a class="el" href="le__ecall__interface_8h.html#aea86cec8465c43f4cc71ac3c7879965a">le_ecall_GetPropulsionType()</a></li>
 </ul>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

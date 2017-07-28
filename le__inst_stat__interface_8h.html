@@ -71,14 +71,16 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:aee5faa79b57d035ace9053a9af7dd6aa"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#aee5faa79b57d035ace9053a9af7dd6aa">le_instStat_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:aee5faa79b57d035ace9053a9af7dd6aa"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa24666a51897c8ea4fefa68be2a908ff"><td align="right" class="memItemLeft" valign="top">typedef struct le_instStat_AppInstallEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a></td></tr>
 <tr class="separator:aa24666a51897c8ea4fefa68be2a908ff"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a57421144148095746625cc8bf683f336"><td align="right" class="memItemLeft" valign="top">typedef struct le_instStat_AppUninstallEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a></td></tr>
 <tr class="separator:a57421144148095746625cc8bf683f336"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a78e81d8369b44b7ca3c9d299af7807e9"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a78e81d8369b44b7ca3c9d299af7807e9">le_instStat_AppInstallHandlerFunc_t</a>) (const char *appName, void *contextPtr)</td></tr>
-<tr class="separator:a78e81d8369b44b7ca3c9d299af7807e9"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2dab9e591b4f0cb3529a0f2feb4f0c5e"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a2dab9e591b4f0cb3529a0f2feb4f0c5e">le_instStat_AppUninstallHandlerFunc_t</a>) (const char *appName, void *contextPtr)</td></tr>
-<tr class="separator:a2dab9e591b4f0cb3529a0f2feb4f0c5e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad8d3d36f0dc06db8f6a64038440f9cf5"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#ad8d3d36f0dc06db8f6a64038440f9cf5">le_instStat_AppInstallHandlerFunc_t</a>) (const char *appName, void *contextPtr)</td></tr>
+<tr class="separator:ad8d3d36f0dc06db8f6a64038440f9cf5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a030890f70a6c638149d26015db38a2ed"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a030890f70a6c638149d26015db38a2ed">le_instStat_AppUninstallHandlerFunc_t</a>) (const char *appName, void *contextPtr)</td></tr>
+<tr class="separator:a030890f70a6c638149d26015db38a2ed"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -86,20 +88,22 @@ Functions</h2></td></tr>
 <tr class="separator:a9f2d05ef69e31a3b192a23ce501e3480"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1e266ab29b7b286e189ec57ba926a016"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a1e266ab29b7b286e189ec57ba926a016">le_instStat_TryConnectService</a> (void)</td></tr>
 <tr class="separator:a1e266ab29b7b286e189ec57ba926a016"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adde0fac3034b23dbb7a908cff947e825"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#adde0fac3034b23dbb7a908cff947e825">le_instStat_SetServerDisconnectHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#aee5faa79b57d035ace9053a9af7dd6aa">le_instStat_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:adde0fac3034b23dbb7a908cff947e825"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:adffba29846c23f83d0c8e95da8f70606"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#adffba29846c23f83d0c8e95da8f70606">le_instStat_DisconnectService</a> (void)</td></tr>
 <tr class="separator:adffba29846c23f83d0c8e95da8f70606"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ada54344ab14680cedcea8b78fcb1d029"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#ada54344ab14680cedcea8b78fcb1d029">le_instStat_AddAppInstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#a78e81d8369b44b7ca3c9d299af7807e9">le_instStat_AppInstallHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:ada54344ab14680cedcea8b78fcb1d029"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#ada54344ab14680cedcea8b78fcb1d029">le_instStat_AddAppInstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#ad8d3d36f0dc06db8f6a64038440f9cf5">le_instStat_AppInstallHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:ada54344ab14680cedcea8b78fcb1d029"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a23fd58ac7fbc43002d6a5d5ffd0a43e8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a23fd58ac7fbc43002d6a5d5ffd0a43e8">le_instStat_RemoveAppInstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a23fd58ac7fbc43002d6a5d5ffd0a43e8"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a342687fcc253f47d97298901df0c816d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a342687fcc253f47d97298901df0c816d">le_instStat_AddAppUninstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#a2dab9e591b4f0cb3529a0f2feb4f0c5e">le_instStat_AppUninstallHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a0182fa0a3fa04be776a3b725c10ea677"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a0182fa0a3fa04be776a3b725c10ea677">le_instStat_RemoveAppInstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:a0182fa0a3fa04be776a3b725c10ea677"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a342687fcc253f47d97298901df0c816d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#a342687fcc253f47d97298901df0c816d">le_instStat_AddAppUninstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#a030890f70a6c638149d26015db38a2ed">le_instStat_AppUninstallHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a342687fcc253f47d97298901df0c816d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac9c7a23237f10780db036f72b4188f82"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#ac9c7a23237f10780db036f72b4188f82">le_instStat_RemoveAppUninstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:ac9c7a23237f10780db036f72b4188f82"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad88c4a560e4885e6b97a7f9a8c0afba8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__inst_stat__interface_8h.html#ad88c4a560e4885e6b97a7f9a8c0afba8">le_instStat_RemoveAppUninstallEventHandler</a> (<a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:ad88c4a560e4885e6b97a7f9a8c0afba8"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_le_instStat.html">Install Status API</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="aa24666a51897c8ea4fefa68be2a908ff"></a>
 <div class="memitem">
@@ -113,23 +117,16 @@ Functions</h2></td></tr>
 <p>Reference type used by Add/Remove functions for EVENT 'le_instStat_AppInstallEvent' </p>
 </div>
 </div>
-<a class="anchor" id="a78e81d8369b44b7ca3c9d299af7807e9"></a>
+<a class="anchor" id="ad8d3d36f0dc06db8f6a64038440f9cf5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_instStat_AppInstallHandlerFunc_t) (const char *appName, void *contextPtr)</td>
+<td class="memname">typedef void(* le_instStat_AppInstallHandlerFunc_t) (const char *appName,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for application install. Called when an application is installed.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">appName</td><td>Name of the application installed. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<p>Handler for application install. Called when an application is installed. </p>
 </div>
 </div>
 <a class="anchor" id="a57421144148095746625cc8bf683f336"></a>
@@ -144,23 +141,28 @@ Functions</h2></td></tr>
 <p>Reference type used by Add/Remove functions for EVENT 'le_instStat_AppUninstallEvent' </p>
 </div>
 </div>
-<a class="anchor" id="a2dab9e591b4f0cb3529a0f2feb4f0c5e"></a>
+<a class="anchor" id="a030890f70a6c638149d26015db38a2ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_instStat_AppUninstallHandlerFunc_t) (const char *appName, void *contextPtr)</td>
+<td class="memname">typedef void(* le_instStat_AppUninstallHandlerFunc_t) (const char *appName,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for application uninstall. Called when an application is uninstalled.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">appName</td><td>Name of the application uninstalled. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
+<p>Handler for application uninstall. Called when an application is uninstalled. </p>
+</div>
+</div>
+<a class="anchor" id="aee5faa79b57d035ace9053a9af7dd6aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_instStat_DisconnectHandler_t) (void *)</td>
+</tr>
 </table>
-</dd>
-</dl>
+</div><div class="memdoc">
+<p>Type for handler called when a server disconnects. </p>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -171,7 +173,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a> le_instStat_AddAppInstallEventHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#a78e81d8369b44b7ca3c9d299af7807e9">le_instStat_AppInstallHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#ad8d3d36f0dc06db8f6a64038440f9cf5">le_instStat_AppInstallHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -205,7 +207,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a> le_instStat_AddAppUninstallEventHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#a2dab9e591b4f0cb3529a0f2feb4f0c5e">le_instStat_AppUninstallHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#a030890f70a6c638149d26015db38a2ed">le_instStat_AppUninstallHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -268,7 +270,7 @@ Functions</h2></td></tr>
 <p>This function is created automatically. </p>
 </div>
 </div>
-<a class="anchor" id="a23fd58ac7fbc43002d6a5d5ffd0a43e8"></a>
+<a class="anchor" id="a0182fa0a3fa04be776a3b725c10ea677"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -276,7 +278,7 @@ Functions</h2></td></tr>
 <td class="memname">void le_instStat_RemoveAppInstallEventHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#aa24666a51897c8ea4fefa68be2a908ff">le_instStat_AppInstallEventHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -284,13 +286,13 @@ Functions</h2></td></tr>
 <p>Remove handler function for EVENT 'le_instStat_AppInstallEvent' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ac9c7a23237f10780db036f72b4188f82"></a>
+<a class="anchor" id="ad88c4a560e4885e6b97a7f9a8c0afba8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -298,7 +300,7 @@ Functions</h2></td></tr>
 <td class="memname">void le_instStat_RemoveAppUninstallEventHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#a57421144148095746625cc8bf683f336">le_instStat_AppUninstallEventHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -306,10 +308,37 @@ Functions</h2></td></tr>
 <p>Remove handler function for EVENT 'le_instStat_AppUninstallEvent' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="adde0fac3034b23dbb7a908cff947e825"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_instStat_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__inst_stat__interface_8h.html#aee5faa79b57d035ace9053a9af7dd6aa">le_instStat_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="a1e266ab29b7b286e189ec57ba926a016"></a>

@@ -65,21 +65,10 @@
 <p><code>Component.cdef</code> files can contain these sections:</p>
 <h1><a class="anchor" id="defFilesCdef_assets"></a>
 assets</h1>
-<p>Used to describe collections of information (fields) that can be exchanged with cloud services like AirVantage.</p>
-<p>The assets section can hold multiple assets, each asset is given a name.</p>
-<p>An asset can be:</p>
-<ul>
-<li><code>variables</code> values that are readable by the server; writable by the client.</li>
-<li><code>settings</code> values that are writable by the server; readable by the client.</li>
-<li><code>commands</code> that are custom commands sent from the server and executable by the client.</li>
-</ul>
-<p>The variable and setting fields can have an associated data type and optionally a default value. The current data types supported are <code> bool, int, float, and string</code>.</p>
-<p>In this code sample, <code>helloWorld</code> app has one setting (the message to be logged), one variable (records how many times a message has been logged). The app also exposes two commands: one to log the currently configured message and one to log the default message.</p>
-<p>The <code>assets</code> definition looks like this:</p>
-<pre class="fragment"><div class="line">assets:</div><div class="line">{</div><div class="line">    message =</div><div class="line">    {</div><div class="line">        settings:</div><div class="line">        {</div><div class="line">            <span class="keywordtype">string</span> greeterMessage = <span class="stringliteral">"Hello world."</span>   <span class="comment">// When requested log this message.</span></div><div class="line">        }</div><div class="line"> </div><div class="line">        variables:</div><div class="line">        {</div><div class="line">            <span class="keywordtype">int</span> greetCount     <span class="comment">// How many times has a greeting been logged?</span></div><div class="line">        }</div><div class="line"> </div><div class="line">        commands:</div><div class="line">        {</div><div class="line">            greetNow           <span class="comment">// Log the message recorded in greeterMessage.</span></div><div class="line">            standardGreeting   <span class="comment">// Use "Hello world," instead of what is set in greeterMessage.</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>Once you've defined your assets, it's up to the app to instantiate instances of them at run-time using the <a class="el" href="c_le_avdata.html">AirVantage Data</a> API. Also see <a class="el" href="howToAVData.html">Manage AirVantage Data</a>.</p>
+<p>The asset section has now been removed as it is not supported with AVC 2.0. See the <a class="el" href="avMigration.html">AirVantage Migration</a> Guide to see the changes between AVC 1.0 and AVC 2.0, including the new way to model the asset data.</p>
 <h1><a class="anchor" id="defFilesCdef_bundles"></a>
 bundles</h1>
-<p>Lists additional files or directories to be copied from the build host into the app so they’re available to the app at runtime (e.g., audio files, web pages, executable scripts or programs built using some external build system).</p>
+<p>Lists additional files or directories to be copied from the build host into the App so they’re available to the App at runtime (e.g., audio files, web pages, executable scripts or programs built using some external build system).</p>
 <pre class="fragment"><div class="line">bundles:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line">        <span class="comment">// Include the web server executable (built using some other build tool) in the app's /bin.</span></div><div class="line">        [x] 3rdParty/webServer/bin/wwwServ  /bin/</div><div class="line"> </div><div class="line">        <span class="comment">// Put the company logo into the app's /var/www/ for read-only access by the web server.</span></div><div class="line">        images/abcCorpLogo.jpg  /var/www/</div><div class="line"> </div><div class="line">        <span class="comment">// Make the appropriate welcome page for the product appear at /var/www/index.html.</span></div><div class="line">        webContent/$PRODUCT_ID/welcome.html  /var/www/index.html</div><div class="line"> </div><div class="line">        <span class="comment">// Create a file to record persistent custom audio messages into.</span></div><div class="line">        [w] audio/defaultMessage.wav  /usr/share/sounds/customMessage.wav</div><div class="line">    }</div><div class="line"> </div><div class="line">    dir:</div><div class="line">    {</div><div class="line">        <span class="comment">// Recursively bundle the directory containing all the audio files into the app.</span></div><div class="line">        <span class="comment">// It will appear to the app read-only under /usr/share/sounds/.</span></div><div class="line">        audio   /usr/share/sounds</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>Three things need to be specified for each file or directory:</p><ul>
 <li>access permissions</li>
 <li>build system path</li>
@@ -91,6 +80,7 @@ bundles</h1>
 <li>x = executable</li>
 </ul>
 <p>If permissions values are not specified, then read-only ([r]) is the default.</p>
+<dl class="section note"><dt>Note</dt><dd>For security reasons, files and directories cannot be both writable and executable.</dd></dl>
 <p>Directories always have executable permission set so they can be traversed. Setting the <code>[x]</code> permission in the <code>dir:</code> subsection causes the files under the directory to be made executable.</p>
 <p>Setting <code>[w]</code> in the <code>dir:</code> subsection causes all files under that directory to be writeable, but the directory itself will not be writeable.</p>
 <dl class="section note"><dt>Note</dt><dd>Directories in the persistent (flash) file system are never made writeable because the on-target flash file system does not support usage quotas (yet).</dd></dl>
@@ -112,15 +102,24 @@ bundles</h1>
 </ul>
 <h1><a class="anchor" id="defFilesCdef_cFlags"></a>
 cflags</h1>
-<p>Provides a way to specify command-line arguments to pass to the compiler when compiling C source code files.</p>
+<p>Provides a way to specify command-line arguments to pass to the compiler when compiling C source code files. These flags will be added to the flags specified on the command-line and in other definition files.</p>
 <p>Flags are separated by whitespace.</p>
 <pre class="fragment"><div class="line">cflags:</div><div class="line">{</div><div class="line">    -g -O0</div><div class="line">    -DDEBUG=1</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesCdef_cxxFlags"></a>
 cxxflags</h1>
-<p>Provides a way to specify command-line arguments to pass to the compiler when compiling C++ source code files.</p>
+<p>Provides a way to specify command-line arguments to pass to the compiler when compiling C++ source code files. These flags will be added to the flags specified on the command-line and in other definition files.</p>
 <p>Flags are separated by whitespace.</p>
-<pre class="fragment"><div class="line">cxxflags:</div><div class="line">{</div><div class="line">    -std=c++0x</div><div class="line">    -g -O0</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesCdef_ldFlags"></a>
+<pre class="fragment"><div class="line">cxxflags:</div><div class="line">{</div><div class="line">    -std=c++0x</div><div class="line">    -g -O0</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesCdef_externalBuild"></a>
+externalBuild</h1>
+<p>Specifies a list of commands required to build this component using an external build process. These commands will be executed in order by the shell, similarly to make recipes. This may be used to build third-party libraries which need to be built from source but are not part of of the target filesystem.</p>
+<dl class="section note"><dt>Note</dt><dd>As with make, sh is used as the shell for executing commands regardless of what shell the user uses. If an alternate shell or long scripts are needed, these can be placed in a separate shell script, and that shell script called here.</dd></dl>
+<p>If <code>externalBuild:</code> section is used in a component, the <code>sources:</code> section cannot be used.</p>
+<dl class="section note"><dt>Note</dt><dd><code>CC</code>, <code>CXX</code>, <code>CFLAGS</code>, <code>CXXFLAGS</code>, and <code>LDFLAGS</code> are set to the target compiler and compiler flags when running the external build commands. The current directory for the command will be the component's object directory. This makes it easy to build and configure packages based on GNU autotools. See example below.</dd></dl>
+<p>For example, suppose a component requires the libwarpspeed.so library, which is a third-party library built using autoconf and make. First create a Component.cdef for the warpspeed library in that library's directory:</p>
+<pre class="fragment"><div class="line">bundles:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line">        [x] libwarpspeed.so /usr/lib</div><div class="line">    }</div><div class="line">}</div><div class="line"> </div><div class="line">externalBuild:</div><div class="line">{</div><div class="line">    <span class="stringliteral">"${CURDIR}/configure --target=$${TARGET_TOOLCHAIN_PREFIX%-}"</span></div><div class="line">    make</div><div class="line">}</div></pre><!-- fragment --><p>Then add</p>
+<pre class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    component:</div><div class="line">    {</div><div class="line">        warpspeed</div><div class="line">    }</div><div class="line"> </div><div class="line">    lib:</div><div class="line">    {</div><div class="line">        libwarpspeed.so</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>to the Component.cdef of any component that needs this library.</p>
+<h1><a class="anchor" id="defFilesCdef_ldFlags"></a>
 ldflags</h1>
-<p>Linker flags provide a way to specify command-line arguments to pass to the compiler when linking C/C++ object (.o) files together into a component shared library (.so) file.</p>
+<p>Linker flags provide a way to specify command-line arguments to pass to the compiler when linking C/C++ object (.o) files together into a component shared library (.so) file. These flags will be added to the flags specified on the command-line and in other definition files.</p>
 <p>Flags are separated by whitespace.</p>
 <pre class="fragment"><div class="line">ldflags:</div><div class="line">{</div><div class="line">    -Lfoo/bar</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesCdef_pools"></a>
 pools</h1>
@@ -248,11 +247,18 @@ component</h2>
 <pre class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    component:</div><div class="line">    {</div><div class="line">        foo</div><div class="line">        bar</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>Any app that uses a component will also use any other components that component requires, and any components they require, etc.</p>
 <p>Specifying a dependency on another component ensures that calls to component initialization functions ( <code>COMPONENT_INIT</code> in C/C++ components ) are sorted in the correct order. If component A depends on component B, then component B will be initialized first.</p>
 <p>Dependency loops are not allowed: component C can't depend on another component that (either directly or indirectly) depends on component C. The build tools detect dependency loops and report any error.</p>
-<h1><a class="anchor" id="defFilesCdef_sources"></a>
+<h2><a class="anchor" id="defFilesCdef_requiresJavaPackage"></a>
+javaPackage</h2>
+<p>You create a <code>javaPackage:</code> section in the @ .cdef listing Java packages to build. It should look something like this:</p>
+<pre class="fragment"><div class="line">javaPackage:</div><div class="line">{</div><div class="line">    io.legato.samples</div><div class="line">}</div></pre><!-- fragment --><p>The build tools will look for Java to code under <code>COMPONENT_DIR/src/io/legato/samples/</code> *.java</p>
+<p>It won't recurse automatically into subdirectories; if you want subdirectories, they also must added to the JavaPackage section.</p>
+<pre class="fragment"><div class="line">javaPackage:</div><div class="line">{</div><div class="line">    io.legato.samples</div><div class="line">    io.legato.samples.foo</div><div class="line">    io.legato.samples.bar</div><div class="line">}</div></pre><!-- fragment --><p>The first Java package listed is assumed to be the <em>main</em> component package as it contains a class with the same name of the component, and it implements the interface (<code>io.legato.Component</code>).</p>
+<p>A hello world Java app folder structure should look something like this:</p>
+<pre class="fragment"><div class="line">+-- javaHelloComponent</div><div class="line">|   +-- Component.cdef</div><div class="line">|   +-- src</div><div class="line">|       +-- io</div><div class="line">|           +-- legato</div><div class="line">|               +-- samples</div><div class="line">|                   +-- javaHelloComponent.java</div><div class="line">+-- jHello.adef</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesCdef_sources"></a>
 sources</h1>
 <p>Contains a list of source code files.</p>
 <p>If C or C++ code, one source file must implement a <code>COMPONENT_INIT</code> function. The framework will automatically call that function at start-up.</p>
-<pre class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    foo.c</div><div class="line">    bar.c</div><div class="line">    init.c      <span class="comment">// This one implements the COMPONENT_INIT</span></div><div class="line">}</div></pre><!-- fragment --><p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<pre class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    foo.c</div><div class="line">    bar.c</div><div class="line">    init.c      <span class="comment">// This one implements the COMPONENT_INIT</span></div><div class="line">}</div></pre><!-- fragment --><p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

@@ -80,27 +80,30 @@ int16
 int32
 int64
 
-double 
+double
 
 string
 
 file
 
-handler
+handler (deprecated; use the name of the handler instead)
+
+le_result_t
+le_onoff_t
 </pre><p>The <code>uint</code> and <code>int</code> types are basic data integer types.</p>
 <p>The <code>double</code> type is an 8 byte floating-point data type.</p>
 <p>The <code>string</code> type is a data type used to store text.</p>
 <p>The <code>file</code> type is used to pass an open file descriptor as a parameter between a client and server.</p>
-<p>A <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_handler">handler</a> is a callback function used when <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_event">events</a> occur.</p>
+<p>The <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> and <a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> types from <a class="el" href="legato_8h.html">legato.h</a> can also be used in API files.</p>
 <p>User-defined types:</p>
 <ul>
 <li>DEFINE</li>
 <li>ENUM</li>
 <li>BITMAP</li>
 <li>REFERENCE</li>
+<li>HANDLER</li>
 </ul>
 <p>Type definitions can also be shared between API files with USETYPES.</p>
-<p>Also, all C types defined in the <code><a class="el" href="legato_8h.html">legato.h</a></code> file are available. The most commonly used of these is the <a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> type. Support for directly using these C types is a temporary measure and will be removed in a future release.</p>
 <h2><a class="anchor" id="apiFilesSyntax_typesDefine"></a>
 DEFINE</h2>
 <p>A DEFINE is specified as:</p>
@@ -146,24 +149,23 @@ Specifying a Function</h1>
 <li>scalar type</li>
 <li>defaults to IN if a direction is not specified</li>
 </ul>
-<pre class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; <span class="stringliteral">"["</span> [ &lt;minSize&gt; <span class="stringliteral">".."</span> ] &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></pre><!-- fragment --><ul>
+<pre class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; <span class="stringliteral">"["</span> &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></pre><!-- fragment --><ul>
 <li>an IN array</li>
 <li><code>maxSize</code> specifies the maximum number of elements allowed for the array</li>
 <li>optional <code>minSize</code> specifies the minimum number of elements required for the array</li>
 </ul>
-<pre class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; <span class="stringliteral">"["</span> &lt;minSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></pre><!-- fragment --><ul>
+<pre class="fragment"><div class="line">&lt;type&gt; &lt;name&gt; <span class="stringliteral">"["</span> &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></pre><!-- fragment --><ul>
 <li>an OUT array</li>
-<li>array should be large enough to store <code>minSize</code> elements; if supported by the function implemention, a shorter OUT array can be used.</li>
+<li>array should be large enough to store <code>maxSize</code> of elements; if supported by the function implementation, a shorter OUT array can be used.</li>
 </ul>
-<pre class="fragment"><div class="line"><span class="stringliteral">"string"</span> &lt;name&gt; <span class="stringliteral">"["</span> [ &lt;minSize&gt; <span class="stringliteral">".."</span> ] &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></pre><!-- fragment --><ul>
+<pre class="fragment"><div class="line"><span class="stringliteral">"string"</span> &lt;name&gt; <span class="stringliteral">"["</span> &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"IN"</span> </div></pre><!-- fragment --><ul>
 <li>an IN string</li>
 <li><code>maxSize</code> specifies the maximum string length allowed,</li>
-<li>optional <code>minSize</code> specifies the minimum string length required</li>
 <li>string length is given as number of characters, excluding any terminating characters</li>
 </ul>
-<pre class="fragment"><div class="line"><span class="stringliteral">"string"</span> &lt;name&gt; <span class="stringliteral">"["</span> &lt;minSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></pre><!-- fragment --><ul>
+<pre class="fragment"><div class="line"><span class="stringliteral">"string"</span> &lt;name&gt; <span class="stringliteral">"["</span> &lt;maxSize&gt; <span class="stringliteral">"]"</span> <span class="stringliteral">"OUT"</span> </div></pre><!-- fragment --><ul>
 <li>an OUT string</li>
-<li>string should be large enough to store <code>minSize</code> characters; if supported by the function implemention, a shorter OUT string can be used.</li>
+<li>string should be large enough to store <code>maxSize</code> characters; if supported by the function implementation, a shorter OUT string can be used.</li>
 <li>string length is given as number of characters, excluding any terminating characters</li>
 </ul>
 <pre class="fragment"><div class="line">&lt;handlerType&gt; &lt;name&gt; </div></pre><!-- fragment --><ul>
@@ -203,13 +205,13 @@ Comments</h1>
 <p>Any comments provided after an element in an ENUM or BITMASK, will be copied to the appropriate generated files, under the same conditions as function parameter comments.</p>
 <h1><a class="anchor" id="apiFilesSyntax_sample"></a>
 Sample API</h1>
-<p>Here's the <code>defn.api</code> file containing just type defintions</p>
+<p>Here's the <code>defn.api</code> file containing just type definitions</p>
 <pre class="fragment">/**
  * Example of nested .api file
  */
 
 DEFINE SIX = 6;
-</pre><p>Here's the <code>common.api</code> file containing just type defintions, and using the types defined in <code>defn.api</code> </p>
+</pre><p>Here's the <code>common.api</code> file containing just type definitions, and using the types defined in <code>defn.api</code> </p>
 <pre class="fragment">/**
  * Common definitions potentially used across multiple .api files
  */
@@ -329,7 +331,7 @@ FUNCTION int32 UseCallback
 );
 
 </pre><hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

@@ -75,13 +75,13 @@ Files Generated</h1>
 <h1><a class="anchor" id="apiFilesC_handlerParm"></a>
 Handler Parameters in C</h1>
 <p>A handler parameter can be used in both events and regular functions. This is how a handler parameter for a function in an interface file is mapped to actual C definitions (based on the <a class="el" href="apiFilesC.html#apiFilesC_sampleAPI">API File Sample Output</a>).</p>
-<pre class="fragment"><div class="line">FUNCTION int32 UseCallback</div><div class="line">(</div><div class="line">    uint32 someParm IN,</div><div class="line">    handler TestAHandler</div><div class="line">);</div></pre><!-- fragment --><p>This results in the function definition:</p>
+<pre class="fragment"><div class="line">FUNCTION int32 UseCallback</div><div class="line">(</div><div class="line">    uint32 someParm IN,</div><div class="line">    TestAHandler handler</div><div class="line">);</div></pre><!-- fragment --><p>This results in the function definition:</p>
 <pre class="fragment"><div class="line">int32_t UseCallback</div><div class="line">(</div><div class="line">    uint32_t someParm,</div><div class="line">    TestAHandlerFunc_t handlerPtr,</div><div class="line">    <span class="keywordtype">void</span>* contextPtr</div><div class="line">);</div></pre><!-- fragment --><p>A <code>contextPtr</code> parameter has been automatically added to the definition of the function. This <code>contextPtr</code> will be passed back to the specified handler function when it is invoked. If the <code>contextPtr</code> is not needed, then NULL can be used.</p>
 <h1><a class="anchor" id="apiFilesC_event"></a>
 Events in C</h1>
 <p>This is how an event in an interface file is mapped to actual C definitions (based on the <a class="el" href="apiFilesC.html#apiFilesC_sampleAPI">API File Sample Output</a>).</p>
-<pre class="fragment"><div class="line">EVENT TestA</div><div class="line">(</div><div class="line">    uint32 data,</div><div class="line">    handler TestAHandler</div><div class="line">);</div></pre><!-- fragment --><p>This results in one type definition and two function definitions:</p>
-<pre class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>TestAHandler* TestAHandlerRef_t;</div><div class="line"> </div><div class="line">TestAHandlerRef_t AddTestAHandler</div><div class="line">(</div><div class="line">    uint32_t data,</div><div class="line">    TestAHandlerFunc_t handlerPtr,</div><div class="line">    <span class="keywordtype">void</span>* contextPtr</div><div class="line">);</div><div class="line"> </div><div class="line"><span class="keywordtype">void</span> RemoveTestAHandler</div><div class="line">(</div><div class="line">    TestAHandlerRef_t addHandlerRef</div><div class="line">);</div></pre><!-- fragment --><p>The parameters from the event definition are used in the ADD_HANDLER function. This is used to register the given handler for events. The REMOVE_HANDLER function does not take any additional parameters, other than the reference returned by the ADD_HANDLER function.</p>
+<pre class="fragment"><div class="line">EVENT TestA</div><div class="line">(</div><div class="line">    uint32 data,</div><div class="line">    TestAHandler myHandler</div><div class="line">);</div></pre><!-- fragment --><p>This results in one type definition and two function definitions:</p>
+<pre class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>TestAHandler* TestAHandlerRef_t;</div><div class="line"> </div><div class="line">TestAHandlerRef_t AddTestAHandler</div><div class="line">(</div><div class="line">    uint32_t data,</div><div class="line">    TestAHandlerFunc_t myHandlerPtr,</div><div class="line">    <span class="keywordtype">void</span>* contextPtr</div><div class="line">);</div><div class="line"> </div><div class="line"><span class="keywordtype">void</span> RemoveTestAHandler</div><div class="line">(</div><div class="line">    TestAHandlerRef_t addHandlerRef</div><div class="line">);</div></pre><!-- fragment --><p>The parameters from the event definition are used in the ADD_HANDLER function. This is used to register the given handler for events. The REMOVE_HANDLER function does not take any additional parameters, other than the reference returned by the ADD_HANDLER function.</p>
 <p>A <code>contextPtr</code> parameter has been automatically added to the definition of the ADD_HANDLER function. The <code>contextPtr</code> passed to the ADD_HANDLER function, will be passed back to the registered handler function. If the <code>contextPtr</code> is not needed, then NULL can be used.</p>
 <h1><a class="anchor" id="apiFilesC_handler"></a>
 Handlers in C</h1>
@@ -431,7 +431,7 @@ int32_t example_UseCallback
 #endif // EXAMPLE_H_INCLUDE_GUARD
 
 </pre><hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

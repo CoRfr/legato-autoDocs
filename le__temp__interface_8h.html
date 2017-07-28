@@ -82,12 +82,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:adc14a215ef9491284beedb34fbcbc5bc"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#adc14a215ef9491284beedb34fbcbc5bc">le_temp_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:adc14a215ef9491284beedb34fbcbc5bc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae0af7bbe704b0e3738fbfd65ef1dc5f0"><td align="right" class="memItemLeft" valign="top">typedef struct le_temp_Sensor * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a></td></tr>
 <tr class="separator:ae0af7bbe704b0e3738fbfd65ef1dc5f0"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a10c66144cf9c183f133ddb36595615e0"><td align="right" class="memItemLeft" valign="top">typedef struct le_temp_ThresholdEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a></td></tr>
 <tr class="separator:a10c66144cf9c183f133ddb36595615e0"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab2526bfa66ad1a52cc955c8b60442a1c"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#ab2526bfa66ad1a52cc955c8b60442a1c">le_temp_ThresholdEventHandlerFunc_t</a>) (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, const char *threshold, void *contextPtr)</td></tr>
-<tr class="separator:ab2526bfa66ad1a52cc955c8b60442a1c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a557bda20eadfd76fed3ae199240375eb"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a557bda20eadfd76fed3ae199240375eb">le_temp_ThresholdEventHandlerFunc_t</a>) (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, const char *threshold, void *contextPtr)</td></tr>
+<tr class="separator:a557bda20eadfd76fed3ae199240375eb"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -95,16 +97,18 @@ Functions</h2></td></tr>
 <tr class="separator:ab23dc70f44db65ba89d1fcf63dee8296"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa5816b09a5e20f6240817ed64acb4859"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#aa5816b09a5e20f6240817ed64acb4859">le_temp_TryConnectService</a> (void)</td></tr>
 <tr class="separator:aa5816b09a5e20f6240817ed64acb4859"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac6c70b23055131d371a2194726301d09"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#ac6c70b23055131d371a2194726301d09">le_temp_SetServerDisconnectHandler</a> (<a class="el" href="le__temp__interface_8h.html#adc14a215ef9491284beedb34fbcbc5bc">le_temp_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:ac6c70b23055131d371a2194726301d09"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a74eab024a7cb29e99488686f26be2595"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a74eab024a7cb29e99488686f26be2595">le_temp_DisconnectService</a> (void)</td></tr>
 <tr class="separator:a74eab024a7cb29e99488686f26be2595"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a4b1869daf56012d886ddd424e6d610ea"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a4b1869daf56012d886ddd424e6d610ea">le_temp_Request</a> (const char *sensorName)</td></tr>
 <tr class="separator:a4b1869daf56012d886ddd424e6d610ea"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae14fb5a1c5445b2cc2148daa90c872fd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#ae14fb5a1c5445b2cc2148daa90c872fd">le_temp_GetSensorName</a> (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, char *sensorName, size_t sensorNameNumElements)</td></tr>
-<tr class="separator:ae14fb5a1c5445b2cc2148daa90c872fd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acb2ef2d56777133835b843a786103268"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#acb2ef2d56777133835b843a786103268">le_temp_AddThresholdEventHandler</a> (<a class="el" href="le__temp__interface_8h.html#ab2526bfa66ad1a52cc955c8b60442a1c">le_temp_ThresholdEventHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
-<tr class="separator:acb2ef2d56777133835b843a786103268"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a29fa7d59baed8a6ee058e32e2cddbd74"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a29fa7d59baed8a6ee058e32e2cddbd74">le_temp_RemoveThresholdEventHandler</a> (<a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a29fa7d59baed8a6ee058e32e2cddbd74"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae1b2c13a5255d08cfd8bce454c8835f0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#ae1b2c13a5255d08cfd8bce454c8835f0">le_temp_GetSensorName</a> (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, char *sensorName, size_t sensorNameSize)</td></tr>
+<tr class="separator:ae1b2c13a5255d08cfd8bce454c8835f0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abc1a33392c1d2e54ba3ebaa544fbee81"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#abc1a33392c1d2e54ba3ebaa544fbee81">le_temp_AddThresholdEventHandler</a> (<a class="el" href="le__temp__interface_8h.html#a557bda20eadfd76fed3ae199240375eb">le_temp_ThresholdEventHandlerFunc_t</a> ThresholdEventHandlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:abc1a33392c1d2e54ba3ebaa544fbee81"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abf25171bdae0707002309e00cd619af5"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#abf25171bdae0707002309e00cd619af5">le_temp_RemoveThresholdEventHandler</a> (<a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:abf25171bdae0707002309e00cd619af5"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a6e5739c1ae59cd2971182ebfba3d79b2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a6e5739c1ae59cd2971182ebfba3d79b2">le_temp_GetTemperature</a> (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, int32_t *temperaturePtr)</td></tr>
 <tr class="separator:a6e5739c1ae59cd2971182ebfba3d79b2"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1d0863fcca4f002409b4c7cbc371ab0b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__temp__interface_8h.html#a1d0863fcca4f002409b4c7cbc371ab0b">le_temp_SetThreshold</a> (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, const char *threshold, int32_t temperature)</td></tr>
@@ -116,7 +120,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_temp.html">Temperature Monitoring</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a146ee59e96f3eb2570bc7a17b257f9c3"></a>
 <div class="memitem">
@@ -167,6 +171,18 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="adc14a215ef9491284beedb34fbcbc5bc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_temp_DisconnectHandler_t) (void *)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Type for handler called when a server disconnects. </p>
+</div>
+</div>
 <a class="anchor" id="ae0af7bbe704b0e3738fbfd65ef1dc5f0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -179,24 +195,16 @@ Functions</h2></td></tr>
 <p>Reference type for a temperature sensor. </p>
 </div>
 </div>
-<a class="anchor" id="ab2526bfa66ad1a52cc955c8b60442a1c"></a>
+<a class="anchor" id="a557bda20eadfd76fed3ae199240375eb"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_temp_ThresholdEventHandlerFunc_t) (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor, const char *threshold, void *contextPtr)</td>
+<td class="memname">typedef void(* le_temp_ThresholdEventHandlerFunc_t) (<a class="el" href="le__temp__interface_8h.html#ae0af7bbe704b0e3738fbfd65ef1dc5f0">le_temp_SensorRef_t</a> sensor,const char *threshold,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for Temperature event.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">sensor</td><td>Temperature sensor reference. </td></tr>
-<tr><td class="paramname">threshold</td><td>Name of the raised threshold. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<p>Handler for Temperature event. </p>
 </div>
 </div>
 <a class="anchor" id="a10c66144cf9c183f133ddb36595615e0"></a>
@@ -212,15 +220,15 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="acb2ef2d56777133835b843a786103268"></a>
+<a class="anchor" id="abc1a33392c1d2e54ba3ebaa544fbee81"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
 <td class="memname"><a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a> le_temp_AddThresholdEventHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__temp__interface_8h.html#ab2526bfa66ad1a52cc955c8b60442a1c">le_temp_ThresholdEventHandlerFunc_t</a> </td>
-<td class="paramname"><em>handlerPtr</em>, </td>
+<td class="paramtype"><a class="el" href="le__temp__interface_8h.html#a557bda20eadfd76fed3ae199240375eb">le_temp_ThresholdEventHandlerFunc_t</a> </td>
+<td class="paramname"><em>ThresholdEventHandlerPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
@@ -239,7 +247,7 @@ Functions</h2></td></tr>
 <p>This event provides information on the threshold reached. </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">ThresholdEventHandlerPtr</td><td></td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
 </table>
 </dd>
@@ -282,7 +290,7 @@ Functions</h2></td></tr>
 <p>This function is created automatically. </p>
 </div>
 </div>
-<a class="anchor" id="ae14fb5a1c5445b2cc2148daa90c872fd"></a>
+<a class="anchor" id="ae1b2c13a5255d08cfd8bce454c8835f0"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -302,7 +310,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>sensorNameNumElements</em> </td>
+<td class="paramname"><em>sensorNameSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -322,7 +330,7 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">sensor</td><td>Temperature sensor reference. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">sensorName</td><td>Name of the temperature sensor. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">sensorNameNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">sensorNameSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -411,7 +419,7 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a29fa7d59baed8a6ee058e32e2cddbd74"></a>
+<a class="anchor" id="abf25171bdae0707002309e00cd619af5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -419,7 +427,7 @@ Functions</h2></td></tr>
 <td class="memname">void le_temp_RemoveThresholdEventHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__temp__interface_8h.html#a10c66144cf9c183f133ddb36595615e0">le_temp_ThresholdEventHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -427,7 +435,7 @@ Functions</h2></td></tr>
 <p>Remove handler function for EVENT 'le_temp_ThresholdEvent' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -458,6 +466,33 @@ Functions</h2></td></tr>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="ac6c70b23055131d371a2194726301d09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_temp_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__temp__interface_8h.html#adc14a215ef9491284beedb34fbcbc5bc">le_temp_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="a1d0863fcca4f002409b4c7cbc371ab0b"></a>

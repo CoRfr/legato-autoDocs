@@ -162,7 +162,9 @@ Playback</h1>
 </ul>
 <h1><a class="anchor" id="le_audio_pb_rec"></a>
 Record</h1>
-<p>Audio file recording can be done from any active input interface.</p>
+<ul>
+<li>Audio file recording can be done from any active input interface.</li>
+</ul>
 <p>Open a "File Recording" interface by calling:</p><ul>
 <li><a class="el" href="le__audio__interface_8h.html#aeac35459c36748a4471b6d45f1ebeb24">le_audio_OpenRecorder()</a>: returns an Audio Stream Reference for file recording. The local audio interface like Microphone, USB Rx, PCM Rx, I2S Rx is recorded into an audio file; or the Modem Voice Rx remote audio interface is recorded into an audio file, depending the kind of connector (input or output) is tied to.</li>
 <li><a class="el" href="le__audio__interface_8h.html#a393a26f6cff7fe05c1813fcafeef50f3">le_audio_RecordFile()</a>: records in a specified file.</li>
@@ -194,7 +196,7 @@ Record</h1>
 </ul>
 <p>You can also register a handler function for media-related notifications like errors or audio events.</p>
 <p><a class="el" href="le__audio__interface_8h.html#a9996ac9d23333cf8219f28b69cac4f81">le_audio_AddMediaHandler()</a> function installs a handler for player/recorder stream notifications.</p>
-<p><a class="el" href="le__audio__interface_8h.html#a60442c840a69155110ae878e03e16059">le_audio_RemoveMediaHandler()</a> function removes the player/recorder handler function.</p>
+<p><a class="el" href="le__audio__interface_8h.html#acaf0935a282d66c9cbe64df4d8a03ddf">le_audio_RemoveMediaHandler()</a> function removes the player/recorder handler function.</p>
 <dl class="section note"><dt>Note</dt><dd>The <code>LE_AUDIO_MEDIA_NO_MORE_SAMPLES</code> event indicates when all samples put into the pipe by the user's app have been sent to the audio driver (see <a class="el" href="le__audio__interface_8h.html#afd37d59ab8207338da197554f49d7ff0">le_audio_PlaySamples()</a>).</dd></dl>
 <p>A sample code that implements audio playback and capture can be found in <b>audioPlaybackRec.c</b> file (please refer to <a class="el" href="c_audioCapturePlayback.html">Sample code of audio playback and capture</a> page).</p>
 <h1><a class="anchor" id="le_audio_dtmf"></a>
@@ -202,12 +204,12 @@ DTMF</h1>
 <p>The <a class="el" href="le__audio__interface_8h.html#a8b1546842a6e917db9a9458aceb77c82">le_audio_PlayDtmf()</a> function allows the application to play one or several DTMF on a playback stream. The duration and the pause of the DTMFs must also be specified with the input parameters.</p>
 <p>The <a class="el" href="le__audio__interface_8h.html#a852728586cacfcbf63ae59b6f80847eb">le_audio_PlaySignallingDtmf()</a> function allows the application to ask the Mobile Network to generate on the remote audio party the DTMFs. Compared with <a class="el" href="le__audio__interface_8h.html#a8b1546842a6e917db9a9458aceb77c82">le_audio_PlayDtmf()</a>, <a class="el" href="le__audio__interface_8h.html#a852728586cacfcbf63ae59b6f80847eb">le_audio_PlaySignallingDtmf()</a> function may offer a better signal quality, but the the duration and the pause timings may be less accurate.</p>
 <p>The application must register a handler function to detect incoming DTMF characters on a specific input audio stream. The <a class="el" href="le__audio__interface_8h.html#a6e65275798c0db287fc1b540cdc0db8b">le_audio_AddDtmfDetectorHandler()</a> function installs a handler for DTMF detection.</p>
-<p>The <a class="el" href="le__audio__interface_8h.html#a7fd6191ed6ff512407bfe01d20a51459">le_audio_RemoveDtmfDetectorHandler()</a> function uninstalls the handler function.</p>
+<p>The <a class="el" href="le__audio__interface_8h.html#aeb1d43fbf2a741fbd91172a90666247d">le_audio_RemoveDtmfDetectorHandler()</a> function uninstalls the handler function.</p>
 <p>The DTMFs are: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, *, #, A, B, C, D. Not case sensitive.</p>
 <dl class="section note"><dt>Note</dt><dd>The DTMF decoding works only on an active audio path.</dd></dl>
 <p>A sample code that implements DTMF playback and decoding can be found in <b>audioDtmfTest.c</b> file (please refer to <a class="el" href="c_audiodtmf.html">Sample code of dtmf playback and decoding</a> page).</p>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

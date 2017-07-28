@@ -79,12 +79,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a085dc6f7a4217fa0845a311770bd2fd1"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#a085dc6f7a4217fa0845a311770bd2fd1">le_data_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:a085dc6f7a4217fa0845a311770bd2fd1"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:abe5cdfb887a7fe14e991d0a685f9cf2b"><td align="right" class="memItemLeft" valign="top">typedef struct le_data_RequestObj * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#abe5cdfb887a7fe14e991d0a685f9cf2b">le_data_RequestObjRef_t</a></td></tr>
 <tr class="separator:abe5cdfb887a7fe14e991d0a685f9cf2b"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ace7f7457f08c4e7c6fc69fbaaa44e828"><td align="right" class="memItemLeft" valign="top">typedef struct le_data_ConnectionStateHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a></td></tr>
 <tr class="separator:ace7f7457f08c4e7c6fc69fbaaa44e828"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab49aba86538b51fbfb0efdafa21f5363"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#ab49aba86538b51fbfb0efdafa21f5363">le_data_ConnectionStateHandlerFunc_t</a>) (const char *intfName, bool isConnected, void *contextPtr)</td></tr>
-<tr class="separator:ab49aba86538b51fbfb0efdafa21f5363"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acfb9ae6ac715b50b2aee510b2e9dff5d"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#acfb9ae6ac715b50b2aee510b2e9dff5d">le_data_ConnectionStateHandlerFunc_t</a>) (const char *intfName, bool isConnected, void *contextPtr)</td></tr>
+<tr class="separator:acfb9ae6ac715b50b2aee510b2e9dff5d"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -100,12 +102,14 @@ Functions</h2></td></tr>
 <tr class="separator:a3d4001b431b95d4ea594957591b1b1a1"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a872a85d8d8e7f877b8ec837621b7881f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#a872a85d8d8e7f877b8ec837621b7881f">le_data_TryConnectService</a> (void)</td></tr>
 <tr class="separator:a872a85d8d8e7f877b8ec837621b7881f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aaccc5800ac840b0fbccd6451e7c719dd"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#aaccc5800ac840b0fbccd6451e7c719dd">le_data_SetServerDisconnectHandler</a> (<a class="el" href="le__data__interface_8h.html#a085dc6f7a4217fa0845a311770bd2fd1">le_data_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:aaccc5800ac840b0fbccd6451e7c719dd"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a700295a33d33947312237297174f3447"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#a700295a33d33947312237297174f3447">le_data_DisconnectService</a> (void)</td></tr>
 <tr class="separator:a700295a33d33947312237297174f3447"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aebd3fc58774ed3f5a11f70d2317837dd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#aebd3fc58774ed3f5a11f70d2317837dd">le_data_AddConnectionStateHandler</a> (<a class="el" href="le__data__interface_8h.html#ab49aba86538b51fbfb0efdafa21f5363">le_data_ConnectionStateHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:aebd3fc58774ed3f5a11f70d2317837dd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#aebd3fc58774ed3f5a11f70d2317837dd">le_data_AddConnectionStateHandler</a> (<a class="el" href="le__data__interface_8h.html#acfb9ae6ac715b50b2aee510b2e9dff5d">le_data_ConnectionStateHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:aebd3fc58774ed3f5a11f70d2317837dd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a241d8832c1d002555ade70d6009d1d7d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#a241d8832c1d002555ade70d6009d1d7d">le_data_RemoveConnectionStateHandler</a> (<a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a241d8832c1d002555ade70d6009d1d7d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3d4af6741018e991d0161450ce8fbd6e"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#a3d4af6741018e991d0161450ce8fbd6e">le_data_RemoveConnectionStateHandler</a> (<a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:a3d4af6741018e991d0161450ce8fbd6e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:afb9db0acdd98620cb0cd303bee8a817c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__data__interface_8h.html#abe5cdfb887a7fe14e991d0a685f9cf2b">le_data_RequestObjRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#afb9db0acdd98620cb0cd303bee8a817c">le_data_Request</a> (void)</td></tr>
 <tr class="separator:afb9db0acdd98620cb0cd303bee8a817c"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1dc7cd8faed6b1ee02ea947cf02b8ee7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__data__interface_8h.html#a1dc7cd8faed6b1ee02ea947cf02b8ee7">le_data_Release</a> (<a class="el" href="le__data__interface_8h.html#abe5cdfb887a7fe14e991d0a685f9cf2b">le_data_RequestObjRef_t</a> requestRef)</td></tr>
@@ -121,7 +125,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_le_data.html">Data Connection</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="ac24f778afd4e0cf2c83be084ba2f9886"></a>
 <div class="memitem">
@@ -148,24 +152,16 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ab49aba86538b51fbfb0efdafa21f5363"></a>
+<a class="anchor" id="acfb9ae6ac715b50b2aee510b2e9dff5d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_data_ConnectionStateHandlerFunc_t) (const char *intfName, bool isConnected, void *contextPtr)</td>
+<td class="memname">typedef void(* le_data_ConnectionStateHandlerFunc_t) (const char *intfName,bool isConnected,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for connection state changes</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">intfName</td><td>Interface name for the data connection </td></tr>
-<tr><td class="paramname">isConnected</td><td>State: connected or disconnected </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<p>Handler for connection state changes </p>
 </div>
 </div>
 <a class="anchor" id="ace7f7457f08c4e7c6fc69fbaaa44e828"></a>
@@ -178,6 +174,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Reference type used by Add/Remove functions for EVENT 'le_data_ConnectionState' </p>
+</div>
+</div>
+<a class="anchor" id="a085dc6f7a4217fa0845a311770bd2fd1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_data_DisconnectHandler_t) (void *)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Type for handler called when a server disconnects. </p>
 </div>
 </div>
 <a class="anchor" id="abe5cdfb887a7fe14e991d0a685f9cf2b"></a>
@@ -224,7 +232,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a> le_data_AddConnectionStateHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__data__interface_8h.html#ab49aba86538b51fbfb0efdafa21f5363">le_data_ConnectionStateHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__data__interface_8h.html#acfb9ae6ac715b50b2aee510b2e9dff5d">le_data_ConnectionStateHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -371,7 +379,7 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a241d8832c1d002555ade70d6009d1d7d"></a>
+<a class="anchor" id="a3d4af6741018e991d0161450ce8fbd6e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -379,7 +387,7 @@ Functions</h2></td></tr>
 <td class="memname">void le_data_RemoveConnectionStateHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__data__interface_8h.html#ace7f7457f08c4e7c6fc69fbaaa44e828">le_data_ConnectionStateHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -387,7 +395,7 @@ Functions</h2></td></tr>
 <p>Remove handler function for EVENT 'le_data_ConnectionState' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -412,6 +420,33 @@ Functions</h2></td></tr>
 <li>NULL if the data connection requested could not be processed </li>
 </ul>
 </dd></dl>
+</div>
+</div>
+<a class="anchor" id="aaccc5800ac840b0fbccd6451e7c719dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_data_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__data__interface_8h.html#a085dc6f7a4217fa0845a311770bd2fd1">le_data_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="aeb5f71861d30b8442b2c11ca34bc73c4"></a>

@@ -110,14 +110,14 @@ $GPVTG,,T,,M,,N,,K,N*2C
 $GPGSA,A,1,,,,,,,,,,,,,,,*1E
 $GPGGA,,,,,,0,,,,,,,,*66</pre><h1><a class="anchor" id="platformConstraintsGnss_nmeaMask"></a>
 Enabled NMEA sentences</h1>
-<p>The <a class="el" href="le__gnss__interface_8h.html#ab9253e29d74cae6e962dcc8b94f0e3c1">le_gnss_SetNmeaSentences()</a> and <a class="el" href="le__gnss__interface_8h.html#a985845ac33d35c34ac3099b6557ca8ea">le_gnss_GetNmeaSentences()</a> functions configure the enabled NMEA sentences in the NMEA flow. Please note that the Qualcomm-based firmware release <code>SWI9X15A_07.10.15.00</code> is subject to some limitations:</p><ul>
+<p>The <a class="el" href="le__gnss__interface_8h.html#ab9253e29d74cae6e962dcc8b94f0e3c1">le_gnss_SetNmeaSentences()</a> and <a class="el" href="le__gnss__interface_8h.html#a985845ac33d35c34ac3099b6557ca8ea">le_gnss_GetNmeaSentences()</a> functions configure the enabled NMEA sentences in the NMEA flow. Please note that the Qualcomm-based firmware release <code>SWI9X15A_07.10.15.00</code> (AR755x, AR8652) is subject to some limitations:</p><ul>
 <li>Not all NMEA sentences supported by the AT!GPSNMEASENTENCE can be (de)activated through the Legato API: the <code>GPGSV_EXTENDED</code> and <code>GPGRS</code> NMEA sentences are not available.</li>
 <li>The Galileo NMEA sentences always appear as not enabled when retrieving their status, even if they are enabled. This concerns the <code>GAGGA</code>, <code>GAGSA</code>, <code>GAGSV</code>, <code>GARMC</code>, and <code>GAVTG</code> NMEA sentences.</li>
 </ul>
 <h1><a class="anchor" id="References"></a>
 References</h1>
 <p>See <a class="el" href="c_gnss.html">GNSS</a> API</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

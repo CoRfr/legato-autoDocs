@@ -64,9 +64,10 @@
 <div class="textblock"><p>Use the Power Manager <code>pmtool</code> to set power management options.</p>
 <p>Usage: <b></b></p><pre class="fragment">pmtool bootOn gpio  &lt;gpioNum&gt; &lt;triggerOption&gt;
 pmtool bootOn timer &lt;timeOutVal&gt;
+pmtool bootOn adc &lt;adcNum&gt; &lt;pollingInterval&gt; &lt;bootAboveValue&gt; &lt;bootBelowValue&gt;
 pmtool shutdown
-pmtool bootReason timer
 pmtool bootReason gpio &lt;gpioNum&gt;
+pmtool bootReason adc &lt;adcNum&gt;
 pmtool query
 </pre><p> </p>
 <pre class="fragment">pmtool bootOn gpio &lt;gpioNum&gt; &lt;triggerOption&gt;</pre> <blockquote class="doxtable">
@@ -74,6 +75,9 @@ pmtool query
 </blockquote>
 <pre class="fragment">pmtool bootOn timer &lt;timeOutVal&gt;</pre> <blockquote class="doxtable">
 <p>Configure specified timer as boot source. timeOutVal specifies the time interval seconds to trigger device boot. </p>
+</blockquote>
+<pre class="fragment">pmtool bootOn adc &lt;adcNum&gt; &lt;pollingInterval&gt; &lt;bootAboveValue&gt; &lt;bootBelowValue&gt;</pre> <blockquote class="doxtable">
+<p>Configure the specified adc as a boot source. The bootBelowValue and bootAboveValue parameters are integer value in milliVolts. If bootAboveValue is less than bootBelowValue, the device will boot if an ADC reading falls between bootAboveValue and bootBelowValue. If bootAboveValue is greater than bootBelowValue, the system will boot if an ADC reading is either above bootAboveValue or below bootBelowValue. The pollingInterval parameter specifies the time in milliseconds between ADC samples. </p>
 </blockquote>
 <pre class="fragment">pmtool shutdown</pre> <blockquote class="doxtable">
 <p>Initiates target device shutdown. </p>
@@ -84,13 +88,16 @@ pmtool query
 <pre class="fragment">pmtool bootReason timer</pre> <blockquote class="doxtable">
 <p>Checks if the timer expiry triggers' target device boot. </p>
 </blockquote>
+<pre class="fragment">pmtool bootReason adc &lt;adcNum&gt;</pre> <blockquote class="doxtable">
+<p>Checks if the specified adc triggered device boot. </p>
+</blockquote>
 <pre class="fragment">pmtool query</pre> <blockquote class="doxtable">
 <p>Displays the current ultra-low power manager firmware version. </p>
 </blockquote>
 <pre class="fragment">pmtool --help</pre><blockquote class="doxtable">
 <p>Prints help text to standard out and exits. </p>
 </blockquote>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

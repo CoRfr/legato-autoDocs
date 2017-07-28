@@ -79,10 +79,12 @@ Functions</h2></td></tr>
 <tr class="separator:a421910132f193dae70e8309dc86a86c4"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae921df0e028ec66f4920cf3ed655d398"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__signals_8h.html#ae921df0e028ec66f4920cf3ed655d398">le_sig_DeleteAll</a> (void)</td></tr>
 <tr class="separator:ae921df0e028ec66f4920cf3ed655d398"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acae2ca62730ef3e9834779c4948f5812"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__signals_8h.html#acae2ca62730ef3e9834779c4948f5812">le_sig_InstallShowStackHandler</a> (void)</td></tr>
+<tr class="separator:acae2ca62730ef3e9834779c4948f5812"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_signals.html">Signals API</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="a89301bf64254cdb071c5277c7762f32d"></a>
 <div class="memitem">
@@ -135,6 +137,22 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Removes all signal event handlers for the calling thread and cleans up any resources used for signal events. This should be called before the thread exits. </p>
+</div>
+</div>
+<a class="anchor" id="acae2ca62730ef3e9834779c4948f5812"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sig_InstallShowStackHandler </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Install handler to show stack and signal informations on SIGSEGV/ILL/BUS/TRAP/FPE signals. Called automatically by main(). </p>
 </div>
 </div>
 <a class="anchor" id="a421910132f193dae70e8309dc86a86c4"></a>

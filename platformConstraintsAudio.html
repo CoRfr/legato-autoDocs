@@ -61,7 +61,13 @@
 <div class="headertitle">
 <h1 class="title">Audio </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="c_audio.html">Audio</a> functions are constrained by the following platform limitations for AR755x, AR8652, and WP8548.</p>
+<div class="textblock"><p><a class="el" href="c_audio.html">le_audio</a> functions are constrained by the following platform limitations.</p>
+<p><b>DTMF, playback and recording:</b></p><ul>
+<li>DTMF decoding works only on MdmVoice Rx stream. DTMF's reception handler must be installed before call initiation.</li>
+<li>File Playback/Recording: WAVE, AMR Narrowband and AMR Wideband formats are supported.</li>
+<li>Only one Recording/sample extraction can be activated simultaneously.</li>
+</ul>
+<hr/>
 <p><b>Possible audio connections:</b></p>
 <table class="doxtable">
 <tr>
@@ -81,7 +87,14 @@
 </table>
 <p>Player = file playback and samples insertion<br/>
  Recorder = file recording and samples extraction</p>
-<dl class="section note"><dt>Note</dt><dd>Only 1 point to 1 point connection is possible except for Player and Recorder. Player and Recorder can be added to any active 1 point to 1 point connections, or tied to 1 single stream.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The Mic input and Spkr output are not available on AR759x platform.<br/>
+ Please refer to the Product Technical Specification document of your platform for further details.<br/>
+<br/>
+</dd>
+<dd>
+Only 1 point to 1 point connection is possible except for Player and Recorder.<br/>
+ Player and Recorder can be added to any active 1 point to 1 point connections, or tied to 1 single stream.<br/>
+</dd></dl>
 <hr/>
 <p><b>Available functions for the different audio streams:</b></p>
 <table class="doxtable">
@@ -107,11 +120,7 @@
  IIR = Infinite Impulse Response filter <br/>
  FIR = Finite Impulse Response filter <br/>
  AGC = Automatic Gain Control</p>
-<p><b>The following diagram shows where the functions are applied in a voice call audio path:</b></p>
-<div class="image">
-<img alt="AR755x_Ext_AudioBlockDiagram_Legato.jpg" src="AR755x_Ext_AudioBlockDiagram_Legato.jpg"/>
-</div>
-<p><b>Gains value's for AR7x series (also applicable for AR8652):</b></p>
+<p><b>Gains value's:</b></p>
 <p><b>Mic:</b></p><ul>
 <li>range: 0x0000 -- 0xFFFF;</li>
 <li>value (in dB) = 20*Log(&lt;value&gt;/0x0100)</li>
@@ -138,14 +147,12 @@
 <li>value (in dB) = 20*Log(&lt;value&gt;/0x2000)</li>
 </ul>
 <hr/>
-<p><b>Other audio features and constraints:</b></p><ul>
-<li>DTMF decoding works only on MdmVoice Rx stream. DTMF's reception handler must be installed before call initiation.</li>
-<li>File Playback/Recording: WAVE, AMR Narrowband and AMR Wideband formats are supported.</li>
-<li>Samples insertion/extraction: PCM samples using configuration of channel number, sampling rate and sampling resolution.</li>
-<li>Several file playbacks can be activated simultaneously but not several file recordings. Playback and recording can’t be performed simultaneously. This also applies to samples insertion/extraction.</li>
-</ul>
+<p><b>The following diagram shows where the functions are applied in a voice call audio path (applicable for AR755x, AR8652, WP8548):</b></p>
+<div class="image">
+<img alt="AR755x_Ext_AudioBlockDiagram_Legato.jpg" src="AR755x_Ext_AudioBlockDiagram_Legato.jpg"/>
+</div>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

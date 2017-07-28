@@ -75,7 +75,7 @@ Adding key-value pairs</h1>
 <pre class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> StoreStuff(<span class="keyword">const</span> <span class="keywordtype">char</span>* keyStr, <span class="keyword">const</span> <span class="keywordtype">char</span>* valueStr)</div><div class="line">{</div><div class="line">    myTable = <a class="code" href="le__hashmap_8h.html#ade79896a5b2ceec82c570fe21f7efe3a">le_hashmap_Create</a>(</div><div class="line">                        <span class="stringliteral">"My Table"</span>,</div><div class="line">                        31,</div><div class="line">                        <a class="code" href="le__hashmap_8h.html#a3ff75de814b38d4c4283379acb406b65">le_hashmap_HashString</a>,</div><div class="line">                        <a class="code" href="le__hashmap_8h.html#a63d2b6c0689ece50ce979557029b8483">le_hashmap_EqualsString</a></div><div class="line">                      );</div><div class="line"> </div><div class="line">    <a class="code" href="le__hashmap_8h.html#a68759fb8291c487a507eae6d92710fc7">le_hashmap_Put</a>(myTable, keyStr, valueStr);</div><div class="line">    ....</div><div class="line">}</div></pre><!-- fragment --><p>The table does not take control of the keys or values. The map only stores the pointers to these values, not the values themselves. It's the responsibility of the caller to manage the actual data storage.</p>
 <h2><a class="anchor" id="c_hashmap_tips"></a>
 Tip</h2>
-<p>The code sample shows some pre-defined functions for certain key types. The key types supported are uint32_t and strings. The strings must be NULL terminated.</p>
+<p>The code sample shows some pre-defined functions for certain key types. The key types supported are uint32_t, uint64_t and strings. The strings must be NULL terminated.</p>
 <p>Tables can also have their own hash and equality functions, but ensure the functions work on the type of key you're storing. The hash function should provide a good distribution of values. It is not required that they be unique.</p>
 <h1><a class="anchor" id="c_hashmap_iterating"></a>
 Iterating over a map</h1>
@@ -95,7 +95,7 @@ Tracing a map</h1>
 <p>If <code><a class="el" href="le__hashmap_8h.html#a10b30e794df1c866fe39c40c7949eb29">le_hashmap_EnableTrace()</a></code> is called for a hashmap object, tracing is immediately activated for that hashmap.</p>
 <p>See <a class="el" href="c_logging.html#c_log_controlling">Log Controls</a> for more information on how to enable and disable tracing using configuration and/or the log control tool.</p>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

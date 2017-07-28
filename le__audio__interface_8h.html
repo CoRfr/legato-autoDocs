@@ -85,6 +85,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:ab774b695ab74b16aab5b9fd8ee10e708"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ab774b695ab74b16aab5b9fd8ee10e708">le_audio_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:ab774b695ab74b16aab5b9fd8ee10e708"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a9a46ff5a5afa61f1bc76120ab9e4da0a"><td align="right" class="memItemLeft" valign="top">typedef struct le_audio_Stream * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a></td></tr>
 <tr class="separator:a9a46ff5a5afa61f1bc76120ab9e4da0a"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab819480f4ce3f36e62b6a4e327668304"><td align="right" class="memItemLeft" valign="top">typedef struct le_audio_Connector * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ab819480f4ce3f36e62b6a4e327668304">le_audio_ConnectorRef_t</a></td></tr>
@@ -93,10 +95,10 @@ Typedefs</h2></td></tr>
 <tr class="separator:a390b011cbb6f745c46e861d315af0bbe"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2db60899cdaa84759075a7955ed24511"><td align="right" class="memItemLeft" valign="top">typedef struct le_audio_DtmfDetectorHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a2db60899cdaa84759075a7955ed24511">le_audio_DtmfDetectorHandlerRef_t</a></td></tr>
 <tr class="separator:a2db60899cdaa84759075a7955ed24511"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa1176ea658084237635f4e7e437f1f7b"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#aa1176ea658084237635f4e7e437f1f7b">le_audio_MediaHandlerFunc_t</a>) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1">le_audio_MediaEvent_t</a> event, void *contextPtr)</td></tr>
-<tr class="separator:aa1176ea658084237635f4e7e437f1f7b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a3c6bc837c07ecf1545eadc7f1813bddb"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a3c6bc837c07ecf1545eadc7f1813bddb">le_audio_DtmfDetectorHandlerFunc_t</a>) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, char dtmf, void *contextPtr)</td></tr>
-<tr class="separator:a3c6bc837c07ecf1545eadc7f1813bddb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a07b4bf5c7aac260b6c058e90da075f2c"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a07b4bf5c7aac260b6c058e90da075f2c">le_audio_MediaHandlerFunc_t</a>) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1">le_audio_MediaEvent_t</a> event, void *contextPtr)</td></tr>
+<tr class="separator:a07b4bf5c7aac260b6c058e90da075f2c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5b0cb7e2fcad2152814739043165ed36"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a5b0cb7e2fcad2152814739043165ed36">le_audio_DtmfDetectorHandlerFunc_t</a>) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, char dtmf, void *contextPtr)</td></tr>
+<tr class="separator:a5b0cb7e2fcad2152814739043165ed36"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -159,6 +161,8 @@ Functions</h2></td></tr>
 <tr class="separator:a65a8844fc6d2e1b7ed78f33bef1b9990"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af95c8ecd8562696e322707e207c393dc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#af95c8ecd8562696e322707e207c393dc">le_audio_TryConnectService</a> (void)</td></tr>
 <tr class="separator:af95c8ecd8562696e322707e207c393dc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a58527802dd2fa80661c20dc641ce5826"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a58527802dd2fa80661c20dc641ce5826">le_audio_SetServerDisconnectHandler</a> (<a class="el" href="le__audio__interface_8h.html#ab774b695ab74b16aab5b9fd8ee10e708">le_audio_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:a58527802dd2fa80661c20dc641ce5826"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af72a5338e5fd23d17e0274e43642c77a"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#af72a5338e5fd23d17e0274e43642c77a">le_audio_DisconnectService</a> (void)</td></tr>
 <tr class="separator:af72a5338e5fd23d17e0274e43642c77a"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a74f1ef979329f6c2bd56ea622f4d05b2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a74f1ef979329f6c2bd56ea622f4d05b2">le_audio_OpenMic</a> (void)</td></tr>
@@ -185,10 +189,10 @@ Functions</h2></td></tr>
 <tr class="separator:ae3ed568ba4d2763ea77e17e77b20ff02"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ad745f008bb04873c817da7af3daf783d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ad745f008bb04873c817da7af3daf783d">le_audio_OpenModemVoiceTx</a> (void)</td></tr>
 <tr class="separator:ad745f008bb04873c817da7af3daf783d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a9996ac9d23333cf8219f28b69cac4f81"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__audio__interface_8h.html#a390b011cbb6f745c46e861d315af0bbe">le_audio_MediaHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a9996ac9d23333cf8219f28b69cac4f81">le_audio_AddMediaHandler</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#aa1176ea658084237635f4e7e437f1f7b">le_audio_MediaHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a9996ac9d23333cf8219f28b69cac4f81"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__audio__interface_8h.html#a390b011cbb6f745c46e861d315af0bbe">le_audio_MediaHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a9996ac9d23333cf8219f28b69cac4f81">le_audio_AddMediaHandler</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#a07b4bf5c7aac260b6c058e90da075f2c">le_audio_MediaHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a9996ac9d23333cf8219f28b69cac4f81"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a60442c840a69155110ae878e03e16059"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a60442c840a69155110ae878e03e16059">le_audio_RemoveMediaHandler</a> (<a class="el" href="le__audio__interface_8h.html#a390b011cbb6f745c46e861d315af0bbe">le_audio_MediaHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a60442c840a69155110ae878e03e16059"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:acaf0935a282d66c9cbe64df4d8a03ddf"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#acaf0935a282d66c9cbe64df4d8a03ddf">le_audio_RemoveMediaHandler</a> (<a class="el" href="le__audio__interface_8h.html#a390b011cbb6f745c46e861d315af0bbe">le_audio_MediaHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:acaf0935a282d66c9cbe64df4d8a03ddf"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:abafeb411da7b1a14b2d5777fc1d3e394"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#abafeb411da7b1a14b2d5777fc1d3e394">le_audio_Close</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
 <tr class="separator:abafeb411da7b1a14b2d5777fc1d3e394"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a65f11540e6af03a3494b6b9be76ba5fc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a65f11540e6af03a3494b6b9be76ba5fc">le_audio_SetGain</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, int32_t gain)</td></tr>
@@ -207,10 +211,10 @@ Functions</h2></td></tr>
 <tr class="separator:a338df65b2fb1ae0140d86880adbcf0de"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a6b88df9301038375701e4c15a4c8aaf0"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a6b88df9301038375701e4c15a4c8aaf0">le_audio_Disconnect</a> (<a class="el" href="le__audio__interface_8h.html#ab819480f4ce3f36e62b6a4e327668304">le_audio_ConnectorRef_t</a> connectorRef, <a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
 <tr class="separator:a6b88df9301038375701e4c15a4c8aaf0"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6e65275798c0db287fc1b540cdc0db8b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__audio__interface_8h.html#a2db60899cdaa84759075a7955ed24511">le_audio_DtmfDetectorHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a6e65275798c0db287fc1b540cdc0db8b">le_audio_AddDtmfDetectorHandler</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#a3c6bc837c07ecf1545eadc7f1813bddb">le_audio_DtmfDetectorHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a6e65275798c0db287fc1b540cdc0db8b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__audio__interface_8h.html#a2db60899cdaa84759075a7955ed24511">le_audio_DtmfDetectorHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a6e65275798c0db287fc1b540cdc0db8b">le_audio_AddDtmfDetectorHandler</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#a5b0cb7e2fcad2152814739043165ed36">le_audio_DtmfDetectorHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a6e65275798c0db287fc1b540cdc0db8b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a7fd6191ed6ff512407bfe01d20a51459"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a7fd6191ed6ff512407bfe01d20a51459">le_audio_RemoveDtmfDetectorHandler</a> (<a class="el" href="le__audio__interface_8h.html#a2db60899cdaa84759075a7955ed24511">le_audio_DtmfDetectorHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a7fd6191ed6ff512407bfe01d20a51459"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aeb1d43fbf2a741fbd91172a90666247d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#aeb1d43fbf2a741fbd91172a90666247d">le_audio_RemoveDtmfDetectorHandler</a> (<a class="el" href="le__audio__interface_8h.html#a2db60899cdaa84759075a7955ed24511">le_audio_DtmfDetectorHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:aeb1d43fbf2a741fbd91172a90666247d"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac1af23c9febed1378620370a6961ce89"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ac1af23c9febed1378620370a6961ce89">le_audio_EnableNoiseSuppressor</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
 <tr class="separator:ac1af23c9febed1378620370a6961ce89"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a3d3d52002fe6bf95271db1a16b1573f7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#a3d3d52002fe6bf95271db1a16b1573f7">le_audio_DisableNoiseSuppressor</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
@@ -310,7 +314,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_audio.html">Audio</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="aafdf655a188e290502c2a909c3b37104"></a>
 <div class="memitem">
@@ -385,24 +389,28 @@ Functions</h2></td></tr>
 <p>Reference type for Audio Connector </p>
 </div>
 </div>
-<a class="anchor" id="a3c6bc837c07ecf1545eadc7f1813bddb"></a>
+<a class="anchor" id="ab774b695ab74b16aab5b9fd8ee10e708"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_audio_DtmfDetectorHandlerFunc_t) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, char dtmf, void *contextPtr)</td>
+<td class="memname">typedef void(* le_audio_DisconnectHandler_t) (void *)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for DTMF decoding.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
-<tr><td class="paramname">dtmf</td><td>Detected DTMF. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
+<p>Type for handler called when a server disconnects. </p>
+</div>
+</div>
+<a class="anchor" id="a5b0cb7e2fcad2152814739043165ed36"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_audio_DtmfDetectorHandlerFunc_t) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef,char dtmf,void *contextPtr)</td>
+</tr>
 </table>
-</dd>
-</dl>
+</div><div class="memdoc">
+<p>Handler for DTMF decoding. </p>
 </div>
 </div>
 <a class="anchor" id="a2db60899cdaa84759075a7955ed24511"></a>
@@ -417,24 +425,16 @@ Functions</h2></td></tr>
 <p>Reference type used by Add/Remove functions for EVENT 'le_audio_DtmfDetector' </p>
 </div>
 </div>
-<a class="anchor" id="aa1176ea658084237635f4e7e437f1f7b"></a>
+<a class="anchor" id="a07b4bf5c7aac260b6c058e90da075f2c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_audio_MediaHandlerFunc_t) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, <a class="el" href="le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1">le_audio_MediaEvent_t</a> event, void *contextPtr)</td>
+<td class="memname">typedef void(* le_audio_MediaHandlerFunc_t) (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef,<a class="el" href="le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1">le_audio_MediaEvent_t</a> event,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for audio stream event.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
-<tr><td class="paramname">event</td><td>Event value. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<p>Handler for audio stream event. </p>
 </div>
 </div>
 <a class="anchor" id="a390b011cbb6f745c46e861d315af0bbe"></a>
@@ -642,7 +642,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a3c6bc837c07ecf1545eadc7f1813bddb">le_audio_DtmfDetectorHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a5b0cb7e2fcad2152814739043165ed36">le_audio_DtmfDetectorHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -683,7 +683,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#aa1176ea658084237635f4e7e437f1f7b">le_audio_MediaHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a07b4bf5c7aac260b6c058e90da075f2c">le_audio_MediaHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -2225,7 +2225,7 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a7fd6191ed6ff512407bfe01d20a51459"></a>
+<a class="anchor" id="aeb1d43fbf2a741fbd91172a90666247d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2233,7 +2233,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="memname">void le_audio_RemoveDtmfDetectorHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a2db60899cdaa84759075a7955ed24511">le_audio_DtmfDetectorHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -2241,13 +2241,13 @@ LE_OK Function succeeded.</dd></dl>
 <p>Remove handler function for EVENT 'le_audio_DtmfDetector' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a60442c840a69155110ae878e03e16059"></a>
+<a class="anchor" id="acaf0935a282d66c9cbe64df4d8a03ddf"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2255,7 +2255,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="memname">void le_audio_RemoveMediaHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a390b011cbb6f745c46e861d315af0bbe">le_audio_MediaHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -2263,7 +2263,7 @@ LE_OK Function succeeded.</dd></dl>
 <p>Remove handler function for EVENT 'le_audio_Media' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2702,6 +2702,33 @@ LE_OK Function succeeded. </dd></dl>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a58527802dd2fa80661c20dc641ce5826"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_audio_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#ab774b695ab74b16aab5b9fd8ee10e708">le_audio_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="a4aebc6e8cdc4389c375e93418823af71"></a>

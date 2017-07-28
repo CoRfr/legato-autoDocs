@@ -81,14 +81,14 @@ Preventing Updates During Critical Operations</h1>
 Controlling the Probation Period</h1>
 <p>Whenever a new system is started, a probation period begins. If the system stays running for the entire probation period, the system is marked "good". But, during the probation period, if an app faults enough times in a short enough period for the Supervisor to give up on trying to start it, the system update is marked "bad" and the system is rolled-back to the last known "good" system.</p>
 <p>In some cases, a customer may want to extend the probation period of their new system for a non-deterministic amount of time, until it has had a chance to perform some action in the real world (such as successfully "phoning home" at least once).</p>
-<p>To support this, the functions <a class="el" href="le__update_ctrl__interface_8h.html#afe4f9e002058e3c74488a28f7c76e47a">le_updateCtrl_LockProbation()</a> and <a class="el" href="le__update_ctrl__interface_8h.html#a4ba5ace59bfe352c518c3f1eae6d0448">le_updateCtrl_UnlockProbation()</a> are provided, where each call to "Lock" must be matched with a call to "Unlock".</p>
+<p>To support this, the functions <a class="el" href="le__update_ctrl__interface_8h.html#a88e55c6e0ee5c2cf52e6fcb75a9db87e">le_updateCtrl_LockProbation()</a> and <a class="el" href="le__update_ctrl__interface_8h.html#a4ba5ace59bfe352c518c3f1eae6d0448">le_updateCtrl_UnlockProbation()</a> are provided, where each call to "Lock" must be matched with a call to "Unlock".</p>
 <p>For those who want to mark "good" at some point of their own determination, regardless of how long the system has been up, <a class="el" href="le__update_ctrl__interface_8h.html#a8eaa5f533d5d677397642c7b44ce7bb3">le_updateCtrl_MarkGood()</a> is provided.</p>
 <p>And for those who want to mark the system "bad" and trigger a rollback at some point of their own choosing, <a class="el" href="le__update_ctrl__interface_8h.html#a9f6a3bf7a830eb04823ea6188c12109c">le_updateCtrl_FailProbation()</a> is provided.</p>
 <p>Calls to any of the functions that affect the probation period are ignored if the probation period is already over (if the system is already marked "good"). Once it is "good", it stays "good".</p>
 <p>If someone tries to update the system while it is still in its probation period, the update will be refused. To override this, call <a class="el" href="le__update_ctrl__interface_8h.html#a9f6a3bf7a830eb04823ea6188c12109c">le_updateCtrl_FailProbation()</a> or <a class="el" href="le__update_ctrl__interface_8h.html#a8eaa5f533d5d677397642c7b44ce7bb3">le_updateCtrl_MarkGood()</a> to end the probation period before trying to apply the new system update.</p>
 <dl class="section note"><dt>Note</dt><dd>If a reboot occurs during the probation period, the probation period will start over. But, if the system reboots more than a few times without reaching the end of its probation period first, then the system will be rolled-back to the last known "good" system.</dd></dl>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

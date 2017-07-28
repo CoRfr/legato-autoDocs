@@ -223,8 +223,7 @@ Sending File Descriptors</h1>
 <p>It's possible to send an open file descriptor through an IPC session by adding an fd to a message before sending it. On the sender's side, <a class="el" href="le__messaging_8h.html#a43459773ce8a9febf0f2e66681e40e91">le_msg_SetFd()</a> is used to set the file descriptor to be sent. On the receiver's side, <a class="el" href="le__messaging_8h.html#a1eff9dd7f93de58f5678ad3d6e0b734d">le_msg_GetFd()</a> is used to get the fd from the message.</p>
 <p>The IPC API will close the original fd in the sender's address space once it has been sent, so if the sender still needs the fd open on its side, it should duplicate the fd (e.g., using dup() ) before sending it.</p>
 <p>On the receiving side, if the fd is not extracted from the message, it will be closed when the message is released. The fd can only be extracted from the message once. Subsequent calls to <a class="el" href="le__messaging_8h.html#a1eff9dd7f93de58f5678ad3d6e0b734d">le_msg_GetFd()</a> will return -1.</p>
-<p>As a denial-of-service prevention measure, receiving of file descriptors is disabled by default on servers. To enable receiving of file descriptors, the server must call le_msg_EnableFdReception() on their service.</p>
-<dl class="section warning"><dt>Warning</dt><dd>DO NOT SEND DIRECTORY FILE DESCRIPTORS. That can be exploited to break out of chroot() jails.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>DO NOT SEND DIRECTORY FILE DESCRIPTORS. They can be exploited and used to break out of chroot() jails.</dd></dl>
 <h1><a class="anchor" id="c_messagingFutureEnhancements"></a>
 Future Enhancements</h1>
 <p>As an optimization to reduce the number of copies in cases where the sender of a message already has the message payload of their message assembled somewhere (perhaps as static data or in another message buffer received earlier from somewhere), a pointer to the payload could be passed to the message, instead of having to copy the payload into the message.</p>
@@ -237,7 +236,7 @@ Troubleshooting</h1>
 <p>If you're running as the super-user (root), you can trace messaging traffic using <b>TBD</b>. You can also inspect message queues and view lists of outstanding message objects within processes using the Process Inspector tool.</p>
 <p>If you're leaking messages by forgetting to release them when you're finished with them, you'll see warning messages in the log indicating your message pool is growing. You should be able to tell the related messaging service by the name of the expanding pool.</p>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

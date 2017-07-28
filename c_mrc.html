@@ -80,7 +80,7 @@ Radio Power Management</h1>
 </ul>
 <h1><a class="anchor" id="le_mrc_configuration"></a>
 Radio Configuration preferences</h1>
-<p>The following functions let you configure and retrieve the radio configuration preferences: <a class="el" href="le__mrc__interface_8h.html#acb434a9f91afb5b6639baf3678ee9388">le_mrc_SetAutomaticRegisterMode()</a>, <a class="el" href="le__mrc__interface_8h.html#a09b890f05a20f4b007d60e595026631f">le_mrc_SetManualRegisterMode()</a> and <a class="el" href="le__mrc__interface_8h.html#a283c0c092c5a135a8e95f9f091655cb1">le_mrc_GetRegisterMode()</a> let you set/get the selected Scan mode.</p>
+<p>The following functions let you configure and retrieve the radio configuration preferences: <a class="el" href="le__mrc__interface_8h.html#acb434a9f91afb5b6639baf3678ee9388">le_mrc_SetAutomaticRegisterMode()</a>, <a class="el" href="le__mrc__interface_8h.html#a09b890f05a20f4b007d60e595026631f">le_mrc_SetManualRegisterMode()</a> and <a class="el" href="le__mrc__interface_8h.html#a9ad2729c28e97ae450f7aee0865197f6">le_mrc_GetRegisterMode()</a> let you set/get the selected Scan mode.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#ac808b4dc721e031566da92e00663c027">le_mrc_SetBandPreferences()</a>, <a class="el" href="le__mrc__interface_8h.html#a04418f56480070ba6c4f3d176dafaa37">le_mrc_GetBandPreferences()</a> let you set/get the 2G/3G band preferences by using a bit mask built with <code>le_mrc_BandBitMask_t</code> </p>
 <p>The 2G/3G band preferences can be:</p><ul>
 <li>Band-Class-0-A-System</li>
@@ -129,7 +129,7 @@ Radio Configuration preferences</h1>
 <p>The TD-SCDMA band preferences can be 'A' to 'F'</p>
 <dl class="section warning"><dt>Warning</dt><dd>Ensure to check the supported preferences for your specific platform.</dd></dl>
 <p><a class="el" href="le__mrc__interface_8h.html#ac476a122ab91d3607c4eb016e93a3bde">le_mrc_AddPreferredOperator()</a> , <a class="el" href="le__mrc__interface_8h.html#a0c2d65eb8cdb200aa4bce8766530c39f">le_mrc_RemovePreferredOperator()</a> to add/remove a preferred operator by specifying the MCC/MNC and the Radio Access Technology.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#a1ea0d2943accd51d3b428e0e6c94d297">le_mrc_GetPreferredOperatorsList()</a>, <a class="el" href="le__mrc__interface_8h.html#a9648b653b7551cd065ec323b96a0aa1b">le_mrc_GetFirstPreferredOperator()</a>, <a class="el" href="le__mrc__interface_8h.html#a896703cabaacf97a70708d944cfbfc87">le_mrc_GetNextPreferredOperator()</a>, <a class="el" href="le__mrc__interface_8h.html#a60679f563ffecc8f107425b806edcdf0">le_mrc_DeletePreferredOperatorsList()</a>, <a class="el" href="le__mrc__interface_8h.html#ab2204081bc04a108194e1dd915c35acf">le_mrc_GetPreferredOperatorDetails()</a> let you retrieve a list of the selected preferred operators and get their details.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#a1ea0d2943accd51d3b428e0e6c94d297">le_mrc_GetPreferredOperatorsList()</a>, <a class="el" href="le__mrc__interface_8h.html#a9648b653b7551cd065ec323b96a0aa1b">le_mrc_GetFirstPreferredOperator()</a>, <a class="el" href="le__mrc__interface_8h.html#a896703cabaacf97a70708d944cfbfc87">le_mrc_GetNextPreferredOperator()</a>, <a class="el" href="le__mrc__interface_8h.html#a60679f563ffecc8f107425b806edcdf0">le_mrc_DeletePreferredOperatorsList()</a>, <a class="el" href="le__mrc__interface_8h.html#a0ea2ddea624145387c5be285de1f59e5">le_mrc_GetPreferredOperatorDetails()</a> let you retrieve a list of the selected preferred operators and get their details.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_mrcRadioConfigurationPreferences.html">Sample code for Radio Configuration Preferences</a></li>
 </ul>
@@ -146,7 +146,7 @@ Radio Access Technology (RAT)</h1>
 <p><a class="el" href="le__mrc__interface_8h.html#a3ad9533c467cec0902d5d165bb32d67b">le_mrc_GetRadioAccessTechInUse()</a> API retrieves the current active Radio Access Technology.</p>
 <p>The application can register a handler function to retrieve the Radio Access Technology each time the RAT changes.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#aedd9c526588a8298322525cfba6f875d">le_mrc_AddRatChangeHandler()</a> API installs a RAT change handler.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#aed4f1730c99a1a9204a198e3df3cf6f5">le_mrc_RemoveRatChangeHandler()</a> API uninstalls the handler function.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#a818abae622b5d2cb3cfec53b15f7023e">le_mrc_RemoveRatChangeHandler()</a> API uninstalls the handler function.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a2d4abd391bc69c218538f5d8e1be4e01">le_mrc_SetRatPreferences()</a>, <a class="el" href="le__mrc__interface_8h.html#ae9fa8655738c63e392c8dcc862bdb1d5">le_mrc_GetRatPreferences()</a> let you set/get the Radio Access Technology preferences by using a bit mask built with <code>le_mrc_RatBitMask_t</code>.</p>
 <p>The Radio Access Technology preferences can be:</p><ul>
 <li>CDMA (CDMA2000-1X + CDMA2000-HRPD)</li>
@@ -163,12 +163,26 @@ Network Registration</h1>
 <p><a class="el" href="le__mrc__interface_8h.html#a4f11e27862fef384c0023f5b538e543d">le_mrc_GetNetRegState()</a> API retrieves the radio module network registration status.</p>
 <p>The application can register a handler function to retrieve the registration status each time the registration state changes.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a929745b84719754d28f539540f71a552">le_mrc_AddNetRegStateEventHandler()</a> API installs a registration state handler.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#a4fc57a5a5bc1f4b6617c895c98a09f15">le_mrc_RemoveNetRegStateEventHandler()</a> API uninstalls the handler function. </p><dl class="section note"><dt>Note</dt><dd>If only one handler is registered, the le_mrc_RemoveNetRegStateHandler() API resets the registration mode to its original value before any handler functions were added.</dd></dl>
+<p><a class="el" href="le__mrc__interface_8h.html#a619adffdee5b1760348a1aa1331ac108">le_mrc_RemoveNetRegStateEventHandler()</a> API uninstalls the handler function. </p><dl class="section note"><dt>Note</dt><dd>If only one handler is registered, the le_mrc_RemoveNetRegStateHandler() API resets the registration mode to its original value before any handler functions were added.</dd></dl>
 <p><a class="el" href="le__mrc__interface_8h.html#a09b890f05a20f4b007d60e595026631f">le_mrc_SetManualRegisterMode()</a> API registers on a cellular network.</p>
 <p>Call <a class="el" href="le__mrc__interface_8h.html#ac342382a54168e032be59e886b4d3262">le_mrc_SetManualRegisterModeAsync()</a> function to set the manual registration mode asynchronously. The function is not blocking. The response will be returned with the <code>le_mrc_ManualSelectionHandlerFunc_t</code> handler function.</p>
 <p>When the network registration fails, the platform specific network registration error code can be known by using <a class="el" href="le__mrc__interface_8h.html#a153247be5ea13ae2bc13ace0dd8c739c">le_mrc_GetPlatformSpecificRegistrationErrorCode()</a> (refer to your platform documentation for further details).</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_mrcNetworkRegistration.html">Sample code for Network Registration</a></li>
+</ul>
+<h1><a class="anchor" id="le_mrc_service"></a>
+Packet services state</h1>
+<p><a class="el" href="le__mrc__interface_8h.html#a2be4a96c3dfd80a63832203f22a661bb">le_mrc_GetPacketSwitchedState()</a> API retrieves the current Packet Switched state <a class="el" href="le__mrc__interface_8h.html#ae2877a1e1252ac79e6c9cae3d3c25a61">le_mrc_NetRegState_t</a>.</p>
+<p>The Packet Switched services state can be:</p><ul>
+<li>NONE</li>
+<li>HOME</li>
+<li>ROAMING</li>
+</ul>
+<p>The application can register a handler function to retrieve the Packet Switched state each time the service state changes.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#ad407c67e0e2bd3d040e2cbbc6338ec2e">le_mrc_AddPacketSwitchedChangeHandler()</a> API installs a Packet Switched state handler.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#a77a657cf71ac533bd8da6772348fc04f">le_mrc_RemovePacketSwitchedChangeHandler()</a> API uninstalls the handler function.</p>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_mrcGetService.html">Sample code for Get the Current Packet Switched state</a></li>
 </ul>
 <h1><a class="anchor" id="le_mrc_signal"></a>
 Signal Quality</h1>
@@ -178,13 +192,13 @@ Signal Quality</h1>
 <p><a class="el" href="le__mrc__interface_8h.html#a5564bace31c937bcef096e597f33d3a4">le_mrc_GetRatOfSignalMetrics()</a> returns the Radio Access Technology of the signal measures.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a9d7243b29bf4c705c4eba83fa3799582">le_mrc_GetGsmSignalMetrics()</a> the signal strength in dBm and the bit error rate measured on GSM network.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a456648564abfc8e9711b60a5d8bddc9b">le_mrc_GetUmtsSignalMetrics()</a> returns the signal metrics measured on UMTS network.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#a030880c064afbf2686726fd2e538adfe">le_mrc_GetLteSignalMetrics()</a> returns the signal metrics measured on LTE network.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#a90b8085aa6d292bd50f8a0784e4e9c67">le_mrc_GetLteSignalMetrics()</a> returns the signal metrics measured on LTE network.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#a09ff33b24fd01be18a145b2b3f1f579a">le_mrc_GetCdmaSignalMetrics()</a> returns the signal metrics measured on CDMA network.</p>
 <p>The application can register a handler function to get notifications when the signal strength changes of a certain threshold value.</p>
 <p><a class="el" href="le__mrc__interface_8h.html#ab62b444715b2b530efe5d397eb86a6e8">le_mrc_AddSignalStrengthChangeHandler()</a> API installs a signal strength change handler. The RAT, the lower-range and the upper-range thresholds must be passed as input parameters. These parameters are updated each time the function is called, the previous thresholds are replaced by the new ones if the function is called with the same RAT.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The threshold values must be in the allowed platform range.</dd></dl>
 <p>The event is notified when we cross the range limits in both direction.</p>
-<p><a class="el" href="le__mrc__interface_8h.html#a789dca8360ddf32a0ea1bfdd24efc6d4">le_mrc_RemoveSignalStrengthChangeHandler()</a> API uninstalls the handler function.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#ade04ec8db3b79c1555b3ab4bdb052216">le_mrc_RemoveSignalStrengthChangeHandler()</a> API uninstalls the handler function.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_mrcQuality.html">Sample code for Signal Quality</a></li>
 </ul>
@@ -198,7 +212,7 @@ Serving cell's location information</h1>
 </ul>
 <h1><a class="anchor" id="le_mrc_network_information"></a>
 Current Network Information</h1>
-<p><a class="el" href="le__mrc__interface_8h.html#a27e5eaddd6df34e4bfcee7d25775591e">le_mrc_GetCurrentNetworkName()</a> retrieves the Current Network Name. <a class="el" href="le__mrc__interface_8h.html#a2e476636ca33c40ce18b73b11a6f9f55">le_mrc_GetCurrentNetworkMccMnc()</a> retrieves the Current Network PLMN information.</p>
+<p><a class="el" href="le__mrc__interface_8h.html#a45fe1941f520c1e4a23b2794dd2a8232">le_mrc_GetCurrentNetworkName()</a> retrieves the Current Network Name. <a class="el" href="le__mrc__interface_8h.html#ac1a0c4fad80538c7df63176576e1d9a3">le_mrc_GetCurrentNetworkMccMnc()</a> retrieves the Current Network PLMN information.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_mrcGetCurrentNetwork.html">Sample code for Get Current Network Information</a></li>
 </ul>
@@ -208,8 +222,8 @@ Network Scan</h1>
 <p>Call <a class="el" href="le__mrc__interface_8h.html#ab66e29d054d7902c61f87e79fd6d987f">le_mrc_PerformCellularNetworkScanAsync()</a> to start a network scan asynchronously. The function is not blocking. The scan list reference will be returned with the handler function response (<code>le_mrc_CellularNetworkScanHandlerFunc_t</code>).</p>
 <p>For each Scan Information, you can call:</p>
 <ul>
-<li><a class="el" href="le__mrc__interface_8h.html#af4fa2d3f3c9a664b8e46478dba048f2e">le_mrc_GetCellularNetworkMccMnc()</a> to have the operator code.</li>
-<li><a class="el" href="le__mrc__interface_8h.html#a82cb12c5f02baccbb04b0af1be4eb031">le_mrc_GetCellularNetworkName()</a> to get the operator name.</li>
+<li><a class="el" href="le__mrc__interface_8h.html#aad275d839efe8b2b5eafe65ef87bd3d3">le_mrc_GetCellularNetworkMccMnc()</a> to have the operator code.</li>
+<li><a class="el" href="le__mrc__interface_8h.html#a6fcb9785c79cb9f8a4d1bef2484ca9d5">le_mrc_GetCellularNetworkName()</a> to get the operator name.</li>
 <li><a class="el" href="le__mrc__interface_8h.html#ad33fbe1d2b7acee0e47f3e54cab78274">le_mrc_GetCellularNetworkRat()</a> to get the radio access technology.</li>
 <li><a class="el" href="le__mrc__interface_8h.html#a4c859fc1364c183aa1d26a022db365c6">le_mrc_IsCellularNetworkInUse()</a> to check if this is currently in use by the network.</li>
 <li><a class="el" href="le__mrc__interface_8h.html#a72ca8072f90d453169baff44441c41c0">le_mrc_IsCellularNetworkAvailable()</a> to check if this is available.</li>
@@ -228,7 +242,7 @@ Neighboring Cells Information</h1>
 <p>Then, you can use the following function to get the information:</p><ul>
 <li><a class="el" href="le__mrc__interface_8h.html#ab50724fd74818d71da1dfcd2217dd795">le_mrc_GetFirstNeighborCellInfo()</a> and <a class="el" href="le__mrc__interface_8h.html#ab50724fd74818d71da1dfcd2217dd795">le_mrc_GetFirstNeighborCellInfo()</a> allow to go among the single cell information retrieved with <a class="el" href="le__mrc__interface_8h.html#a8d44fe46e61f3399c5e0dd6002b042ae">le_mrc_GetNeighborCellsInfo()</a>. These two functions return a reference of le_mrc_CellInfoRef_t type.</li>
 <li><a class="el" href="le__mrc__interface_8h.html#abdbc94e474235417d8610e2eb95558eb">le_mrc_GetNeighborCellId()</a> gets the identifier of the cell specified with the le_mrc_CellInfoRef_t parameter (can be called for any kind of RAT).</li>
-<li><a class="el" href="le__mrc__interface_8h.html#a70ba0ca70367bc673a6bca1e246bb88f">le_mrc_GetNeighborCellLocAreaCode()</a> gets the location area code of the cell specified with the le_mrc_CellInfoRef_t parameter (can be called for any kind of RAT). 0xFFFF value is returned if the value is not available.</li>
+<li><a class="el" href="le__mrc__interface_8h.html#a70ba0ca70367bc673a6bca1e246bb88f">le_mrc_GetNeighborCellLocAreaCode()</a> gets the location area code of the cell specified with the le_mrc_CellInfoRef_t parameter (can be called for any kind of RAT). UINT16_MAX value is returned if the value is not available.</li>
 <li><a class="el" href="le__mrc__interface_8h.html#aeae116235802afd041afd9df009642aa">le_mrc_GetNeighborCellRxLevel()</a> gets the signal strength (in dBm) of the cell specified with the le_mrc_CellInfoRef_t parameter (can be called for any kind of RAT).</li>
 <li><a class="el" href="le__mrc__interface_8h.html#a5bb3e75b74260a9cee57247e1968a31f">le_mrc_GetNeighborCellRat()</a> gets the Radio Access Technology of the cell specified with the le_mrc_CellInfoRef_t parameter.</li>
 <li><a class="el" href="le__mrc__interface_8h.html#a94e452e3d7063d3359dcbb97a31b984b">le_mrc_GetNeighborCellUmtsEcIo()</a> gets the Ec/Io (the received energy per chip divided by the power density in the band measured in dBm on the primary CPICH channel of serving cell) of the cell specified with the le_mrc_CellInfoRef_t parameter.</li>
@@ -239,7 +253,7 @@ Neighboring Cells Information</h1>
 <li><a class="el" href="c_mrcNeighborCells.html">Sample code for Neighboring Cells Information</a></li>
 </ul>
 <p>c_mrcNeighborCells </p><hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

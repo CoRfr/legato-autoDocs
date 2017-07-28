@@ -67,7 +67,11 @@
 <h1><a class="anchor" id="defFilesSdef_apps"></a>
 apps</h1>
 <p>An <code>apps:</code> section declares one or more apps to be deployed to the target system.</p>
-<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver</div><div class="line">}</div></pre><!-- fragment --><p>This looks for an app definition file called <code>webserver.adef</code> and includes it in the system.</p>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver</div><div class="line">}</div></pre><!-- fragment --><p>This looks for an app definition file called <code>webserver.adef</code> and includes it in the system. You can also optionally include the <code></code>.adef extension.</p>
+<p>Alternatively you can include the full path and adef extension on the declaration and bypass the app search paths.</p>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    /full/path/to/my/app/webserver.adef</div><div class="line">}</div></pre><!-- fragment --><p>In addition to including applications in source for to your system builds. You can also add binary application packages.</p>
+<p>Binary app packages are apps distributed without their source code. You include these apps in your <code></code>.sdef file <code>apps:</code> section just like .adef files.</p>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver.wp85.app</div><div class="line">}</div></pre><!-- fragment --><p>Binary app files are named for the target architecture they are built against. This way it's hard to mix up builds for incompatible target architectures. The same pathing and search rules apply to binary apps as do for .adef files.</p>
 <p>The <code>apps:</code> section can override limits and other app settings.</p>
 <p>Here's a code sample to deploy a web server limiting its share of the CPU under heavy load to 500 (see <a class="el" href="defFilesAdef.html#defFilesAdef_cpuShare">cpuShare</a>):</p>
 <pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webServer</div><div class="line">    {</div><div class="line">        cpuShare: 500</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>Any of the following subsections can be used in an <code></code>.sdef <code>apps:</code> section, and will override the .adef setting for all processes in that app:</p>
@@ -156,7 +160,19 @@ buildVars:
 
     X = "$X baz" // X has been changed to "foobar baz"
 }
-</pre><h1><a class="anchor" id="defFilesSdef_kernelModules"></a>
+</pre><h1><a class="anchor" id="defFilesSdef_cFlags"></a>
+cflags</h1>
+<p>Provides a way to specify command-line arguments to pass to the compiler when compiling C source code files. These flags will be added to the flags specified on the command-line and in other definition files.</p>
+<p>Flags are separated by whitespace.</p>
+<pre class="fragment"><div class="line">cflags:</div><div class="line">{</div><div class="line">    -g -O0</div><div class="line">    -DDEBUG=1</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesSdef_cxxFlags"></a>
+cxxflags</h1>
+<p>Provides a way to specify command-line arguments to pass to the compiler when compiling C++ source code files. These flags will be added to the flags specified on the command-line and in other definition files.</p>
+<p>Flags are separated by whitespace.</p>
+<pre class="fragment"><div class="line">cxxflags:</div><div class="line">{</div><div class="line">    -std=c++0x</div><div class="line">    -g -O0</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesSdef_ldFlags"></a>
+ldflags</h1>
+<p>Linker flags provide a way to specify command-line arguments to pass to the compiler when linking C/C++ object (.o) files together into a component shared library (.so) file. These flags will be added to the flags specified on the command-line and in other definition files.</p>
+<p>Flags are separated by whitespace.</p>
+<pre class="fragment"><div class="line">ldflags:</div><div class="line">{</div><div class="line">    -Lfoo/bar</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="defFilesSdef_kernelModules"></a>
 kernelModules</h1>
 <p>The optional <code>kernelModules:</code> section declares a list of pre-built kernel modules to be bundled and installed with Legato.</p>
 <p>Each entry represents a path to the <a class="el" href="defFilesMdef.html">.mdef</a> definition file that describes how the module is installed on the target.</p>
@@ -172,7 +188,7 @@ commands</h1>
 <pre class="fragment"><div class="line">commandName = appName:/path/to/exe</div></pre><!-- fragment --><p>The path to the executable must be an absolute path within the application's read-only installed files. For example, if the executable is a script that was bundled into the app "myApp" to appear at "/usr/share/exe" inside the myApp's sandbox at runtime, then the command would be specified as</p>
 <pre class="fragment"><div class="line">commandName = myApp:/usr/share/exe</div></pre><!-- fragment --><p>If the executable is built using an "executables" section in a .adef file, then the executable will appear in the app's bin directory. For example,</p>
 <pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    myTools <span class="comment">// This app's .adef builds an exe called "led" that can be used to turn LEDs on and off.</span></div><div class="line">}</div><div class="line"> </div><div class="line">commands:</div><div class="line">{</div><div class="line">    led = myTools:/bin/led  <span class="comment">// When I login via ssh, I can run "led 1 on" to turn on LED 1.</span></div><div class="line">}</div></pre><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>When the command runs, it runs with the full privileges of the user that runs it. If you login as root and run a command, the command executes with root user privileges.</dd></dl>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

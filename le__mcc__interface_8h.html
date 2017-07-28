@@ -72,12 +72,14 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:af2c47cb3ce4a009bb33723f509f22597"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#af2c47cb3ce4a009bb33723f509f22597">le_mcc_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:af2c47cb3ce4a009bb33723f509f22597"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8ae6dac3ca12854884d63e17d5388a7a"><td align="right" class="memItemLeft" valign="top">typedef struct le_mcc_Call * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a></td></tr>
 <tr class="separator:a8ae6dac3ca12854884d63e17d5388a7a"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a0bb9fd4ec67450a267bc372bf9a90cb9"><td align="right" class="memItemLeft" valign="top">typedef struct le_mcc_CallEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a></td></tr>
 <tr class="separator:a0bb9fd4ec67450a267bc372bf9a90cb9"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ace811e84500b2f008d8c95c43872d82c"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ace811e84500b2f008d8c95c43872d82c">le_mcc_CallEventHandlerFunc_t</a>) (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> event, void *contextPtr)</td></tr>
-<tr class="separator:ace811e84500b2f008d8c95c43872d82c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2da8782d86f835e8d57c83356e6b33a3"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a2da8782d86f835e8d57c83356e6b33a3">le_mcc_CallEventHandlerFunc_t</a>) (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> event, void *contextPtr)</td></tr>
+<tr class="separator:a2da8782d86f835e8d57c83356e6b33a3"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -176,6 +178,8 @@ Functions</h2></td></tr>
 <tr class="separator:ac639c6d7ea04e8a82782fbed1765ff71"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1858a08c8d944abc96b8fa92bc297ba5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a1858a08c8d944abc96b8fa92bc297ba5">le_mcc_TryConnectService</a> (void)</td></tr>
 <tr class="separator:a1858a08c8d944abc96b8fa92bc297ba5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab82ce2dd4d5fab2830d61cf3b0ff20a9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ab82ce2dd4d5fab2830d61cf3b0ff20a9">le_mcc_SetServerDisconnectHandler</a> (<a class="el" href="le__mcc__interface_8h.html#af2c47cb3ce4a009bb33723f509f22597">le_mcc_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:ab82ce2dd4d5fab2830d61cf3b0ff20a9"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a19d524087a3ab345616fca3f8c08be33"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a19d524087a3ab345616fca3f8c08be33">le_mcc_DisconnectService</a> (void)</td></tr>
 <tr class="separator:a19d524087a3ab345616fca3f8c08be33"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aeee65430506230b5744701d08ff8dac4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#aeee65430506230b5744701d08ff8dac4">le_mcc_Create</a> (const char *phoneNumPtr)</td></tr>
@@ -186,8 +190,8 @@ Functions</h2></td></tr>
 <tr class="separator:a72a32869bb23864b3e86c606368bed70"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a07e4856dffdbf887f51879e39ec43e42"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a07e4856dffdbf887f51879e39ec43e42">le_mcc_IsConnected</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
 <tr class="separator:a07e4856dffdbf887f51879e39ec43e42"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aeae32829e9a5fa864167df3ee67d0f41"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#aeae32829e9a5fa864167df3ee67d0f41">le_mcc_GetRemoteTel</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, char *telPtr, size_t telPtrNumElements)</td></tr>
-<tr class="separator:aeae32829e9a5fa864167df3ee67d0f41"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6b5922dc325e4f45c90b2ecfd0f0a74f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a6b5922dc325e4f45c90b2ecfd0f0a74f">le_mcc_GetRemoteTel</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, char *telPtr, size_t telPtrSize)</td></tr>
+<tr class="separator:a6b5922dc325e4f45c90b2ecfd0f0a74f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab16921abc02e0569b129f4a7d92bf3c9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960d">le_mcc_TerminationReason_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9">le_mcc_GetTerminationReason</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
 <tr class="separator:ab16921abc02e0569b129f4a7d92bf3c9"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a68b9b8ed1b221924dcea1be0fd610a54"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a68b9b8ed1b221924dcea1be0fd610a54">le_mcc_GetPlatformSpecificTerminationCode</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef)</td></tr>
@@ -202,10 +206,10 @@ Functions</h2></td></tr>
 <tr class="separator:a54093f7d51cae9a186a97aa799ac3ddc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a6b7fda9b1d0f0208a99b4bdcafe97538"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a6b7fda9b1d0f0208a99b4bdcafe97538">le_mcc_SetCallerIdRestrict</a> (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da">le_onoff_t</a> clirStatus)</td></tr>
 <tr class="separator:a6b7fda9b1d0f0208a99b4bdcafe97538"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab826cf4b9e3911e659a90d483081e7fe"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler</a> (<a class="el" href="le__mcc__interface_8h.html#ace811e84500b2f008d8c95c43872d82c">le_mcc_CallEventHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:ab826cf4b9e3911e659a90d483081e7fe"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler</a> (<a class="el" href="le__mcc__interface_8h.html#a2da8782d86f835e8d57c83356e6b33a3">le_mcc_CallEventHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:ab826cf4b9e3911e659a90d483081e7fe"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8a12dc6f1707cf52818d9c2d8281630c"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#a8a12dc6f1707cf52818d9c2d8281630c">le_mcc_RemoveCallEventHandler</a> (<a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a8a12dc6f1707cf52818d9c2d8281630c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa7682ff49924db10aefee547fcb0b4d8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#aa7682ff49924db10aefee547fcb0b4d8">le_mcc_RemoveCallEventHandler</a> (<a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:aa7682ff49924db10aefee547fcb0b4d8"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac637e687387a5b8cf9c5b02cbb7816fa"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#ac637e687387a5b8cf9c5b02cbb7816fa">le_mcc_SetCallWaitingService</a> (bool active)</td></tr>
 <tr class="separator:ac637e687387a5b8cf9c5b02cbb7816fa"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:acdf73f5a2e498ee201d8a11c416de29b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__mcc__interface_8h.html#acdf73f5a2e498ee201d8a11c416de29b">le_mcc_GetCallWaitingService</a> (bool *activePtr)</td></tr>
@@ -215,27 +219,19 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_mcc.html">Modem Call Control</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="ace811e84500b2f008d8c95c43872d82c"></a>
+<a class="anchor" id="a2da8782d86f835e8d57c83356e6b33a3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_mcc_CallEventHandlerFunc_t) (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef, <a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> event, void *contextPtr)</td>
+<td class="memname">typedef void(* le_mcc_CallEventHandlerFunc_t) (<a class="el" href="le__mcc__interface_8h.html#a8ae6dac3ca12854884d63e17d5388a7a">le_mcc_CallRef_t</a> callRef,<a class="el" href="le__mcc__interface_8h.html#aefc4679ffa76d0e04c578572c22f06cf">le_mcc_Event_t</a> event,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
 <p>Handler for call state changes.</p>
-<dl class="section note"><dt>Note</dt><dd>The callRef has to be deleted using <a class="el" href="le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae">le_mcc_Delete()</a> when LE_MCC_TERMINATED event is received, except if is has to be used for a future usage (with le_mcc_profile handler for instance, or dialing again the same number).</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">callRef</td><td>The call reference. </td></tr>
-<tr><td class="paramname">event</td><td>Call event. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<dl class="section note"><dt>Note</dt><dd>The callRef has to be deleted using <a class="el" href="le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae">le_mcc_Delete()</a> when LE_MCC_TERMINATED event is received, except if is has to be used for a future usage (with le_mcc_profile handler for instance, or dialing again the same number). </dd></dl>
 </div>
 </div>
 <a class="anchor" id="a0bb9fd4ec67450a267bc372bf9a90cb9"></a>
@@ -260,6 +256,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Reference type for managing active calls. </p>
+</div>
+</div>
+<a class="anchor" id="af2c47cb3ce4a009bb33723f509f22597"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_mcc_DisconnectHandler_t) (void *)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Type for handler called when a server disconnects. </p>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
@@ -521,7 +529,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> le_mcc_AddCallEventHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#ace811e84500b2f008d8c95c43872d82c">le_mcc_CallEventHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a2da8782d86f835e8d57c83356e6b33a3">le_mcc_CallEventHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -760,7 +768,7 @@ If destination number is too long (max LE_MDMDEFS_PHONE_NUM_MAX_LEN digits), it 
 </dl>
 </div>
 </div>
-<a class="anchor" id="aeae32829e9a5fa864167df3ee67d0f41"></a>
+<a class="anchor" id="a6b5922dc325e4f45c90b2ecfd0f0a74f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -780,7 +788,7 @@ If destination number is too long (max LE_MDMDEFS_PHONE_NUM_MAX_LEN digits), it 
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>telPtrNumElements</em> </td>
+<td class="paramname"><em>telPtrSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -799,7 +807,7 @@ LE_OK The function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">callRef</td><td>The call reference to read from. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">telPtr</td><td>The telephone number string. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">telPtrNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">telPtrSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -904,7 +912,7 @@ LE_OK The function succeeded. </dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a8a12dc6f1707cf52818d9c2d8281630c"></a>
+<a class="anchor" id="aa7682ff49924db10aefee547fcb0b4d8"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -912,7 +920,7 @@ LE_OK The function succeeded. </dd></dl>
 <td class="memname">void le_mcc_RemoveCallEventHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#a0bb9fd4ec67450a267bc372bf9a90cb9">le_mcc_CallEventHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -920,7 +928,7 @@ LE_OK The function succeeded. </dd></dl>
 <p>Remove handler function for EVENT 'le_mcc_CallEvent' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -989,6 +997,33 @@ LE_OK The function succeeded. </dd></dl>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="ab82ce2dd4d5fab2830d61cf3b0ff20a9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_mcc_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__mcc__interface_8h.html#af2c47cb3ce4a009bb33723f509f22597">le_mcc_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="a72a32869bb23864b3e86c606368bed70"></a>

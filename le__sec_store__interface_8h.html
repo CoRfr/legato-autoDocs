@@ -60,6 +60,7 @@
 <div class="header">
 <div class="summary">
 <a href="#define-members">Macros</a> |
+<a href="#typedef-members">Typedefs</a> |
 <a href="#func-members">Functions</a> </div>
 <div class="headertitle">
 <h1 class="title">le_secStore_interface.h File Reference</h1> </div>
@@ -78,24 +79,31 @@ Macros</h2></td></tr>
 <tr class="memitem:ae398ccb382fe59fce5c07fa339629ae8"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#ae398ccb382fe59fce5c07fa339629ae8">LE_SECSTORE_MAX_ITEM_SIZE</a>   8192</td></tr>
 <tr class="separator:ae398ccb382fe59fce5c07fa339629ae8"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a0040a579ae83fb0e60685179636ad0c7"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#a0040a579ae83fb0e60685179636ad0c7">le_secStore_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:a0040a579ae83fb0e60685179636ad0c7"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aff3449babb2af88f6fdf0440ebd0b6c1"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#aff3449babb2af88f6fdf0440ebd0b6c1">le_secStore_ConnectService</a> (void)</td></tr>
 <tr class="separator:aff3449babb2af88f6fdf0440ebd0b6c1"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae3cc571cc92891d06b3c55a8a8fb5c71"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#ae3cc571cc92891d06b3c55a8a8fb5c71">le_secStore_TryConnectService</a> (void)</td></tr>
 <tr class="separator:ae3cc571cc92891d06b3c55a8a8fb5c71"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae7b53a785b94e890240442f09ce4cc98"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#ae7b53a785b94e890240442f09ce4cc98">le_secStore_SetServerDisconnectHandler</a> (<a class="el" href="le__sec_store__interface_8h.html#a0040a579ae83fb0e60685179636ad0c7">le_secStore_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:ae7b53a785b94e890240442f09ce4cc98"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae3bad5e625173f32735b398095392b1d"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#ae3bad5e625173f32735b398095392b1d">le_secStore_DisconnectService</a> (void)</td></tr>
 <tr class="separator:ae3bad5e625173f32735b398095392b1d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:acb8b225d19e1bd1ebde45cddcd962edc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#acb8b225d19e1bd1ebde45cddcd962edc">le_secStore_Write</a> (const char *name, const uint8_t *bufPtr, size_t bufNumElements)</td></tr>
-<tr class="separator:acb8b225d19e1bd1ebde45cddcd962edc"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aa09cc29c6c645ae272583c1e23a3c33c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#aa09cc29c6c645ae272583c1e23a3c33c">le_secStore_Read</a> (const char *name, uint8_t *bufPtr, size_t *bufNumElementsPtr)</td></tr>
-<tr class="separator:aa09cc29c6c645ae272583c1e23a3c33c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8cf931ad3da5536432c7694f1423a74b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#a8cf931ad3da5536432c7694f1423a74b">le_secStore_Write</a> (const char *name, const uint8_t *bufPtr, size_t bufSize)</td></tr>
+<tr class="separator:a8cf931ad3da5536432c7694f1423a74b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9c1aae58aedd2a6d9443228c9632cb2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#ae9c1aae58aedd2a6d9443228c9632cb2">le_secStore_Read</a> (const char *name, uint8_t *bufPtr, size_t *bufSizePtr)</td></tr>
+<tr class="separator:ae9c1aae58aedd2a6d9443228c9632cb2"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8d6a2676272cca0a26e9e5d634a39cce"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sec_store__interface_8h.html#a8d6a2676272cca0a26e9e5d634a39cce">le_secStore_Delete</a> (const char *name)</td></tr>
 <tr class="separator:a8d6a2676272cca0a26e9e5d634a39cce"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_secStore.html">Secure Storage</a> API</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="ae398ccb382fe59fce5c07fa339629ae8"></a>
 <div class="memitem">
@@ -119,6 +127,19 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Maximum number of characters and byte storage size permitted for a secure storage item name. </p>
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="a0040a579ae83fb0e60685179636ad0c7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_secStore_DisconnectHandler_t) (void *)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Type for handler called when a server disconnects. </p>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -153,7 +174,7 @@ Functions</h2></td></tr>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Deletes an item from secure storage.</p>
+<p>Deletes an item from secure storage. If the item name is not valid, this function will kill the calling client.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_NOT_FOUND if the item doesn't exist. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
@@ -181,7 +202,7 @@ Functions</h2></td></tr>
 <p>This function is created automatically. </p>
 </div>
 </div>
-<a class="anchor" id="aa09cc29c6c645ae272583c1e23a3c33c"></a>
+<a class="anchor" id="ae9c1aae58aedd2a6d9443228c9632cb2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -201,7 +222,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t * </td>
-<td class="paramname"><em>bufNumElementsPtr</em> </td>
+<td class="paramname"><em>bufSizePtr</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -210,16 +231,43 @@ Functions</h2></td></tr>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Reads an item from secure storage.</p>
+<p>Reads an item from secure storage. If the item name is not valid or the buffer is NULL, this function will kill the calling client.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_OVERFLOW if the buffer is too small to hold the entire item. No data will be written to the buffer in this case. LE_NOT_FOUND if the item doesn't exist. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the secure storage item. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">bufPtr</td><td>Buffer to store the data in. </td></tr>
-<tr><td class="paramdir">[in,out]</td><td class="paramname">bufNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">bufSizePtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="ae7b53a785b94e890240442f09ce4cc98"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_secStore_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sec_store__interface_8h.html#a0040a579ae83fb0e60685179636ad0c7">le_secStore_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="ae3cc571cc92891d06b3c55a8a8fb5c71"></a>
@@ -247,7 +295,7 @@ Functions</h2></td></tr>
 </dd></dl>
 </div>
 </div>
-<a class="anchor" id="acb8b225d19e1bd1ebde45cddcd962edc"></a>
+<a class="anchor" id="a8cf931ad3da5536432c7694f1423a74b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -267,7 +315,7 @@ Functions</h2></td></tr>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>bufNumElements</em> </td>
+<td class="paramname"><em>bufSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -276,13 +324,13 @@ Functions</h2></td></tr>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Writes an item to secure storage. If the item already exists, it'll be overwritten with the new value. If the item doesn't already exist, it'll be created.</p>
+<p>Writes an item to secure storage. If the item already exists, it'll be overwritten with the new value. If the item doesn't already exist, it'll be created. If the item name is not valid or the buffer is NULL, this function will kill the calling client.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_OK if successful. LE_NO_MEMORY if there isn't enough memory to store the item. LE_UNAVAILABLE if the secure storage is currently unavailable. LE_FAULT if there was some other error. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of the secure storage item. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">bufPtr</td><td>Buffer containing the data to store. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">bufNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">bufSize</td><td></td></tr>
 </table>
 </dd>
 </dl>

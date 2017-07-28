@@ -125,6 +125,10 @@ Functions</h2></td></tr>
 <tr class="separator:a1bcf5d26bec7e15b6ec30fec4701ce03"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab3e3edfdbd30d06729486060a75a77c7"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__hashmap_8h.html#ab3e3edfdbd30d06729486060a75a77c7">le_hashmap_EqualsUInt32</a> (const void *firstIntPtr, const void *secondIntPtr)</td></tr>
 <tr class="separator:ab3e3edfdbd30d06729486060a75a77c7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a12558f1e0eeb68991ffb8f8ad442ce86"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__hashmap_8h.html#a12558f1e0eeb68991ffb8f8ad442ce86">le_hashmap_HashUInt64</a> (const void *intToHashPtr)</td></tr>
+<tr class="separator:a12558f1e0eeb68991ffb8f8ad442ce86"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3b7ac9c681fc54fb121d94ee1e6f4c40"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__hashmap_8h.html#a3b7ac9c681fc54fb121d94ee1e6f4c40">le_hashmap_EqualsUInt64</a> (const void *firstIntPtr, const void *secondIntPtr)</td></tr>
+<tr class="separator:a3b7ac9c681fc54fb121d94ee1e6f4c40"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2c9fc51c9f65c44f6c78cdaf101ab0e4"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__hashmap_8h.html#a2c9fc51c9f65c44f6c78cdaf101ab0e4">le_hashmap_HashVoidPointer</a> (const void *voidToHashPtr)</td></tr>
 <tr class="separator:a2c9fc51c9f65c44f6c78cdaf101ab0e4"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8ecdbbdb5cc0773f0f9946e6e4dec89c"><td align="right" class="memItemLeft" valign="top">bool </td><td class="memItemRight" valign="bottom"><a class="el" href="le__hashmap_8h.html#a8ecdbbdb5cc0773f0f9946e6e4dec89c">le_hashmap_EqualsVoidPointer</a> (const void *firstVoidPtr, const void *secondVoidPtr)</td></tr>
@@ -136,7 +140,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_hashmap.html">HashMap API</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a class="anchor" id="adfe15673aeaa2400d3147d62abffee40"></a>
 <div class="memitem">
@@ -415,6 +419,40 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">firstIntPtr</td><td>Pointer to the first integer for comparing. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">secondIntPtr</td><td>Pointer to the second integer for comparing. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3b7ac9c681fc54fb121d94ee1e6f4c40"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">bool le_hashmap_EqualsUInt64 </td>
+<td>(</td>
+<td class="paramtype">const void * </td>
+<td class="paramname"><em>firstIntPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const void * </td>
+<td class="paramname"><em>secondIntPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Long integer equality function. This can be used as a paramter to le_hashmap_Create if the key to the table is a uint64_t</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the integers are equal, false otherwise </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">firstIntPtr</td><td>Pointer to the first long integer for comparing. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">secondIntPtr</td><td>Pointer to the second long integer for comparing. </td></tr>
 </table>
 </dd>
 </dl>
@@ -762,6 +800,29 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">intToHashPtr</td><td>Pointer to the integer to be hashed. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a12558f1e0eeb68991ffb8f8ad442ce86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">size_t le_hashmap_HashUInt64 </td>
+<td>(</td>
+<td class="paramtype">const void * </td>
+<td class="paramname"><em>intToHashPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Long integer hashing function. This can be used as a paramter to le_hashmap_Create if the key to the table is a uint64_t</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the hash value of the uint64_t pointed to by intToHash </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">intToHashPtr</td><td>Pointer to the long integer to be hashed </td></tr>
 </table>
 </dd>
 </dl>

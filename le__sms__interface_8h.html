@@ -94,6 +94,8 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a79109a7c918fcbba157a3b94bae6023f"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a79109a7c918fcbba157a3b94bae6023f">le_sms_DisconnectHandler_t</a>) (void *)</td></tr>
+<tr class="separator:a79109a7c918fcbba157a3b94bae6023f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a8eb2a15362fe26516fc68fd7a7d5e3e7"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_Msg * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a></td></tr>
 <tr class="separator:a8eb2a15362fe26516fc68fd7a7d5e3e7"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:afd91170c5ea21ec7ca98f7ce95049dae"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_MsgList * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae">le_sms_MsgListRef_t</a></td></tr>
@@ -102,12 +104,12 @@ Typedefs</h2></td></tr>
 <tr class="separator:a77d2607cc541bf0369e69bb2d105d4bf"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a30f936dfe4c276ff8025ad2a90a8e4e3"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_FullStorageEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a></td></tr>
 <tr class="separator:a30f936dfe4c276ff8025ad2a90a8e4e3"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a01aa759eb07ab9e8c4a5e0a6d0c7e942"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status, void *contextPtr)</td></tr>
-<tr class="separator:a01aa759eb07ab9e8c4a5e0a6d0c7e942"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6b6e7403719627629df41529916fa71b"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, void *contextPtr)</td></tr>
-<tr class="separator:a6b6e7403719627629df41529916fa71b"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6bafe108821bf8918cfd72ebdf904a39"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6bafe108821bf8918cfd72ebdf904a39">le_sms_FullStorageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> storage, void *contextPtr)</td></tr>
-<tr class="separator:a6bafe108821bf8918cfd72ebdf904a39"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0b680af2e34411d6e34d29d57d2ad654"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status, void *contextPtr)</td></tr>
+<tr class="separator:a0b680af2e34411d6e34d29d57d2ad654"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adcbb115d37fdcebe65c1f95833e67b92"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#adcbb115d37fdcebe65c1f95833e67b92">le_sms_RxMessageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, void *contextPtr)</td></tr>
+<tr class="separator:adcbb115d37fdcebe65c1f95833e67b92"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a21475d8d8e0e5163fff8f20d294def41"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a21475d8d8e0e5163fff8f20d294def41">le_sms_FullStorageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> storage, void *contextPtr)</td></tr>
+<tr class="separator:a21475d8d8e0e5163fff8f20d294def41"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -324,16 +326,18 @@ Functions</h2></td></tr>
 <tr class="separator:a1437987e5017d2159dc8dcbbbc50b953"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a59dc61c13191d632d08c576ee165c5bc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a59dc61c13191d632d08c576ee165c5bc">le_sms_TryConnectService</a> (void)</td></tr>
 <tr class="separator:a59dc61c13191d632d08c576ee165c5bc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa8b75a43a6be2715a43c9c329f44f9fb"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa8b75a43a6be2715a43c9c329f44f9fb">le_sms_SetServerDisconnectHandler</a> (<a class="el" href="le__sms__interface_8h.html#a79109a7c918fcbba157a3b94bae6023f">le_sms_DisconnectHandler_t</a> disconnectHandler, void *contextPtr)</td></tr>
+<tr class="separator:aa8b75a43a6be2715a43c9c329f44f9fb"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1e445b8db58402de8a97ca6ce42ad155"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1e445b8db58402de8a97ca6ce42ad155">le_sms_DisconnectService</a> (void)</td></tr>
 <tr class="separator:a1e445b8db58402de8a97ca6ce42ad155"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a844d595f3ae8d170b2fff80d854abb8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a844d595f3ae8d170b2fff80d854abb8d">le_sms_AddRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a844d595f3ae8d170b2fff80d854abb8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a844d595f3ae8d170b2fff80d854abb8d">le_sms_AddRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#adcbb115d37fdcebe65c1f95833e67b92">le_sms_RxMessageHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a844d595f3ae8d170b2fff80d854abb8d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2f474706ba6d7a40083fe1f50f530101"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2f474706ba6d7a40083fe1f50f530101">le_sms_RemoveRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a2f474706ba6d7a40083fe1f50f530101"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1ae7c04f5de9245489956e62bd607430"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1ae7c04f5de9245489956e62bd607430">le_sms_AddFullStorageEventHandler</a> (<a class="el" href="le__sms__interface_8h.html#a6bafe108821bf8918cfd72ebdf904a39">le_sms_FullStorageHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a469a4d08b9ccb8b61ed7b8294e6ee3ef"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a469a4d08b9ccb8b61ed7b8294e6ee3ef">le_sms_RemoveRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:a469a4d08b9ccb8b61ed7b8294e6ee3ef"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1ae7c04f5de9245489956e62bd607430"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1ae7c04f5de9245489956e62bd607430">le_sms_AddFullStorageEventHandler</a> (<a class="el" href="le__sms__interface_8h.html#a21475d8d8e0e5163fff8f20d294def41">le_sms_FullStorageHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a1ae7c04f5de9245489956e62bd607430"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a1b4c00f308ffab8c9828edc1631047d8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1b4c00f308ffab8c9828edc1631047d8">le_sms_RemoveFullStorageEventHandler</a> (<a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> addHandlerRef)</td></tr>
-<tr class="separator:a1b4c00f308ffab8c9828edc1631047d8"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad4f895d18ab6a6456c0914c7f4bfb8b7"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ad4f895d18ab6a6456c0914c7f4bfb8b7">le_sms_RemoveFullStorageEventHandler</a> (<a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> handlerRef)</td></tr>
+<tr class="separator:ad4f895d18ab6a6456c0914c7f4bfb8b7"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a668abcbcff2f1f3c5cdf799315a81058"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a668abcbcff2f1f3c5cdf799315a81058">le_sms_Create</a> (void)</td></tr>
 <tr class="separator:a668abcbcff2f1f3c5cdf799315a81058"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2b14febf0e2285b0b3c2dbcd1c2bb7b0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2b14febf0e2285b0b3c2dbcd1c2bb7b0">le_sms_SetTimeout</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint32_t timeout)</td></tr>
@@ -342,15 +346,15 @@ Functions</h2></td></tr>
 <tr class="separator:a145d3215f5601b88ef80b2674a9df226"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a34dc999430c46530d6c9067f800c5d72"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a34dc999430c46530d6c9067f800c5d72">le_sms_SetText</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const char *text)</td></tr>
 <tr class="separator:a34dc999430c46530d6c9067f800c5d72"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2abf46b6d57c473bb06caf701a04183e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2abf46b6d57c473bb06caf701a04183e">le_sms_SetBinary</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint8_t *binPtr, size_t binNumElements)</td></tr>
-<tr class="separator:a2abf46b6d57c473bb06caf701a04183e"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a66b82d0120635bbf25a7fed301a84609"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a66b82d0120635bbf25a7fed301a84609">le_sms_SetUCS2</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint16_t *ucs2Ptr, size_t ucs2NumElements)</td></tr>
-<tr class="separator:a66b82d0120635bbf25a7fed301a84609"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ab7295e1cdf2adb865135d657ec8bde09"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ab7295e1cdf2adb865135d657ec8bde09">le_sms_SetPDU</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint8_t *pduPtr, size_t pduNumElements)</td></tr>
-<tr class="separator:ab7295e1cdf2adb865135d657ec8bde09"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad135130755ab2979a265f65178a3ae0d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ad135130755ab2979a265f65178a3ae0d">le_sms_SetBinary</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint8_t *binPtr, size_t binSize)</td></tr>
+<tr class="separator:ad135130755ab2979a265f65178a3ae0d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ac351541bd51f008551a55ea645e31599"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ac351541bd51f008551a55ea645e31599">le_sms_SetUCS2</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint16_t *ucs2Ptr, size_t ucs2Size)</td></tr>
+<tr class="separator:ac351541bd51f008551a55ea645e31599"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0fc5c9da622cc48ef5f9d908dbcbbf92"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0fc5c9da622cc48ef5f9d908dbcbbf92">le_sms_SetPDU</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, const uint8_t *pduPtr, size_t pduSize)</td></tr>
+<tr class="separator:a0fc5c9da622cc48ef5f9d908dbcbbf92"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ab7dee7d2c74cfcadd9ea0d5fe1786dfc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ab7dee7d2c74cfcadd9ea0d5fe1786dfc">le_sms_Send</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:ab7dee7d2c74cfcadd9ea0d5fe1786dfc"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0ba61dcf10157e9982702373577c6b45"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0ba61dcf10157e9982702373577c6b45">le_sms_SendAsync</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a0ba61dcf10157e9982702373577c6b45"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0ba61dcf10157e9982702373577c6b45">le_sms_SendAsync</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a0ba61dcf10157e9982702373577c6b45"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a46afe91bbded617ad444ea29a9dd910a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397df">le_sms_ErrorCode3GPP2_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a46afe91bbded617ad444ea29a9dd910a">le_sms_Get3GPP2ErrorCode</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:a46afe91bbded617ad444ea29a9dd910a"><td class="memSeparator" colspan="2"> </td></tr>
@@ -358,10 +362,10 @@ Functions</h2></td></tr>
 <tr class="separator:a9ee511af99c91383344debf532fae1ae"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a9cfbc2131df38f99272a71bf05cb1254"><td align="right" class="memItemLeft" valign="top">int32_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a9cfbc2131df38f99272a71bf05cb1254">le_sms_GetPlatformSpecificErrorCode</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:a9cfbc2131df38f99272a71bf05cb1254"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a4bf9a993afcf06f8e9927b534ef9861c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4bf9a993afcf06f8e9927b534ef9861c">le_sms_SendText</a> (const char *destStr, const char *textStr, <a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="memitem:a4bf9a993afcf06f8e9927b534ef9861c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4bf9a993afcf06f8e9927b534ef9861c">le_sms_SendText</a> (const char *destStr, const char *textStr, <a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
 <tr class="separator:a4bf9a993afcf06f8e9927b534ef9861c"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a8e6e66ff683717a8cd3eb20fc6efe6e0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a8e6e66ff683717a8cd3eb20fc6efe6e0">le_sms_SendPdu</a> (const uint8_t *pduPtr, size_t pduNumElements, <a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
-<tr class="separator:a8e6e66ff683717a8cd3eb20fc6efe6e0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6c45951342396e9c4bc0e995b4e70784"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6c45951342396e9c4bc0e995b4e70784">le_sms_SendPdu</a> (const uint8_t *pduPtr, size_t pduSize, <a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a6c45951342396e9c4bc0e995b4e70784"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aca1691010c88995cb47225f2889910fa"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aca1691010c88995cb47225f2889910fa">le_sms_Delete</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:aca1691010c88995cb47225f2889910fa"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a5c2b8ce7043b4732c7b0ede7c5d7118c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0">le_sms_Format_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5c2b8ce7043b4732c7b0ede7c5d7118c">le_sms_GetFormat</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
@@ -372,20 +376,20 @@ Functions</h2></td></tr>
 <tr class="separator:aa28c1d04ff19b88100b766737610b128"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa3e075b4a9396b2e4af233e4543f40bd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa3e075b4a9396b2e4af233e4543f40bd">le_sms_GetCellBroadcastSerialNumber</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint16_t *serialNumberPtr)</td></tr>
 <tr class="separator:aa3e075b4a9396b2e4af233e4543f40bd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a68bfd509a8a3fd4ae39bde7ac5c32d8d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a68bfd509a8a3fd4ae39bde7ac5c32d8d">le_sms_GetSenderTel</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *tel, size_t telNumElements)</td></tr>
-<tr class="separator:a68bfd509a8a3fd4ae39bde7ac5c32d8d"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aca83e53998bd7105e14011af41ba6499"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aca83e53998bd7105e14011af41ba6499">le_sms_GetTimeStamp</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *timestamp, size_t timestampNumElements)</td></tr>
-<tr class="separator:aca83e53998bd7105e14011af41ba6499"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aa4651e8dc97aa01df80ed6d9a7a486c6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa4651e8dc97aa01df80ed6d9a7a486c6">le_sms_GetSenderTel</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *tel, size_t telSize)</td></tr>
+<tr class="separator:aa4651e8dc97aa01df80ed6d9a7a486c6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af018ca1bc2085a48e4b6d4691bef3cc7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#af018ca1bc2085a48e4b6d4691bef3cc7">le_sms_GetTimeStamp</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *timestamp, size_t timestampSize)</td></tr>
+<tr class="separator:af018ca1bc2085a48e4b6d4691bef3cc7"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a6165464dd3502b3c76b79b32206ba10f"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6165464dd3502b3c76b79b32206ba10f">le_sms_GetUserdataLen</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:a6165464dd3502b3c76b79b32206ba10f"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ac598dec158aed1e9fa134daf22c704db"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ac598dec158aed1e9fa134daf22c704db">le_sms_GetText</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *text, size_t textNumElements)</td></tr>
-<tr class="separator:ac598dec158aed1e9fa134daf22c704db"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a0de50069a9df99adac983385106d9c09"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a0de50069a9df99adac983385106d9c09">le_sms_GetBinary</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint8_t *binPtr, size_t *binNumElementsPtr)</td></tr>
-<tr class="separator:a0de50069a9df99adac983385106d9c09"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a6bd382c896103d4136c163e58f1ee0d7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6bd382c896103d4136c163e58f1ee0d7">le_sms_GetUCS2</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint16_t *ucs2Ptr, size_t *ucs2NumElementsPtr)</td></tr>
-<tr class="separator:a6bd382c896103d4136c163e58f1ee0d7"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae4b284d427ab7ec637056a6208fdd89e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ae4b284d427ab7ec637056a6208fdd89e">le_sms_GetPDU</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint8_t *pduPtr, size_t *pduNumElementsPtr)</td></tr>
-<tr class="separator:ae4b284d427ab7ec637056a6208fdd89e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aebf0c28efce6ec0b9616ffa8ecb80782"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aebf0c28efce6ec0b9616ffa8ecb80782">le_sms_GetText</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, char *text, size_t textSize)</td></tr>
+<tr class="separator:aebf0c28efce6ec0b9616ffa8ecb80782"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af652a15437db583f333257ff5cef808d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#af652a15437db583f333257ff5cef808d">le_sms_GetBinary</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint8_t *binPtr, size_t *binSizePtr)</td></tr>
+<tr class="separator:af652a15437db583f333257ff5cef808d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adafdc63a36a6a50c8e942bf69958789f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#adafdc63a36a6a50c8e942bf69958789f">le_sms_GetUCS2</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint16_t *ucs2Ptr, size_t *ucs2SizePtr)</td></tr>
+<tr class="separator:adafdc63a36a6a50c8e942bf69958789f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a77555788d56f73fa52f56904cd39cd2f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a77555788d56f73fa52f56904cd39cd2f">le_sms_GetPDU</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint8_t *pduPtr, size_t *pduSizePtr)</td></tr>
+<tr class="separator:a77555788d56f73fa52f56904cd39cd2f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:abb89b302e564f3d55d604bb0c0dda022"><td align="right" class="memItemLeft" valign="top">size_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#abb89b302e564f3d55d604bb0c0dda022">le_sms_GetPDULen</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:abb89b302e564f3d55d604bb0c0dda022"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aff755186b683b94ba2788b48e28284a3"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aff755186b683b94ba2788b48e28284a3">le_sms_DeleteFromStorage</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
@@ -404,8 +408,8 @@ Functions</h2></td></tr>
 <tr class="separator:a3dbd11952804520512fed270d183461d"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a6ef04e331af6563b79e77bb51b28bc55"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6ef04e331af6563b79e77bb51b28bc55">le_sms_MarkUnread</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef)</td></tr>
 <tr class="separator:a6ef04e331af6563b79e77bb51b28bc55"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:aeef8f1ac8d2aa3f512e15c054e024bea"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aeef8f1ac8d2aa3f512e15c054e024bea">le_sms_GetSmsCenterAddress</a> (char *tel, size_t telNumElements)</td></tr>
-<tr class="separator:aeef8f1ac8d2aa3f512e15c054e024bea"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae46b8ea579c788950049948edf1110b6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#ae46b8ea579c788950049948edf1110b6">le_sms_GetSmsCenterAddress</a> (char *tel, size_t telSize)</td></tr>
+<tr class="separator:ae46b8ea579c788950049948edf1110b6"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a5df138c515944ce955dd54689593b5df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5df138c515944ce955dd54689593b5df">le_sms_SetSmsCenterAddress</a> (const char *tel)</td></tr>
 <tr class="separator:a5df138c515944ce955dd54689593b5df"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a05e4196eb01d4d36ed2412c6eedc406e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a05e4196eb01d4d36ed2412c6eedc406e">le_sms_SetPreferredStorage</a> (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> prefStorage)</td></tr>
@@ -435,7 +439,7 @@ Functions</h2></td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_sms.html">SMS</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a5bf62f998e950de37b56813d8c5d9b95"></a>
 <div class="memitem">
@@ -546,24 +550,28 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a class="anchor" id="a01aa759eb07ab9e8c4a5e0a6d0c7e942"></a>
+<a class="anchor" id="a0b680af2e34411d6e34d29d57d2ad654"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_sms_CallbackResultFunc_t) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status, void *contextPtr)</td>
+<td class="memname">typedef void(* le_sms_CallbackResultFunc_t) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef,<a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for Sending result.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
-<tr><td class="paramname">status</td><td>Status result. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
+<p>Handler for Sending result. </p>
+</div>
+</div>
+<a class="anchor" id="a79109a7c918fcbba157a3b94bae6023f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_sms_DisconnectHandler_t) (void *)</td>
+</tr>
 </table>
-</dd>
-</dl>
+</div><div class="memdoc">
+<p>Type for handler called when a server disconnects. </p>
 </div>
 </div>
 <a class="anchor" id="a30f936dfe4c276ff8025ad2a90a8e4e3"></a>
@@ -578,23 +586,16 @@ Functions</h2></td></tr>
 <p>Reference type used by Add/Remove functions for EVENT 'le_sms_FullStorageEvent' </p>
 </div>
 </div>
-<a class="anchor" id="a6bafe108821bf8918cfd72ebdf904a39"></a>
+<a class="anchor" id="a21475d8d8e0e5163fff8f20d294def41"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_sms_FullStorageHandlerFunc_t) (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> storage, void *contextPtr)</td>
+<td class="memname">typedef void(* le_sms_FullStorageHandlerFunc_t) (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> storage,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for full storage indication.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">storage</td><td>storage parameter. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<p>Handler for full storage indication. </p>
 </div>
 </div>
 <a class="anchor" id="afd91170c5ea21ec7ca98f7ce95049dae"></a>
@@ -621,23 +622,16 @@ Functions</h2></td></tr>
 <p>Declare a reference type for referring to SMS Message objects. </p>
 </div>
 </div>
-<a class="anchor" id="a6b6e7403719627629df41529916fa71b"></a>
+<a class="anchor" id="adcbb115d37fdcebe65c1f95833e67b92"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">typedef void(* le_sms_RxMessageHandlerFunc_t) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, void *contextPtr)</td>
+<td class="memname">typedef void(* le_sms_RxMessageHandlerFunc_t) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef,void *contextPtr)</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Handler for New Message.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-<table class="params">
-<tr><td class="paramname">msgRef</td><td>Message reference. </td></tr>
-<tr><td class="paramname">contextPtr</td><td></td></tr>
-</table>
-</dd>
-</dl>
+<p>Handler for New Message. </p>
 </div>
 </div>
 <a class="anchor" id="a77d2607cc541bf0369e69bb2d105d4bf"></a>
@@ -1324,7 +1318,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> le_sms_AddFullStorageEventHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a6bafe108821bf8918cfd72ebdf904a39">le_sms_FullStorageHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a21475d8d8e0e5163fff8f20d294def41">le_sms_FullStorageHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -1358,7 +1352,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="memname"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> le_sms_AddRxMessageHandler </td>
 <td>(</td>
-<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#adcbb115d37fdcebe65c1f95833e67b92">le_sms_RxMessageHandlerFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -1642,7 +1636,7 @@ It is only applicable for 3GPP2 message sending failure, otherwise LE_SMS_ERROR_
 </dl>
 </div>
 </div>
-<a class="anchor" id="a0de50069a9df99adac983385106d9c09"></a>
+<a class="anchor" id="af652a15437db583f333257ff5cef808d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1662,7 +1656,7 @@ It is only applicable for 3GPP2 message sending failure, otherwise LE_SMS_ERROR_
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t * </td>
-<td class="paramname"><em>binNumElementsPtr</em> </td>
+<td class="paramname"><em>binSizePtr</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -1683,7 +1677,7 @@ LE_OK Function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">binPtr</td><td>Binary message. </td></tr>
-<tr><td class="paramdir">[in,out]</td><td class="paramname">binNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">binSizePtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1888,7 +1882,7 @@ Msg Message object reference.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ae4b284d427ab7ec637056a6208fdd89e"></a>
+<a class="anchor" id="a77555788d56f73fa52f56904cd39cd2f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -1908,7 +1902,7 @@ Msg Message object reference.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t * </td>
-<td class="paramname"><em>pduNumElementsPtr</em> </td>
+<td class="paramname"><em>pduSizePtr</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -1929,7 +1923,7 @@ LE_OK Function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
-<tr><td class="paramdir">[in,out]</td><td class="paramname">pduNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">pduSizePtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2009,7 +2003,7 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a68bfd509a8a3fd4ae39bde7ac5c32d8d"></a>
+<a class="anchor" id="aa4651e8dc97aa01df80ed6d9a7a486c6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2029,7 +2023,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>telNumElements</em> </td>
+<td class="paramname"><em>telSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2050,13 +2044,13 @@ LE_OK Function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">tel</td><td>Telephone number string. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">telNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">telSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="aeef8f1ac8d2aa3f512e15c054e024bea"></a>
+<a class="anchor" id="ae46b8ea579c788950049948edf1110b6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2070,7 +2064,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>telNumElements</em> </td>
+<td class="paramname"><em>telSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2090,7 +2084,7 @@ LE_OK Function succeeded.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">tel</td><td>SMS center address number string. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">telNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">telSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2120,7 +2114,7 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ac598dec158aed1e9fa134daf22c704db"></a>
+<a class="anchor" id="aebf0c28efce6ec0b9616ffa8ecb80782"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2140,7 +2134,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>textNumElements</em> </td>
+<td class="paramname"><em>textSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2159,13 +2153,13 @@ LE_OK Function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">text</td><td>SMS text. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">textNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">textSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="aca83e53998bd7105e14011af41ba6499"></a>
+<a class="anchor" id="af018ca1bc2085a48e4b6d4691bef3cc7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2185,7 +2179,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>timestampNumElements</em> </td>
+<td class="paramname"><em>timestampSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2205,8 +2199,8 @@ LE_OK Function succeeded.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">timestamp</td><td>Message time stamp (in text mode). string format: "yy/MM/dd,hh:mm:ss+/-zz" (Year/Month/Day,Hour:Min:Seconds+/-TimeZone) </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">timestampNumElements</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">timestamp</td><td>Message time stamp (in text mode). string format: "yy/MM/dd,hh:mm:ss+/-zz" (Year/Month/Day,Hour:Min:Seconds+/-TimeZone) The time zone indicates the difference, expressed in quarters of an hours between the local time and GMT. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timestampSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2236,7 +2230,7 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a6bd382c896103d4136c163e58f1ee0d7"></a>
+<a class="anchor" id="adafdc63a36a6a50c8e942bf69958789f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2256,7 +2250,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t * </td>
-<td class="paramname"><em>ucs2NumElementsPtr</em> </td>
+<td class="paramname"><em>ucs2SizePtr</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2277,7 +2271,7 @@ LE_OK Function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">ucs2Ptr</td><td>UCS2 message. </td></tr>
-<tr><td class="paramdir">[in,out]</td><td class="paramname">ucs2NumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">ucs2SizePtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2430,7 +2424,7 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a1b4c00f308ffab8c9828edc1631047d8"></a>
+<a class="anchor" id="ad4f895d18ab6a6456c0914c7f4bfb8b7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2438,7 +2432,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="memname">void le_sms_RemoveFullStorageEventHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -2446,13 +2440,13 @@ LE_OK Function succeeded.</dd></dl>
 <p>Remove handler function for EVENT 'le_sms_FullStorageEvent' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a2f474706ba6d7a40083fe1f50f530101"></a>
+<a class="anchor" id="a469a4d08b9ccb8b61ed7b8294e6ee3ef"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2460,7 +2454,7 @@ LE_OK Function succeeded.</dd></dl>
 <td class="memname">void le_sms_RemoveRxMessageHandler </td>
 <td>(</td>
 <td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> </td>
-<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td class="paramname"><em>handlerRef</em></td><td>)</td>
 <td></td>
 </tr>
 </table>
@@ -2468,7 +2462,7 @@ LE_OK Function succeeded.</dd></dl>
 <p>Remove handler function for EVENT 'le_sms_RxMessage' </p>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2518,7 +2512,7 @@ LE_TIMEOUT Timeout before the complete sending.</dd></dl>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -2547,14 +2541,14 @@ LE_TIMEOUT Timeout before the complete sending.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td>CallBack for sending result. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a8e6e66ff683717a8cd3eb20fc6efe6e0"></a>
+<a class="anchor" id="a6c45951342396e9c4bc0e995b4e70784"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2568,12 +2562,12 @@ LE_TIMEOUT Timeout before the complete sending.</dd></dl>
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>pduNumElements</em>, </td>
+<td class="paramname"><em>pduSize</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -2598,8 +2592,8 @@ LE_TIMEOUT Timeout before the complete sending.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">pduNumElements</td><td></td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pduSize</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td>CallBack for sending result. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
 </table>
 </dd>
@@ -2625,7 +2619,7 @@ LE_TIMEOUT Timeout before the complete sending.</dd></dl>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a> </td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a0b680af2e34411d6e34d29d57d2ad654">le_sms_CallbackResultFunc_t</a> </td>
 <td class="paramname"><em>handlerPtr</em>, </td>
 </tr>
 <tr>
@@ -2654,14 +2648,14 @@ If message is too long (max LE_SMS_TEXT_MAX_LEN digits), it is a fatal error, th
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">destStr</td><td>Telephone number string. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">textStr</td><td>SMS text. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td>CallBack for sending result. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a2abf46b6d57c473bb06caf701a04183e"></a>
+<a class="anchor" id="ad135130755ab2979a265f65178a3ae0d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2681,7 +2675,7 @@ If message is too long (max LE_SMS_TEXT_MAX_LEN digits), it is a fatal error, th
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>binNumElements</em> </td>
+<td class="paramname"><em>binSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2703,7 +2697,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">binPtr</td><td>Binary data. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">binNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">binSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2751,7 +2745,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 </dl>
 </div>
 </div>
-<a class="anchor" id="ab7295e1cdf2adb865135d657ec8bde09"></a>
+<a class="anchor" id="a0fc5c9da622cc48ef5f9d908dbcbbf92"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2771,7 +2765,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>pduNumElements</em> </td>
+<td class="paramname"><em>pduSize</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2793,7 +2787,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">pduNumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pduSize</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -2823,6 +2817,33 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 </table>
 </dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="aa8b75a43a6be2715a43c9c329f44f9fb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_SetServerDisconnectHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a79109a7c918fcbba157a3b94bae6023f">le_sms_DisconnectHandler_t</a> </td>
+<td class="paramname"><em>disconnectHandler</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set handler called when server disconnection is detected.</p>
+<p>When a server connection is lost, call this handler then exit with LE_FATAL. If a program wants to continue without exiting, it should call longjmp() from inside the handler. </p>
 </div>
 </div>
 <a class="anchor" id="a5df138c515944ce955dd54689593b5df"></a>
@@ -2936,7 +2957,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 </dl>
 </div>
 </div>
-<a class="anchor" id="a66b82d0120635bbf25a7fed301a84609"></a>
+<a class="anchor" id="ac351541bd51f008551a55ea645e31599"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -2956,7 +2977,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 <td class="paramkey"></td>
 <td></td>
 <td class="paramtype">size_t </td>
-<td class="paramname"><em>ucs2NumElements</em> </td>
+<td class="paramname"><em>ucs2Size</em> </td>
 </tr>
 <tr>
 <td></td>
@@ -2979,7 +3000,7 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">ucs2Ptr</td><td>UCS2 message. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">ucs2NumElements</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">ucs2Size</td><td></td></tr>
 </table>
 </dd>
 </dl>

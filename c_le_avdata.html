@@ -61,59 +61,43 @@
 <div class="headertitle">
 <h1 class="title">AirVantage Data </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__avdata__interface_8h.html">API Reference</a> <br/>
-<a class="el" href="howToAVData.html">How To Manage Data</a></p>
+<div class="textblock"><p><a class="el" href="le__avdata__interface_8h_source.html">Type/Function Reference</a> <br/>
+<a class="el" href="avData.html">How To Manage Data</a></p>
 <hr/>
 <p>This API provides a data service to allow apps to manage app-specific data on the AirVantage server.</p>
 <p>Data is setup as <b>assets</b> -- a collection of fields that can be managed by the AirVantage server.</p>
-<p>An asset field is a single piece of information that can be managed by the AirVantage server. There can be multiple fields in an asset.</p>
+<p>An asset field is a single piece of information that can be managed by the AirVantage server.</p>
 <p>A field can be:</p><ul>
-<li><code>variable</code> allows an app to set the value, and can be read from the AV server.</li>
-<li><code>setting</code> allows the AV server to set the value, and can be read by an app.</li>
-<li><code>command</code> allows the AV server to invoke a command or function in the app.</li>
+<li><code>variable</code> allowing an app to read/write the value, and can be read from the AV server.</li>
+<li><code>setting</code> allowing the AV server to read/write the value, and can be read by an app.</li>
+<li><code>command</code> allowing the AV server to invoke a function in the app.</li>
 </ul>
-<p>All fields have names. Variable and setting fields also have a type. The possible field types, along with the default value are:</p><ul>
-<li>string (empty string)</li>
-<li>integer (0)</li>
-<li>float (0.0)</li>
-<li>boolean (false)</li>
-<li>binary (zero-length block).</li>
+<p>A field is referred to by a path, much like a path in Unix-like OSes. So a path is separated by slashes ("/"), a parent path cannot contain a field, and a parent path cannot contain a parent path and a child path of the same name.</p>
+<p>Variable and setting fields also have types. The field types are:</p><ul>
+<li>string</li>
+<li>integer</li>
+<li>float</li>
+<li>boolean</li>
 </ul>
-<p>Default values can be overwritten in the asset definition. Currently, string, integer, float and boolean fields are supported; binary fields will be supported in the future.</p>
-<h1><a class="anchor" id="le_avdata_instance"></a>
-Asset Data Instances</h1>
-<p>An app that needs to send data to the AirVantage server must first create an asset instance using le_avc_Create() with the name of the asset definition. Once an asset instance is created, the app can begin accessing the instance's fields.</p>
-<p>Multiple instances of the same asset can be created, as well as multiple instances of different assets.</p>
-<p>Asset definitions are specified in the <a class="el" href="defFilesCdef.html#defFilesCdef_assets">assets</a> section of the app's <code>cdef</code> file.</p>
+<p>variable and setting fileds have no default values. When they are first created with the CreateResource API, they contain "null" values. They can also be set to "null" values with the SetNull API. A field does not have a fixed data type, so any of the SetInt/Float/Bool/String can be called for a certain field to change its value and its type. However, A GetInt/Float/Bool/String API must be called on a field with the matching type. In other words, a Get API does not perform type-casting.</p>
 <h1><a class="anchor" id="le_avdata_field"></a>
 Field Values and Activity</h1>
-<p>Set functions are available to set variable field values. Get functions are available to get settings fields' values.</p>
-<p>An app can register a handler so that it can be called when activity occurs on a field. This is optional for variable and setting fields, but is required for command fields.</p><ul>
-<li><code>variable</code> called when the field is read by the AV server. The app can then call the appropriate set function to provide a new value for the field.</li>
-<li><code>setting</code> called when the field has been updated by the AV server with a new value. The app can use the appropriate get function to retrieve the new value.</li>
-<li><code>command</code> called when the AV server wants to invoke a command. The app should perform an appropriate action or call a function to execute this command.</li>
-</ul>
-<p>Read action handlers are only called when the server performs the read on a specific field of an asset instance. i.e, a handler registered on a variable field will be called if the server reads only that field; it will not be called when the server reads the whole instance of an asset. Write action handlers are called on write to asset instance or individual fields.</p>
-<p>An app can request to open avms session and register a handler to get notified of avms session events. <a class="el" href="le__avdata__interface_8h.html#a1153ba43d55c59db3d36e3f44fd5ff10">le_avdata_RequestSession()</a> and <a class="el" href="le__avdata__interface_8h.html#a1f0253c6388d80aa9c1ce7745a06cfe9">le_avdata_ReleaseSession()</a> can be used to open an avms session and close an avms session respectively. If the session was initiated by an user app, avms session will be closed when all apps release their session reference. <a class="el" href="le__avdata__interface_8h.html#af36e54289bb16f2f29da4c7456560982">le_avdata_AddSessionStateHandler()</a> and <a class="el" href="le__avdata__interface_8h.html#a76fa8cac2ca4ed74156832cc07197de6">le_avdata_RemoveSessionStateHandler()</a> can be used to add and remove notification handlers.</p>
-<p>Leaving it optional to register handlers for variable and setting fields allows an app to decide how it wants to access variable and setting fields. It can decide to only do something in response to the AV server, or it can work independently of the AV server updating variables when it has a new value, and reading settings only when it needs the value.</p>
-<h1><a class="anchor" id="le_avdata_observe"></a>
-Observe</h1>
-<p>If the <a class="el" href="howToAVData.html#howToAVData_enableObserve">Observe</a> is enabled, the AirVantage Server will send observe requests on all user-defined assets of an app.</p>
-<p>Whenever an app (asset) changes a field value by using le_avdata_Set*(), it'll trigger a notify if Observe is enabled on that asset. The notify contains only the value of the changed field.</p>
+<p>Set functions are available to set field values (including null). Get functions are available to get field values.</p>
+<p>An app can register a handler so that it can be called when an activity occurs on a field. This is optional for variable and setting fields, but is required for command fields. Registered handlers are called only when activities from AV server occurs. Client activites do not trigger handlers.</p>
+<p>A handler registered with a command field is invoked with an optional argument list sent from the AV server. The APIs GetInt/Float/Bool/StringArg and GetStringArgLength are available to extract the arguments in the handler definition. AV server does not send argument lists for handlers registered with variable and setting fields.</p>
+<p>A handler registered with a command field must call the ReplyExecResult API at the end of its definition, in order to reply the command execution result to the AV server.</p>
 <h1><a class="anchor" id="le_avdata_timeseries"></a>
 Time Series</h1>
-<p>Time series is an AirVantage-specific LWM2M feature built on top of LWM2M Observe. This feature enables user apps to collect sensor data when the device is offline. You control starting and stopping time series data on a resource through the user app. <a class="el" href="le__avdata__interface_8h.html#a1d6df0ba8c6b6d0c7c32776a8aaa357f">le_avdata_StartTimeSeries()</a> starts time series data on a resource, and <a class="el" href="le__avdata__interface_8h.html#ab8d36689b3b8e262c22886012f14ecb6">le_avdata_StopTimeSeries()</a> stops collecting time series data on a resource. User apps can open an <code>avms</code> session, and push the collected history data using <a class="el" href="le__avdata__interface_8h.html#a3f4f95c9ddead3838c753780f7df076e">le_avdata_PushTimeSeries()</a>.</p>
-<p>The buffer size allocated for history data per resource is 1024 bytes. Bytes transmitted over the air can be reduced by choosing an appropriate factor. For example, if the sampled integer data is a multiple of 1000, the encoded data will be smaller if a factor of 0.001 is used. For float fields, if a factor other than 1 is used, the data will be encoded as integer to save bytes transported over the air. For example, if the resolution of float data is 0.01, a factor of 100 can be used to represent .01 as 1, and encoding this as integer thus saving memory.</p>
-<dl class="section note"><dt>Note</dt><dd>System time is used as timestamp for history data in le_avdata_Set*(). It's up to the target device administrator to ensure system time is up-to-date before starting time series. Alternatively, le_avdata_Record*() can be used to pass a user-specified timestamp.</dd></dl>
-<p><a class="el" href="le__avdata__interface_8h.html#a3625f1d2a6343d0222b571c257e7ed98">le_avdata_RecordInt()</a>, <a class="el" href="le__avdata__interface_8h.html#a0786a4b3aba202202627b9dce81fee05">le_avdata_RecordFloat()</a>, <a class="el" href="le__avdata__interface_8h.html#a58c1b401b3dae95329c232fbb3a56017">le_avdata_RecordBool()</a> and <a class="el" href="le__avdata__interface_8h.html#ab140b6ccf9f16c7567b6d2540f11f5ce">le_avdata_RecordString()</a> can be used to pass an user specified time stamp. The user specified time stamp must be in milli seconds elapsed since epoch.</p>
-<dl class="section note"><dt>Note</dt><dd>Observe has to be enabled on the resource before time series can be pushed out. User apps can use <a class="el" href="le__avdata__interface_8h.html#a35f1cb74f0bb6e96abf2ce57e7a6f19b">le_avdata_IsObserve()</a> to know if Observe is enabled on a resource.</dd>
-<dd>
-LEGATO_FEATURE_TIMESERIES is enabled by default for all WP products. The time series feature depends on the cbor libraries in yocto. Hence, yocto image has to be updated on the device together with the legato image. Users who want to update legato only without the Yocto image should turn off time series in targetdefs.</dd></dl>
+<p>This feature enables user apps to collect data when the device is offline. A time series record can be initialized using le_avdata_CreateRecord() and data can be accumulated using le_avdata_RecordInt(), le_avdata_RecordFloat(), le_avdata_RecordBool and le_avdata_RecordString with a specified time stamp (milliseconds elapsed since epoch). User apps can then open an <code>avms</code> session, and push the collected history data using le_avdata_PushRecord(). The callback used when calling le_avdata_PushRecord() will indicate whether the push has been successful or not.</p>
+<p>This code sample shows how to collect data and send to the server (assuming session is opened)</p>
+<pre class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> PushCallbackHandler</div><div class="line">(</div><div class="line">    le_avdata_PushStatus_t status,</div><div class="line">    <span class="keywordtype">void</span>* contextPtr</div><div class="line">)</div><div class="line">{</div><div class="line">    <span class="keywordflow">if</span> (status == LE_AVDATA_PUSH_SUCCESS)</div><div class="line">    {</div><div class="line">        <span class="comment">// data pushed successfully</span></div><div class="line">    }</div><div class="line">}</div><div class="line"> </div><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> SendData()</div><div class="line">{</div><div class="line">    <span class="keyword">struct </span>timeval tv;</div><div class="line">    uint64_t utcMilliSec;</div><div class="line">    <a class="code" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> result;</div><div class="line"> </div><div class="line">    le_avdata_RecordRef_t recRef = le_avdata_CreateRecord();</div><div class="line"> </div><div class="line">    gettimeofday(&amp;tv, NULL);</div><div class="line">    utcMilliSec = (uint64_t)(tv.tv_sec) * 1000 + (uint64_t)(tv.tv_usec) / 1000; <span class="comment">// get current time</span></div><div class="line">    result = le_avdata_RecordFloat(recRef, <span class="stringliteral">"speed"</span>, 0.08, utcMilliSec);</div><div class="line"> </div><div class="line">    <span class="keywordflow">if</span> (result != LE_OK)</div><div class="line">    {</div><div class="line">         le_avdata_PushRecord(recRef, PushCallbackHandler, NULL);</div><div class="line">    }</div><div class="line"> </div><div class="line">    le_avdata_DeleteRecord(recRef);</div><div class="line">}</div></pre><!-- fragment --><h1><a class="anchor" id="le_avdata_session"></a>
+User app session management</h1>
+<p>An app can request to open avms session and register a handler to get notified of avms session events. le_avdata_RequestSession() and le_avdata_ReleaseSession() can be used to open an avms session and close an avms session respectively. If the session was initiated by an user app, avms session will be closed when all apps release their session reference. le_avdata_AddSessionStateHandler() and le_avdata_RemoveSessionStateHandler() can be used to add and remove notification handlers.</p>
 <h1><a class="anchor" id="le_avdata_fatal"></a>
 Fatal Behavior</h1>
 <p>An invalid asset name or field name is treated as a fatal error (i.e. non-recoverable) and will result in the client app being terminated.</p>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

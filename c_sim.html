@@ -86,18 +86,18 @@ Select a card to use</h1>
 <h1><a class="anchor" id="le_sim_id"></a>
 SIM identification information</h1>
 <p><b>ICCID:</b> Each SIM is internationally identified by its integrated circuit card identifier (ICCID). ICCIDs are stored in the SIM cards and engraved or printed on the SIM card body. The ICCID is defined by the ITU-T recommendation E.118 as the Primary Account Number. According to E.118, the number is up to 19 digits long, including a single check digit calculated using the Luhn algorithm. However, the GSM Phase 1 (ETSI Recommendation GSM 11.11) defined the ICCID length as 10 octets (20 digits) with operator-specific structure.</p>
-<p><a class="el" href="le__sim__interface_8h.html#a90cbc71edc9bee227502f3836f5fa117">le_sim_GetICCID()</a> API reads the identification number (ICCID).</p>
+<p><a class="el" href="le__sim__interface_8h.html#a7b43e4e8713af665657e15ae0f5bc1e8">le_sim_GetICCID()</a> API reads the identification number (ICCID).</p>
 <p>Using this API selects the requested SIM.</p>
 <p><b>IMSI:</b> The International Mobile Subscriber Identity or IMSI is a unique identification associated with all cellular networks. The IMSI is used in any mobile network that connects with other networks. For GSM, UMTS and LTE network, this number is provisioned in the SIM card.</p>
 <p>An IMSI is usually presented as a 15 digit long number, but can be shorter. The first 3 digits are the mobile country code (MCC), are followed by the mobile network code (MNC), either 2 digits (European standard) or 3 digits (North American standard). The length of the MNC depends on the value of the MCC. The remaining digits are the mobile subscription identification number (MSIN) within the network's customer base.</p>
-<p><b>Home</b> <b>Network</b> <b>Name:</b> <a class="el" href="le__sim__interface_8h.html#a2a6676da979e90e12010e084f304660b">le_sim_GetHomeNetworkOperator()</a> retrieves the Home Network Name.</p>
-<p><a class="el" href="le__sim__interface_8h.html#aedcba6023de6b7ec0a2cf3d2ca725b49">le_sim_GetIMSI()</a> API reads the international mobile subscriber identity (IMSI).</p>
+<p><b>Home</b> <b>Network</b> <b>Name:</b> <a class="el" href="le__sim__interface_8h.html#a2fa95e7fdaaff2fd000e676b9cc34344">le_sim_GetHomeNetworkOperator()</a> retrieves the Home Network Name.</p>
+<p><a class="el" href="le__sim__interface_8h.html#acc0f801f268630ea496377077a366374">le_sim_GetIMSI()</a> API reads the international mobile subscriber identity (IMSI).</p>
 <p>Using this API selects the requested SIM.</p>
-<p><b>Phone</b> <b>Number:</b> <a class="el" href="le__sim__interface_8h.html#a68a907c8b75749b0647721604a8deb12">le_sim_GetSubscriberPhoneNumber()</a> API reads the Phone Number associated to the SIM. If the phone number has not been provisioned, it will return the empty string.</p>
+<p><b>Phone</b> <b>Number:</b> <a class="el" href="le__sim__interface_8h.html#a5964edfe6070d40e0518c0a5d25aa628">le_sim_GetSubscriberPhoneNumber()</a> API reads the Phone Number associated to the SIM. If the phone number has not been provisioned, it will return the empty string.</p>
 <p>Using this API selects the requested SIM.</p>
 <p><b>Home</b> <b>Network</b> <b>Information:</b> </p><ul>
-<li><a class="el" href="le__sim__interface_8h.html#a2a6676da979e90e12010e084f304660b">le_sim_GetHomeNetworkOperator()</a>function retrieves the Home Network Name.</li>
-<li><a class="el" href="le__sim__interface_8h.html#a048b9cc4aed3f4c2fcf6ca34f40e99a9">le_sim_GetHomeNetworkMccMnc()</a>function retrieves the Home Network MCC (Mobile Country Code) and MNC (Mobile Network Code).</li>
+<li><a class="el" href="le__sim__interface_8h.html#a2fa95e7fdaaff2fd000e676b9cc34344">le_sim_GetHomeNetworkOperator()</a>function retrieves the Home Network Name.</li>
+<li><a class="el" href="le__sim__interface_8h.html#a6bab381ed34046b553145bfbe53dfa3c">le_sim_GetHomeNetworkMccMnc()</a>function retrieves the Home Network MCC (Mobile Country Code) and MNC (Mobile Network Code).</li>
 </ul>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_simTestIdentification.html">Sample code for SIM Identification</a></li>
@@ -107,6 +107,8 @@ SIM Authentication</h1>
 <p><a class="el" href="le__sim__interface_8h.html#a7d9de57c8931013432cd41b26d1e7585">le_sim_EnterPIN()</a> enters the PIN (Personal Identification Number) code that's required before any Mobile equipment functionality can be used.</p>
 <p>Using this API selects the requested SIM.</p>
 <p><a class="el" href="le__sim__interface_8h.html#a8886dbb94aa732883ec5a67ddd345f98">le_sim_GetRemainingPINTries()</a> returns the number of remaining PIN entry attempts before the SIM will become blocked.</p>
+<p>Using this API selects the requested SIM.</p>
+<p><a class="el" href="le__sim__interface_8h.html#a285eeaa3c5e1977abbe49682145f3d35">le_sim_GetRemainingPUKTries()</a> returns the number of remaining PUK entry attempts before the SIM will become blocked.</p>
 <p>Using this API selects the requested SIM.</p>
 <p><a class="el" href="le__sim__interface_8h.html#a761bbdf28094b906236320445d9b9166">le_sim_ChangePIN()</a> must be called to change the PIN code.</p>
 <p>Using this API selects the requested SIM.</p>
@@ -138,7 +140,7 @@ SIM states</h1>
 <p>When a new SIM's state is notified, the handler is called.</p>
 <p>Call <a class="el" href="le__sim__interface_8h.html#a16b06f266471d81f772e5439ec570144">le_sim_GetState()</a> to retrieve the new state of the SIM.</p>
 <dl class="section note"><dt>Note</dt><dd>If two (or more) applications have registered a handler function for notifications, they will all receive it and will be passed the same SIM.</dd></dl>
-<p>The application can uninstall the handler function by calling <a class="el" href="le__sim__interface_8h.html#a8e3a4e2e978cf4931a39317ee5e9f762">le_sim_RemoveNewStateHandler()</a> API.</p>
+<p>The application can uninstall the handler function by calling <a class="el" href="le__sim__interface_8h.html#a0286578e9aa46ba864df1878263b9f84">le_sim_RemoveNewStateHandler()</a> API.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Your platform might need a reboot to detect a SIM insertion or removal. Please refer to the <a class="el" href="platformConstraintsSim.html">SIM constraints</a> page or your platform documentation for further details.</dd></dl>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_simTestStates.html">Sample code for SIM States</a></li>
@@ -169,7 +171,7 @@ SIM Toolkit</h1>
 <p>It is mainly used for in-vehicle emergency call service (eCall).</p>
 <p>An eUICC can be remotely managed to change the Mobile Network Operator subscription.</p>
 <p>The <a class="el" href="le__sim__interface_8h.html#a85577728a34d70801cbb4deb8efd75d5">le_sim_AddSimToolkitEventHandler()</a> function registers a handler to be notified of SIM Toolkit events.</p>
-<p>The <a class="el" href="le__sim__interface_8h.html#a487be241cae0657f96bcc44d0f8fab5a">le_sim_RemoveSimToolkitEventHandler()</a> function unregisters the handler.</p>
+<p>The <a class="el" href="le__sim__interface_8h.html#a2485840533f80632a61096b1d7c5d8f2">le_sim_RemoveSimToolkitEventHandler()</a> function unregisters the handler.</p>
 <p>The <a class="el" href="le__sim__interface_8h.html#a8cc75a17466446c19c5bd941b1360e0e">le_sim_AcceptSimToolkitCommand()</a> allows the device to accept the last SIM Toolkit command.</p>
 <p>The <a class="el" href="le__sim__interface_8h.html#a8cbdc50d62ddd5ea80386d27e16d954f">le_sim_RejectSimToolkitCommand()</a> forbids the device to accept the last SIM Toolkit command.</p>
 <p>A sample code can be seen in the following page:</p><ul>
@@ -178,13 +180,13 @@ SIM Toolkit</h1>
 <p>Information related to SIM Toolkit platform constraints can be seen in the <a class="el" href="platformConstraintsStk.html">SIM Toolkit</a> page.</p>
 <h1><a class="anchor" id="le_sim_access"></a>
 SIM access</h1>
-<p>The application can send an APDU (Application Protocol Data Unit) to the SIM using <a class="el" href="le__sim__interface_8h.html#ad72df795270776e68e473f34c0264ecb">le_sim_SendApdu()</a> API. The user must encode the APDU as specified by in recommendation 3GPP 11.11, 3GPP 51.011, 3GPP 31.102, 3GPP 31.103 or ETSI TS 102 221. </p><dl class="section note"><dt>Note</dt><dd>Between two successive call to <a class="el" href="le__sim__interface_8h.html#ad72df795270776e68e473f34c0264ecb">le_sim_SendApdu()</a> API, there is no locking protection. In this situation, some command types and parameters can modify SIM files incorrectly.</dd></dl>
-<p>Using <a class="el" href="le__sim__interface_8h.html#acc0760cfa301adeb917b171b32973de3">le_sim_SendCommand()</a>, the application has easier but more limited access to the SIM database. The command is transmitted to the SIM, which gives information through swi1 and swi2 about the execution of the command (see 3GPP recommendation previously mentioned for their coding). Some parameters are platform dependent, see <a class="el" href="platformConstraintsSim.html">SIM constraints</a> for their coding.</p>
+<p>The application can send an APDU (Application Protocol Data Unit) to the SIM using <a class="el" href="le__sim__interface_8h.html#ad59f8ec574f4eab0cfae070a1e593298">le_sim_SendApdu()</a> API. The user must encode the APDU as specified by in recommendation 3GPP 11.11, 3GPP 51.011, 3GPP 31.102, 3GPP 31.103 or ETSI TS 102 221. </p><dl class="section note"><dt>Note</dt><dd>Between two successive call to <a class="el" href="le__sim__interface_8h.html#ad59f8ec574f4eab0cfae070a1e593298">le_sim_SendApdu()</a> API, there is no locking protection. In this situation, some command types and parameters can modify SIM files incorrectly.</dd></dl>
+<p>Using <a class="el" href="le__sim__interface_8h.html#a654c414b5c4cb968dfa019e8754d01cb">le_sim_SendCommand()</a>, the application has easier but more limited access to the SIM database. The command is transmitted to the SIM, which gives information through swi1 and swi2 about the execution of the command (see 3GPP recommendation previously mentioned for their coding). Some parameters are platform dependent, see <a class="el" href="platformConstraintsSim.html">SIM constraints</a> for their coding.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_simTestApdu.html">Sample code for SIM access</a></li>
 </ul>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

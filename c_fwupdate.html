@@ -72,12 +72,26 @@ IPC interfaces binding</h1>
 {
    clientExe.clientComponent.le_fwupdate -&gt; fwupdateService.le_fwupdate
 }
-</pre><h1><a class="anchor" id="le_fwupdate_image"></a>
+</pre><dl class="section warning"><dt>Warning</dt><dd>All of these APIs are not available for all platforms. Please refer to the Product Technical specification document of your platform for further details. Please refer to <a class="el" href="platformConstraintsDualSys.html">Dual System mechanism</a> for details on Dual System.</dd></dl>
+<h1><a class="anchor" id="le_fwupdate_image"></a>
 Update Firmware Image</h1>
 <p>The firmware update process is started by calling <a class="el" href="le__fwupdate__interface_8h.html#ab68f3a7c5d4284306468e888bf6a8796">le_fwupdate_Download()</a>. This function takes a file descriptor, rather than a file, to provide flexibility in the source of the image. In particular, this can be used to stream the image, rather than having to save it on the file system before doing the update.</p>
-<p>If the image is successfully downloaded, a reset will occur in order to apply the update. This will reset all processors. After the application processor has restarted, the <a class="el" href="c_info.html#le_info_version">Query Firmware Version</a> APIs can be used to determine whether the firmware has been updated to the new version.</p>
+<p>On platform which does not support dual system, when the image is successfully downloaded, a reset will occur in order to apply the update. This will reset all processors. After the application processor has restarted, the <a class="el" href="c_info.html#le_info_version">Query Firmware Version</a> APIs can be used to determine whether the firmware has been updated to the new version.</p>
+<p>On platform which supports dual system, if the image is successfully downloaded, the user needs to swap the systems in order to use the updated system. This will reset all processors. After the application processor has restarted, the <a class="el" href="c_info.html#le_info_version">Query Firmware Version</a> APIs can be used to determine whether the firmware has been updated to the new version.</p>
+<h1><a class="anchor" id="le_fwupdate_resume"></a>
+Update Firmware Image Download Resume</h1>
+<p>During the download, the flash programming position is saved. Thanks to this position, fwupdate service is able to resume the download without downloading the update package at the beginning.</p>
+<p>By default, the fwupdate service download API is resuming the previous download: new data received through this API will be programmed at the resume position.</p>
+<dl class="section note"><dt>Note</dt><dd>A download can be resumed when:<ul>
+<li><a class="el" href="le__fwupdate__interface_8h.html#ab68f3a7c5d4284306468e888bf6a8796">le_fwupdate_Download()</a> API has previously returned LE_CLOSED or LE_TIMEOUT</li>
+<li>A reset occured during last <a class="el" href="le__fwupdate__interface_8h.html#ab68f3a7c5d4284306468e888bf6a8796">le_fwupdate_Download()</a> processing (Legato/full system reset)</li>
+<li>No resume can be performed in other cases.</li>
+</ul>
+</dd></dl>
+<p>A complete download can be forced by calling <a class="el" href="le__fwupdate__interface_8h.html#a481234992a0fbc18f97c88f68dc00837">le_fwupdate_InitDownload()</a>. Resume position is set to 0.</p>
+<p>The current resume position can be retrieved by calling <a class="el" href="le__fwupdate__interface_8h.html#a6629d3f730bfcea4843a3cfe3d457bcd">le_fwupdate_GetResumePosition()</a>.</p>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

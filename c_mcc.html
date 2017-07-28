@@ -76,12 +76,12 @@ Starting a Call</h1>
 <p><a class="el" href="le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70">le_mcc_Start()</a> must still initiate the call when ready.</p>
 <p>The <a class="el" href="le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70">le_mcc_Start()</a> function initiates a call attempt (it's asynchronous because it can take time for a call to connect). If function failed, the <a class="el" href="le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9">le_mcc_GetTerminationReason()</a> API can be used to retrieve the terminal reason.</p>
 <p>It's essential to register a handler function to get the call events. Use <a class="el" href="le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe">le_mcc_AddCallEventHandler()</a> API to install that handler function. The handler will be called for all calls' events (incoming and outgoing).</p>
-<p>The <a class="el" href="le__mcc__interface_8h.html#a8a12dc6f1707cf52818d9c2d8281630c">le_mcc_RemoveCallEventHandler()</a> API uninstalls the handler function.</p>
+<p>The <a class="el" href="le__mcc__interface_8h.html#aa7682ff49924db10aefee547fcb0b4d8">le_mcc_RemoveCallEventHandler()</a> API uninstalls the handler function.</p>
 <p>The following APIs can be used to manage incoming or outgoing calls:</p><ul>
 <li><a class="el" href="le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9">le_mcc_GetTerminationReason()</a> - termination reason.</li>
 <li><a class="el" href="le__mcc__interface_8h.html#a68b9b8ed1b221924dcea1be0fd610a54">le_mcc_GetPlatformSpecificTerminationCode()</a> - the platform specific termination code (refer to your platform documentation for further details).</li>
 <li><a class="el" href="le__mcc__interface_8h.html#a07e4856dffdbf887f51879e39ec43e42">le_mcc_IsConnected()</a> - connection status.</li>
-<li><a class="el" href="le__mcc__interface_8h.html#aeae32829e9a5fa864167df3ee67d0f41">le_mcc_GetRemoteTel()</a> - displays remote party telephone number associated with the call.</li>
+<li><a class="el" href="le__mcc__interface_8h.html#a6b5922dc325e4f45c90b2ecfd0f0a74f">le_mcc_GetRemoteTel()</a> - displays remote party telephone number associated with the call.</li>
 <li><a class="el" href="le__mcc__interface_8h.html#a7b9567715a3cd30c83a3b6886eeb2044">le_mcc_HangUp()</a> will disconnect this call.</li>
 </ul>
 <p>When finished with the call object, call <a class="el" href="le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae">le_mcc_Delete()</a> to free all the allocated resources associated with the object.</p>
@@ -101,7 +101,7 @@ Supplementary service</h1>
 Sample codes</h1>
 <p>A sample code that implements a dialing call can be found in <b>le_mccTest.c</b> file (please refer to <a class="el" href="c_mccTest.html">Sample code of Modem Call control</a> page).</p>
 <hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

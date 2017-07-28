@@ -82,22 +82,22 @@ Requesting the Cellular Network</h1>
 <p>Before the cellular network is requested, an application should register a network state handler using <a class="el" href="le__cellnet__interface_8h.html#aa3106518be8b38d94265574736769b6a">le_cellnet_AddStateEventHandler()</a>. Once the cellular network becomes available, the handler will be called to indicate that the modem is now registered on the network.</p>
 <p>If the state of the network changes, then the handler will be called with the new state. The current cellular network state can also be retrieved with <a class="el" href="le__cellnet__interface_8h.html#ae9c76bc533ec41c91d7915b11ae9c5d6">le_cellnet_GetNetworkState()</a>. </p><dl class="section note"><dt>Note</dt><dd>There might be a discrepancy between the state notified by the handler and the state retrieved through <a class="el" href="le__cellnet__interface_8h.html#ae9c76bc533ec41c91d7915b11ae9c5d6">le_cellnet_GetNetworkState()</a>: the state can have changed between the event notification and its treatment by the application.</dd></dl>
 <p>To release the cellular network, an application can use <a class="el" href="le__cellnet__interface_8h.html#ae3387759b2ae9ecf0992ac685cec5bcd">le_cellnet_Release()</a>. Once all user applications release the cellular network access, then the service will turn off the radio.</p>
-<p>The application can release the network state handler by calling <a class="el" href="le__cellnet__interface_8h.html#aea0df4c86d4fb66f9188ab194fec2726">le_cellnet_RemoveStateEventHandler()</a> when it is not needed anymore.</p>
+<p>The application can release the network state handler by calling <a class="el" href="le__cellnet__interface_8h.html#a4194e5285d98f60873ac1ae3f59c4d47">le_cellnet_RemoveStateEventHandler()</a> when it is not needed anymore.</p>
 <p>All configuration data required for a network registration, such as the PIN code of the SIM, will be stored in the secure storage by the use of the <a class="el" href="le__cellnet__interface_8h.html#a0cfdcf5974f6268b99f96815c2eb4def">le_cellnet_SetSimPinCode()</a> function.</p>
 <h1><a class="anchor" id="c_le_cellnet_config"></a>
 Cellular Network configuration</h1>
-<p>Setting the SIM PIN code in the secure storage and retrieving it is performed by two functions: <a class="el" href="le__cellnet__interface_8h.html#a0cfdcf5974f6268b99f96815c2eb4def">le_cellnet_SetSimPinCode()</a> and <a class="el" href="le__cellnet__interface_8h.html#add211749ae33cff8bf6bb48f6945b93c">le_cellnet_GetSimPinCode()</a>.</p>
+<p>Setting the SIM PIN code in the secure storage and retrieving it is performed by two functions: <a class="el" href="le__cellnet__interface_8h.html#a0cfdcf5974f6268b99f96815c2eb4def">le_cellnet_SetSimPinCode()</a> and <a class="el" href="le__cellnet__interface_8h.html#a4123c80f04ad6bbbd1ab9c87eaec006b">le_cellnet_GetSimPinCode()</a>.</p>
 <p>The <a class="el" href="le__cellnet__interface_8h.html#a0cfdcf5974f6268b99f96815c2eb4def">le_cellnet_SetSimPinCode()</a> function stores the PIN code in the secure storage and takes two parameters: the SIM identifier and the SIM card PIN code.</p>
 <dl class="section note"><dt>Note</dt><dd>The function erases the previously stored SIM card PIN code. </dd>
 <dd>
 It is possible to set and retry a void entry ("") corresponding to an unlocked SIM.</dd></dl>
-<p>The <a class="el" href="le__cellnet__interface_8h.html#add211749ae33cff8bf6bb48f6945b93c">le_cellnet_GetSimPinCode()</a> function retrieves the SIM card PIN code from the secure storage and takes one parameter: the SIM identifier.</p>
+<p>The <a class="el" href="le__cellnet__interface_8h.html#a4123c80f04ad6bbbd1ab9c87eaec006b">le_cellnet_GetSimPinCode()</a> function retrieves the SIM card PIN code from the secure storage and takes one parameter: the SIM identifier.</p>
 <dl class="section note"><dt>Note</dt><dd>The action carried out by the Cellular Network Service when a new SIM is inserted depends on the SIM state:<ul>
 <li>if the SIM is locked, it will automatically read the secure storage in order to try to enter the PIN code for the SIM card. If the PIN code is not set or too long (max 8 digits), an error will be logged and the SIM will not be unlocked.</li>
 <li>is the SIM is blocked, it just logs an error and does not try to enter the PUK code.</li>
 </ul>
 </dd></dl>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

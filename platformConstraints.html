@@ -61,28 +61,38 @@
 <div class="headertitle">
 <h1 class="title">Platform Constraints </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>The AR755x, AR8652, WP750x, and WP8548 platforms have the following limitations:</p>
+<div class="textblock"><h1><a class="anchor" id="AtPlatforms"></a>
+AT-command based platforms</h1>
+<p>The AT-command based platforms (e.g. Raspberry Pi) only support a limited set of functions, please refer to <a class="el" href="platformConstraintsAtCmd.html">Supported functions on AT-command based platforms</a> section.</p>
+<h1><a class="anchor" id="SwiPlatforms"></a>
+Sierra Wireless platforms</h1>
+<ul>
+<li><b>'X'</b> means the platform is impacted by limitations on the feature, i.e. by using the API, the User must consider the constraints described in the corresponding page.</li>
+<li><b>'NA'</b> means the feature is not applicable to the platform</li>
+</ul>
 <table class="doxtable">
 <tr>
-<th>Constraint </th><th align="center">AR755x </th><th align="center">AR8652 </th><th align="center">WP750x </th><th align="center">WP8548  </th></tr>
+<th>Features </th><th align="center">AR755x </th><th align="center">AR758x </th><th align="center">AR759x </th><th align="center">AR8652 </th><th align="center">WPx5xx </th><th align="center">WP76xx  </th></tr>
 <tr>
-<td><a class="el" href="platformConstraintsAdc.html">Analog to Digital Converter</a> </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsAdc.html">Analog to Digital Converter</a> (<a class="el" href="c_adc.html">le_adc</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsAudio.html">Audio</a> </td><td align="center">X </td><td align="center">X </td><td align="center"></td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsAudio.html">Audio</a> (<a class="el" href="c_audio.html">le_audio</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsGnss.html">GNSS platform constraints</a> </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsGnss.html">GNSS platform constraints</a> (<a class="el" href="c_gnss.html">le_gnss</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsSecStorage.html">Secure Storage</a> </td><td align="center">X </td><td align="center">X </td><td align="center"></td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsSecStorage.html">Secure Storage</a> (<a class="el" href="c_secStore.html">le_secStore</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsSim.html">SIM</a> </td><td align="center">X </td><td align="center">X </td><td align="center"></td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsSim.html">SIM</a> (<a class="el" href="c_sim.html">le_sim</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsStk.html">SIM Toolkit</a> </td><td align="center">X </td><td align="center">X </td><td align="center"></td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsStk.html">SIM Toolkit</a> (<a class="el" href="c_sim.html#le_sim_stk">le_sim for STK</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsTemperature.html">Temperature Monitoring</a> </td><td align="center">X </td><td align="center">X </td><td align="center"></td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsTemperature.html">Temperature Monitoring</a> (<a class="el" href="c_temp.html">le_temp</a>) </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
 <tr>
-<td><a class="el" href="platformConstraintsATCommand.html">AT Command</a> </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
+<td><a class="el" href="platformConstraintsReadOnly.html">Legato Read Only R/O</a> </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td><td align="center">X </td></tr>
+<tr>
+<td><a class="el" href="platformConstraintsDualSys.html">Dual System mechanism</a> (<a class="el" href="c_fwupdate.html">le_fwupdate</a>) </td><td align="center">NA </td><td align="center">X </td><td align="center">X </td><td align="center">NA </td><td align="center">NA </td><td align="center">NA </td></tr>
 </table>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

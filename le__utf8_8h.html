@@ -85,10 +85,14 @@ Functions</h2></td></tr>
 <tr class="separator:acffd959e1c6dcf9841217c1c0f6d09e5"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a680a92fafea1ed72dedb80b52be32a06"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__utf8_8h.html#a680a92fafea1ed72dedb80b52be32a06">le_utf8_ParseInt</a> (int *valuePtr, const char *arg)</td></tr>
 <tr class="separator:a680a92fafea1ed72dedb80b52be32a06"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3b4db65916b5d7d41ba0b1a5595aabd5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__utf8_8h.html#a3b4db65916b5d7d41ba0b1a5595aabd5">le_utf8_EncodeUnicodeCodePoint</a> (uint32_t codePoint, char *out, size_t *outSize)</td></tr>
+<tr class="separator:a3b4db65916b5d7d41ba0b1a5595aabd5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5f590886916f55f68b518ccd3ac932ca"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__utf8_8h.html#a5f590886916f55f68b518ccd3ac932ca">le_utf8_DecodeUnicodeCodePoint</a> (const char *src, size_t *byteLength, uint32_t *codePoint)</td></tr>
+<tr class="separator:a5f590886916f55f68b518ccd3ac932ca"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_utf8.html">UTF-8 String Handling API</a> include file.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ade7dfb60b18574dc62c49b86c025579b"></a>
 <div class="memitem">
@@ -131,7 +135,11 @@ Functions</h2></td></tr>
 <p>UTF-8 characters may be more than one byte long and this function will only copy whole characters not partial characters.</p>
 <p>The destination string will always be Null-terminated, unless destSize is zero.</p>
 <p>If destStr and srcStr overlap the behaviour of this function is undefined.</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_OK if srcStr was completely copied to the destStr. LE_OVERFLOW if srcStr was truncated when it was copied to destStr. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if srcStr was completely copied to the destStr.</li>
+<li>LE_OVERFLOW if srcStr was truncated when it was copied to destStr. </li>
+</ul>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">destStr</td><td>Destination string. </td></tr>
@@ -181,16 +189,20 @@ Functions</h2></td></tr>
 <p>Copies the string in srcStr to the start of destStr and returns the number of bytes copied (not including the NULL-terminator) in numBytesPtr. Null can be passed into numBytesPtr if the number of bytes copied is not needed. The srcStr must be in UTF-8 format.</p>
 <p>If the size of srcStr is less than or equal to the destination buffer size then the entire srcStr will be copied including the null-character. The rest of the destination buffer is not modified.</p>
 <p>If the size of srcStr is larger than the destination buffer then the maximum number of characters (from srcStr) plus a null-character that will fit in the destination buffer is copied.</p>
-<p>UTF-8 characters may be more than one byte long and this function will only copy whole characters not partial characters. Even if srcStr is larger than the destination buffer ,the copied characters may not fill the entire destination buffer because the last character copied may not align exactly with the end of the destination buffer.</p>
+<p>UTF-8 characters may be more than one byte long and this function will only copy whole characters not partial characters. Therefore, even if srcStr is larger than the destination buffer, the copied characters may not fill the entire destination buffer because the last character copied may not align exactly with the end of the destination buffer.</p>
 <p>The destination string will always be Null-terminated, unless destSize is zero.</p>
 <p>If destStr and srcStr overlap the behaviour of this function is undefined.</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_OK if srcStr was completely copied to the destStr. LE_OVERFLOW if srcStr was truncated when it was copied to destStr. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if srcStr was completely copied to the destStr.</li>
+<li>LE_OVERFLOW if srcStr was truncated when it was copied to destStr. </li>
+</ul>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">destStr</td><td>Destination where the srcStr is to be copied. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">srcStr</td><td>UTF-8 source string. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">destSize</td><td>Size of the destination buffer in bytes. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">numBytesPtr</td><td>Number of bytes copied not including the NULL-terminator. [Parameter can be set to NULL if the number of bytes copied is not needed. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">numBytesPtr</td><td>Number of bytes copied not including the NULL-terminator. Parameter can be set to NULL if the number of bytes copied is not needed. </td></tr>
 </table>
 </dd>
 </dl>
@@ -241,7 +253,11 @@ Functions</h2></td></tr>
 <p>The srcStr and subStr must be in null-terminated UTF-8 strings.</p>
 <p>The destination string will always be null-terminated.</p>
 <p>If subStr is not found in the srcStr then this function behaves just like <a class="el" href="le__utf8_8h.html#aa5ae72c01396c106fdf3b4741ead7477">le_utf8_Copy()</a>.</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_OK if srcStr was completely copied to the destStr. LE_OVERFLOW if srcStr was truncated when it was copied to destStr. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK if srcStr was completely copied to the destStr.</li>
+<li>LE_OVERFLOW if srcStr was truncated when it was copied to destStr. </li>
+</ul>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">destStr</td><td>Destination where the srcStr is to be copied. </td></tr>
@@ -249,6 +265,101 @@ Functions</h2></td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">subStr</td><td>Sub-string to copy up to. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">destSize</td><td>Size of the destination buffer in bytes. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">numBytesPtr</td><td>Number of bytes copied not including the NULL-terminator. Parameter can be set to NULL if the number of bytes copied is not needed. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a5f590886916f55f68b518ccd3ac932ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_utf8_DecodeUnicodeCodePoint </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>src</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>byteLength</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>codePoint</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Decode the first unicode code point from the UTF-8 string src.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER if byteLength points to 0</li>
+<li>LE_UNDERFLOW if src appears to be the beginning of a UTF-8 character which extends beyond the end of the string as specified by byteLength.</li>
+<li>LE_FORMAT_ERROR if src is not valid UTF-8 encoded string data.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Not all code point values are valid unicode. This function does not validate whether the code point is valid unicode. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>UTF-8 encoded data to extract a code point from. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">byteLength</td><td>As an input parameter, the value pointed to represents the number of bytes in src. As an output parameter, the value pointed to is the number of bytes from src that were consumed to decode the code point (in the case of an LE_OK return value) or the number of bytes that would have been consumed had src been long enough (in the case of an LE_UNDERFLOW return value). </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">codePoint</td><td>Code point that was decoded from src. This value is only valid when the function returns LE_OK. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a3b4db65916b5d7d41ba0b1a5595aabd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_utf8_EncodeUnicodeCodePoint </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>codePoint</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>out</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>outSize</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Encode a unicode code point as UTF-8 into a buffer.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OUT_OF_RANGE if the code point supplied is outside the range of unicode code points</li>
+<li>LE_OVERFLOW if the out buffer is not large enough to store the UTF-8 encoding of the code point</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Not all code point values are valid unicode. This function does not validate whether the code point is valid unicode. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">codePoint</td><td>Code point to encode as UTF-8 </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>Buffer to store the UTF-8 encoded value in. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">outSize</td><td>As an input, this value is interpreted as the size of the out buffer. As an output, it is updated to hold the size of the UTF-8 encoded value (in the case of an LE_OK return value) or size that would be required to encode the code point (in the case or an LE_OVERFLOW return value). </td></tr>
 </table>
 </dd>
 </dl>
@@ -276,7 +387,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Determines whether a given byte is a continuation (not the first byte) of a multi-byte UTF-8 character.</p>
-<dl class="section return"><dt>Returns</dt><dd>True if a continuation byte. False otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True if a continuation byte or false otherwise. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>The byte to check. </td></tr>
@@ -299,7 +410,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Checks to see if the string is indeed a UTF-8 encoded, null-terminated string.</p>
-<dl class="section return"><dt>Returns</dt><dd>true if the format is correct. false if the format is incorrect. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the format is correct or false otherwise </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>The string. </td></tr>
@@ -369,7 +480,11 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the number of characters in string.</p>
 <p>UTF-8 encoded characters may be larger than 1 byte so the number of characters is not necessarily equal to the the number of bytes in the string.</p>
-<dl class="section return"><dt>Returns</dt><dd>Number of characters in string if successful. LE_FORMAT_ERROR if the string is not UTF-8. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>Number of characters in string if successful.</li>
+<li>LE_FORMAT_ERROR if the string is not UTF-8. </li>
+</ul>
+</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>Pointer to the string. </td></tr>
