@@ -67,6 +67,9 @@ var searchData=
   ['le_5futf8_2eh',['le_utf8.h',['../le__utf8_8h.html',1,'']]],
   ['le_5fvoicecall_5finterface_2eh',['le_voicecall_interface.h',['../le__voicecall__interface_8h.html',1,'']]],
   ['le_5fwdog_5finterface_2eh',['le_wdog_interface.h',['../le__wdog__interface_8h.html',1,'']]],
+  ['le_5fwifiap_5finterface_2eh',['le_wifiAp_interface.h',['../le__wifi_ap__interface_8h.html',1,'']]],
+  ['le_5fwificlient_5finterface_2eh',['le_wifiClient_interface.h',['../le__wifi_client__interface_8h.html',1,'']]],
+  ['le_5fwifidefs_5finterface_2eh',['le_wifiDefs_interface.h',['../le__wifi_defs__interface_8h.html',1,'']]],
   ['legato_2eh',['legato.h',['../legato_8h.html',1,'']]],
   ['logfd_5finterface_2eh',['logFd_interface.h',['../log_fd__interface_8h.html',1,'']]]
 ];

@@ -32,5 +32,6 @@ var le__voicecall__interface_8h =
     [ "le_voicecall_GetTerminationReason", "le__voicecall__interface_8h.html#a1e04e5a857e17e67eb75cd1c6136f163", null ],
     [ "le_voicecall_GetTxAudioStream", "le__voicecall__interface_8h.html#ab2dc17c9f027ed291576a1b6f6b6fed1", null ],
     [ "le_voicecall_RemoveStateHandler", "le__voicecall__interface_8h.html#a67b1fe682dd7022e69e7fc100ead4aab", null ],
-    [ "le_voicecall_Start", "le__voicecall__interface_8h.html#aac588cbf58e2ea5655b89b9f6e2fd883", null ]
+    [ "le_voicecall_Start", "le__voicecall__interface_8h.html#aac588cbf58e2ea5655b89b9f6e2fd883", null ],
+    [ "le_voicecall_TryConnectService", "le__voicecall__interface_8h.html#a07e94a7b09c94d763c4ca2b8d1707580", null ]
 ];

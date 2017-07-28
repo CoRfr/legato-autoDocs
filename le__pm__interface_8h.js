@@ -7,5 +7,6 @@ var le__pm__interface_8h =
     [ "le_pm_DisconnectService", "le__pm__interface_8h.html#aaf6d4541984f163ac25f35cda6373849", null ],
     [ "le_pm_NewWakeupSource", "le__pm__interface_8h.html#a85038248bcddc8963f7280ffa53acf62", null ],
     [ "le_pm_Relax", "le__pm__interface_8h.html#a2ffb1fb0d165604226a9df35360080ea", null ],
-    [ "le_pm_StayAwake", "le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534", null ]
+    [ "le_pm_StayAwake", "le__pm__interface_8h.html#a6be9b6c443c506b0ce29da79e53e2534", null ],
+    [ "le_pm_TryConnectService", "le__pm__interface_8h.html#a7fbcd7a020620a5a2aba064f9d408800", null ]
 ];

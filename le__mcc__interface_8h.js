@@ -72,6 +72,7 @@ var le__mcc__interface_8h =
       [ "LE_MCC_TERM_PLATFORM_SPECIFIC", "le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da18ea36d3713331bcbc016db95e10f75c", null ],
       [ "LE_MCC_TERM_UNDEFINED", "le__mcc__interface_8h.html#abda706f723ba619f9bc460bcc9a4960da3dbb90bf0628971a6afbd4773fc97c1a", null ]
     ] ],
+    [ "le_mcc_ActivateCall", "le__mcc__interface_8h.html#a62626d9db0d9bf56fb2660d9acfdfcc5", null ],
     [ "le_mcc_AddCallEventHandler", "le__mcc__interface_8h.html#ab826cf4b9e3911e659a90d483081e7fe", null ],
     [ "le_mcc_Answer", "le__mcc__interface_8h.html#a598349c6ccfa151dbd1d2f2a9c293ca4", null ],
     [ "le_mcc_ConnectService", "le__mcc__interface_8h.html#ac639c6d7ea04e8a82782fbed1765ff71", null ],
@@ -79,6 +80,7 @@ var le__mcc__interface_8h =
     [ "le_mcc_Delete", "le__mcc__interface_8h.html#a1a016e6443df2d3ee99113649f4f34ae", null ],
     [ "le_mcc_DisconnectService", "le__mcc__interface_8h.html#a19d524087a3ab345616fca3f8c08be33", null ],
     [ "le_mcc_GetCallerIdRestrict", "le__mcc__interface_8h.html#a54093f7d51cae9a186a97aa799ac3ddc", null ],
+    [ "le_mcc_GetCallWaitingService", "le__mcc__interface_8h.html#acdf73f5a2e498ee201d8a11c416de29b", null ],
     [ "le_mcc_GetPlatformSpecificTerminationCode", "le__mcc__interface_8h.html#a68b9b8ed1b221924dcea1be0fd610a54", null ],
     [ "le_mcc_GetRemoteTel", "le__mcc__interface_8h.html#aeae32829e9a5fa864167df3ee67d0f41", null ],
     [ "le_mcc_GetTerminationReason", "le__mcc__interface_8h.html#ab16921abc02e0569b129f4a7d92bf3c9", null ],
@@ -87,5 +89,7 @@ var le__mcc__interface_8h =
     [ "le_mcc_IsConnected", "le__mcc__interface_8h.html#a07e4856dffdbf887f51879e39ec43e42", null ],
     [ "le_mcc_RemoveCallEventHandler", "le__mcc__interface_8h.html#a8a12dc6f1707cf52818d9c2d8281630c", null ],
     [ "le_mcc_SetCallerIdRestrict", "le__mcc__interface_8h.html#a6b7fda9b1d0f0208a99b4bdcafe97538", null ],
-    [ "le_mcc_Start", "le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70", null ]
+    [ "le_mcc_SetCallWaitingService", "le__mcc__interface_8h.html#ac637e687387a5b8cf9c5b02cbb7816fa", null ],
+    [ "le_mcc_Start", "le__mcc__interface_8h.html#a72a32869bb23864b3e86c606368bed70", null ],
+    [ "le_mcc_TryConnectService", "le__mcc__interface_8h.html#a1858a08c8d944abc96b8fa92bc297ba5", null ]
 ];

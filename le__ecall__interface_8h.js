@@ -138,11 +138,14 @@ var le__ecall__interface_8h =
     [ "le_ecall_SetMsdEraGlonassDiagnosticResult", "le__ecall__interface_8h.html#a51ad61edf379cfe07f03fbd71b56df9d", null ],
     [ "le_ecall_SetMsdPassengersCount", "le__ecall__interface_8h.html#a8c009bb03d61dcd0ffbd9e986b692a85", null ],
     [ "le_ecall_SetMsdPosition", "le__ecall__interface_8h.html#a2b56b7b7fd7f936c144d30eba7815908", null ],
+    [ "le_ecall_SetMsdPositionN1", "le__ecall__interface_8h.html#af3cfea09eea1b1ba39648798070ad139", null ],
+    [ "le_ecall_SetMsdPositionN2", "le__ecall__interface_8h.html#a6b25b9b242ba114f31ae2f853070bf11", null ],
     [ "le_ecall_SetMsdTxMode", "le__ecall__interface_8h.html#a00d3dbc99884375cf2487d6640767c40", null ],
     [ "le_ecall_SetNadDeregistrationTime", "le__ecall__interface_8h.html#a66e454e84db7d337d76bc867b57891a1", null ],
     [ "le_ecall_SetPsapNumber", "le__ecall__interface_8h.html#a9c13a8582bca84c4ae77643e1f4cfd71", null ],
     [ "le_ecall_StartAutomatic", "le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667", null ],
     [ "le_ecall_StartManual", "le__ecall__interface_8h.html#ab106c3ca87fc8dd8239d2849df932122", null ],
     [ "le_ecall_StartTest", "le__ecall__interface_8h.html#aa5d23a1bea370b1ae29fc52d7a89d947", null ],
+    [ "le_ecall_TryConnectService", "le__ecall__interface_8h.html#ab546b43bee315c4cfc2d5697cad3cf4b", null ],
     [ "le_ecall_UseUSimNumbers", "le__ecall__interface_8h.html#a034c442fd7c6650ed956822a561c0104", null ]
 ];

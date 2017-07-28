@@ -29,5 +29,6 @@ var le__antenna__interface_8h =
     [ "le_antenna_Request", "le__antenna__interface_8h.html#af768fcc154de42aecd549ff10e600a65", null ],
     [ "le_antenna_SetExternalAdc", "le__antenna__interface_8h.html#a691370edf658b655a0f72b285dc5d00a", null ],
     [ "le_antenna_SetOpenLimit", "le__antenna__interface_8h.html#a436108eac97dbe9b6857ddc364243a9f", null ],
-    [ "le_antenna_SetShortLimit", "le__antenna__interface_8h.html#a0ccc004b9cd6927614b5b37565117f7a", null ]
+    [ "le_antenna_SetShortLimit", "le__antenna__interface_8h.html#a0ccc004b9cd6927614b5b37565117f7a", null ],
+    [ "le_antenna_TryConnectService", "le__antenna__interface_8h.html#a3b0f2ee5e63f3b391af3ec95fbd54d16", null ]
 ];

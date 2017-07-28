@@ -9,5 +9,6 @@ var app_smack__interface_8h =
     [ "appSmack_ConnectService", "app_smack__interface_8h.html#ad3e19b9a4a9634d3c12ef9c40a036567", null ],
     [ "appSmack_DisconnectService", "app_smack__interface_8h.html#a5106468b3ff13d029ed868c13e297c7a", null ],
     [ "appSmack_GetAccessLabel", "app_smack__interface_8h.html#aa9283290ed50347a040dcd88997088ae", null ],
-    [ "appSmack_GetLabel", "app_smack__interface_8h.html#adb46c9612a7e4af419e8144e6567c2fd", null ]
+    [ "appSmack_GetLabel", "app_smack__interface_8h.html#adb46c9612a7e4af419e8144e6567c2fd", null ],
+    [ "appSmack_TryConnectService", "app_smack__interface_8h.html#abeb81ef59400f96081e9e847046282eb", null ]
 ];

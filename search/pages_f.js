@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['runtime_20architecture',['Runtime Architecture',['../basic_runtime_arch.html',1,'basicConcepts']]],
-  ['ring_20indicator_20signal',['Ring Indicator Signal',['../c_ri_pin.html',1,'legatoServicesModem']]],
-  ['requirements',['Requirements',['../getstarted_c_lrequirements.html',1,'getstartedCLinstallMain']]],
-  ['requirements',['Requirements',['../getstarted_d_srequirements.html',1,'']]],
-  ['release_20notes',['Release Notes',['../legato_rel_notes_beta.html',1,'getstartedMain']]],
-  ['releaselegato',['releaselegato',['../tools_host_releaselegato.html',1,'toolsHost']]],
-  ['rmapp',['rmapp',['../tools_host_rmapp.html',1,'toolsHost']]]
+  ['power_20management',['Power Management',['../basicPwrMgmt.html',1,'basicConcepts']]],
+  ['path_20api',['Path API',['../c_path.html',1,'c_APIs']]],
+  ['path_20iterator_20api',['Path Iterator API',['../c_pathIter.html',1,'c_APIs']]],
+  ['power_20manager',['Power Manager',['../c_pm.html',1,'legatoServicesPowerMain']]],
+  ['positioning',['Positioning',['../c_pos.html',1,'legatoServicesPositioning']]],
+  ['positioning_20control_20api',['Positioning Control API',['../c_posCtrl.html',1,'c_pos']]],
+  ['print_20apis',['Print APIs',['../c_print.html',1,'c_APIs']]],
+  ['port_20legacy_20c_20app',['Port Legacy C App',['../howToPortLegacyC.html',1,'howToPortLegacyGen']]],
+  ['port_20legacy_20apps',['Port Legacy Apps',['../howToPortLegacyGen.html',1,'howToMain']]],
+  ['positioning',['Positioning',['../legatoServicesPositioning.html',1,'legatoServices']]],
+  ['power',['Power',['../legatoServicesPowerMain.html',1,'legatoServices']]],
+  ['platform_20constraints',['Platform Constraints',['../platformConstraints.html',1,'buildPlatformMain']]],
+  ['prep_20dev_20host',['Prep Dev Host',['../yoctoPrepDevHost.html',1,'yoctoBuildLegato']]]
 ];

@@ -17,6 +17,7 @@ var le__mdc__interface_8h =
     [ "le_mdc_MtPdpSessionStateHandlerFunc_t", "le__mdc__interface_8h.html#a285dd997ce1e6a439441dd939df080c8", null ],
     [ "le_mdc_MtPdpSessionStateHandlerRef_t", "le__mdc__interface_8h.html#a00399530f88038d5d06823194780793a", null ],
     [ "le_mdc_ProfileRef_t", "le__mdc__interface_8h.html#a91074d8f0d88c6645e3085dfadf87011", null ],
+    [ "le_mdc_SessionHandlerFunc_t", "le__mdc__interface_8h.html#a20c053f6aaaa47d3e62f83abc911e558", null ],
     [ "le_mdc_SessionStateHandlerFunc_t", "le__mdc__interface_8h.html#a1f32da683c8a9e061db7101ef5c8bb98", null ],
     [ "le_mdc_SessionStateHandlerRef_t", "le__mdc__interface_8h.html#a1a5079ca540f75d009991c164f1c2a51", null ],
     [ "le_mdc_Auth_t", "le__mdc__interface_8h.html#ae9758eecfab89fbc1bc01341393a7723", [
@@ -119,6 +120,7 @@ var le__mdc__interface_8h =
     [ "le_mdc_GetIPv6GatewayAddress", "le__mdc__interface_8h.html#a0b82eac1ed112bd3b82060cc54751246", null ],
     [ "le_mdc_GetPDP", "le__mdc__interface_8h.html#a0a51125579f1d5009dac03c79ddff498", null ],
     [ "le_mdc_GetPlatformSpecificDisconnectionCode", "le__mdc__interface_8h.html#a3e3a92b0f5e3edab9400412170517a62", null ],
+    [ "le_mdc_GetPlatformSpecificFailureConnectionReason", "le__mdc__interface_8h.html#a438ff354100b5020ace1059635b740b4", null ],
     [ "le_mdc_GetProfile", "le__mdc__interface_8h.html#a638b693cd5f644fa5c24f81e1e36483c", null ],
     [ "le_mdc_GetProfileFromApn", "le__mdc__interface_8h.html#a160de65c9260e93f7fc2140c0ff429e7", null ],
     [ "le_mdc_GetProfileIndex", "le__mdc__interface_8h.html#a108f7c3db74a377c2ae5482543d4e0d9", null ],
@@ -135,5 +137,8 @@ var le__mdc__interface_8h =
     [ "le_mdc_SetDefaultAPN", "le__mdc__interface_8h.html#ad44bd756fd5cbfd43a5b348054786a4d", null ],
     [ "le_mdc_SetPDP", "le__mdc__interface_8h.html#a73e66a7a63dc95d7f261fc2a26470386", null ],
     [ "le_mdc_StartSession", "le__mdc__interface_8h.html#a2cb08d5c3e6c43297d80448891719649", null ],
-    [ "le_mdc_StopSession", "le__mdc__interface_8h.html#a53453f85065c3cace0922150b7e3d869", null ]
+    [ "le_mdc_StartSessionAsync", "le__mdc__interface_8h.html#aa03d6e31263ddf8bf1d94b183c9934d9", null ],
+    [ "le_mdc_StopSession", "le__mdc__interface_8h.html#a53453f85065c3cace0922150b7e3d869", null ],
+    [ "le_mdc_StopSessionAsync", "le__mdc__interface_8h.html#ac5b357f7437c9e253fa17b2511fa14ef", null ],
+    [ "le_mdc_TryConnectService", "le__mdc__interface_8h.html#ac93bebcbe5364e7313a168e9502c30b6", null ]
 ];

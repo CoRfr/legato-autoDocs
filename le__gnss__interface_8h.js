@@ -1,8 +1,10 @@
 var le__gnss__interface_8h =
 [
-    [ "LE_GNSS_MAX_SUPL_CERTIFICATE_LEN", "le__gnss__interface_8h.html#a55a09e781cec3a35c15fd88e17bdbad1", null ],
-    [ "LE_GNSS_MAX_SUPL_SERVER_URL_LEN", "le__gnss__interface_8h.html#aad83794e1452ffce131332a7d5d615f0", null ],
-    [ "LE_GNSS_MAX_SV_INFO_NUMBER", "le__gnss__interface_8h.html#a9f33a36bc52937226b8e231bb238444b", null ],
+    [ "LE_GNSS_SUPL_CERTIFICATE_MAX_BYTES", "le__gnss__interface_8h.html#a21047fe5846838e335d14c741729ab0a", null ],
+    [ "LE_GNSS_SUPL_CERTIFICATE_MAX_LEN", "le__gnss__interface_8h.html#a97e225e05799d437426a263b577e1080", null ],
+    [ "LE_GNSS_SUPL_SERVER_URL_MAX_BYTES", "le__gnss__interface_8h.html#a3954e32e2abfb94270da304bfd177355", null ],
+    [ "LE_GNSS_SUPL_SERVER_URL_MAX_LEN", "le__gnss__interface_8h.html#a6ba0422d301ed6bcb1e2d7b4119dc5b2", null ],
+    [ "LE_GNSS_SV_INFO_MAX_LEN", "le__gnss__interface_8h.html#a507cc757f9629ad56d7a0767c0356e76", null ],
     [ "le_gnss_PositionHandlerFunc_t", "le__gnss__interface_8h.html#abc0f34de9b91ed31cb10ccd5d432def8", null ],
     [ "le_gnss_PositionHandlerRef_t", "le__gnss__interface_8h.html#a55a27b330b348c8d78073fe0e3e784eb", null ],
     [ "le_gnss_SampleRef_t", "le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a", null ],
@@ -11,9 +13,19 @@ var le__gnss__interface_8h =
       [ "LE_GNSS_MS_BASED_MODE", "le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca4d21852db64fad5ca5c90b35efaaefff", null ],
       [ "LE_GNSS_MS_ASSISTED_MODE", "le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dca185c89cade65e4e40dc69c55327c726a", null ]
     ] ],
+    [ "le_gnss_Constellation_t", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9", [
+      [ "LE_GNSS_SV_CONSTELLATION_UNDEFINED", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9a77c8502d2ea17362dcafd44aa81ddadc", null ],
+      [ "LE_GNSS_SV_CONSTELLATION_GPS", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9ac6f47b9be468f8cda7beda6afe0e1324", null ],
+      [ "LE_GNSS_SV_CONSTELLATION_SBAS", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9a0f5d345dd7b9260cd219a4836572d419", null ],
+      [ "LE_GNSS_SV_CONSTELLATION_GLONASS", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9ab349eed6d7964f39ae97645bd84c219c", null ],
+      [ "LE_GNSS_SV_CONSTELLATION_GALILEO", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9af8c46789e88c3fa8a3c6d8e2661e7844", null ],
+      [ "LE_GNSS_SV_CONSTELLATION_MAX", "le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9a63adb37a1800f8a8d2c8419170c72ed4", null ]
+    ] ],
     [ "le_gnss_ConstellationBitMask_t", "le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc", [
       [ "LE_GNSS_CONSTELLATION_GPS", "le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efcad8f92688bcc53bb744cb1466609d49a7", null ],
-      [ "LE_GNSS_CONSTELLATION_GLONASS", "le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878", null ]
+      [ "LE_GNSS_CONSTELLATION_GLONASS", "le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca8031dcacac5aac40d2b2e1b574c5b878", null ],
+      [ "LE_GNSS_CONSTELLATION_BEIDOU", "le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efca06b4d29c1057f5337ada61a1958995db", null ],
+      [ "LE_GNSS_CONSTELLATION_GALILEO", "le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efcae4a1c35e91652aaa43d2b09267314d4d", null ]
     ] ],
     [ "le_gnss_FixState_t", "le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1", [
       [ "LE_GNSS_STATE_FIX_NO_POS", "le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1a8d85fe09a65c69af21102b4bacc64055", null ],
@@ -39,12 +51,16 @@ var le__gnss__interface_8h =
     [ "le_gnss_GetDate", "le__gnss__interface_8h.html#a29602d1e12325d0076802af0db7f23ca", null ],
     [ "le_gnss_GetDirection", "le__gnss__interface_8h.html#a86f3e812fa009379b3e7e49011e6a229", null ],
     [ "le_gnss_GetDop", "le__gnss__interface_8h.html#a70504e7c542d626aa07948d8330020c7", null ],
-    [ "le_gnss_GetExtendedEphemerisValidity", "le__gnss__interface_8h.html#a1fbfc55e9e7585646fb312d7017061ff", null ],
+    [ "le_gnss_GetExtendedEphemerisValidity", "le__gnss__interface_8h.html#a9b0e90a4b9e62c9826c70f37128b5fd5", null ],
+    [ "le_gnss_GetGpsTime", "le__gnss__interface_8h.html#a4e9966df8185978aaef75399d5aff2d3", null ],
     [ "le_gnss_GetHorizontalSpeed", "le__gnss__interface_8h.html#a483fba8fc6b0fa116bcbd889af95fc4f", null ],
     [ "le_gnss_GetLocation", "le__gnss__interface_8h.html#ada100f53f9ad9f3df852fcc6639c15bc", null ],
     [ "le_gnss_GetPositionState", "le__gnss__interface_8h.html#a0a0df2ffe42b6277f43af0e52e617339", null ],
+    [ "le_gnss_GetSatellitesInfo", "le__gnss__interface_8h.html#adfb931e0da0a15eb5ce46d26dc525727", null ],
+    [ "le_gnss_GetSatellitesStatus", "le__gnss__interface_8h.html#a5ae945ad1921b621e9631e4286f40784", null ],
     [ "le_gnss_GetSuplAssistedMode", "le__gnss__interface_8h.html#a2b5eb5e1efbc31683e717dd7181ff1d3", null ],
     [ "le_gnss_GetTime", "le__gnss__interface_8h.html#a0d014a96fc8b15b736d04747d51082d9", null ],
+    [ "le_gnss_GetTimeAccuracy", "le__gnss__interface_8h.html#ad41698ff4a68651b9fb81b862d4274f6", null ],
     [ "le_gnss_GetTtff", "le__gnss__interface_8h.html#a6b2fbb3902c9fd3336b5940b2abacb12", null ],
     [ "le_gnss_GetVerticalSpeed", "le__gnss__interface_8h.html#a37a370cec19610be1f99d9c9db291a1e", null ],
     [ "le_gnss_InjectSuplCertificate", "le__gnss__interface_8h.html#a3bd8f5067d4bba2e7ed5fce95c2c1a74", null ],
@@ -56,5 +72,6 @@ var le__gnss__interface_8h =
     [ "le_gnss_SetSuplAssistedMode", "le__gnss__interface_8h.html#a5d74c2ad91a504a1d0ac35b4f4f2c382", null ],
     [ "le_gnss_SetSuplServerUrl", "le__gnss__interface_8h.html#abff6d8ae251972df157b5b38829230ed", null ],
     [ "le_gnss_Start", "le__gnss__interface_8h.html#add90639835a531c4b9d15554e4f3ba16", null ],
-    [ "le_gnss_Stop", "le__gnss__interface_8h.html#a93d63fdc76dbced071956b87de2abff7", null ]
+    [ "le_gnss_Stop", "le__gnss__interface_8h.html#a93d63fdc76dbced071956b87de2abff7", null ],
+    [ "le_gnss_TryConnectService", "le__gnss__interface_8h.html#ab73c2f8ce9e85d774d44b95b4f4a8637", null ]
 ];

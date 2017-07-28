@@ -52,5 +52,6 @@ var le__cfg__interface_8h =
     [ "le_cfg_SetEmpty", "le__cfg__interface_8h.html#a008c17822f0af91639b1fbb257be48ea", null ],
     [ "le_cfg_SetFloat", "le__cfg__interface_8h.html#aab1e755f81ef2e4bcbc6d57ea558a7a5", null ],
     [ "le_cfg_SetInt", "le__cfg__interface_8h.html#a46cb4c6dd1068cb07128ca637667bb77", null ],
-    [ "le_cfg_SetString", "le__cfg__interface_8h.html#a741ade500cc7b10070e45065740d6980", null ]
+    [ "le_cfg_SetString", "le__cfg__interface_8h.html#a741ade500cc7b10070e45065740d6980", null ],
+    [ "le_cfg_TryConnectService", "le__cfg__interface_8h.html#ae95903ceaf3bf1037f9ea5712d74d490", null ]
 ];

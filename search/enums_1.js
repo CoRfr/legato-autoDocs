@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['le_5fadc_5fadcchannelinput_5ft',['le_adc_AdcChannelInput_t',['../le__adc__interface_8h.html#ae3b7b6d7051508cac8eef345a6d88aac',1,'le_adc_interface.h']]],
   ['le_5fantenna_5fstatus_5ft',['le_antenna_Status_t',['../le__antenna__interface_8h.html#a78674a68c062ffc7625954391f1ec98f',1,'le_antenna_interface.h']]],
   ['le_5fantenna_5ftype_5ft',['le_antenna_Type_t',['../le__antenna__interface_8h.html#a1ec9df90396295a1d47f0f2940c13c70',1,'le_antenna_interface.h']]],
   ['le_5fappinfo_5fprocstate_5ft',['le_appInfo_ProcState_t',['../le__app_info__interface_8h.html#a426a8f86552dfbc4094a025484b2b12c',1,'le_appInfo_interface.h']]],
@@ -10,8 +9,8 @@ var searchData=
   ['le_5faudio_5fformat_5ft',['le_audio_Format_t',['../le__audio__interface_8h.html#a0ad2f5012ed700af1892f82e4af5989d',1,'le_audio_interface.h']]],
   ['le_5faudio_5fi2schannel_5ft',['le_audio_I2SChannel_t',['../le__audio__interface_8h.html#a94794180ed71a84bd26a1f525858f252',1,'le_audio_interface.h']]],
   ['le_5faudio_5fmediaevent_5ft',['le_audio_MediaEvent_t',['../le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1',1,'le_audio_interface.h']]],
-  ['le_5faudio_5fprofile_5ft',['le_audio_Profile_t',['../le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5',1,'le_audio_interface.h']]],
   ['le_5favc_5ferrorcode_5ft',['le_avc_ErrorCode_t',['../le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9',1,'le_avc_interface.h']]],
+  ['le_5favc_5fsessiontype_5ft',['le_avc_SessionType_t',['../le__avc__interface_8h.html#a75d2fe14cef94bb6ebe00e7a849031af',1,'le_avc_interface.h']]],
   ['le_5favc_5fstatus_5ft',['le_avc_Status_t',['../le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff',1,'le_avc_interface.h']]],
   ['le_5favc_5fupdatetype_5ft',['le_avc_UpdateType_t',['../le__avc__interface_8h.html#af541450f0cbf512f28be786d79a61865',1,'le_avc_interface.h']]],
   ['le_5fcellnet_5fstate_5ft',['le_cellnet_State_t',['../le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3',1,'le_cellnet_interface.h']]],
@@ -24,6 +23,7 @@ var searchData=
   ['le_5fflock_5faccessmode_5ft',['le_flock_AccessMode_t',['../le__file_lock_8h.html#a5e5400e33a5e10b7c624748a9ce11280',1,'le_fileLock.h']]],
   ['le_5fflock_5fcreatemode_5ft',['le_flock_CreateMode_t',['../le__file_lock_8h.html#a35d8c575df68d1da52a1048916f7e7d9',1,'le_fileLock.h']]],
   ['le_5fgnss_5fassistedmode_5ft',['le_gnss_AssistedMode_t',['../le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc',1,'le_gnss_interface.h']]],
+  ['le_5fgnss_5fconstellation_5ft',['le_gnss_Constellation_t',['../le__gnss__interface_8h.html#a30697e968cedd1935e7ca5f3ebe2fea9',1,'le_gnss_interface.h']]],
   ['le_5fgnss_5fconstellationbitmask_5ft',['le_gnss_ConstellationBitMask_t',['../le__gnss__interface_8h.html#adac6fdd4f73229bc9af14e0a11335efc',1,'le_gnss_interface.h']]],
   ['le_5fgnss_5ffixstate_5ft',['le_gnss_FixState_t',['../le__gnss__interface_8h.html#abcb86aa054abc7a32d2f5a7363387ef1',1,'le_gnss_interface.h']]],
   ['le_5fgpio_5fedge_5ft',['le_gpio_Edge_t',['../le__gpio__interface_8h.html#aba036e04f8a3ae939cabfbfa5a45e240',1,'le_gpio_interface.h']]],
@@ -50,6 +50,7 @@ var searchData=
   ['le_5fmrc_5ftdscdmabandbitmask_5ft',['le_mrc_TdScdmaBandBitMask_t',['../le__mrc__interface_8h.html#a418a508a9a6dbd3a4a68458f0c64a00e',1,'le_mrc_interface.h']]],
   ['le_5fonoff_5ft',['le_onoff_t',['../le__basics_8h.html#ae2138c90c41d30e2d510be01d8b374da',1,'le_basics.h']]],
   ['le_5fresult_5ft',['le_result_t',['../le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c',1,'le_basics.h']]],
+  ['le_5fsim_5fcommand_5ft',['le_sim_Command_t',['../le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331',1,'le_sim_interface.h']]],
   ['le_5fsim_5fid_5ft',['le_sim_Id_t',['../le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdd',1,'le_sim_interface.h']]],
   ['le_5fsim_5fmanufacturer_5ft',['le_sim_Manufacturer_t',['../le__sim__interface_8h.html#ac9719aa7561f79bc0b51eca9447ff37e',1,'le_sim_interface.h']]],
   ['le_5fsim_5fstates_5ft',['le_sim_States_t',['../le__sim__interface_8h.html#a21b9bb7d5e5e7ece213e00738a5bae41',1,'le_sim_interface.h']]],
@@ -61,11 +62,14 @@ var searchData=
   ['le_5fsms_5flanguages_5ft',['le_sms_Languages_t',['../le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb',1,'le_sms_interface.h']]],
   ['le_5fsms_5fstatus_5ft',['le_sms_Status_t',['../le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6',1,'le_sms_interface.h']]],
   ['le_5fsms_5ftype_5ft',['le_sms_Type_t',['../le__sms__interface_8h.html#a9001c5bc939bda5d5865e363bdf7662c',1,'le_sms_interface.h']]],
-  ['le_5ftemp_5fthresholdstatus_5ft',['le_temp_ThresholdStatus_t',['../le__temp__interface_8h.html#a2c535dc58fa4f9d63fb50621ec87905e',1,'le_temp_interface.h']]],
   ['le_5fthread_5fpriority_5ft',['le_thread_Priority_t',['../le__thread_8h.html#a653b0f17cd4d4567c86a25e23d004f07',1,'le_thread.h']]],
   ['le_5fulpm_5fgpiostate_5ft',['le_ulpm_GpioState_t',['../le__ulpm__interface_8h.html#ab0af9c55cfd8187a5edee98d75fd7d57',1,'le_ulpm_interface.h']]],
   ['le_5fupdate_5ferrorcode_5ft',['le_update_ErrorCode_t',['../le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20',1,'le_update_interface.h']]],
   ['le_5fupdate_5fstate_5ft',['le_update_State_t',['../le__update__interface_8h.html#ae9758536ebaf1842cdaaddd6cf95a672',1,'le_update_interface.h']]],
   ['le_5fvoicecall_5fevent_5ft',['le_voicecall_Event_t',['../le__voicecall__interface_8h.html#a51066eb84677e4d4c5447aaf8dd18ff1',1,'le_voicecall_interface.h']]],
-  ['le_5fvoicecall_5fterminationreason_5ft',['le_voicecall_TerminationReason_t',['../le__voicecall__interface_8h.html#a752ba5dba19137e6d92e25450894bb13',1,'le_voicecall_interface.h']]]
+  ['le_5fvoicecall_5fterminationreason_5ft',['le_voicecall_TerminationReason_t',['../le__voicecall__interface_8h.html#a752ba5dba19137e6d92e25450894bb13',1,'le_voicecall_interface.h']]],
+  ['le_5fwifiap_5fevent_5ft',['le_wifiAp_Event_t',['../le__wifi_ap__interface_8h.html#aeac8ad63bcfc5ee984cdd86ec9f116d5',1,'le_wifiAp_interface.h']]],
+  ['le_5fwifiap_5fsecurityprotocol_5ft',['le_wifiAp_SecurityProtocol_t',['../le__wifi_ap__interface_8h.html#abb658c71d7d836247ec091fb349758b9',1,'le_wifiAp_interface.h']]],
+  ['le_5fwificlient_5fevent_5ft',['le_wifiClient_Event_t',['../le__wifi_client__interface_8h.html#a1b776321e539bab3bc6a07078545bca4',1,'le_wifiClient_interface.h']]],
+  ['le_5fwificlient_5fsecurityprotocol_5ft',['le_wifiClient_SecurityProtocol_t',['../le__wifi_client__interface_8h.html#a3acda5a68db1e0d601ee840a94542304',1,'le_wifiClient_interface.h']]]
 ];

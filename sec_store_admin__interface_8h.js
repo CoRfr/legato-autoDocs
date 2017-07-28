@@ -1,8 +1,10 @@
 var sec_store_admin__interface_8h =
 [
+    [ "SECSTOREADMIN_MAX_PATH_BYTES", "sec_store_admin__interface_8h.html#a87586cfc1994e2ca570e85309bfebba3", null ],
     [ "SECSTOREADMIN_MAX_PATH_SIZE", "sec_store_admin__interface_8h.html#a659f4fc5eeb34940d06443436bf55d50", null ],
     [ "secStoreAdmin_IterRef_t", "sec_store_admin__interface_8h.html#abdd281dcdd0bd6a42ccf4ab6581ad6e9", null ],
     [ "secStoreAdmin_ConnectService", "sec_store_admin__interface_8h.html#ad9231c3f63c28740ce137937575512f7", null ],
+    [ "secStoreAdmin_CopyMetaTo", "sec_store_admin__interface_8h.html#ab054f85e824384dac211bec2b08cd6b7", null ],
     [ "secStoreAdmin_CreateIter", "sec_store_admin__interface_8h.html#af9ad6040381e49255b70c344984f065f", null ],
     [ "secStoreAdmin_Delete", "sec_store_admin__interface_8h.html#a7099f4b5e2a7b03dee054e73f9ec1c1b", null ],
     [ "secStoreAdmin_DeleteIter", "sec_store_admin__interface_8h.html#a1b2bfa514f93235bf5fffd3e098abf4a", null ],
@@ -12,5 +14,6 @@ var sec_store_admin__interface_8h =
     [ "secStoreAdmin_GetTotalSpace", "sec_store_admin__interface_8h.html#ac8eb38a1cdd75ff734a222bb129456f9", null ],
     [ "secStoreAdmin_Next", "sec_store_admin__interface_8h.html#afb7ecb1215f1fde24ed693ef10069052", null ],
     [ "secStoreAdmin_Read", "sec_store_admin__interface_8h.html#a99df42615c4ab6c8ec1eb0f2f69176ea", null ],
+    [ "secStoreAdmin_TryConnectService", "sec_store_admin__interface_8h.html#a87b2255cc5b375f954828142d02985e5", null ],
     [ "secStoreAdmin_Write", "sec_store_admin__interface_8h.html#a6799053e02e9e9e9a84d286d1bebfedc", null ]
 ];

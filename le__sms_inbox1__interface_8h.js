@@ -24,5 +24,6 @@ var le__sms_inbox1__interface_8h =
     [ "le_smsInbox1_MarkRead", "le__sms_inbox1__interface_8h.html#a19c1e0e3e27a2d44374a1774b582b1ff", null ],
     [ "le_smsInbox1_MarkUnread", "le__sms_inbox1__interface_8h.html#a82ad6e7eb4ced962f6205acb87a8f62a", null ],
     [ "le_smsInbox1_Open", "le__sms_inbox1__interface_8h.html#ab5c07622b824f8af32de8a7c6f6aaf53", null ],
-    [ "le_smsInbox1_RemoveRxMessageHandler", "le__sms_inbox1__interface_8h.html#a58587948e7bf5612bcb38164edfa4fee", null ]
+    [ "le_smsInbox1_RemoveRxMessageHandler", "le__sms_inbox1__interface_8h.html#a58587948e7bf5612bcb38164edfa4fee", null ],
+    [ "le_smsInbox1_TryConnectService", "le__sms_inbox1__interface_8h.html#a0837ffe2fb2054cd2a98f5db21de569a", null ]
 ];

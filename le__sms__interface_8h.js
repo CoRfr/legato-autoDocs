@@ -7,6 +7,8 @@ var le__sms__interface_8h =
     [ "LE_SMS_TEXT_MAX_LEN", "le__sms__interface_8h.html#ac1b7b4dad3b9f7f1fe602494123a10b0", null ],
     [ "LE_SMS_TIMESTAMP_MAX_BYTES", "le__sms__interface_8h.html#a9844280f515fbc2b393844e63aa83075", null ],
     [ "LE_SMS_TIMESTAMP_MAX_LEN", "le__sms__interface_8h.html#accabf44fe7d9f2b85b807eee8da276c3", null ],
+    [ "LE_SMS_UCS2_MAX_BYTES", "le__sms__interface_8h.html#af493fd4a06e32bd984c22005c9c938ee", null ],
+    [ "LE_SMS_UCS2_MAX_CHARS", "le__sms__interface_8h.html#a8026a1caf6d8b759972785ebefafaf94", null ],
     [ "le_sms_CallbackResultFunc_t", "le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942", null ],
     [ "le_sms_MsgListRef_t", "le__sms__interface_8h.html#afd91170c5ea21ec7ca98f7ce95049dae", null ],
     [ "le_sms_MsgRef_t", "le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7", null ],
@@ -138,6 +140,7 @@ var le__sms__interface_8h =
       [ "LE_SMS_FORMAT_PDU", "le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0a3f6a4a63acbf7aec5a498017ff53a6e8", null ],
       [ "LE_SMS_FORMAT_TEXT", "le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0a1bb6a0d76a622b1185ee879e1595dff8", null ],
       [ "LE_SMS_FORMAT_BINARY", "le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0ac70333fc9281ed10aa405d585689c000", null ],
+      [ "LE_SMS_FORMAT_UCS2", "le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0afe08800134fe4f54c84439cb2d323a77", null ],
       [ "LE_SMS_FORMAT_UNKNOWN", "le__sms__interface_8h.html#a337778c44e63660c44fa2116699296c0abea80bb6058e34a427c02b80bfede497", null ]
     ] ],
     [ "le_sms_Languages_t", "le__sms__interface_8h.html#ad4ba75a2c1d118cd46ca5e8428fb5ddb", [
@@ -201,6 +204,7 @@ var le__sms__interface_8h =
     [ "le_sms_GetText", "le__sms__interface_8h.html#ac598dec158aed1e9fa134daf22c704db", null ],
     [ "le_sms_GetTimeStamp", "le__sms__interface_8h.html#aca83e53998bd7105e14011af41ba6499", null ],
     [ "le_sms_GetType", "le__sms__interface_8h.html#a2a63c6b5179025a80fb86c7f188e1eb7", null ],
+    [ "le_sms_GetUCS2", "le__sms__interface_8h.html#a6bd382c896103d4136c163e58f1ee0d7", null ],
     [ "le_sms_GetUserdataLen", "le__sms__interface_8h.html#a6165464dd3502b3c76b79b32206ba10f", null ],
     [ "le_sms_MarkRead", "le__sms__interface_8h.html#a3dbd11952804520512fed270d183461d", null ],
     [ "le_sms_MarkUnread", "le__sms__interface_8h.html#a6ef04e331af6563b79e77bb51b28bc55", null ],
@@ -216,5 +220,7 @@ var le__sms__interface_8h =
     [ "le_sms_SetPDU", "le__sms__interface_8h.html#ab7295e1cdf2adb865135d657ec8bde09", null ],
     [ "le_sms_SetSmsCenterAddress", "le__sms__interface_8h.html#a5df138c515944ce955dd54689593b5df", null ],
     [ "le_sms_SetText", "le__sms__interface_8h.html#a34dc999430c46530d6c9067f800c5d72", null ],
-    [ "le_sms_SetTimeout", "le__sms__interface_8h.html#a2b14febf0e2285b0b3c2dbcd1c2bb7b0", null ]
+    [ "le_sms_SetTimeout", "le__sms__interface_8h.html#a2b14febf0e2285b0b3c2dbcd1c2bb7b0", null ],
+    [ "le_sms_SetUCS2", "le__sms__interface_8h.html#a66b82d0120635bbf25a7fed301a84609", null ],
+    [ "le_sms_TryConnectService", "le__sms__interface_8h.html#a59dc61c13191d632d08c576ee165c5bc", null ]
 ];

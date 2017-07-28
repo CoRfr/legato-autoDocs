@@ -1,6 +1,6 @@
 var le__update__interface_8h =
 [
-    [ "le_update_ProgressHandlerFunc_t", "le__update__interface_8h.html#a6926f0dc18bfe5bfe23e1cea26d464c2", null ],
+    [ "le_update_ProgressHandlerFunc_t", "le__update__interface_8h.html#a76d8e535f504fdbef5ce68d56845c9c9", null ],
     [ "le_update_ProgressHandlerRef_t", "le__update__interface_8h.html#a20a94b986a9ba0e6772b146f98b95f92", null ],
     [ "le_update_ErrorCode_t", "le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20", [
       [ "LE_UPDATE_ERR_NONE", "le__update__interface_8h.html#a24bac90fc939c561c64d13608cc78a20a5473b80d9e60fc1a8fd5f78a47b1c69e", null ],
@@ -23,5 +23,6 @@ var le__update__interface_8h =
     [ "le_update_GetPreviousSystemIndex", "le__update__interface_8h.html#a82196efdc87d57f62d40a195cbafd2eb", null ],
     [ "le_update_GetSystemHash", "le__update__interface_8h.html#aab3efd60e6c19a17d38f19ae14401ac2", null ],
     [ "le_update_RemoveProgressHandler", "le__update__interface_8h.html#a5c0b5527aaa493f05612f85926d71400", null ],
-    [ "le_update_Start", "le__update__interface_8h.html#a5b2d287f2403b1228df7ac257f3becd7", null ]
+    [ "le_update_Start", "le__update__interface_8h.html#a5b2d287f2403b1228df7ac257f3becd7", null ],
+    [ "le_update_TryConnectService", "le__update__interface_8h.html#a423e12ec091de3bc309a652a93c52e4d", null ]
 ];

@@ -39,5 +39,6 @@ var le__info__interface_8h =
     [ "le_info_GetPlatformSerialNumber", "le__info__interface_8h.html#a23d1f0f22d275ae334c4124e56f1d7e5", null ],
     [ "le_info_GetPriId", "le__info__interface_8h.html#a18940ac413b3df2bac02892d243d6bd4", null ],
     [ "le_info_GetPrlOnlyPreference", "le__info__interface_8h.html#a3f2f3ea1720f9ff173483046966ebdb3", null ],
-    [ "le_info_GetPrlVersion", "le__info__interface_8h.html#ab12105ea6f654c3124ec812234e0f1fa", null ]
+    [ "le_info_GetPrlVersion", "le__info__interface_8h.html#ab12105ea6f654c3124ec812234e0f1fa", null ],
+    [ "le_info_TryConnectService", "le__info__interface_8h.html#ad124577659056925db432fff6aca6d8c", null ]
 ];

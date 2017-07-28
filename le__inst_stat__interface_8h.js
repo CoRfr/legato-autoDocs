@@ -9,5 +9,6 @@ var le__inst_stat__interface_8h =
     [ "le_instStat_ConnectService", "le__inst_stat__interface_8h.html#a9f2d05ef69e31a3b192a23ce501e3480", null ],
     [ "le_instStat_DisconnectService", "le__inst_stat__interface_8h.html#adffba29846c23f83d0c8e95da8f70606", null ],
     [ "le_instStat_RemoveAppInstallEventHandler", "le__inst_stat__interface_8h.html#a23fd58ac7fbc43002d6a5d5ffd0a43e8", null ],
-    [ "le_instStat_RemoveAppUninstallEventHandler", "le__inst_stat__interface_8h.html#ac9c7a23237f10780db036f72b4188f82", null ]
+    [ "le_instStat_RemoveAppUninstallEventHandler", "le__inst_stat__interface_8h.html#ac9c7a23237f10780db036f72b4188f82", null ],
+    [ "le_instStat_TryConnectService", "le__inst_stat__interface_8h.html#a1e266ab29b7b286e189ec57ba926a016", null ]
 ];

@@ -22,5 +22,6 @@ var le__pos__interface_8h =
     [ "le_pos_sample_GetHorizontalSpeed", "le__pos__interface_8h.html#a0bb7a30675f1dd7891b22c7753d7caec", null ],
     [ "le_pos_sample_GetTime", "le__pos__interface_8h.html#a47171bf14bf4f249d3b76a8ed204f13c", null ],
     [ "le_pos_sample_GetVerticalSpeed", "le__pos__interface_8h.html#a18162e15ad9a61696312745ec0bec1fd", null ],
-    [ "le_pos_sample_Release", "le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea", null ]
+    [ "le_pos_sample_Release", "le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea", null ],
+    [ "le_pos_TryConnectService", "le__pos__interface_8h.html#a33d3a27b6d35a6c77a955df66aad9b6f", null ]
 ];

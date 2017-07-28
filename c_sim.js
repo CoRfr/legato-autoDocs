@@ -7,10 +7,14 @@ var c_sim =
     [ "SIM states", "c_sim.html#le_sim_state", null ],
     [ "Local SIM profile switch", "c_sim.html#le_sim_profile_switch", null ],
     [ "SIM Toolkit", "c_sim.html#le_sim_stk", null ],
-    [ "Sample code for SIM Select", "c_sim_test_select.html", null ],
-    [ "Sample code for SIM Identification", "c_sim_test_identification.html", null ],
-    [ "Sample code for SIM Authentication", "c_sim_test_authentication.html", null ],
-    [ "Sample code for SIM States", "c_sim_test_states.html", null ],
-    [ "Sample code for Local SIM profile switch", "c_sim_test_profile_switch.html", null ],
-    [ "Sample code for Local SIM Toolkit", "c_sim_test_sim_toolkit.html", null ]
+    [ "SIM access", "c_sim.html#le_sim_access", null ],
+    [ "Sample code for SIM Select", "c_simTestSelect.html", null ],
+    [ "Sample code for SIM Identification", "c_simTestIdentification.html", null ],
+    [ "Sample code for SIM Authentication", "c_simTestAuthentication.html", null ],
+    [ "Sample code for SIM States", "c_simTestStates.html", null ],
+    [ "Sample code for Local SIM profile switch", "c_simTestProfileSwitch.html", null ],
+    [ "Sample code for Local SIM Toolkit", "c_simTestSimToolkit.html", null ],
+    [ "SIM Toolkit", "platformConstraintsStk.html", null ],
+    [ "SIM", "platformConstraintsSim.html", null ],
+    [ "Sample code for SIM access", "c_simTestApdu.html", null ]
 ];

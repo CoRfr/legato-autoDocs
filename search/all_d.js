@@ -1,11 +1,24 @@
 var searchData=
 [
-  ['naming_20standards',['Naming Standards',['../ccoding_stds_naming.html',1,'ccodingStdsMain']]],
-  ['nmea_20port_20setup',['NMEA Port Setup',['../how_to_n_m_e_a.html',1,'howToMain']]],
-  ['nextptr',['nextPtr',['../structle__dls___link__t.html#aeb5c99f0b4fb15daefef9b81f04b98dc',1,'le_dls_Link_t::nextPtr()'],['../structle__sls___link__t.html#ab3b10ba398661c42032ece7720860ee2',1,'le_sls_Link_t::nextPtr()']]],
-  ['num_5farray_5fmembers',['NUM_ARRAY_MEMBERS',['../le__basics_8h.html#a8d8f28a045f43b477cafb67a99894c07',1,'le_basics.h']]],
-  ['numallocs',['numAllocs',['../structle__mem___pool_stats__t.html#abcfdbe19fa0d2deb6bc57858fc0c4512',1,'le_mem_PoolStats_t']]],
-  ['numblocksinuse',['numBlocksInUse',['../structle__mem___pool_stats__t.html#a313be0351549e89c5137819f67b72e3b',1,'le_mem_PoolStats_t']]],
-  ['numfree',['numFree',['../structle__mem___pool_stats__t.html#adbc69b9f0b2b6719fdb9f40e29688381',1,'le_mem_PoolStats_t']]],
-  ['numoverflows',['numOverflows',['../structle__mem___pool_stats__t.html#ae60202bce92af5ecb9b0f4a2312be7ec',1,'le_mem_PoolStats_t']]]
+  ['mkapp',['mkapp',['../buildToolsmkapp.html',1,'buildTools']]],
+  ['mkcomp',['mkcomp',['../buildToolsmkcomp.html',1,'buildTools']]],
+  ['mkexe',['mkexe',['../buildToolsmkexe.html',1,'buildTools']]],
+  ['mksys',['mksys',['../buildToolsmksys.html',1,'buildTools']]],
+  ['modem_20firmware_20update',['Modem Firmware Update',['../c_fwupdate.html',1,'legatoServicesUpdateMain']]],
+  ['modem_20information',['Modem Information',['../c_info.html',1,'legatoServicesModem']]],
+  ['modem_20call_20control',['Modem Call Control',['../c_mcc.html',1,'legatoServicesModem']]],
+  ['modem_20data_20control',['Modem Data Control',['../c_mdc.html',1,'legatoServicesModem']]],
+  ['modem_20radio_20control',['Modem Radio Control',['../c_mrc.html',1,'legatoServicesModem']]],
+  ['mutex_20api',['Mutex API',['../c_mutex.html',1,'c_APIs']]],
+  ['manage_20airvantage_20data',['Manage AirVantage Data',['../howToAVData.html',1,'howToAV']]],
+  ['manage_20config_20tree',['Manage Config Tree',['../howToConfigTree.html',1,'howToMain']]],
+  ['manage_20ecall',['Manage eCall',['../howToEcall.html',1,'howToMain']]],
+  ['manage_20gnss',['Manage GNSS',['../howToGNSS.html',1,'howToMain']]],
+  ['manage_20device_20power',['Manage Device Power',['../howToPowerMgmt.html',1,'howToMain']]],
+  ['manage_20sandboxes_20and_20security',['Manage Sandboxes and Security',['../howToSecurity.html',1,'howToMain']]],
+  ['modem',['Modem',['../legatoServicesModem.html',1,'legatoServices']]],
+  ['mangoh_20developers',['mangOH Developers',['../mangohDevelopers.html',1,'']]],
+  ['maxnumblocksused',['maxNumBlocksUsed',['../structle__mem___pool_stats__t.html#ae0ecac2638936865038492db1e7d3d20',1,'le_mem_PoolStats_t']]],
+  ['modem_20demo',['Modem Demo',['../sampleApps_modemDemo.html',1,'sampleApps']]],
+  ['mklegatoimg',['mklegatoimg',['../toolsHost_mklegatoimg.html',1,'toolsHost']]]
 ];

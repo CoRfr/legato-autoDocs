@@ -1,5 +1,13 @@
 var le__avc__interface_8h =
 [
+    [ "LE_AVC_APN_NAME_MAX_LEN", "le__avc__interface_8h.html#ab51b9b583789f4e693c0fdae7bbfd4d9", null ],
+    [ "LE_AVC_APN_NAME_MAX_LEN_BYTES", "le__avc__interface_8h.html#a582dcf8c48d38e85f8b3473c426431d2", null ],
+    [ "LE_AVC_HTTP_STATUS_INVALID", "le__avc__interface_8h.html#a0fb4d3ec7d1869955fcf2d4113c0e6b3", null ],
+    [ "LE_AVC_NUM_RETRY_TIMERS", "le__avc__interface_8h.html#abe9f6c66e63f33f10ce4bc609bdfdfe7", null ],
+    [ "LE_AVC_PASSWORD_MAX_LEN", "le__avc__interface_8h.html#a001220a5701442d3b3f6b1fbbc50c355", null ],
+    [ "LE_AVC_PASSWORD_MAX_LEN_BYTES", "le__avc__interface_8h.html#a7404ee229fd8ac0f58efd2063f8aa06f", null ],
+    [ "LE_AVC_USERNAME_MAX_LEN", "le__avc__interface_8h.html#a0b16bee84dac3844639005a8c94cf6fb", null ],
+    [ "LE_AVC_USERNAME_MAX_LEN_BYTES", "le__avc__interface_8h.html#a2e75ef57292f632822fef6a9f17f0f1b", null ],
     [ "le_avc_BlockRequestRef_t", "le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979", null ],
     [ "le_avc_StatusEventHandlerRef_t", "le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f", null ],
     [ "le_avc_StatusHandlerFunc_t", "le__avc__interface_8h.html#aafeac33fdfce140b8bf33683cd7d9d18", null ],
@@ -8,6 +16,11 @@ var le__avc__interface_8h =
       [ "LE_AVC_ERR_BAD_PACKAGE", "le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a88f3a39f2aa27af2986e31b94febd9ec", null ],
       [ "LE_AVC_ERR_INTERNAL", "le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a718608913fcee065e2b7076db63c962f", null ],
       [ "LE_AVC_ERR_SECURITY_FAILURE", "le__avc__interface_8h.html#a9c0a79ba754f64f270821246337c4ce9a891ff0af5c14411c8c9f894212948f5a", null ]
+    ] ],
+    [ "le_avc_SessionType_t", "le__avc__interface_8h.html#a75d2fe14cef94bb6ebe00e7a849031af", [
+      [ "LE_AVC_BOOTSTRAP_SESSION", "le__avc__interface_8h.html#a75d2fe14cef94bb6ebe00e7a849031afae8fece53075194655a179153f7f1078e", null ],
+      [ "LE_AVC_DM_SESSION", "le__avc__interface_8h.html#a75d2fe14cef94bb6ebe00e7a849031afa3d8ff093c4d4054dfaaf0cf18698ff29", null ],
+      [ "LE_AVC_SESSION_INVALID", "le__avc__interface_8h.html#a75d2fe14cef94bb6ebe00e7a849031afa00a8f797f5eeb4cc487a630a64843878", null ]
     ] ],
     [ "le_avc_Status_t", "le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff", [
       [ "LE_AVC_NO_UPDATE", "le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cffa1f3c54330817d9ea3f0f2d921f6aaa61", null ],
@@ -42,11 +55,20 @@ var le__avc__interface_8h =
     [ "le_avc_DeferInstall", "le__avc__interface_8h.html#a068f714a110bfa4cac179731a17798f3", null ],
     [ "le_avc_DeferUninstall", "le__avc__interface_8h.html#a4da465033b4438cdc75fdba894fd890f", null ],
     [ "le_avc_DisconnectService", "le__avc__interface_8h.html#ac2b017103029c74d4be4cad63eb9dceb", null ],
+    [ "le_avc_GetApnConfig", "le__avc__interface_8h.html#a68a21b4f2f4e009a8cf5009b762cdf97", null ],
     [ "le_avc_GetAppUpdateName", "le__avc__interface_8h.html#abf50df00e1df25c4eabfc6b3a004280a", null ],
     [ "le_avc_GetErrorCode", "le__avc__interface_8h.html#a5c893155e3b5ef0c68405b26b4244f1f", null ],
+    [ "le_avc_GetHttpStatus", "le__avc__interface_8h.html#ad94eda48df9d4975fa817f326b5a9bed", null ],
+    [ "le_avc_GetPollingTimer", "le__avc__interface_8h.html#a123c2bc3f47759547bf3089d48d9d964", null ],
+    [ "le_avc_GetRetryTimers", "le__avc__interface_8h.html#ae331259fab99d4d8dd1411b69b5bc52a", null ],
+    [ "le_avc_GetSessionType", "le__avc__interface_8h.html#a7d7e9533c7f77e066bbda76f41444e6b", null ],
     [ "le_avc_GetUpdateType", "le__avc__interface_8h.html#a1f085c5986e7c473ed70cff32320ce11", null ],
     [ "le_avc_RemoveStatusEventHandler", "le__avc__interface_8h.html#a11e325085dadb01bbefffd0b899eb207", null ],
+    [ "le_avc_SetApnConfig", "le__avc__interface_8h.html#a746285481c5074d321db1609df8f309c", null ],
+    [ "le_avc_SetPollingTimer", "le__avc__interface_8h.html#a774b5c0278c056ef0787f4e1ba9e7255", null ],
+    [ "le_avc_SetRetryTimers", "le__avc__interface_8h.html#a0a7e7491ad2b5489c4910bdd4a0ce82d", null ],
     [ "le_avc_StartSession", "le__avc__interface_8h.html#aee17b1de43cf946b59a965e6077e7b03", null ],
     [ "le_avc_StopSession", "le__avc__interface_8h.html#a5b3e21858181bb972e982046bced1182", null ],
+    [ "le_avc_TryConnectService", "le__avc__interface_8h.html#a877c94d9e054e5b724f493f87d4c064c", null ],
     [ "le_avc_UnblockInstall", "le__avc__interface_8h.html#af5b3dffdd29b7de3288ea1a88c0ecd4e", null ]
 ];

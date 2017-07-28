@@ -14,5 +14,6 @@ var le__ips__interface_8h =
     [ "le_ips_GetInputVoltage", "le__ips__interface_8h.html#ad4e7387907ce93bd409007bca25ae433", null ],
     [ "le_ips_GetVoltageThresholds", "le__ips__interface_8h.html#aa940a3432534e873e0046a0375cb9047", null ],
     [ "le_ips_RemoveThresholdEventHandler", "le__ips__interface_8h.html#af860387586a557f5d49a2ebe7ef24722", null ],
-    [ "le_ips_SetVoltageThresholds", "le__ips__interface_8h.html#ab019313758c21f7a390f7a6061583121", null ]
+    [ "le_ips_SetVoltageThresholds", "le__ips__interface_8h.html#ab019313758c21f7a390f7a6061583121", null ],
+    [ "le_ips_TryConnectService", "le__ips__interface_8h.html#a3e45e5944eb21d08e9f5549262c3e872", null ]
 ];

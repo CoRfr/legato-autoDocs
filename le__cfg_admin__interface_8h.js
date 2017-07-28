@@ -9,5 +9,6 @@ var le__cfg_admin__interface_8h =
     [ "le_cfgAdmin_GetTreeName", "le__cfg_admin__interface_8h.html#add1f28ab26d32028bf2e63c8a050f78b", null ],
     [ "le_cfgAdmin_ImportTree", "le__cfg_admin__interface_8h.html#a2467ab9a920e733de97f4a795e557192", null ],
     [ "le_cfgAdmin_NextTree", "le__cfg_admin__interface_8h.html#a4309cd7fd95b7ea95a4bea40bee7fdf7", null ],
-    [ "le_cfgAdmin_ReleaseTreeIterator", "le__cfg_admin__interface_8h.html#a9077c6fe37d2bff7414f7a4f49c17158", null ]
+    [ "le_cfgAdmin_ReleaseTreeIterator", "le__cfg_admin__interface_8h.html#a9077c6fe37d2bff7414f7a4f49c17158", null ],
+    [ "le_cfgAdmin_TryConnectService", "le__cfg_admin__interface_8h.html#a4e0f0e4e39749194419dd0aa8c1c54f5", null ]
 ];

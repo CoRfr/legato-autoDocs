@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['watchdog_20service',['Watchdog Service',['../c_wdog.html',1,'legatoServicesSupervisor']]],
-  ['windows_20adk',['Windows ADK',['../get_started_quick_windows_a_d_k.html',1,'getStartedQuick']]]
+  ['voice_20call_20service',['Voice Call Service',['../c_le_voicecall.html',1,'legatoServices']]],
+  ['variables_20_26_20function_20parameters',['Variables &amp; Function Parameters',['../ccodingStdsParam.html',1,'ccodingStdsNaming']]]
 ];

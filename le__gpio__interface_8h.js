@@ -39,5 +39,6 @@ var le__gpio__interface_8h =
     [ "le_gpio_SetInput", "le__gpio__interface_8h.html#aa9575365b0d7f3c63ab7a82f4106040b", null ],
     [ "le_gpio_SetOpenDrainOutput", "le__gpio__interface_8h.html#ae2f18371b5d1cec66dfc44d01951e3ac", null ],
     [ "le_gpio_SetPushPullOutput", "le__gpio__interface_8h.html#a8b868ea1ec60fec2cc21a8f010f1ce24", null ],
-    [ "le_gpio_SetTriStateOutput", "le__gpio__interface_8h.html#a24ac042e9f77c27d490ac0f7c03e64f3", null ]
+    [ "le_gpio_SetTriStateOutput", "le__gpio__interface_8h.html#a24ac042e9f77c27d490ac0f7c03e64f3", null ],
+    [ "le_gpio_TryConnectService", "le__gpio__interface_8h.html#acaa2c0adb20561aff3c36812f0d64472", null ]
 ];

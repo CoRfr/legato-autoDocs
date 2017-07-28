@@ -13,7 +13,10 @@ var le__cellnet__interface_8h =
     [ "le_cellnet_AddStateEventHandler", "le__cellnet__interface_8h.html#aa3106518be8b38d94265574736769b6a", null ],
     [ "le_cellnet_ConnectService", "le__cellnet__interface_8h.html#a3fce0254d00b4262c11b8b5cb7c39b0c", null ],
     [ "le_cellnet_DisconnectService", "le__cellnet__interface_8h.html#a38bf0c21fb42c1e46ccfff595c1445c8", null ],
+    [ "le_cellnet_GetSimPinCode", "le__cellnet__interface_8h.html#add211749ae33cff8bf6bb48f6945b93c", null ],
     [ "le_cellnet_Release", "le__cellnet__interface_8h.html#ae3387759b2ae9ecf0992ac685cec5bcd", null ],
     [ "le_cellnet_RemoveStateEventHandler", "le__cellnet__interface_8h.html#aea0df4c86d4fb66f9188ab194fec2726", null ],
-    [ "le_cellnet_Request", "le__cellnet__interface_8h.html#adc6770a47ed109a77ae44241a953da5f", null ]
+    [ "le_cellnet_Request", "le__cellnet__interface_8h.html#adc6770a47ed109a77ae44241a953da5f", null ],
+    [ "le_cellnet_SetSimPinCode", "le__cellnet__interface_8h.html#a0cfdcf5974f6268b99f96815c2eb4def", null ],
+    [ "le_cellnet_TryConnectService", "le__cellnet__interface_8h.html#adb5d299d7658dfb8e951f90888e566b8", null ]
 ];

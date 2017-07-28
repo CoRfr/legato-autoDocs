@@ -71,6 +71,9 @@ var files =
     [ "le_utf8.h", "le__utf8_8h.html", "le__utf8_8h" ],
     [ "le_voicecall_interface.h", "le__voicecall__interface_8h.html", "le__voicecall__interface_8h" ],
     [ "le_wdog_interface.h", "le__wdog__interface_8h.html", "le__wdog__interface_8h" ],
+    [ "le_wifiAp_interface.h", "le__wifi_ap__interface_8h.html", "le__wifi_ap__interface_8h" ],
+    [ "le_wifiClient_interface.h", "le__wifi_client__interface_8h.html", "le__wifi_client__interface_8h" ],
+    [ "le_wifiDefs_interface.h", "le__wifi_defs__interface_8h.html", "le__wifi_defs__interface_8h" ],
     [ "legato.h", "legato_8h.html", "legato_8h" ],
     [ "logFd_interface.h", "log_fd__interface_8h.html", "log_fd__interface_8h" ],
     [ "secStoreAdmin_interface.h", "sec_store_admin__interface_8h.html", "sec_store_admin__interface_8h" ]

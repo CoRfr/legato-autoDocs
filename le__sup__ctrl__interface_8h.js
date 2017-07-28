@@ -5,5 +5,6 @@ var le__sup__ctrl__interface_8h =
     [ "le_sup_ctrl_RestartLegato", "le__sup__ctrl__interface_8h.html#a56f9e4745a2602caf76e6cadd939e588", null ],
     [ "le_sup_ctrl_StartApp", "le__sup__ctrl__interface_8h.html#a87aad682024480d38eaf889182703d61", null ],
     [ "le_sup_ctrl_StopApp", "le__sup__ctrl__interface_8h.html#a468918cc7037de4641666cfa948f7216", null ],
-    [ "le_sup_ctrl_StopLegato", "le__sup__ctrl__interface_8h.html#af4ce1779bfbbe4057a0b18f4894fd124", null ]
+    [ "le_sup_ctrl_StopLegato", "le__sup__ctrl__interface_8h.html#af4ce1779bfbbe4057a0b18f4894fd124", null ],
+    [ "le_sup_ctrl_TryConnectService", "le__sup__ctrl__interface_8h.html#af7196ed974a4ff3b52b0d86209703f1a", null ]
 ];

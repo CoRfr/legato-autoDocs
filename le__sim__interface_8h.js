@@ -1,18 +1,32 @@
 var le__sim__interface_8h =
 [
+    [ "LE_SIM_APDU_MAX_BYTES", "le__sim__interface_8h.html#ab54084e23152ffffad76b8cdfec91bf2", null ],
+    [ "LE_SIM_DATA_MAX_BYTES", "le__sim__interface_8h.html#a5674824ab605e6e521544a887c4ce024", null ],
+    [ "LE_SIM_FILE_ID_BYTES", "le__sim__interface_8h.html#af172bc75589c693533af5cf55e33555e", null ],
+    [ "LE_SIM_FILE_ID_LEN", "le__sim__interface_8h.html#a869290ea48dc472465345af6e3f1ed65", null ],
     [ "LE_SIM_ICCID_BYTES", "le__sim__interface_8h.html#a70c33c93f96c8376220b123909654d61", null ],
     [ "LE_SIM_ICCID_LEN", "le__sim__interface_8h.html#a51403752e70df40cd0472afa1914e7e3", null ],
     [ "LE_SIM_IMSI_BYTES", "le__sim__interface_8h.html#af25612258426b8b806ab4128e5b055b6", null ],
     [ "LE_SIM_IMSI_LEN", "le__sim__interface_8h.html#a233b68cf33721539c2bf3ba52bbd7ff2", null ],
+    [ "LE_SIM_PATH_MAX_BYTES", "le__sim__interface_8h.html#aad33f4de709b3b095fddbf8956e82d5a", null ],
+    [ "LE_SIM_PATH_MAX_LEN", "le__sim__interface_8h.html#a1e28c18e1e1c28123ced4d9485b7f5c6", null ],
     [ "LE_SIM_PIN_MAX_BYTES", "le__sim__interface_8h.html#aceddc12f8f1ec75fc733daa77991ce16", null ],
     [ "LE_SIM_PIN_MAX_LEN", "le__sim__interface_8h.html#ad2e7d02474310221f6815561ea02659f", null ],
     [ "LE_SIM_PIN_MIN_LEN", "le__sim__interface_8h.html#a072e9b594642fe6d4a2dd24c375ae0e2", null ],
     [ "LE_SIM_PUK_MAX_BYTES", "le__sim__interface_8h.html#ace26b9554dca416872a157003f5b93c1", null ],
     [ "LE_SIM_PUK_MAX_LEN", "le__sim__interface_8h.html#a25221b5f13960a83652a69494ef90115", null ],
+    [ "LE_SIM_RESPONSE_MAX_BYTES", "le__sim__interface_8h.html#a155be383d76069564b6ced6c18b8b712", null ],
     [ "le_sim_NewStateHandlerFunc_t", "le__sim__interface_8h.html#a9b29d688e7fac86082c1a2664278a573", null ],
     [ "le_sim_NewStateHandlerRef_t", "le__sim__interface_8h.html#a2762b1c04a51b185890700b0fa94f92d", null ],
     [ "le_sim_SimToolkitEventHandlerFunc_t", "le__sim__interface_8h.html#a6762190a9e0fbdb76df4ec8dcee1c0f7", null ],
     [ "le_sim_SimToolkitEventHandlerRef_t", "le__sim__interface_8h.html#a3d8f90603c8f5ff03b30fe9fabdf37f2", null ],
+    [ "le_sim_Command_t", "le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331", [
+      [ "LE_SIM_READ_RECORD", "le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331aa2d4ea6bc380cab183fb215911a39f14", null ],
+      [ "LE_SIM_READ_BINARY", "le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331ae4a619ba58f2cd503103b397b717b16f", null ],
+      [ "LE_SIM_UPDATE_RECORD", "le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331a73f253861a66d9f1689fbdb97263019e", null ],
+      [ "LE_SIM_UPDATE_BINARY", "le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331a68f83c3e207642ec4153b67c51cd3cd6", null ],
+      [ "LE_SIM_COMMAND_MAX", "le__sim__interface_8h.html#ac1a708ba305c36e33383073ec7f0e331a882fe099761cbf51a4a7bc82cc6cfaa6", null ]
+    ] ],
     [ "le_sim_Id_t", "le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdd", [
       [ "LE_SIM_EMBEDDED", "le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccddac9d9805213bfb9ae4d299aa70097846a", null ],
       [ "LE_SIM_EXTERNAL_SLOT_1", "le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdda4270fb44e8fa7876f337864675b42f2d", null ],
@@ -65,6 +79,9 @@ var le__sim__interface_8h =
     [ "le_sim_RemoveNewStateHandler", "le__sim__interface_8h.html#a8e3a4e2e978cf4931a39317ee5e9f762", null ],
     [ "le_sim_RemoveSimToolkitEventHandler", "le__sim__interface_8h.html#a487be241cae0657f96bcc44d0f8fab5a", null ],
     [ "le_sim_SelectCard", "le__sim__interface_8h.html#a91a0f0399c89e466b9a8ccfab6de129d", null ],
+    [ "le_sim_SendApdu", "le__sim__interface_8h.html#ad72df795270776e68e473f34c0264ecb", null ],
+    [ "le_sim_SendCommand", "le__sim__interface_8h.html#acc0760cfa301adeb917b171b32973de3", null ],
+    [ "le_sim_TryConnectService", "le__sim__interface_8h.html#a66b944460c1c96a68a896c38d752f7f2", null ],
     [ "le_sim_Unblock", "le__sim__interface_8h.html#a77293780d1e14f291418181c7c3c11f0", null ],
     [ "le_sim_Unlock", "le__sim__interface_8h.html#a36f50d2da76a981a8f671424dccb1c1d", null ]
 ];

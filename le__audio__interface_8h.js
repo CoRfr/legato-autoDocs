@@ -54,13 +54,6 @@ var le__audio__interface_8h =
       [ "LE_AUDIO_MEDIA_ERROR", "le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1a5f7de6714ea54f09d036a87dd1c63a50", null ],
       [ "LE_AUDIO_MEDIA_MAX", "le__audio__interface_8h.html#aaf870f5f30f4f6f65efb873c5d0cb5f1a0d7192558212ce592db643ee43bd1054", null ]
     ] ],
-    [ "le_audio_Profile_t", "le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5", [
-      [ "LE_AUDIO_HANDSFREE", "le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a0b2baa1a1db29f3ef78d31e6ca9b7648", null ],
-      [ "LE_AUDIO_HANDSET", "le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5aed17351c74da18eea646b52432621bbf", null ],
-      [ "LE_AUDIO_HEADSET", "le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a28b615e66b45a58709c6389f905f606e", null ],
-      [ "LE_AUDIO_TTY", "le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a7de255a63a21334b4b792c33bfdfa8a9", null ],
-      [ "LE_AUDIO_USB", "le__audio__interface_8h.html#a3d396e4c3ed914277e81c39f3c423ed5a3fbcc52b25d4c6053f687bb155b30abd", null ]
-    ] ],
     [ "le_audio_AddDtmfDetectorHandler", "le__audio__interface_8h.html#a6e65275798c0db287fc1b540cdc0db8b", null ],
     [ "le_audio_AddMediaHandler", "le__audio__interface_8h.html#a9996ac9d23333cf8219f28b69cac4f81", null ],
     [ "le_audio_Close", "le__audio__interface_8h.html#abafeb411da7b1a14b2d5777fc1d3e394", null ],
@@ -89,7 +82,7 @@ var le__audio__interface_8h =
     [ "le_audio_GetPcmSamplingRate", "le__audio__interface_8h.html#a36779982278d3f965286582f38917247", null ],
     [ "le_audio_GetPcmSamplingResolution", "le__audio__interface_8h.html#a70fbe5e1ae02033e89ad04bbf1ed2b39", null ],
     [ "le_audio_GetPlatformSpecificGain", "le__audio__interface_8h.html#a56ce044998f69da54f183552666ff352", null ],
-    [ "le_audio_GetProfile", "le__audio__interface_8h.html#a1bf9091e0068a75a34fdf638ce0f2bc3", null ],
+    [ "le_audio_GetProfile", "le__audio__interface_8h.html#a26d5e3e4e52a821a18c4dd6a84b2fa23", null ],
     [ "le_audio_GetSampleAmrDtx", "le__audio__interface_8h.html#ab26d633ee83aed52dae838cb9d721f87", null ],
     [ "le_audio_GetSampleAmrMode", "le__audio__interface_8h.html#aa293e15d41f7c1c384053947b5a4dbea", null ],
     [ "le_audio_GetSamplePcmChannelNumber", "le__audio__interface_8h.html#a40bf3633c3050a7526a100562edc97f9", null ],
@@ -125,13 +118,14 @@ var le__audio__interface_8h =
     [ "le_audio_SetPcmSamplingRate", "le__audio__interface_8h.html#ae7c9d76c5377ad5fae13b24477827f45", null ],
     [ "le_audio_SetPcmSamplingResolution", "le__audio__interface_8h.html#ab3678e77c8d69f248cd339042bd824cc", null ],
     [ "le_audio_SetPlatformSpecificGain", "le__audio__interface_8h.html#af7163fc276aaf8855d2ef7b0bbdaf8c3", null ],
-    [ "le_audio_SetProfile", "le__audio__interface_8h.html#ae2e6553f8125a30676d31f5cbd43a3b8", null ],
+    [ "le_audio_SetProfile", "le__audio__interface_8h.html#a8526af295a5fe34cbb79f6b6d5c99f6a", null ],
     [ "le_audio_SetSampleAmrDtx", "le__audio__interface_8h.html#a5932f51fb1398cc2442c8bb765ca4071", null ],
     [ "le_audio_SetSampleAmrMode", "le__audio__interface_8h.html#a18600cdbd3995c9c2ca24f9b15991f7d", null ],
     [ "le_audio_SetSamplePcmChannelNumber", "le__audio__interface_8h.html#aae7db9f0933119fb5a61162722b3274a", null ],
     [ "le_audio_SetSamplePcmSamplingRate", "le__audio__interface_8h.html#a04adfcc0e8f5796eca53c31cd5dd6528", null ],
     [ "le_audio_SetSamplePcmSamplingResolution", "le__audio__interface_8h.html#aae37b46c13f76144dd94c48bfe94998b", null ],
     [ "le_audio_Stop", "le__audio__interface_8h.html#a4aebc6e8cdc4389c375e93418823af71", null ],
+    [ "le_audio_TryConnectService", "le__audio__interface_8h.html#af95c8ecd8562696e322707e207c393dc", null ],
     [ "le_audio_Unmute", "le__audio__interface_8h.html#adad24547293481964039efe56bc14e2b", null ],
     [ "le_audio_UnmuteCallWaitingTone", "le__audio__interface_8h.html#ab2cee945145242ebe446ab66eac9aa91", null ]
 ];

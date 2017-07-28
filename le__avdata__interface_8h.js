@@ -14,13 +14,14 @@ var le__avdata__interface_8h =
     [ "le_avdata_DisconnectService", "le__avdata__interface_8h.html#a4210ebe082f4c821d10d5bed72f9c640", null ],
     [ "le_avdata_GetBinary", "le__avdata__interface_8h.html#af43cd83333be70ec9529dd4030f4e430", null ],
     [ "le_avdata_GetBool", "le__avdata__interface_8h.html#ae3d448ea6e5d4e87cfb8a9ae713cc06c", null ],
-    [ "le_avdata_GetFloat", "le__avdata__interface_8h.html#a45fab2cd681a4e0c20b4e0a4fd97aa9a", null ],
+    [ "le_avdata_GetFloat", "le__avdata__interface_8h.html#a7f4a6bfedd75bc81ceae57924b832455", null ],
     [ "le_avdata_GetInt", "le__avdata__interface_8h.html#aece245e0d4ba02523679dd2ba25a8a90", null ],
     [ "le_avdata_GetString", "le__avdata__interface_8h.html#add94bfa34220bf89c913f13b4721c4d0", null ],
     [ "le_avdata_RemoveFieldEventHandler", "le__avdata__interface_8h.html#a18b8176f294ffc1b5ffdefe4c3e3768a", null ],
     [ "le_avdata_SetBinary", "le__avdata__interface_8h.html#ae6200a5fb1fdf180fae558ea718d39c3", null ],
     [ "le_avdata_SetBool", "le__avdata__interface_8h.html#a99996f9a245331fa7ea2dd6b42b4c703", null ],
-    [ "le_avdata_SetFloat", "le__avdata__interface_8h.html#aa428e0730b58eb8273abe2389b407b5e", null ],
+    [ "le_avdata_SetFloat", "le__avdata__interface_8h.html#a26a675b16ffcc98d7abac4268b354d39", null ],
     [ "le_avdata_SetInt", "le__avdata__interface_8h.html#a3986a2997adc18ef9d8ea955b14846e4", null ],
-    [ "le_avdata_SetString", "le__avdata__interface_8h.html#a4d33d841f1a9f6c9bf15360db91f5bd3", null ]
+    [ "le_avdata_SetString", "le__avdata__interface_8h.html#a4d33d841f1a9f6c9bf15360db91f5bd3", null ],
+    [ "le_avdata_TryConnectService", "le__avdata__interface_8h.html#af9dc75ad35431dd76f2248bbd0da7f33", null ]
 ];

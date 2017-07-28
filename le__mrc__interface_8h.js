@@ -6,6 +6,8 @@ var le__mrc__interface_8h =
     [ "LE_MRC_MNC_LEN", "le__mrc__interface_8h.html#a0550a0420d5f13f4b68a6c880473e768", null ],
     [ "LE_MRC_NETWORK_NAME_MAX_LEN", "le__mrc__interface_8h.html#a5f5edf129f254904b22595af86cdeaa7", null ],
     [ "le_mrc_CellInfoRef_t", "le__mrc__interface_8h.html#a8fbb2523c254ba473a3f59efa452355e", null ],
+    [ "le_mrc_CellularNetworkScanHandlerFunc_t", "le__mrc__interface_8h.html#a32b46b705cd7d45d76606b6c609df627", null ],
+    [ "le_mrc_ManualSelectionHandlerFunc_t", "le__mrc__interface_8h.html#aed3784a1d6f94a5b4b15baf3cc89555a", null ],
     [ "le_mrc_MetricsRef_t", "le__mrc__interface_8h.html#a6ad5afb123492b2e249f3ecd414d6e83", null ],
     [ "le_mrc_NeighborCellsRef_t", "le__mrc__interface_8h.html#a672ea94ad892bb95f43836b5fbd24188", null ],
     [ "le_mrc_NetRegStateEventHandlerRef_t", "le__mrc__interface_8h.html#a709ab9eb31ffa85aa85b8b2aaec22a6d", null ],
@@ -160,6 +162,7 @@ var le__mrc__interface_8h =
     [ "le_mrc_GetNextCellularNetworkScan", "le__mrc__interface_8h.html#ae0ca9f0c1c106d6ddeef784c6bb0d69b", null ],
     [ "le_mrc_GetNextNeighborCellInfo", "le__mrc__interface_8h.html#a0baede61d9b260a3ec83e3ab320d0715", null ],
     [ "le_mrc_GetNextPreferredOperator", "le__mrc__interface_8h.html#a896703cabaacf97a70708d944cfbfc87", null ],
+    [ "le_mrc_GetPlatformSpecificRegistrationErrorCode", "le__mrc__interface_8h.html#a153247be5ea13ae2bc13ace0dd8c739c", null ],
     [ "le_mrc_GetPreferredOperatorDetails", "le__mrc__interface_8h.html#ab2204081bc04a108194e1dd915c35acf", null ],
     [ "le_mrc_GetPreferredOperatorsList", "le__mrc__interface_8h.html#a1ea0d2943accd51d3b428e0e6c94d297", null ],
     [ "le_mrc_GetRadioAccessTechInUse", "le__mrc__interface_8h.html#a3ad9533c467cec0902d5d165bb32d67b", null ],
@@ -169,6 +172,7 @@ var le__mrc__interface_8h =
     [ "le_mrc_GetRegisterMode", "le__mrc__interface_8h.html#a283c0c092c5a135a8e95f9f091655cb1", null ],
     [ "le_mrc_GetServingCellId", "le__mrc__interface_8h.html#aafc9fb71c3013b7b26dc386b13ca4a85", null ],
     [ "le_mrc_GetServingCellLocAreaCode", "le__mrc__interface_8h.html#a8ba03765e7595f85783f6f6a022311f8", null ],
+    [ "le_mrc_GetServingCellLteTracAreaCode", "le__mrc__interface_8h.html#a856dc7825b4fa8de095f26020e03f015", null ],
     [ "le_mrc_GetSignalQual", "le__mrc__interface_8h.html#a717aa0f4e4dc9a83b6adc2f26f3f0258", null ],
     [ "le_mrc_GetTdScdmaBandCapabilities", "le__mrc__interface_8h.html#adfa81f2361744bc67697221845713a98", null ],
     [ "le_mrc_GetTdScdmaBandPreferences", "le__mrc__interface_8h.html#aed41544004ed7df9de8e874b8bb09d3b", null ],
@@ -179,6 +183,7 @@ var le__mrc__interface_8h =
     [ "le_mrc_IsCellularNetworkInUse", "le__mrc__interface_8h.html#a4c859fc1364c183aa1d26a022db365c6", null ],
     [ "le_mrc_MeasureSignalMetrics", "le__mrc__interface_8h.html#ad3662723a7ed47cf45d9a2eaaa1fb16e", null ],
     [ "le_mrc_PerformCellularNetworkScan", "le__mrc__interface_8h.html#ab4a246dd466fa8175aca0158e0cab227", null ],
+    [ "le_mrc_PerformCellularNetworkScanAsync", "le__mrc__interface_8h.html#ab66e29d054d7902c61f87e79fd6d987f", null ],
     [ "le_mrc_RemoveNetRegStateEventHandler", "le__mrc__interface_8h.html#a4fc57a5a5bc1f4b6617c895c98a09f15", null ],
     [ "le_mrc_RemovePreferredOperator", "le__mrc__interface_8h.html#a0c2d65eb8cdb200aa4bce8766530c39f", null ],
     [ "le_mrc_RemoveRatChangeHandler", "le__mrc__interface_8h.html#aed4f1730c99a1a9204a198e3df3cf6f5", null ],
@@ -187,7 +192,9 @@ var le__mrc__interface_8h =
     [ "le_mrc_SetBandPreferences", "le__mrc__interface_8h.html#ac808b4dc721e031566da92e00663c027", null ],
     [ "le_mrc_SetLteBandPreferences", "le__mrc__interface_8h.html#a21d2fe7c736e9a4a342dcc461a5d6e02", null ],
     [ "le_mrc_SetManualRegisterMode", "le__mrc__interface_8h.html#a09b890f05a20f4b007d60e595026631f", null ],
+    [ "le_mrc_SetManualRegisterModeAsync", "le__mrc__interface_8h.html#ac342382a54168e032be59e886b4d3262", null ],
     [ "le_mrc_SetRadioPower", "le__mrc__interface_8h.html#a78bd27d92337e2122320f41bcaa5480f", null ],
     [ "le_mrc_SetRatPreferences", "le__mrc__interface_8h.html#a2d4abd391bc69c218538f5d8e1be4e01", null ],
-    [ "le_mrc_SetTdScdmaBandPreferences", "le__mrc__interface_8h.html#a8765511597189b64e486fa8f17bcddcd", null ]
+    [ "le_mrc_SetTdScdmaBandPreferences", "le__mrc__interface_8h.html#a8765511597189b64e486fa8f17bcddcd", null ],
+    [ "le_mrc_TryConnectService", "le__mrc__interface_8h.html#a28d361984ad02bd619593207129c0428", null ]
 ];
