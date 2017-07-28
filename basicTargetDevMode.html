@@ -2,7 +2,7 @@
 <html data-context="Build Apps" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>Update Target Software  - Legato Docs</title>
+<title>Developer Mode  - Legato Docs</title>
 <meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description"/>
 <meta content="legato, iot" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
@@ -59,11 +59,49 @@
 <div class="content">
 <div class="header">
 <div class="headertitle">
-<h1 class="title">Update Target Software </h1> </div>
+<h1 class="title">Developer Mode </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>Your target device should have come with a working Legato framework installed on it already.</p>
-<p>To update the app and framework binaries on your target with the ones you built in <a class="el" href="basicBuildLegato.html">Build Legato</a>, use the <code>update</code> tool to pass the system update pack to the target device for installation. </p><pre class="fragment"><div class="line">$ update build/wp85/system.wp85.update 192.168.2.2</div></pre><!-- fragment --><p>See <a class="el" href="toolsTarget_update.html">update</a> for more information on how to use the <code>update</code> tool.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<div class="textblock"><p>Developer Mode is provided as a pre-built core app (but not installed by default). Developer Mode (<code>devMode</code>) was created to provide helpful features to Developers.</p>
+<p><code>devMode</code> provides the following features:</p><ul>
+<li>bundles <a class="el" href="howToDebugGDB.html">gdbserver</a> executable for use on the target device, allowing step-by-step debugging of Legato apps.</li>
+<li>sets the probation period of apps to 10 seconds, to prevent aggressive roll-back.</li>
+<li>runs the tcf-agent, so the target is auto discoverable by Developer Studio.</li>
+<li>holds a wake lock, so the target won't go to sleep when disconnected from USB.</li>
+</ul>
+<h1><a class="anchor" id="howToDevMode_installDev"></a>
+Installing Developer Mode</h1>
+<p><code>devMode</code> is a core app that is built during the <code>make</code> <code></code> &lt;target&gt; process but it is not included by default in the <code>system.sdef</code>.</p>
+<p>To install <code>devMode:</code> </p>
+<pre class="fragment">$ make wp85
+$ app install $LEGATO_ROOT/build/wp85/tools/devMode.wp85.update 192.168.2.2
+</pre><h1><a class="anchor" id="devMode_enableDev"></a>
+Enabling Developer Mode</h1>
+<p>To start <code>devMode</code> on your target (if it's disabled):</p>
+<p>Start the app:</p>
+<pre class="fragment">app start devMode </pre><p>Modify the config on the target to enable starting devMode upon reboot:</p>
+<pre class="fragment">config set /apps/devMode/startManual false bool </pre><p>To configure enabling/disabling <code>devMode</code> (even after a system rebuild) add a start: auto (enabled) or start: manual (disabled) to the <code>devMode</code> adef.</p>
+<p>Example devMode adef:</p>
+<pre class="fragment">sandboxed: false
+start: auto                 &lt;-- change to manual to disable
+
+executables:
+{
+    devMode = ( $LEGATO_ROOT/components/devMode/devMode )
+}
+
+processes:
+{
+    run:
+    {
+</pre><h1><a class="anchor" id="DevMode_disableDev"></a>
+Disabling Developer Mode</h1>
+<p>To temporarily stop devMode:</p>
+<pre class="fragment">app stop devMode </pre><h1><a class="anchor" id="devMode_removeDev"></a>
+Removing Developer Mode</h1>
+<p>To remove devMode from your target:</p>
+<pre class="fragment">app remove devMode </pre><p>It is advisable to remove the devMode app before deploying targets in production. This can be done by removing devMode from the system sdef file and rebuilding the system for the target device.</p>
+<dl class="section note"><dt>Note</dt><dd>The tcf-agent creates extra network traffic between the host and the target. Stopping or removing devMode will decrease the traffic.</dd></dl>
+<p>Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>

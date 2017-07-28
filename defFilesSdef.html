@@ -67,7 +67,11 @@
 <h1><a class="anchor" id="defFilesSdef_apps"></a>
 apps</h1>
 <p>An <code>apps:</code> section declares one or more apps to be deployed to the target system.</p>
-<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver</div><div class="line">}</div></pre><!-- fragment --><p>This looks for an app definition file called <code>webserver.adef</code> and includes it in the system.</p>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver</div><div class="line">}</div></pre><!-- fragment --><p>This looks for an app definition file called <code>webserver.adef</code> and includes it in the system. You can also optionally include the <code></code>.adef extension.</p>
+<p>Alternatively you can include the full path and adef extension on the declaration and bypass the app search paths.</p>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    /full/path/to/my/app/webserver.adef</div><div class="line">}</div></pre><!-- fragment --><p>In addition to including applications in source for to your system builds. You can also add binary application packages.</p>
+<p>Binary app packages are apps distributed without their source code. You include these apps in your <code></code>.sdef file <code>apps:</code> section just like .adef files.</p>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webserver.wp85.app</div><div class="line">}</div></pre><!-- fragment --><p>Binary app files are named for the target architecture they are built against. This way it's hard to mix up builds for incompatible target architectures. The same pathing and search rules apply to binary apps as do for .adef files.</p>
 <p>The <code>apps:</code> section can override limits and other app settings.</p>
 <p>Here's a code sample to deploy a web server limiting its share of the CPU under heavy load to 500 (see <a class="el" href="defFilesAdef.html#defFilesAdef_cpuShare">cpuShare</a>):</p>
 <pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    webServer</div><div class="line">    {</div><div class="line">        cpuShare: 500</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>Any of the following subsections can be used in an <code></code>.sdef <code>apps:</code> section, and will override the .adef setting for all processes in that app:</p>

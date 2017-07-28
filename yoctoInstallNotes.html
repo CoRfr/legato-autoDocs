@@ -67,7 +67,7 @@ Login Authentication</h1>
 <p>To log onto the target through the serial interface, log on as <b>root</b> with no password, and then follow the login authentication menus to setup secure credentials.</p>
 <h1><a class="anchor" id="yoctoInstallNotes_yoctoCDC"></a>
 CDC-ECM for IP vs Ethernet</h1>
-<p>Using CDC-ECM for IP connections will cause the MAC address to change every reboot because the kernel allocates software-defined MAC addresses to interfaces. This may cause new connections to be detected by your host every time you reboot the device. See <a class="el" href="basicTargetConfigIP.html">Configure IP Address</a> and <a class="el" href="toolsTarget_setNet.html">setNet</a>.</p>
+<p>Using CDC-ECM for IP connections will cause the MAC address to change every reboot because the kernel allocates software-defined MAC addresses to interfaces. This may cause new connections to be detected by your host every time you reboot the device. See basicTargetConfigIP and <a class="el" href="toolsTarget_setNet.html">setNet</a>.</p>
 <h1><a class="anchor" id="yoctoInstallNotes_yoctoPrefIP"></a>
 Setup Preferred IP</h1>
 <p>Either boot with an Ethernet cable plugged in and let the device obtain an IP address using DHCP, or enable CDC-ECM and the micro-USB cable. You can then determine the IP address using <code>ifconfig</code> on the console or provide a fixed IP from your DHCP server. Then use <code>ssh</code> and <code>scp</code> to access the device and transfer files. </p><dl class="section note"><dt>Note</dt><dd>ssh over Ethernet is temporarily disabled in Legato 16.10.0.</dd></dl>

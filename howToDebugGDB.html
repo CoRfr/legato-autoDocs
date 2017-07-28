@@ -2,7 +2,7 @@
 <html data-context="Build Apps" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>GDB  - Legato Docs</title>
+<title>Debug using GDB  - Legato Docs</title>
 <meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description"/>
 <meta content="legato, iot" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
@@ -59,59 +59,80 @@
 <div class="content">
 <div class="header">
 <div class="headertitle">
-<h1 class="title">GDB </h1> </div>
+<h1 class="title">Debug using GDB </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>This topic provides details on using the open-source <code>GDB</code> tool on a host PC to debug a sandboxed app on a target device. This type of remote debugging is useful where resources are limited like embedded apps. The sample code in this topic has an app named <code>hw</code> with one executable <code>hw_exe</code> and a few processes created in the same executable (<code>hw_proc1</code>, <code>hw_proc2</code>, etc.).</p>
-<p>These are the high-level steps to use GDB with a sandboxed app.</p>
+<div class="textblock"><p>This topic provides details on using the open-source <code>GDB</code> tool on a dev machine to debug sandboxed apps. This type of remote debugging is useful where resources are limited like in embedded apps.</p>
+<p>The sample code uses an app named <code>hw</code> with one executable <code>hw_exe</code> and processes created in the same executable (<code>hw_proc1</code>, <code>hw_proc2</code>, etc.).</p>
+<p>High-level steps to use GDB with a sandboxed app:</p>
 <p>On the target device:</p><ul>
-<li>Run the sandboxed app <a class="el" href="howToDebugGDB.html#howToDebugGDB_withoutProcess">without the process</a> that's being debugged.</li>
-<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_makeGDBAvail">Make</a> <code>gdbserver</code> available in the sanboxed app.</li>
-<li>Run the sandboxed app with <code>gdbserver</code> <a class="el" href="howToDebugGDB.html#howToDebugGDB_withProcess">with the process</a> being debugged.</li>
+<li>Make sure the devMode app <code>is</code> installed and running</li>
+<li>Run the sandboxed app <a class="el" href="howToDebugGDB.html#howToDebugGDB_withoutProcess">without the process</a> you want to debug.</li>
+<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_makeGDBAvail">Start</a> <code>gdbserver</code> in the sanboxed app.</li>
+<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_withProcess">Start the process</a> in the sandboxed app with <code>gdbserver</code>.</li>
 <li><a class="el" href="howToDebugGDB.html#howToDebugGDB_removeGDB">Remove</a> <code>gdb</code> from the sandboxed app after you're finished debugging.</li>
 </ul>
-<p>On the host PC:</p><ul>
-<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_launchGDBhost">Launch</a> <code>gdbserver</code> on the host PC.</li>
-<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_remoteConnect">Remote connect</a> to the target and run regular <code>gdb</code> commands.</li>
+<p>On your dev machine:</p><ul>
+<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_launchGDBhost">Launch</a> <code>gdb</code> from the apps make directory.</li>
+<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_remoteConnect">Remote connect</a> to the target and run <code>gdb</code> commands.</li>
 </ul>
-<p>See <a class="el" href="basicTargetConfigIP.html">Configure IP Address</a> if you need to setup your host/target communications.</p>
+<p>See basicTargetConfigIP if you need to setup your host/target communications.</p>
 <h1><a class="anchor" id="howToDebugGDB_sampleCode"></a>
 Sample Code</h1>
-<p>The following simple app sample code is used in this topic's examples.</p>
+<p>The following simple app sample code is used in examples.</p>
 <h2><a class="anchor" id="howToDebugGDB_sampleCode_adef"></a>
 hw.adef</h2>
 <pre class="fragment"><div class="line">start: manual</div><div class="line"> </div><div class="line">executables:</div><div class="line">{</div><div class="line">    hw_exe = ( hw )</div><div class="line">}</div><div class="line"> </div><div class="line">processes:</div><div class="line">{</div><div class="line">    run:</div><div class="line">    {</div><div class="line">        hw_proc1 = ( hw_exe )</div><div class="line">        hw_proc2 = ( hw_exe )</div><div class="line">        hw_proc3 = ( hw_exe )</div><div class="line">        hw_proc4 = ( hw_exe )</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>See <a class="el" href="basicAppsCreate.html">Create Apps</a> for more info.</p>
 <h2><a class="anchor" id="howToDebugGDB_sampleCode_cdef"></a>
 .cdef</h2>
-<p><code>hw/Component.cdef</code> </p><pre class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    hello.c</div><div class="line">}</div><div class="line"> </div><div class="line">cflags:</div><div class="line">{</div><div class="line">    -g</div><div class="line">}</div></pre><!-- fragment --><p> See <a class="el" href="defFilesCdef.html#defFilesCdef_cFlags">cflags</a> for more info on <code>cflags</code>.</p>
+<p><code>hw/Component.cdef</code> </p><pre class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    hello.c</div><div class="line">}</div><div class="line"> </div><div class="line">cflags:</div><div class="line">{</div><div class="line">    -g</div><div class="line">}</div></pre><!-- fragment --><p>See <a class="el" href="defFilesCdef.html#defFilesCdef_cFlags">cflags</a> for more info on <code>cflags</code>.</p>
 <h2><a class="anchor" id="howToDebugGDB_sampleCode_helloC"></a>
 hello.c</h2>
-<p><code>hw/hello.c</code> </p><pre class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"> </div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line">    <a class="code" href="le__log_8h.html#a23e6d206faa64f612045d688cdde5808">LE_INFO</a>(<span class="stringliteral">"HELLO WORLD."</span>);</div><div class="line">}</div></pre><!-- fragment --><p>See <a class="el" href="basicAppsCreate.html">Create Apps</a> for more info.</p>
-<h1><a class="anchor" id="howToDebugGDB_withoutProcess"></a>
-Run without Process</h1>
-<p>To use GDB, you start the sandboxed app excluding the process being debugged.</p>
-<p>On the target, run the app excluding the process being debugged, <code>hw_proc3:</code> </p><pre class="fragment"><div class="line">app start hw --norun=hw_proc3</div></pre><!-- fragment --><h1><a class="anchor" id="howToDebugGDB_makeGDBAvail"></a>
-Make GDB Available</h1>
-<p>On the target, make <code>gdbserver</code> available in the sandboxed <code>/bin</code> directory: </p><pre class="fragment"><div class="line">gdbCfg hw</div></pre><!-- fragment --><h1><a class="anchor" id="howToDebugGDB_withProcess"></a>
-Run with Process</h1>
-<p>On the target, start <code>gdbserver</code> with arguments specified after <code>--</code> (two dashes): </p><pre class="fragment"><div class="line">app runProc hw --exe=/bin/gdbserver -- localhost:2000 /bin/hw_exe</div></pre><!-- fragment --><p>It will return this: <br/>
-<code>Process /bin/hw_exe created; pid = 9783</code> <br/>
-<code>Listening on port 2000</code></p>
-<h1><a class="anchor" id="howToDebugGDB_launchGDBhost"></a>
-Launch GDB on Host</h1>
-<p>You need to complete these steps on the host PC:</p><ul>
-<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_launchGDBhost">Launch</a> <code>gdb</code> on the host PC.</li>
+<p><code>hw/hello.c</code> </p>
+<pre class="fragment"><div class="line"><span class="preprocessor">#include "<a class="code" href="legato_8h.html">legato.h</a>"</span></div><div class="line"> </div><div class="line"><a class="code" href="le__event_loop_8h.html#abdb9187a56836a93d19cc793cbd4b7ec">COMPONENT_INIT</a></div><div class="line">{</div><div class="line">    <a class="code" href="le__log_8h.html#a23e6d206faa64f612045d688cdde5808">LE_INFO</a>(<span class="stringliteral">"HELLO WORLD."</span>);</div><div class="line">}</div></pre><!-- fragment --><p>See <a class="el" href="basicAppsCreate.html">Create Apps</a> for more info.</p>
+<h1><a class="anchor" id="howToDebugGDB_onTarget"></a>
+Running GDB on your Target Device</h1>
+<h2><a class="anchor" id="howToDebugGDB_withoutProcess"></a>
+Running the App without a Process</h2>
+<p>To use GDB, start the sandboxed app excluding the process being debugged:</p>
+<p>On the target, run the app excluding the process being debugged, <code>hw_proc3:</code> </p><pre class="fragment"># app start hw --norun=hw_proc3
+</pre><h2><a class="anchor" id="howToDebugGDB_makeGDBAvail"></a>
+Start GDB on an App</h2>
+<p>On your dev machine, set up port forwarding from local host to the target. This bypasses the firewall on the target and allows GDB server to connect.</p>
+<pre class="fragment">$ ssh -L 2000:localhost:2000 root@192.168.2.2
+</pre><dl class="section warning"><dt>Warning</dt><dd>Do not end this session to the Target or the port forwarding will end. GDB won't be able to connect to the Target.</dd></dl>
+<p>On the target, start <code>gdbserver</code> in the sandboxed <code>/bin</code> directory by running: </p><pre class="fragment"># gdbCfg &lt;app name&gt;
+</pre><p>For Example: </p><pre class="fragment"># gdbCfg hw
+</pre><h2><a class="anchor" id="howToDebugGDB_withProcess"></a>
+Start the Process with GDB enabled</h2>
+<p>On the target, start <code>gdbserver</code> by starting the app with the arguments specified after <code>--</code> (two dashes):</p>
+<pre class="fragment"># app runProc &lt;app name&gt; --exe=/bin/gdbserver --localhost:2000 /bin/&lt;app bin dir&gt;
+</pre><p>For Example: </p><pre class="fragment"># app runProc hw --exe=/bin/gdbserver -- localhost:2000 /bin/hw_exe
+</pre><p>If started successfully, the following will be returned: <br/>
+</p><pre class="fragment">Process /bin/hw_exe created; pid = 9783
+Listening on port 2000
+</pre><h1><a class="anchor" id="howToDebugGDB_launchGDBhost"></a>
+Launch GDB on your Dev Machine</h1>
+<p>To start GDB on your Dev Machine:</p><ul>
+<li><a class="el" href="howToDebugGDB.html#howToDebugGDB_launchGDBhost">Launch</a> <code>gdb</code> on the Dev Machine.</li>
 <li><a class="el" href="howToDebugGDB.html#howToDebugGDB_remoteConnect">Remote connect</a> to the target and run regular <code>gdb</code> commands.</li>
 </ul>
-<p>You need to run the commands from the directory where the <code>hw</code> app was made.</p>
-<p>In this example, we're running the <code>gdb</code> tool (<code>arm-poky-linux-gnueabi-gdb</code>) located in our target's toolchain path (<code>/opt/swi/y17-ext/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi</code> for wp85). Use the <code>findtoolchain</code> command on the host PC to determine your toolchain path. The path <code>_build_hw/wp85/app/hw/staging/read-only/bin/hw_exe</code> is relative to the app directory; this build directory is generated when an app is made.</p>
-<pre class="fragment"><div class="line">~/LegatoApps/hw$ /opt/swi/y17-ext/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb _build_hw/wp85/app/hw/staging/read-only/bin/hw_exe</div></pre><!-- fragment --><h1><a class="anchor" id="howToDebugGDB_remoteConnect"></a>
-Remote Connect</h1>
-<p>After GDB is launched, use the <code>target</code> <code>remote</code> command to connect to the target: </p><pre class="fragment"><div class="line">(gdb) target remote 192.168.2.2:2000</div></pre><!-- fragment --><p><code>Remote debugging from host 192.168.2.3</code> will display on the target.</p>
-<dl class="section note"><dt>Note</dt><dd>You can now run any of the standard <code>gdb</code> debugging commands on <code>hw_exe</code>.</dd></dl>
+<h2><a class="anchor" id="howTODebugGDB_lanchGDBhost"></a>
+Launch gdb from Dev Machine</h2>
+<p>You need to run the commands from the directory where the <code>hw</code> app was made. The path <code>_build_hw/wp85/app/hw/staging/read-only/bin/hw_exe</code> is relative to the app directory; this build directory is generated when an app is made and the gdb commands must be run here.</p>
+<p>In this example, we're running the <code>gdb</code> tool (<code>arm-poky-linux-gnueabi-gdb</code>) located in our target's toolchain path (<code>/opt/swi/y17-ext/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi</code> for wp85). Use the <code>findtoolchain</code> command on your dev machine to determine the toolchain path.</p>
+<p>Launch GDB from the toolchain using the following command (substitute your program and path for hw):</p>
+<pre class="fragment">$ ~/LegatoApps/hw$ /opt/swi/y17-ext/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-gdb _build_hw/wp85/app/hw/staging/read-only/bin/hw_exe
+</pre><h2><a class="anchor" id="howToDebugGDB_remoteConnect"></a>
+Remote Connect</h2>
+<p>After GDB is launched, use the <code>target</code> <code>remote</code> command to connect to the target: </p><pre class="fragment">$ (gdb) target remote localhost:2000
+</pre><dl class="section note"><dt>Note</dt><dd>If you get an error about connecting make sure you have a <a class="el" href="howToDebugGDB.html#howToDebugGDB_makeGDBAvail">ssh -L (port forwarding) session</a> open between the dev machine and target.</dd></dl>
+<p>The target will display: </p><pre class="fragment">Remote debugging using localhost:2000
+</pre><p>You can now run any of the standard <code>gdb</code> debugging commands on <code>hw_exe</code>.</p>
 <h1><a class="anchor" id="howToDebugGDB_removeGDB"></a>
 Remove GDB from Sandbox</h1>
-<p>Once you've finished debugging, remove <code>gdbserver</code> from the sandbox <code>/bin</code> directory: </p><pre class="fragment"><div class="line">gdbCfg hw --reset</div></pre><!-- fragment --><p>Refer to the many available open source resources if you need help using <code>gdb</code>.</p>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<p>Once you've finished debugging, remove <code>gdbserver</code> from the sandbox <code>/bin</code> directory on the target: </p><pre class="fragment"># gdbCfg hw --reset
+</pre><p>Refer to the many available open source resources if you need help using <code>gdb</code>.</p>
+<p>Copyright (C) Sierra Wireless Inc. </p>
 </div></div>
 <br clear="left"/>
 </div>
