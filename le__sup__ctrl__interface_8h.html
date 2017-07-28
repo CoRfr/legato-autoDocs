@@ -59,6 +59,7 @@
 <div class="content">
 <div class="header">
 <div class="summary">
+<a href="#typedef-members">Typedefs</a> |
 <a href="#func-members">Functions</a> </div>
 <div class="headertitle">
 <h1 class="title">le_sup_ctrl_interface.h File Reference</h1> </div>
@@ -68,6 +69,12 @@
 </div>
 <p><a href="le__sup__ctrl__interface_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ab51cf2e4d8c2c4acb80a2ca6b1afb7c6"><td align="right" class="memItemLeft" valign="top"><a class="anchor" id="ab51cf2e4d8c2c4acb80a2ca6b1afb7c6"></a>
+typedef struct le_sup_ctrl_App * </td><td class="memItemRight" valign="bottom"><b>le_sup_ctrl_AppRef_t</b></td></tr>
+<tr class="separator:ab51cf2e4d8c2c4acb80a2ca6b1afb7c6"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a0ad662483013b3171f034e0c0aa06d67"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#a0ad662483013b3171f034e0c0aa06d67">le_sup_ctrl_ConnectService</a> (void)</td></tr>
@@ -76,6 +83,12 @@ Functions</h2></td></tr>
 <tr class="separator:af7196ed974a4ff3b52b0d86209703f1a"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ac81ee633fd2f3cd7e4ea5141e0452071"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#ac81ee633fd2f3cd7e4ea5141e0452071">le_sup_ctrl_DisconnectService</a> (void)</td></tr>
 <tr class="separator:ac81ee633fd2f3cd7e4ea5141e0452071"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a18802f3fd9b95a336e8f2497e4043444"><td align="right" class="memItemLeft" valign="top">le_sup_ctrl_AppRef_t </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#a18802f3fd9b95a336e8f2497e4043444">le_sup_ctrl_GetAppRef</a> (const char *appName)</td></tr>
+<tr class="separator:a18802f3fd9b95a336e8f2497e4043444"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad23e3d9222592170f24d118e11d8d519"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#ad23e3d9222592170f24d118e11d8d519">le_sup_ctrl_ReleaseAppRef</a> (le_sup_ctrl_AppRef_t appRef)</td></tr>
+<tr class="separator:ad23e3d9222592170f24d118e11d8d519"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab4ba4d716789430ce614a34eefd844f0"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#ab4ba4d716789430ce614a34eefd844f0">le_sup_ctrl_SetRun</a> (le_sup_ctrl_AppRef_t appRef, const char *procName, bool run)</td></tr>
+<tr class="separator:ab4ba4d716789430ce614a34eefd844f0"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a87aad682024480d38eaf889182703d61"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#a87aad682024480d38eaf889182703d61">le_sup_ctrl_StartApp</a> (const char *appName)</td></tr>
 <tr class="separator:a87aad682024480d38eaf889182703d61"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a468918cc7037de4641666cfa948f7216"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sup__ctrl__interface_8h.html#a468918cc7037de4641666cfa948f7216">le_sup_ctrl_StopApp</a> (const char *appName)</td></tr>
@@ -125,6 +138,51 @@ Functions</h2></td></tr>
 <p>This function is created automatically. </p>
 </div>
 </div>
+<a class="anchor" id="a18802f3fd9b95a336e8f2497e4043444"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">le_sup_ctrl_AppRef_t le_sup_ctrl_GetAppRef </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>appName</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Gets a reference to an application.</p>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the named app. NULL if the app is not installed. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appName</td><td>Name of the app to get the ref for. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad23e3d9222592170f24d118e11d8d519"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sup_ctrl_ReleaseAppRef </td>
+<td>(</td>
+<td class="paramtype">le_sup_ctrl_AppRef_t </td>
+<td class="paramname"><em>appRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Release the reference to an application. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appRef</td><td>Ref to the app. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a56f9e4745a2602caf76e6cadd939e588"></a>
 <div class="memitem">
 <div class="memproto">
@@ -143,6 +201,47 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">manualRestart</td><td>Was the restart manually triggered e.g. "legato restart" </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab4ba4d716789430ce614a34eefd844f0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sup_ctrl_SetRun </td>
+<td>(</td>
+<td class="paramtype">le_sup_ctrl_AppRef_t </td>
+<td class="paramname"><em>appRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>procName</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool </td>
+<td class="paramname"><em>run</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the run flag for a process in an application.</p>
+<p>If there is an error this function will kill the calling client. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">appRef</td><td>Ref to the app. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">procName</td><td>Process name to set the run flag for. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">run</td><td>Flag to run the process or not. </td></tr>
 </table>
 </dd>
 </dl>

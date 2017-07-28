@@ -100,10 +100,14 @@ Typedefs</h2></td></tr>
 <tr class="separator:afd91170c5ea21ec7ca98f7ce95049dae"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a77d2607cc541bf0369e69bb2d105d4bf"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_RxMessageHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a></td></tr>
 <tr class="separator:a77d2607cc541bf0369e69bb2d105d4bf"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a30f936dfe4c276ff8025ad2a90a8e4e3"><td align="right" class="memItemLeft" valign="top">typedef struct le_sms_FullStorageEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a></td></tr>
+<tr class="separator:a30f936dfe4c276ff8025ad2a90a8e4e3"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a01aa759eb07ab9e8c4a5e0a6d0c7e942"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a01aa759eb07ab9e8c4a5e0a6d0c7e942">le_sms_CallbackResultFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, <a class="el" href="le__sms__interface_8h.html#a18a1937acb5878ae01a9d668fe5070b6">le_sms_Status_t</a> status, void *contextPtr)</td></tr>
 <tr class="separator:a01aa759eb07ab9e8c4a5e0a6d0c7e942"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a6b6e7403719627629df41529916fa71b"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6b6e7403719627629df41529916fa71b">le_sms_RxMessageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, void *contextPtr)</td></tr>
 <tr class="separator:a6b6e7403719627629df41529916fa71b"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a6bafe108821bf8918cfd72ebdf904a39"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a6bafe108821bf8918cfd72ebdf904a39">le_sms_FullStorageHandlerFunc_t</a>) (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> storage, void *contextPtr)</td></tr>
+<tr class="separator:a6bafe108821bf8918cfd72ebdf904a39"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -199,6 +203,11 @@ Enumerations</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:a4d1e11633722ac519f2d8efb1178167c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a3b6b0bfc35728f2a70c4eed9dbb7b995"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> { <a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995a56924250545e56d2d95f87d138133aeb">LE_SMS_STORAGE_NV</a> = 0, 
+<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995a9bd99a2cb463d1c5e0358bdfdcc68546">LE_SMS_STORAGE_SIM</a> = 1, 
+<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995ab6aa3d5740b7fef0cd3b839641b62959">LE_SMS_STORAGE_MAX</a> = 2
+ }</td></tr>
+<tr class="separator:a3b6b0bfc35728f2a70c4eed9dbb7b995"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aeb77e45e90a8257c2b386428fa9397df"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397df">le_sms_ErrorCode3GPP2_t</a> { <br/>
   <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa3069a7eea9b3a9a9a68d12f1aee8c01b">LE_SMS_ERROR_ADDR_VACANT</a> = 0, 
 <a class="el" href="le__sms__interface_8h.html#aeb77e45e90a8257c2b386428fa9397dfa11443cf726a2516d30daf0975fbc9b00">LE_SMS_ERROR_ADDR_TRANSLATION_FAILURE</a> = 1, 
@@ -321,6 +330,10 @@ Functions</h2></td></tr>
 <tr class="separator:a844d595f3ae8d170b2fff80d854abb8d"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2f474706ba6d7a40083fe1f50f530101"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2f474706ba6d7a40083fe1f50f530101">le_sms_RemoveRxMessageHandler</a> (<a class="el" href="le__sms__interface_8h.html#a77d2607cc541bf0369e69bb2d105d4bf">le_sms_RxMessageHandlerRef_t</a> addHandlerRef)</td></tr>
 <tr class="separator:a2f474706ba6d7a40083fe1f50f530101"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1ae7c04f5de9245489956e62bd607430"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1ae7c04f5de9245489956e62bd607430">le_sms_AddFullStorageEventHandler</a> (<a class="el" href="le__sms__interface_8h.html#a6bafe108821bf8918cfd72ebdf904a39">le_sms_FullStorageHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a1ae7c04f5de9245489956e62bd607430"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1b4c00f308ffab8c9828edc1631047d8"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a1b4c00f308ffab8c9828edc1631047d8">le_sms_RemoveFullStorageEventHandler</a> (<a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a1b4c00f308ffab8c9828edc1631047d8"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a668abcbcff2f1f3c5cdf799315a81058"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a668abcbcff2f1f3c5cdf799315a81058">le_sms_Create</a> (void)</td></tr>
 <tr class="separator:a668abcbcff2f1f3c5cdf799315a81058"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a2b14febf0e2285b0b3c2dbcd1c2bb7b0"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a2b14febf0e2285b0b3c2dbcd1c2bb7b0">le_sms_SetTimeout</a> (<a class="el" href="le__sms__interface_8h.html#a8eb2a15362fe26516fc68fd7a7d5e3e7">le_sms_MsgRef_t</a> msgRef, uint32_t timeout)</td></tr>
@@ -395,6 +408,10 @@ Functions</h2></td></tr>
 <tr class="separator:aeef8f1ac8d2aa3f512e15c054e024bea"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a5df138c515944ce955dd54689593b5df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5df138c515944ce955dd54689593b5df">le_sms_SetSmsCenterAddress</a> (const char *tel)</td></tr>
 <tr class="separator:a5df138c515944ce955dd54689593b5df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a05e4196eb01d4d36ed2412c6eedc406e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a05e4196eb01d4d36ed2412c6eedc406e">le_sms_SetPreferredStorage</a> (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> prefStorage)</td></tr>
+<tr class="separator:a05e4196eb01d4d36ed2412c6eedc406e"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5275b917903dbd1d782867f42d256c55"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a5275b917903dbd1d782867f42d256c55">le_sms_GetPreferredStorage</a> (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> *prefStoragePtr)</td></tr>
+<tr class="separator:a5275b917903dbd1d782867f42d256c55"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a4607c63f325465d078514b5682347c7f"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#a4607c63f325465d078514b5682347c7f">le_sms_ActivateCellBroadcast</a> (void)</td></tr>
 <tr class="separator:a4607c63f325465d078514b5682347c7f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa57c2f717c71b33e93f278673a7806e9"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__sms__interface_8h.html#aa57c2f717c71b33e93f278673a7806e9">le_sms_DeactivateCellBroadcast</a> (void)</td></tr>
@@ -543,6 +560,37 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramname">status</td><td>Status result. </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a30f936dfe4c276ff8025ad2a90a8e4e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_sms_FullStorageEventHandler* <a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_sms_FullStorageEvent' </p>
+</div>
+</div>
+<a class="anchor" id="a6bafe108821bf8918cfd72ebdf904a39"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_sms_FullStorageHandlerFunc_t) (<a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> storage, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for full storage indication.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">storage</td><td>storage parameter. </td></tr>
 <tr><td class="paramname">contextPtr</td><td></td></tr>
 </table>
 </dd>
@@ -1103,6 +1151,29 @@ Functions</h2></td></tr>
 </table>
 </div>
 </div>
+<a class="anchor" id="a3b6b0bfc35728f2a70c4eed9dbb7b995"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>SMS storage area. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a3b6b0bfc35728f2a70c4eed9dbb7b995a56924250545e56d2d95f87d138133aeb"></a>LE_SMS_STORAGE_NV </td><td class="fielddoc">
+<p>Non volatile memory storage. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3b6b0bfc35728f2a70c4eed9dbb7b995a9bd99a2cb463d1c5e0358bdfdcc68546"></a>LE_SMS_STORAGE_SIM </td><td class="fielddoc">
+<p>Sim SMS storage. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a3b6b0bfc35728f2a70c4eed9dbb7b995ab6aa3d5740b7fef0cd3b839641b62959"></a>LE_SMS_STORAGE_MAX </td><td class="fielddoc">
+<p>Undefined storage. </p>
+</td></tr>
+</table>
+</div>
+</div>
 <a class="anchor" id="a9001c5bc939bda5d5865e363bdf7662c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1241,6 +1312,40 @@ Functions</h2></td></tr>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">fromId</td><td>Starting point of the range of cell broadcast message identifier. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">toId</td><td>Ending point of the range of cell broadcast message identifier. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1ae7c04f5de9245489956e62bd607430"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> le_sms_AddFullStorageEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a6bafe108821bf8918cfd72ebdf904a39">le_sms_FullStorageHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_sms_FullStorageEvent'</p>
+<p>This event provides information on full storage indication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1878,6 +1983,32 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a5275b917903dbd1d782867f42d256c55"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_GetPreferredStorage </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> * </td>
+<td class="paramname"><em>prefStoragePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the preferred SMS storage for incoming messages. </p><dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">prefStoragePtr</td><td>storage parameter. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a68bfd509a8a3fd4ae39bde7ac5c32d8d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2299,6 +2430,28 @@ LE_OK Function succeeded.</dd></dl>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a1b4c00f308ffab8c9828edc1631047d8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_sms_RemoveFullStorageEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a30f936dfe4c276ff8025ad2a90a8e4e3">le_sms_FullStorageEventHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_sms_FullStorageEvent' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a2f474706ba6d7a40083fe1f50f530101"></a>
 <div class="memitem">
 <div class="memproto">
@@ -2641,6 +2794,32 @@ If the caller is passing a bad pointer into this function, it is a fatal error, 
 <tr><td class="paramdir">[in]</td><td class="paramname">msgRef</td><td>Reference to the message object. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">pduPtr</td><td>PDU message. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">pduNumElements</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a05e4196eb01d4d36ed2412c6eedc406e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_sms_SetPreferredStorage </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__sms__interface_8h.html#a3b6b0bfc35728f2a70c4eed9dbb7b995">le_sms_Storage_t</a> </td>
+<td class="paramname"><em>prefStorage</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the preferred SMS storage for incoming messages. </p><dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed.</li>
+<li>LE_OK Function succeeded. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">prefStorage</td><td>storage parameter. </td></tr>
 </table>
 </dd>
 </dl>

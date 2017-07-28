@@ -61,7 +61,8 @@
 <div class="headertitle">
 <h1 class="title">Temperature Monitoring </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__temp__interface_8h.html">API Reference</a></p>
+<div class="textblock"><p><a class="el" href="le__temp__interface_8h.html">API Reference</a> <br/>
+<a class="el" href="platformConstraintsTemperature.html">Temperature Monitoring</a> Constraints</p>
 <hr/>
 <p>The Temperature API is used to retrieve temperature values and set warning and critical thresholds.</p>
 <dl class="section warning"><dt>Warning</dt><dd>When a Critical event occurs, some platform can automatically switch off.</dd></dl>
@@ -70,12 +71,12 @@ IPC interfaces binding</h1>
 <p>All the functions of this API are provided by the <b>modemService</b> application service.</p>
 <p>Here's a code sample binding to modem services: </p><pre class="fragment">bindings:
 {
-   clientExe.clientComponent.le_temp -&gt; modemService.le_temp
+   clientExe.clientComponent.le_temp -&gt; modemServices.le_temp
 }
 </pre><h1><a class="anchor" id="le_temp_monitoring"></a>
 Monitoring</h1>
 <p>This functionality allows to monitor the temperature by getting the temperature sensor and by setting several temperature thresholds.</p>
-<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the names of supported sensors and thresholds for your specific platform. Please refer to <a class="el" href="platformConstraintsTemperature.html">Temperature monitoring</a> platform constraints page.</dd>
+<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the names of supported sensors and thresholds for your specific platform. Please refer to <a class="el" href="platformConstraintsTemperature.html">Temperature Monitoring</a> platform constraints page.</dd>
 <dd>
 An hysteresis can be dependent of the platform. Be sure to verify your platform's specifications.</dd>
 <dd>

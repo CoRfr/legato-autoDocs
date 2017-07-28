@@ -118,11 +118,11 @@ components</h1>
 </ul>
 <p>The <code>components</code> section contains a list of file system paths to component directories.</p>
 <p>For example,</p>
-<pre class="fragment"><div class="line">components:</div><div class="line">{</div><div class="line">    $SOURCE_ROOT/audioFiles  <span class="comment">// &lt;-- component containing just audio files.</span></div><div class="line"> </div><div class="line">    path/to/audioPlayer <span class="comment">// &lt;-- component that bundles audioExe built using another build system.</span></div><div class="line">}</div><div class="line"> </div><div class="line">processes:</div><div class="line">{</div><div class="line">    run:</div><div class="line">    {</div><div class="line">        (audioExe)</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If a component is included in an <a class="el" href="defFilesAdef.html#defFilesAdef_executables">executable</a>, then it is not necessary to include that component in a <code>components:</code> section.</dd></dl>
+<pre class="fragment"><div class="line">components:</div><div class="line">{</div><div class="line">    $SOURCE_ROOT/audioFiles  <span class="comment">// &lt;-- component containing just audio files.</span></div><div class="line"> </div><div class="line">    path/to/audioPlayer <span class="comment">// &lt;-- component that bundles audioExe built using another build system.</span></div><div class="line">}</div><div class="line"> </div><div class="line">processes:</div><div class="line">{</div><div class="line">    run:</div><div class="line">    {</div><div class="line">        (audioExe)</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If a component is included in an <a class="el" href="defFilesAdef.html#defFilesAdef_executables">executable</a>, then it isn't necessary to include that component in a <code>components:</code> section.</dd></dl>
 <h1><a class="anchor" id="defFilesAdef_cpuShare"></a>
 cpuShare</h1>
 <p>Specifies the relative cpu share for an app.</p>
-<p>Cpu share calculates the cpu percentage for a process relative to all other processes in the system. New cgroups and processes default value of <b>1024</b> if not otherwise configured. The actual percentage of the cpu allocated to a process is calculated like this:</p>
+<p>Cpu share calculates the cpu percentage for a process relative to all other processes in the system. New cgroups and processes default value is <b>1024</b> if not otherwise configured. The actual percentage of the cpu allocated to a process is calculated like this:</p>
 <p>(share value of process) / (sum of shares from all processes contending for the cpu)</p>
 <p>All processes within a cgroup share the available cpu percentage share for that cgroup like this:</p>
 <ul>
@@ -190,7 +190,7 @@ processes</h1>
 run</h2>
 <p>Names a process to be started by the Supervisor when the app is started. Also specifies executable and command-line arguments.</p>
 <pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    myProc1 = ( myExe --foo -b 43 )</div><div class="line">}</div></pre><!-- fragment --><p>Process name and command-line arguments are optional.</p>
-<pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe )</div><div class="line">}</div></pre><!-- fragment --><p>If the process name is not specified, then the process will be given the same name as the executable it's running (e.g. <code>myexe</code>)</p>
+<pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe )</div><div class="line">}</div></pre><!-- fragment --><p>If the process name isn't specified, then the process will be given the same name as the executable it's running (e.g. <code>myexe</code>)</p>
 <p>A given executable can be launched multiple times. </p><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    process1 = ( myexe )</div><div class="line">    process2 = ( myexe )</div><div class="line">}</div></pre><!-- fragment --><p>Command-line arguments passed to the process when started can appear after the executable name. </p><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe --foo )</div><div class="line">}</div></pre><!-- fragment --><pre class="fragment"><div class="line">run:</div><div class="line">{</div><div class="line">    ( myexe --bar  <span class="comment">// Note that the command-line can be broken into multiple lines for readability.</span></div><div class="line">            --toto ) <span class="comment">// And it can be commented too.</span></div><div class="line">}</div></pre><!-- fragment --><p>Executable names can be the ones listed in the app’s <code>executables:</code> section. They can also be the names of files that are bundled into the app with <code>[x]</code> (executable) permission.</p>
 <p>Quotation marks (either single <b>'</b> or double <b>"</b>) can be used if white-space (spaces, tabs, <code>//</code>, etc.) is needed inside a command-line argument, or if an empty argument is needed ("").</p>
 <h2><a class="anchor" id="defFilesAdef_processEnvVars"></a>
@@ -217,7 +217,7 @@ priority</h2>
 <li><b>low</b>, <b>medium</b>, <b>high</b> - intended for normal processes that contend for the CPU. Processes with these priorities don't preempt each other, but their priorities affect how they're inserted into the scheduling queue (high to low).</li>
 <li><b>rt1</b> to <b>rt32</b> - intended for (soft) realtime processes. A higher realtime priority will preempt a lower realtime priority (ie. rt2 would preempt rt1). Processes with any realtime priority will preempt processes with high, medium, low and idle priorities.</li>
 </ul>
-<dl class="section warning"><dt>Warning</dt><dd>Processes with realtime priorities preempt the Legato framework processes. Ensure that your design lets realtime processes relinquish the CPU appropriately.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>Processes assigned realtime priorities preempt Legato framework processes. Ensure that your design relinquinshes the CPU appropriately. Processes assigned a realtime priority aren't constrained by an app's cpu share even if the process later changes to a non-realtime priority. This also applies to all threads the process spawns.</dd></dl>
 <pre class="fragment"><div class="line">priority: medium</div></pre><!-- fragment --><h2><a class="anchor" id="defFilesAdef_processMaxCoreDumpFileBytes"></a>
 maxCoreDumpFileBytes</h2>
 <p>Specifies the maximum size (in bytes) of core dump files that can be generated by processes.</p>
@@ -278,7 +278,7 @@ configTree</h2>
 <li><code>[r]</code> - grant read-only access</li>
 <li><code>[w]</code> - grant read and write access</li>
 </ul>
-<p>If access is granted to a tree, but the access mode ([r] or [w]) is not specified, only read permission will be granted.</p>
+<p>If access is granted to a tree, but the access mode ([r] or [w]) isn't specified, only read permission will be granted.</p>
 <p>A special tree name "." can be used to refer to the app's own configuration data tree.</p>
 <pre class="fragment"><div class="line">requires:</div><div class="line">{</div><div class="line">    configTree:</div><div class="line">    {</div><div class="line">        [w] .       <span class="comment">// I need write access to my configuration data.</span></div><div class="line">        otherApp    <span class="comment">// I need read access to another app's configuration data.</span></div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>Because config data can be saved to flash storage, granting write access to a config tree can make it possible for the app to wear out your flash device. Granting an untrusted app write access to another app's config settings creates a security hole, because it makes it possible for the untrusted app to interfere with the other app's operation. It's especially dangerous to grant write access to the system tree, because it's possible to completely compromise the target device. Even read access may be dangerous if any kind of security key, including PIN and PUK codes, are kept in the system tree. Don't give apps direct access to the <code>system tree</code>.</dd></dl>
 <h2><a class="anchor" id="defFilesAdef_requiresDir"></a>
@@ -324,7 +324,7 @@ device</h2>
 <p>Things listed in <code>requires</code> are expected to be found on the target at runtime. They're not copied into the app at build time; they are made accessible to the app inside of its sandbox at runtime.</p>
 <p>Each entry consists of two file system paths and a set of optional access permissions:</p>
 <ul>
-<li>access permissions, readable ([r]) and/or writeable ([w]). Executable is not allowed on device files. If permission values are not specified, then read-only ([r]) is the default.</li>
+<li>access permissions, readable ([r]) and/or writeable ([w]). Executable isn't allowed on device files. If permission values are not specified, then read-only ([r]) is the default.</li>
 <li>path to the object in the file system outside of the app, which must be an absolute path (beginning with ‘/’). This must be a path to a valid character or block device file.</li>
 <li>absolute file system path inside the app’s sandbox where the object will appear at runtime.</li>
 </ul>
@@ -345,7 +345,7 @@ sandboxed</h1>
 <li><b>false</b> - app won't be run in a sandbox.</li>
 </ul>
 <p>The default is <b>true</b>.</p>
-<p>If an app is unsandboxed (app is not inside of a sandbox), it can see the target device's real root file system. A sandboxed app can't see the target's real root file system; a sandboxed app has a separate root file system, which it can't leave.</p>
+<p>If an app is unsandboxed (app isn't inside of a sandbox), it can see the target device's real root file system. A sandboxed app can't see the target's real root file system; a sandboxed app has a separate root file system, which it can't leave.</p>
 <p>Each app has its own user and primary group IDs. The app's user name and primary group name are both <code>appxxxx"</code>, where the <code>xxxx</code> is the name of the app.</p>
 <p>User and/or group will be automatically created if missing for the specified app, but only users and groups of sandboxed apps will automatically be deleted when those apps are uninstalled.</p>
 <pre class="fragment"><div class="line">sandboxed: <span class="keyword">false</span></div></pre><!-- fragment --><h1><a class="anchor" id="defFilesAdef_start"></a>

@@ -61,7 +61,8 @@
 <div class="headertitle">
 <h1 class="title">SIM </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__sim__interface_8h.html">API Reference</a></p>
+<div class="textblock"><p><a class="el" href="le__sim__interface_8h.html">API Reference</a> <br/>
+<a class="el" href="platformConstraintsSim.html">SIM</a> Constraints</p>
 <hr/>
 <p>This file contains prototype definitions for SIM API.</p>
 <p>A subscriber identity module or subscriber identification module (SIM) is an integrated circuit that securely stores the international mobile subscriber identity (IMSI) and related key used to identify and authenticate subscribers on M2M devices.</p>
@@ -161,7 +162,7 @@ Local SIM profile switch</h1>
 </ul>
 <h1><a class="anchor" id="le_sim_stk"></a>
 SIM Toolkit</h1>
-<p>The SIM application Toolkit allows the SIM card to initiates commands or asking input from the modem to accept/reject SIM operations.</p>
+<p>The SIM application Toolkit allows the SIM card to initiates commands or asking input from the modem to accept/reject SIM operations. See <a class="el" href="platformConstraintsStk.html">SIM Toolkit</a> Constraints.</p>
 <p>One of the use case is the remote provisioning of an embedded UICC (eUICC).</p>
 <p>The embedded UICC (eUICC) format supports multiple subscription profiles, which can be remotely provisioned, updated or selected through SIM tool kit procedures (Bearer Independent Protocol -BIP-, SIM refresh).</p>
 <p>It is mainly used for in-vehicle emergency call service (eCall).</p>
@@ -177,7 +178,7 @@ SIM Toolkit</h1>
 <h1><a class="anchor" id="le_sim_access"></a>
 SIM access</h1>
 <p>The application can send an APDU (Application Protocol Data Unit) to the SIM using <a class="el" href="le__sim__interface_8h.html#ad72df795270776e68e473f34c0264ecb">le_sim_SendApdu()</a> API. The user must encode the APDU as specified by in recommendation 3GPP 11.11, 3GPP 51.011, 3GPP 31.102, 3GPP 31.103 or ETSI TS 102 221. </p><dl class="section note"><dt>Note</dt><dd>Between two successive call to <a class="el" href="le__sim__interface_8h.html#ad72df795270776e68e473f34c0264ecb">le_sim_SendApdu()</a> API, there is no locking protection. In this situation, some command types and parameters can modify SIM files incorrectly.</dd></dl>
-<p>Using le_sim_SendSimCommand() API, the application has easier but more limited access to the SIM database. The command is transmitted to the SIM, which gives information through swi1 and swi2 about the execution of the command (see 3GPP recommendation previously mentioned for their coding). Some parameters are platform dependent, see <a class="el" href="platformConstraintsSim.html">SIM</a> for their coding.</p>
+<p>Using <a class="el" href="le__sim__interface_8h.html#acc0760cfa301adeb917b171b32973de3">le_sim_SendCommand()</a>, the application has easier but more limited access to the SIM database. The command is transmitted to the SIM, which gives information through swi1 and swi2 about the execution of the command (see 3GPP recommendation previously mentioned for their coding). Some parameters are platform dependent, see <a class="el" href="platformConstraintsSim.html">SIM</a> for their coding.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_simTestApdu.html">Sample code for SIM access</a></li>
 </ul>

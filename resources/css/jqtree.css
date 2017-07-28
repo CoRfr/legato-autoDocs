@@ -36,6 +36,7 @@ ul.jqtree-tree {
     ul.jqtree-tree .jqtree-toggler.jqtree-closed {
       background-position: 0 0; }
   ul.jqtree-tree .jqtree-element {
+    margin-bottom: 0.3em;
     position: relative;
    display:inline-block;
 

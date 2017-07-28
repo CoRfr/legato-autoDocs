@@ -75,6 +75,8 @@ Macros</h2></td></tr>
 <tr class="separator:af172d482e4ae897d7b98f6e7a6bdd338"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a1ab4c80e50d3738db0f6a43bbb5c4d29"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#a1ab4c80e50d3738db0f6a43bbb5c4d29">LE_WIFIDEFS_MAX_WEPKEY_BYTES</a>   64</td></tr>
 <tr class="separator:a1ab4c80e50d3738db0f6a43bbb5c4d29"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a40a94c738d2d4a432ad4891331fe8b22"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#a40a94c738d2d4a432ad4891331fe8b22">LE_WIFIDEFS_MIN_PASSPHRASE_LENGTH</a>   8</td></tr>
+<tr class="separator:a40a94c738d2d4a432ad4891331fe8b22"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a76e422c7a30aa09d003e6198411a2719"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#a76e422c7a30aa09d003e6198411a2719">LE_WIFIDEFS_MAX_PASSPHRASE_LENGTH</a>   63</td></tr>
 <tr class="separator:a76e422c7a30aa09d003e6198411a2719"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aa9249c1a7ad61484f5ce85b58c86beff"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#aa9249c1a7ad61484f5ce85b58c86beff">LE_WIFIDEFS_MAX_PASSPHRASE_BYTES</a>   64</td></tr>
@@ -91,7 +93,9 @@ Macros</h2></td></tr>
 <tr class="separator:a7a7997b71daf8cf4940c6b440e83881b"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a12dd4a338f0754fd396c04d7359ff152"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#a12dd4a338f0754fd396c04d7359ff152">LE_WIFIDEFS_MAX_PASSWORD_BYTES</a>   131</td></tr>
 <tr class="separator:a12dd4a338f0754fd396c04d7359ff152"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:abba88ade60f4a8508fd8a1db0e1f9bc0"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#abba88ade60f4a8508fd8a1db0e1f9bc0">LE_WIFIDEFS_MAX_SSID_BYTES</a>   32</td></tr>
+<tr class="memitem:a9e8c4e1ee23a824c30005ac1af95fbb1"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#a9e8c4e1ee23a824c30005ac1af95fbb1">LE_WIFIDEFS_MAX_SSID_LENGTH</a>   32</td></tr>
+<tr class="separator:a9e8c4e1ee23a824c30005ac1af95fbb1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abba88ade60f4a8508fd8a1db0e1f9bc0"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__wifi_defs__interface_8h.html#abba88ade60f4a8508fd8a1db0e1f9bc0">LE_WIFIDEFS_MAX_SSID_BYTES</a>   33</td></tr>
 <tr class="separator:abba88ade60f4a8508fd8a1db0e1f9bc0"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -187,11 +191,23 @@ Macros</h2></td></tr>
 <div class="memproto">
 <table class="memname">
 <tr>
-<td class="memname">#define LE_WIFIDEFS_MAX_SSID_BYTES   32</td>
+<td class="memname">#define LE_WIFIDEFS_MAX_SSID_BYTES   33</td>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>The maximum length of octets of the Service set identification (SSID). </p><dl class="section note"><dt>Note</dt><dd>that while the values are probably human readable, this is not a string. </dd></dl>
+<p>The maximum length of octets of the Service set identification (SSID). </p><dl class="section note"><dt>Note</dt><dd>While the values are probably human readable, this is not a string. </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a9e8c4e1ee23a824c30005ac1af95fbb1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_WIFIDEFS_MAX_SSID_LENGTH   32</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The maximum length of octets of the Service set identification (SSID). </p><dl class="section note"><dt>Note</dt><dd>While the values are probably human readable, this is not a string. </dd></dl>
 </div>
 </div>
 <a class="anchor" id="a21e2c2c7083f695c87924417da0e93e8"></a>
@@ -240,6 +256,18 @@ Macros</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The maximum length of the wep key </p>
+</div>
+</div>
+<a class="anchor" id="a40a94c738d2d4a432ad4891331fe8b22"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_WIFIDEFS_MIN_PASSPHRASE_LENGTH   8</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>The minimum length of the pass-phrase used to generate PSK is 8 bytes. See 802.11-2007: H4.2. </p>
 </div>
 </div>
 </div>

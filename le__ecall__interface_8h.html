@@ -76,6 +76,10 @@
 Macros</h2></td></tr>
 <tr class="memitem:a287eeec0c34e2566297839227109fa62"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a287eeec0c34e2566297839227109fa62">LE_ECALL_MSD_MAX_LEN</a>   140</td></tr>
 <tr class="separator:a287eeec0c34e2566297839227109fa62"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4ad17acf985481ff5dc2a6a3e84d9aa0"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a4ad17acf985481ff5dc2a6a3e84d9aa0">LE_ECALL_VIN_MAX_LEN</a>   17</td></tr>
+<tr class="separator:a4ad17acf985481ff5dc2a6a3e84d9aa0"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a0fce568162ff0d320cdea60adf4c9d3a"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a0fce568162ff0d320cdea60adf4c9d3a">LE_ECALL_VIN_MAX_BYTES</a>   18</td></tr>
+<tr class="separator:a0fce568162ff0d320cdea60adf4c9d3a"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -93,6 +97,10 @@ Enumerations</h2></td></tr>
 <a class="el" href="le__ecall__interface_8h.html#af762f89b222e4cc18e9646c6e4b945b9a6d328d963d60c73e04af260f8dae7257">LE_ECALL_FORCED_PERSISTENT_ONLY_MODE</a> = 2
  }</td></tr>
 <tr class="separator:af762f89b222e4cc18e9646c6e4b945b9"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a38a79a5123761b6808ea58b4f343579b"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579b">le_ecall_SystemStandard_t</a> { <a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579bab0936ca3beaeab66be8e76556afde4c9">LE_ECALL_PAN_EUROPEAN</a> = 0, 
+<a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579baddc50d7d4524fffc7388c5753ce5a299">LE_ECALL_ERA_GLONASS</a> = 1
+ }</td></tr>
+<tr class="separator:a38a79a5123761b6808ea58b4f343579b"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a233609e4724e549a1405f9177c0a07dd"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dd">le_ecall_State_t</a> { <br/>
   <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda5c06f82cbeeebb121ab56920a67dbc91">LE_ECALL_STATE_UNKNOWN</a> = 0, 
 <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda94ba7aacca9dfe74c4733515a7ba2c5e">LE_ECALL_STATE_STARTED</a> = 1, 
@@ -132,6 +140,38 @@ Enumerations</h2></td></tr>
 <a class="el" href="le__ecall__interface_8h.html#adbaa600a7ab66371afddb909b1a113bdafe1cddc2df801a67c7f02020c0dd1127">LE_ECALL_TX_MODE_PUSH</a> = 1
  }</td></tr>
 <tr class="separator:adbaa600a7ab66371afddb909b1a113bd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a90c7868842c599a89be72a1ff8609f09"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09">le_ecall_MsdVehicleType_t</a> { <br/>
+  <a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a40d86dd8dcb911706ce2c8b0d5811b74">LE_ECALL_MSD_VEHICLE_PASSENGER_M1</a> = 0, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09acf7dde2942af72d9656c0b753aab4880">LE_ECALL_MSD_VEHICLE_BUS_M2</a> = 1, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a4fec691d022aceb729f762089ba4d220">LE_ECALL_MSD_VEHICLE_BUS_M3</a> = 2, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09ad6de93630a2a42974183824859c5aa6b">LE_ECALL_MSD_VEHICLE_COMMERCIAL_N1</a> = 3, 
+<br/>
+  <a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09aa0343d1ba261012a84f4e23daa592805">LE_ECALL_MSD_VEHICLE_HEAVY_N2</a> = 4, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a1b7b0a735c5926915e10cd60ef490ca0">LE_ECALL_MSD_VEHICLE_HEAVY_N3</a> = 5, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a90d476fe87b6b4904d43b890bec6d7fe">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L1E</a> = 6, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a2317b478a2c3c595ed481cb8e426d4bb">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L2E</a> = 7, 
+<br/>
+  <a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a9eb880184b537abdedaf2ffecf3113c6">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L3E</a> = 8, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a875db9ea3d4d1ff8c3de6358c4c502d2">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L4E</a> = 9, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a90dca21d5af8159bc3041f4b6d79d4ea">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L5E</a> = 10, 
+<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09af289b648028b35294f76cdc0f5565fcc">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L6E</a> = 11, 
+<br/>
+  <a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09a6c6a69013560e30cb30c54780f251504">LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L7E</a> = 12
+<br/>
+ }</td></tr>
+<tr class="separator:a90c7868842c599a89be72a1ff8609f09"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a10f3332edf213de92962a861b0fb6a1f"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> { <br/>
+  <a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1fa149b43967ef0459355a74dd4b46f7e00">LE_ECALL_PROPULSION_TYPE_GASOLINE</a> = 0x1, 
+<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1fa92a89cae3678b9195cc215ef29e45fd9">LE_ECALL_PROPULSION_TYPE_DIESEL</a> = 0x2, 
+<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1fa4855cd600bbb4dd38a7cb76ed75e82f1">LE_ECALL_PROPULSION_TYPE_NATURALGAS</a> = 0x4, 
+<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1fa482d6ce5009a6d2b4da047280a4e20bc">LE_ECALL_PROPULSION_TYPE_PROPANE</a> = 0x8, 
+<br/>
+  <a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1faad7f52b13e9b3b5aae9af0036fba775f">LE_ECALL_PROPULSION_TYPE_ELECTRIC</a> = 0x10, 
+<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1faed1adcaabce9973ed9e9f8f86cc73150">LE_ECALL_PROPULSION_TYPE_HYDROGEN</a> = 0x20, 
+<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1fa1f6166e6aec7ef156bc0a2d1b608ecf9">LE_ECALL_PROPULSION_TYPE_OTHER</a> = 0x40
+<br/>
+ }</td></tr>
+<tr class="separator:a10f3332edf213de92962a861b0fb6a1f"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a777e8d6608b5e40f73696904471519cf"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a777e8d6608b5e40f73696904471519cf">le_ecall_DiagnosticResultBitMask_t</a> { <br/>
   <a class="el" href="le__ecall__interface_8h.html#a777e8d6608b5e40f73696904471519cfa3a666c50c2a85411eb7d723a9553144e">LE_ECALL_DIAG_RESULT_PRESENT_MIC_CONNECTION_FAILURE</a> = 0x1, 
 <a class="el" href="le__ecall__interface_8h.html#a777e8d6608b5e40f73696904471519cfa5ea3221dec67d321994be4a7b1a28dd9">LE_ECALL_DIAG_RESULT_MIC_CONNECTION_FAILURE</a> = 0x2, 
@@ -236,6 +276,26 @@ Functions</h2></td></tr>
 <tr class="separator:aad7fa3b34d9d72a2f1d4baa681ba25cc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af1221deb68c46912748f65505b3e4919"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#af1221deb68c46912748f65505b3e4919">le_ecall_Delete</a> (<a class="el" href="le__ecall__interface_8h.html#a8536728653b7b3cdd6b298c6e7b67705">le_ecall_CallRef_t</a> ecallRef)</td></tr>
 <tr class="separator:af1221deb68c46912748f65505b3e4919"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1b492b42490b319fcc228e52f8694307"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a1b492b42490b319fcc228e52f8694307">le_ecall_SetSystemStandard</a> (<a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579b">le_ecall_SystemStandard_t</a> systemStandard)</td></tr>
+<tr class="separator:a1b492b42490b319fcc228e52f8694307"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abfb468cf1e977e9b2444d13617322331"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#abfb468cf1e977e9b2444d13617322331">le_ecall_GetSystemStandard</a> (<a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579b">le_ecall_SystemStandard_t</a> *systemStandardPtr)</td></tr>
+<tr class="separator:abfb468cf1e977e9b2444d13617322331"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4d698cd7bde3b33e191453d31bc7c9d1"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a4d698cd7bde3b33e191453d31bc7c9d1">le_ecall_SetMsdVersion</a> (uint32_t msdVersion)</td></tr>
+<tr class="separator:a4d698cd7bde3b33e191453d31bc7c9d1"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4875975bc3f3c8fb78b43ae40322eedd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a4875975bc3f3c8fb78b43ae40322eedd">le_ecall_GetMsdVersion</a> (uint32_t *msdVersionPtr)</td></tr>
+<tr class="separator:a4875975bc3f3c8fb78b43ae40322eedd"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a291bd0a938266981a8cb6eb836c45b37"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a291bd0a938266981a8cb6eb836c45b37">le_ecall_SetVehicleType</a> (<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09">le_ecall_MsdVehicleType_t</a> vehicleType)</td></tr>
+<tr class="separator:a291bd0a938266981a8cb6eb836c45b37"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab7cdf7de011b9c8edaec790b360dded6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#ab7cdf7de011b9c8edaec790b360dded6">le_ecall_GetVehicleType</a> (<a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09">le_ecall_MsdVehicleType_t</a> *vehicleTypePtr)</td></tr>
+<tr class="separator:ab7cdf7de011b9c8edaec790b360dded6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af12e1f7dae1b1aa61d06e9ddb4591edc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#af12e1f7dae1b1aa61d06e9ddb4591edc">le_ecall_SetVIN</a> (const char *vin)</td></tr>
+<tr class="separator:af12e1f7dae1b1aa61d06e9ddb4591edc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8a2f9c133af1a894b15f70d7013e4dda"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a8a2f9c133af1a894b15f70d7013e4dda">le_ecall_GetVIN</a> (char *vin, size_t vinNumElements)</td></tr>
+<tr class="separator:a8a2f9c133af1a894b15f70d7013e4dda"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:abb9c569b53f8c35b878c7c9ca159e1df"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#abb9c569b53f8c35b878c7c9ca159e1df">le_ecall_SetPropulsionType</a> (<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> propulsionType)</td></tr>
+<tr class="separator:abb9c569b53f8c35b878c7c9ca159e1df"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:aea86cec8465c43f4cc71ac3c7879965a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#aea86cec8465c43f4cc71ac3c7879965a">le_ecall_GetPropulsionType</a> (<a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> *propulsionTypePtr)</td></tr>
+<tr class="separator:aea86cec8465c43f4cc71ac3c7879965a"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a00d3dbc99884375cf2487d6640767c40"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a00d3dbc99884375cf2487d6640767c40">le_ecall_SetMsdTxMode</a> (<a class="el" href="le__ecall__interface_8h.html#adbaa600a7ab66371afddb909b1a113bd">le_ecall_MsdTxMode_t</a> mode)</td></tr>
 <tr class="separator:a00d3dbc99884375cf2487d6640767c40"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a4319df67dc451fecb72e4e60ba7b6f6e"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__ecall__interface_8h.html#a4319df67dc451fecb72e4e60ba7b6f6e">le_ecall_GetMsdTxMode</a> (<a class="el" href="le__ecall__interface_8h.html#adbaa600a7ab66371afddb909b1a113bd">le_ecall_MsdTxMode_t</a> *modePtr)</td></tr>
@@ -321,6 +381,30 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>MSD message length in bytes. </p>
+</div>
+</div>
+<a class="anchor" id="a0fce568162ff0d320cdea60adf4c9d3a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_ECALL_VIN_MAX_BYTES   18</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Vehicle Identification Number (VIN) string BYTES. One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="a4ad17acf985481ff5dc2a6a3e84d9aa0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_ECALL_VIN_MAX_LEN   17</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Vehicle Identification Number (VIN) string LENGTH. (without nulltermination) </p>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -591,6 +675,59 @@ Functions</h2></td></tr>
 </table>
 </div>
 </div>
+<a class="anchor" id="a90c7868842c599a89be72a1ff8609f09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09">le_ecall_MsdVehicleType_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>eCall MSD vehicle type </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a40d86dd8dcb911706ce2c8b0d5811b74"></a>LE_ECALL_MSD_VEHICLE_PASSENGER_M1 </td><td class="fielddoc">
+<p>Passenger vehicle (Class M1) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09acf7dde2942af72d9656c0b753aab4880"></a>LE_ECALL_MSD_VEHICLE_BUS_M2 </td><td class="fielddoc">
+<p>Buses and coaches (Class M2) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a4fec691d022aceb729f762089ba4d220"></a>LE_ECALL_MSD_VEHICLE_BUS_M3 </td><td class="fielddoc">
+<p>Buses and coaches (Class M3) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09ad6de93630a2a42974183824859c5aa6b"></a>LE_ECALL_MSD_VEHICLE_COMMERCIAL_N1 </td><td class="fielddoc">
+<p>Light commercial vehicles (Class N1) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09aa0343d1ba261012a84f4e23daa592805"></a>LE_ECALL_MSD_VEHICLE_HEAVY_N2 </td><td class="fielddoc">
+<p>Heavy duty vehicles (Class N2) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a1b7b0a735c5926915e10cd60ef490ca0"></a>LE_ECALL_MSD_VEHICLE_HEAVY_N3 </td><td class="fielddoc">
+<p>Heavy duty vehicles (Class N3) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a90d476fe87b6b4904d43b890bec6d7fe"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L1E </td><td class="fielddoc">
+<p>Motorcycles (Class L1e) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a2317b478a2c3c595ed481cb8e426d4bb"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L2E </td><td class="fielddoc">
+<p>Motorcycles (Class L2e) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a9eb880184b537abdedaf2ffecf3113c6"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L3E </td><td class="fielddoc">
+<p>Motorcycles (Class L3e) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a875db9ea3d4d1ff8c3de6358c4c502d2"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L4E </td><td class="fielddoc">
+<p>Motorcycles (Class L4e) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a90dca21d5af8159bc3041f4b6d79d4ea"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L5E </td><td class="fielddoc">
+<p>Motorcycles (Class L5e) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09af289b648028b35294f76cdc0f5565fcc"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L6E </td><td class="fielddoc">
+<p>Motorcycles (Class L6e) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a90c7868842c599a89be72a1ff8609f09a6c6a69013560e30cb30c54780f251504"></a>LE_ECALL_MSD_VEHICLE_MOTORCYCLE_L7E </td><td class="fielddoc">
+<p>Motorcycles (Class L7e) </p>
+</td></tr>
+</table>
+</div>
+</div>
 <a class="anchor" id="af762f89b222e4cc18e9646c6e4b945b9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -610,6 +747,41 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="af762f89b222e4cc18e9646c6e4b945b9a6d328d963d60c73e04af260f8dae7257"></a>LE_ECALL_FORCED_PERSISTENT_ONLY_MODE </td><td class="fielddoc">
 <p>Persistent eCall only mode. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a10f3332edf213de92962a861b0fb6a1f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Propulsion type Bit Mask </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1fa149b43967ef0459355a74dd4b46f7e00"></a>LE_ECALL_PROPULSION_TYPE_GASOLINE </td><td class="fielddoc">
+<p>Gasoline propulsion) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1fa92a89cae3678b9195cc215ef29e45fd9"></a>LE_ECALL_PROPULSION_TYPE_DIESEL </td><td class="fielddoc">
+<p>Diesel propulsion. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1fa4855cd600bbb4dd38a7cb76ed75e82f1"></a>LE_ECALL_PROPULSION_TYPE_NATURALGAS </td><td class="fielddoc">
+<p>Compressed natural gas propulsion. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1fa482d6ce5009a6d2b4da047280a4e20bc"></a>LE_ECALL_PROPULSION_TYPE_PROPANE </td><td class="fielddoc">
+<p>Liquid propane gas propulsion. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1faad7f52b13e9b3b5aae9af0036fba775f"></a>LE_ECALL_PROPULSION_TYPE_ELECTRIC </td><td class="fielddoc">
+<p>Electric propulsion. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1faed1adcaabce9973ed9e9f8f86cc73150"></a>LE_ECALL_PROPULSION_TYPE_HYDROGEN </td><td class="fielddoc">
+<p>Hydrogen propulsion. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a10f3332edf213de92962a861b0fb6a1fa1f6166e6aec7ef156bc0a2d1b608ecf9"></a>LE_ECALL_PROPULSION_TYPE_OTHER </td><td class="fielddoc">
+<p>Other type of propulsions. </p>
 </td></tr>
 </table>
 </div>
@@ -699,6 +871,26 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a233609e4724e549a1405f9177c0a07ddadafcb8d0490beb3d2778fadcbaeb8c11"></a>LE_ECALL_STATE_TIMEOUT_T10 </td><td class="fielddoc">
 <p>Timeout for Timer T10 (see CEN-EN 16062, annex A) </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a38a79a5123761b6808ea58b4f343579b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579b">le_ecall_SystemStandard_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Configure which standard to follow for the eCall, either PAN European eCall or ERA GLONASS. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a38a79a5123761b6808ea58b4f343579bab0936ca3beaeab66be8e76556afde4c9"></a>LE_ECALL_PAN_EUROPEAN </td><td class="fielddoc">
+<p>PAN-EUROPEAN standard. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a38a79a5123761b6808ea58b4f343579baddc50d7d4524fffc7388c5753ce5a299"></a>LE_ECALL_ERA_GLONASS </td><td class="fielddoc">
+<p>ERA GLONASS standard. </p>
 </td></tr>
 </table>
 </div>
@@ -1121,6 +1313,34 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a4875975bc3f3c8fb78b43ae40322eedd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_GetMsdVersion </td>
+<td>(</td>
+<td class="paramtype">uint32_t * </td>
+<td class="paramname"><em>msdVersionPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the MSD version.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for other failures</li>
+<li>LE_BAD_PARAMETER parameter is NULL </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">msdVersionPtr</td><td>Msd version </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a0f24b673049d51baf132ace25e2fa161"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1167,6 +1387,35 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">ecallRef</td><td>eCall reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="aea86cec8465c43f4cc71ac3c7879965a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_GetPropulsionType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> * </td>
+<td class="paramname"><em>propulsionTypePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the propulsion stored. Note that a vehicle may have more than one propulsion type.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_NOT_FOUND if the value is not set.</li>
+<li>LE_FAULT for other failures</li>
+<li>LE_BAD_PARAMETER parameter is NULL </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">propulsionTypePtr</td><td>bitmask </td></tr>
 </table>
 </dd>
 </dl>
@@ -1239,6 +1488,34 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a class="anchor" id="abfb468cf1e977e9b2444d13617322331"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_GetSystemStandard </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579b">le_ecall_SystemStandard_t</a> * </td>
+<td class="paramname"><em>systemStandardPtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the system standard.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for other failures</li>
+<li>LE_BAD_PARAMETER parameter is NULL </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">systemStandardPtr</td><td>System Standard </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a771b2ef399a8fbf3b80c4eb11152c06a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1258,6 +1535,73 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">ecallRef</td><td>eCall reference. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab7cdf7de011b9c8edaec790b360dded6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_GetVehicleType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09">le_ecall_MsdVehicleType_t</a> * </td>
+<td class="paramname"><em>vehicleTypePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the Vehicled Type.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER parameter is NULL</li>
+<li>LE_FAULT for other failures </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">vehicleTypePtr</td><td>Vehicle type </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a8a2f9c133af1a894b15f70d7013e4dda"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_GetVIN </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>vin</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>vinNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the VIN (Vehicle Identification Number).</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_NOT_FOUND if the value is not set.</li>
+<li>LE_BAD_PARAMETER parameter is NULL or to small </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">vin</td><td>VIN is gotten with a null termination. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">vinNumElements</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1897,6 +2241,33 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a4d698cd7bde3b33e191453d31bc7c9d1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_SetMsdVersion </td>
+<td>(</td>
+<td class="paramtype">uint32_t </td>
+<td class="paramname"><em>msdVersion</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the MSDs version. Default value is 1</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for other failures </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">msdVersion</td><td>Msd version </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a66e454e84db7d337d76bc867b57891a1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1919,6 +2290,33 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">deregTime</td><td>the NAD_DEREGISTRATION_TIME value (in minutes). </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="abb9c569b53f8c35b878c7c9ca159e1df"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_SetPropulsionType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a10f3332edf213de92962a861b0fb6a1f">le_ecall_PropulsionTypeBitMask_t</a> </td>
+<td class="paramname"><em>propulsionType</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the propulsion type. Note that a vehicle may have more than one propulsion type.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for other failures </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">propulsionType</td><td>bitmask </td></tr>
 </table>
 </dd>
 </dl>
@@ -1949,6 +2347,88 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">psap</td><td>Public Safely Answering Point number </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1b492b42490b319fcc228e52f8694307"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_SetSystemStandard </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a38a79a5123761b6808ea58b4f343579b">le_ecall_SystemStandard_t</a> </td>
+<td class="paramname"><em>systemStandard</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the system standard. Default is PAN EUROPEAN</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for other failures </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">systemStandard</td><td>System standard </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a291bd0a938266981a8cb6eb836c45b37"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_SetVehicleType </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__ecall__interface_8h.html#a90c7868842c599a89be72a1ff8609f09">le_ecall_MsdVehicleType_t</a> </td>
+<td class="paramname"><em>vehicleType</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the Vehicled Type Default value is 0</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_FAULT for other failures </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">vehicleType</td><td>Vehicle type </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af12e1f7dae1b1aa61d06e9ddb4591edc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_ecall_SetVIN </td>
+<td>(</td>
+<td class="paramtype">const char * </td>
+<td class="paramname"><em>vin</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Set the VIN (Vehicle Identification Number).</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_BAD_PARAMETER parameter is NULL.</li>
+<li>LE_FAULT for other failures </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">vin</td><td>VIN (Vehicle Identification Number) </td></tr>
 </table>
 </dd>
 </dl>

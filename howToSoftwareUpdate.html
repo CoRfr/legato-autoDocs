@@ -88,7 +88,8 @@ Preserve App Between Systems</h2>
 <p>To preserve an app between systems, ensure the app is included in the <a class="el" href="defFilesSdef.html#defFilesSdef_apps">apps</a> section of the <code></code>.sdef file.</p>
 <h1><a class="anchor" id="howToSystemUpdate_maintainConfig"></a>
 Maintain Config Settings</h1>
-<p>This is how to maintain system config settings outside of the /apps and /users branches of the config tree:</p>
+<p>If you use the <a class="el" href="c_update.html">Software Update</a> API to update Legato, target device config trees are automatically inherited.</p>
+<p>If you need to maintain system config settings outside of the /apps and /users branches of the config tree, do this:</p>
 <ul>
 <li>Copy old system configuration into new system.</li>
 <li>Import application configuration settings into “/apps” node (which destroys old apps config).</li>

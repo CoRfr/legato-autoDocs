@@ -113,7 +113,7 @@ Minimum Set of Data (MSD)</h1>
 <li><a class="el" href="le__ecall__interface_8h.html#a6b25b9b242ba114f31ae2f853070bf11">le_ecall_SetMsdPositionN2()</a> sets the second delta position of the vehicle.</li>
 <li><a class="el" href="le__ecall__interface_8h.html#a8c009bb03d61dcd0ffbd9e986b692a85">le_ecall_SetMsdPassengersCount()</a> sets the number of passengers.</li>
 </ul>
-<p>The MSD is automatically encoded with the dynamic values and the static values retrieved from the configuration tree each time those functions are called.</p>
+<p>The MSD is automatically encoded with the values previously set.</p>
 <dl class="section warning"><dt>Warning</dt><dd>Those functions return a LE_DUPLICATE error when the MSD has been already imported with <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function.</dd></dl>
 <p>The MSD transmission mode can be set or get with:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#a00d3dbc99884375cf2487d6640767c40">le_ecall_SetMsdTxMode()</a></li>
@@ -124,7 +124,7 @@ Minimum Set of Data (MSD)</h1>
 <li><code>LE_ECALL_TX_MODE_PULL</code> : the MSD is sent when requested by the PSAP</li>
 </ul>
 <p>It's possible to import a prepared MSD using the <a class="el" href="le__ecall__interface_8h.html#a85c4c3b921b9a6b0bc10f9400e58113e">le_ecall_ImportMsd()</a> function. The prepared MSD must answer the requirements described in the "EN 15722:2013" publication (this publication has been prepared by Technical Committee CEN/TC 278 “Intelligent Transport Systems").</p>
-<dl class="section warning"><dt>Warning</dt><dd>The imported MSD doesn't take into account the values provided by the le_ecall_SetMsdXxx() functions and the configuration tree. It overwrites any previous imported MSD or encoded MSD.</dd>
+<dl class="section warning"><dt>Warning</dt><dd>The imported MSD doesn't take into account the values provided by the le_ecall_SetMsdXxx() functions. It overwrites any previous imported MSD or encoded MSD.</dd>
 <dd>
 The imported MSD overwrites the control flags (automaticActivation and testCall) set by le_ecall_StartXxx() functions (Manual, Automatic, Test). The User App is in charge of their correct settings.</dd></dl>
 <p>The encoded MSD can be retrieved with <a class="el" href="le__ecall__interface_8h.html#aebdb7744c37081fda6398031d3ee1198">le_ecall_ExportMsd()</a> function.</p>
@@ -173,7 +173,7 @@ Redial management</h1>
 Code samples</h1>
 <p>A sample code that implements an eCall test session with a local voice prompt can be found in <b>eCallWPrompt.c</b> file (please refer to <a class="el" href="c_ecallWPromptSample.html">Sample code of an eCall test session with a local voice prompt</a> page).</p>
 <p>A sample code that implements an eCall test session with a voice call connection can be found in <b>eCallWVoice.c</b> file (please refer to <a class="el" href="c_ecallWVoiceSample.html">Sample code an eCall test session with a voice call connection</a> page).</p>
-<p>If you want to have a look at a more in-depth usage of these APIs, please refer to the c_ecallAppMain .</p>
+<p>If you want to have a look at a more in-depth usage of these APIs, please refer to the <a class="el" href="c_ecall.html">eCall</a>.</p>
 <h1><a class="anchor" id="le_ecall_configuration"></a>
 eCall configuration</h1>
 <p>By default, the number to dial is read from the FDN/SDN (Fixed Dialling Numbers/Service Dialling Numbers) of the U/SIM, depending upon the eCall operating mode.</p>
@@ -204,53 +204,26 @@ eCall configuration</h1>
 <p>If less time has expired during the dial attempt, it will wait for (interval - 'dial attempt duration') seconds to allow hangup before redialing.</p>
 <p>In the case the call was connected, the redial will be immediate.</p>
 <p><a class="el" href="le__ecall__interface_8h.html#af90a8602d4b1d0cacaa3971c508dd188">le_ecall_SetIntervalBetweenDialAttempts()</a> is available for both manual and test modes.</p>
-<h1><a class="anchor" id="le_ecall_configdb"></a>
-Configuration tree</h1>
-<p>The configuration database path for the eCall is: </p><pre class="fragment">/
-    modemServices/
-        eCall/
-            systemStandard&lt;string&gt; = &lt;eCall system&gt;
-            msdVersion&lt;int&gt; = &lt;MSD value&gt;
-            vehicleType&lt;string&gt; = &lt;vehicle type&gt;
-            vin&lt;string&gt; = &lt;VIN&gt;
-            propulsionType/
-                0&lt;string&gt; = &lt;propulsion type&gt;
-                1&lt;string&gt; = &lt;propulsion type&gt;
-                ...
-</pre><p>The 'systemStandard' is the kind of eCall system:</p><ul>
-<li>PAN-EUROPEAN</li>
-<li>ERA-GLONASS</li>
+<p>The prefered system standard defaults to PAN-EUROPEAN It can be set an gotten with the following functions:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a1b492b42490b319fcc228e52f8694307">le_ecall_SetSystemStandard()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#abfb468cf1e977e9b2444d13617322331">le_ecall_GetSystemStandard()</a></li>
 </ul>
-<p>If no value or a bad entry is filled, the default value is 'PAN-EUROPEAN'.</p>
-<p>The 'msdVersion' field is the MSD format version. If the field is not present, the default MSD version is version 1.</p>
-<p>The 'vehicleType' field can be set with the following choices (string type):</p><ul>
-<li>"Passenger-M1" (Passenger vehicle, Class M1)</li>
-<li>"Bus-M2" (Buses and coaches, Class M2)</li>
-<li>"Bus-M3" (Buses and coaches, Class M3)</li>
-<li>"Commercial-N1" (Light commercial vehicles, Class N1)</li>
-<li>"Heavy-N2" (Heavy duty vehicles, Class N2)</li>
-<li>"Heavy-N3" (Heavy duty vehicles, Class N3)</li>
-<li>"Motorcycle-L1e" (Motorcycles, Class L1e)</li>
-<li>"Motorcycle-L2e" (Motorcycles, Class L2e)</li>
-<li>"Motorcycle-L3e" (Motorcycles, Class L3e)</li>
-<li>"Motorcycle-L4e" (Motorcycles, Class L4e)</li>
-<li>"Motorcycle-L5e" (Motorcycles, Class L5e)</li>
-<li>"Motorcycle-L6e" (Motorcycles, Class L6e)</li>
-<li>"Motorcycle-L7e" (Motorcycles, Class L7e)</li>
+<p>The MSD version can be set and and gotten with the following functions:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a4d698cd7bde3b33e191453d31bc7c9d1">le_ecall_SetMsdVersion()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a4875975bc3f3c8fb78b43ae40322eedd">le_ecall_GetMsdVersion()</a></li>
 </ul>
-<p>The 'vin' is the vehicle identification number (string type).</p>
-<p>The 'propulsionType' field can be set with the following choices (string type):</p><ul>
-<li>"Gasoline" (Gasoline propulsion)</li>
-<li>"Diesel" (Diesel propulsion)</li>
-<li>"NaturalGas" (Compressed natural gas propulsion)</li>
-<li>"Propane" (Liquid propane gas propulsion)</li>
-<li>"Electric" (Electric propulsion)</li>
-<li>"Hydrogen" (Hydrogen propulsion)</li>
-<li>"Other" (Other type of propulsion)</li>
+<p>The vehicle type can be set and gotten with the following functions:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#a291bd0a938266981a8cb6eb836c45b37">le_ecall_SetVehicleType()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#ab7cdf7de011b9c8edaec790b360dded6">le_ecall_GetVehicleType()</a></li>
 </ul>
-<p>Several 'propulsionType' can be applied.</p>
-<hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license.</p>
+<p>The vehicle identifier can be set and gotten with the following functions:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#af12e1f7dae1b1aa61d06e9ddb4591edc">le_ecall_SetVIN()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#a8a2f9c133af1a894b15f70d7013e4dda">le_ecall_GetVIN()</a></li>
+</ul>
+<p>The propulsion type can be set and gotten with the following functions:</p><ul>
+<li><a class="el" href="le__ecall__interface_8h.html#abb9c569b53f8c35b878c7c9ca159e1df">le_ecall_SetPropulsionType()</a></li>
+<li><a class="el" href="le__ecall__interface_8h.html#aea86cec8465c43f4cc71ac3c7879965a">le_ecall_GetPropulsionType()</a></li>
+</ul>
 <hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

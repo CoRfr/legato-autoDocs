@@ -193,7 +193,7 @@ Functions</h2></td></tr>
 <p>antenna in short circuit: unknown state. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a78674a68c062ffc7625954391f1ec98fa7cb009b4d5c52c7ce67f9c50c338319f"></a>LE_ANTENNA_CLOSE_CIRCUIT </td><td class="fielddoc">
-<p>antenna in close circuit: presence of antenna. </p>
+<p>antenna in closed circuit: presence of antenna. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a78674a68c062ffc7625954391f1ec98fa9a8e51bd22a41a9278381410e4e8e924"></a>LE_ANTENNA_OPEN_CIRCUIT </td><td class="fielddoc">
 <p>antenna in open circuit: there is no antenna. </p>
@@ -342,11 +342,11 @@ Functions</h2></td></tr>
 <li>LE_FAULT on other failure</li>
 </ul>
 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the returned ADC index is "-1", it means that no external ADC are used to monitor the requested antenna. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the returned ADC index is "-1", it means no external ADC are used to monitor the requested antenna. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">antennaRef</td><td>antenna reference </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">adcIdPtr</td><td>The ADC index used to monitor the requested antenna </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">adcIdPtr</td><td>ADC index used to monitor the requested antenna </td></tr>
 </table>
 </dd>
 </dl>
@@ -385,7 +385,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">antennaRef</td><td>antenna reference </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">openLimitPtr</td><td>The ADC value used to detect an open circuit </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">openLimitPtr</td><td>ADC value used to detect an open circuit </td></tr>
 </table>
 </dd>
 </dl>
@@ -424,7 +424,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">antennaRef</td><td>antenna reference </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">shortLimitPtr</td><td>The ADC value used to detect a short circuit </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">shortLimitPtr</td><td>ADC value used to detect a short circuit </td></tr>
 </table>
 </dd>
 </dl>
@@ -592,7 +592,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">antennaRef</td><td>antenna reference </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">adcId</td><td>The ADC index used to monitor the requested antenna </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">adcId</td><td>ADC index used to monitor the requested antenna </td></tr>
 </table>
 </dd>
 </dl>
@@ -631,7 +631,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">antennaRef</td><td>antenna reference </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">openLimit</td><td>The ADC value used to detect an open circuit </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">openLimit</td><td>ADC value used to detect an open circuit </td></tr>
 </table>
 </dd>
 </dl>
@@ -670,7 +670,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">antennaRef</td><td>antenna reference </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">shortLimit</td><td>The ADC value used to detect a short circuit </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">shortLimit</td><td>ADC value used to detect a short circuit </td></tr>
 </table>
 </dd>
 </dl>

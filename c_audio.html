@@ -61,8 +61,8 @@
 <div class="headertitle">
 <h1 class="title">Audio </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__audio__interface_8h.html">API Reference</a></p>
-<hr/>
+<div class="textblock"><p><a class="el" href="le__audio__interface_8h.html">API Reference</a> <br/>
+<a class="el" href="platformConstraintsAudio.html">Audio</a> Constraints </p><hr/>
 <p>The Audio API handles audio interfaces including play and record supported formats.</p>
 <p>A Legato device can use several audio interfaces. You choose the input and output interfaces to tie together. The Audio stream related to a particular interface is represented with an 'Audio Stream Reference'.</p>
 <p>You can create your own audio path by connecting several audio streams together using audio connectors.</p>
@@ -116,6 +116,7 @@ Open/Close an Audio Interface</h1>
 <p>Call <a class="el" href="le__audio__interface_8h.html#abafeb411da7b1a14b2d5777fc1d3e394">le_audio_Close()</a> to release it. If several users own the same, corresponding stream reference, the interface will close only after the last user releases the audio stream.</p>
 <p>You can configure the PCM interface with the <a class="el" href="le__audio__interface_8h.html#ae7c9d76c5377ad5fae13b24477827f45">le_audio_SetPcmSamplingRate()</a>, <a class="el" href="le__audio__interface_8h.html#ab3678e77c8d69f248cd339042bd824cc">le_audio_SetPcmSamplingResolution()</a> and <a class="el" href="le__audio__interface_8h.html#a593682daa95aec349e48144f5b46c658">le_audio_SetPcmCompanding()</a> functions. This function must be called before activating an audio path with the PCM interface, in other words you must call this function before connecting the PCM Stream to a connector.</p>
 <p>In addition, the <a class="el" href="le__audio__interface_8h.html#a36779982278d3f965286582f38917247">le_audio_GetPcmSamplingRate()</a>, <a class="el" href="le__audio__interface_8h.html#a70fbe5e1ae02033e89ad04bbf1ed2b39">le_audio_GetPcmSamplingResolution()</a> and <a class="el" href="le__audio__interface_8h.html#aab9a28f3c695b90f8b9f622eb401f6cf">le_audio_GetPcmCompanding()</a> functions allows you to retrieve the PCM interface configuration.</p>
+<dl class="section note"><dt>Note</dt><dd>Opening a Legato audio stream doesn’t necessarily interact with the audio HW interface. On most platforms, it only allocates a context in memory. The audio path becomes active when the streams are plugged into a connector.</dd></dl>
 <h1><a class="anchor" id="le_audio_streams"></a>
 Control an Audio Stream</h1>
 <p>Once the users get an Audio Stream reference, they can control it with the following functions:</p>

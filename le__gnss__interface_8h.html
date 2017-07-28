@@ -195,6 +195,10 @@ Functions</h2></td></tr>
 <tr class="separator:a5ae945ad1921b621e9631e4286f40784"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a70504e7c542d626aa07948d8330020c7"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a70504e7c542d626aa07948d8330020c7">le_gnss_GetDop</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, uint16_t *hdopPtr, uint16_t *vdopPtr, uint16_t *pdopPtr)</td></tr>
 <tr class="separator:a70504e7c542d626aa07948d8330020c7"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adadd768a9b74c8ba785c7f20ce0d2f08"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#adadd768a9b74c8ba785c7f20ce0d2f08">le_gnss_GetSatellitesLatency</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef, uint16_t *satIdPtr, size_t *satIdNumElementsPtr, int32_t *latencyPtr, size_t *latencyNumElementsPtr)</td></tr>
+<tr class="separator:adadd768a9b74c8ba785c7f20ce0d2f08"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a07ee55596c930fe47981ba0a4d018bd2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a07ee55596c930fe47981ba0a4d018bd2">le_gnss_GetLastSampleRef</a> (void)</td></tr>
+<tr class="separator:a07ee55596c930fe47981ba0a4d018bd2"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a89cdf0fb25e8204befc65db7aa6837db"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a89cdf0fb25e8204befc65db7aa6837db">le_gnss_ReleaseSampleRef</a> (<a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> positionSampleRef)</td></tr>
 <tr class="separator:a89cdf0fb25e8204befc65db7aa6837db"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a5d74c2ad91a504a1d0ac35b4f4f2c382"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__gnss__interface_8h.html#a5d74c2ad91a504a1d0ac35b4f4f2c382">le_gnss_SetSuplAssistedMode</a> (<a class="el" href="le__gnss__interface_8h.html#a70085fe9ff78ec5c7426fd4c9dc2f9dc">le_gnss_AssistedMode_t</a> assistedMode)</td></tr>
@@ -768,7 +772,7 @@ Functions</h2></td></tr>
 <li>LE_OK Function succeeded.</li>
 </ul>
 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>Altitude is in metres, above Mean Sea Level, with 3 decimal places (3047 = 3.047 metres).</dd>
+<dl class="section note"><dt>Note</dt><dd>Altitude is in meters, above Mean Sea Level, with 3 decimal places (3047 = 3.047 meters).</dd>
 <dd>
 For a 2D position fix, the altitude will be indicated as invalid and set to INT32_MAX</dd>
 <dd>
@@ -778,8 +782,8 @@ altitudePtr, altitudeAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">altitudePtr</td><td>Altitude in metres, above Mean Sea Level [resolution 1e-3]. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">vAccuracyPtr</td><td>Vertical position's accuracy in metres [resolution 1e-1]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">altitudePtr</td><td>Altitude in meters, above Mean Sea Level [resolution 1e-3]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">vAccuracyPtr</td><td>Vertical position's accuracy in meters [resolution 1e-1]. </td></tr>
 </table>
 </dd>
 </dl>
@@ -1104,6 +1108,24 @@ If the caller is passing an invalid Position sample reference into this function
 </dl>
 </div>
 </div>
+<a class="anchor" id="a07ee55596c930fe47981ba0a4d018bd2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> le_gnss_GetLastSampleRef </td>
+<td>(</td>
+<td class="paramtype">void </td>
+<td class="paramname"></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function gets the last updated position sample object reference.</p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to last Position's sample.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>On failure, the process exits, so you don't have to worry about checking the returned reference for validity. </dd></dl>
+</div>
+</div>
 <a class="anchor" id="ada100f53f9ad9f3df852fcc6639c15bc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1152,7 +1174,7 @@ If the caller is passing an invalid Position sample reference into this function
 <dd>
 The latitude and longitude are given in degrees with 6 decimal places like: Latitude +48858300 = 48.858300 degrees North Longitude +2294400 = 2.294400 degrees East</dd>
 <dd>
-Altitude is in metres, above Mean Sea Level, with 3 decimal places (3047 = 3.047 metres).</dd>
+Altitude is in meters, above Mean Sea Level, with 3 decimal places (3047 = 3.047 meters).</dd>
 <dd>
 If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1160,7 +1182,7 @@ If the caller is passing an invalid Position sample reference into this function
 <tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">latitudePtr</td><td>WGS84 Latitude in degrees, positive North [resolution 1e-6]. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">longitudePtr</td><td>WGS84 Longitude in degrees, positive East [resolution 1e-6]. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">hAccuracyPtr</td><td>Horizontal position's accuracy in metres [resolution 1e-2]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">hAccuracyPtr</td><td>Horizontal position's accuracy in meters [resolution 1e-2]. </td></tr>
 </table>
 </dd>
 </dl>
@@ -1320,6 +1342,67 @@ If the caller is passing an invalid Position sample reference into this function
 <tr><td class="paramdir">[in,out]</td><td class="paramname">satAzimNumElementsPtr</td><td></td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">satElevPtr</td><td>Satellites in View Elevation [degrees]. Range: 0 to 90 If Elevation angle is currently unknown, the value is set to UINT8_MAX. </td></tr>
 <tr><td class="paramdir">[in,out]</td><td class="paramname">satElevNumElementsPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="adadd768a9b74c8ba785c7f20ce0d2f08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_gnss_GetSatellitesLatency </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__gnss__interface_8h.html#ac9577035f26d6b7f48615670eb72102a">le_gnss_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>satIdPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>satIdNumElementsPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">int32_t * </td>
+<td class="paramname"><em>latencyPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>latencyNumElementsPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the satellites latency measures. That measure provides the time difference when the satellite measurement is obtained relative to the time the position's sample is provided. A positive value means the satellite measurement precedes the time reference of position report.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_FAULT Function failed to get the satellites latency measures.</li>
+<li>LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to UINT16_MAX or INT32_MAX).</li>
+<li>LE_OK Function succeeded.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position sample reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">satIdPtr</td><td>Satellites in View ID number, referring to NMEA standard. </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">satIdNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">latencyPtr</td><td>Satellites latency measure in milliseconds </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">latencyNumElementsPtr</td><td></td></tr>
 </table>
 </dd>
 </dl>
@@ -1579,7 +1662,7 @@ If the caller is passing an invalid Position sample reference into this function
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">vspeedPtr</td><td>Vertical speed in meters/second [resolution 1e-2]. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">vspeedPtr</td><td>Vertical speed in meters/second [resolution 1e-2], positive up. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">vspeedAccuracyPtr</td><td>Vertical speed's accuracy estimate in meters/second [resolution 1e-1]. </td></tr>
 </table>
 </dd>

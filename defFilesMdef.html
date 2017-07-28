@@ -61,7 +61,8 @@
 <div class="headertitle">
 <h1 class="title">Kernel Module Definition .mdef </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>The <code></code>.mdef files supports declaring pre-built kernel modules to use Legato.</p>
+<div class="textblock"><p>This topic provides details about Legato's Kernel Module Definition file.</p>
+<p>The <code></code>.mdef files support declaring pre-built kernel modules to use Legato.</p>
 <p><code></code>.mdef files contain the following sections:</p>
 <h1><a class="anchor" id="defFilesMdef_preBuilt"></a>
 preBuilt</h1>
@@ -72,15 +73,18 @@ preBuilt</h1>
 params</h1>
 <p>The optional <code>params:</code> section lists all module parameters that must be provided to the module’s <code>insmod</code> command.</p>
 <p>The following code sample will execute this command <code>insmod &lt;module&gt; param1=value1 param2=value2 …</code>: </p><pre class="fragment"><div class="line">params:</div><div class="line">{</div><div class="line">    param1 = “value1”</div><div class="line">    param2 = “value2”</div><div class="line">    …</div><div class="line">}</div></pre><!-- fragment --><p>The mandatory quotes (“ ”) around each parameter value indicate a string type.</p>
-<h1><a class="anchor" id="defFilesMdef_preBuilt_buildKernal"></a>
+<h1><a class="anchor" id="defFilesMdef_preBuilt_buildKernel"></a>
 Build Kernel Modules</h1>
-<p>For info on how to build Linux kernel modules, see the <a href="http://www.yoctoproject.org/docs/1.6.1/kernel-dev/kernel-dev.html">Yoco kernel dev docs</a> and </p><pre class="fragment"><div class="line">$(KERNEL_SRC)/Documentation/kbuild/modules.txt file</div></pre><!-- fragment --><h2><a class="anchor" id="defFilesMdef_preBuilt_binaries"></a>
+<p>For info on how to build Linux kernel modules, see the <a href="http://www.yoctoproject.org/docs/1.7.3/kernel-dev/kernel-dev.html">Yocto kernel dev docs</a> and </p><pre class="fragment"><div class="line">$(KERNEL_SRC)/Documentation/kbuild/modules.txt file</div></pre><!-- fragment --><h2><a class="anchor" id="defFilesMdef_buildDir"></a>
 Build Directory</h2>
 <p>Kernel module binares are built in the Yocto Linux kernel build environment, preferably with Yocto cross-build tools.</p>
 <p>Modules have to be built from the Yocto kernel’s build directory.</p>
 <p>From the Yocto tree root, this is the path to kernel build directory: </p><pre class="fragment">&lt;Yocto-root&gt;/build_bin/tmp/work/swi_mdm9x15-poky-linux-gnueabi/linux-yocto/&lt;kernel-version&gt;/linux-swi_mdm9x15-standard-build
 </pre><p>From the Legato directory, this is the path to kernel build directory: </p><pre class="fragment">../build_bin/tmp/work/swi_mdm9x15-poky-linux-gnueabi/linux-yocto/&lt;kernel-version&gt;/linux-swi_mdm9x15-standard-build
-</pre><p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+</pre><h1><a class="anchor" id="defFiles_kernelDriver"></a>
+Kernel Driver</h1>
+<p>See <a class="el" href="yoctoOutofTreeKernelModule.html">Out-of-Tree Kernel Modules</a> for details.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>
 </div>

@@ -61,9 +61,10 @@
 <div class="headertitle">
 <h1 class="title">Config Tree API </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__cfg__interface_8h.html">API Reference</a></p>
+<div class="textblock"><p><a class="el" href="le__cfg__interface_8h.html">API Reference</a> <br/>
+<a class="el" href="howToConfigTree.html">Manage Config Tree</a></p>
 <hr/>
-<p>The Config Tree API is used by apps to read and write their specific configurations. Each app is given an isolated tree. The system utilities store their configuration in the <code>root</code> tree.</p>
+<p>The Config Tree API is used by apps to read and write their specific configurations. Each app is given an isolated tree. The system utilities store their configuration in the <code>root</code> tree. Trees are created when they are first accessed by a user or component/process etc. Apps automatically get read access to a tree with the same name as the app. Apps can also be granted read or write access to any other tree with any other name (e.g., a tree named <code>foo</code> can be shared with <em>appA</em> and <em>appB</em>).</p>
 <p>Paths in the tree look like traditional Unix style paths like this:</p>
 <pre class="fragment"><div class="line">/path/to/my/value </div></pre><!-- fragment --><p>The path root is the root of the tree where the app has been given access. If the app has permission to access another tree, the path can also include the name of the other tree, followed by a colon.</p>
 <pre class="fragment"><div class="line">secondTree:/path/to/my/value </div></pre><!-- fragment --><p>In this case, a value named <code>value</code> is read from the tree named <code>secondTree</code> </p>
@@ -95,6 +96,7 @@ Working without Transactions</h1>
 <p>Because these functions don't take an explicit transaction, they can't work with relative paths. If a relative path is given, the path will be considered relative to the tree's root.</p>
 <p>Translating this to a "quick" (non-transactional) example looks like this:</p>
 <pre class="fragment"><div class="line"><span class="keywordtype">void</span> ClearIpInfo</div><div class="line">(</div><div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span>* interfaceNamePtr</div><div class="line">)</div><div class="line">{</div><div class="line">    <span class="keywordtype">char</span> pathBuffer[MAX_CFG_STRING] = { 0 };</div><div class="line"> </div><div class="line">    sprintf(pathBuffer, <span class="stringliteral">"/system/%s/ip4/"</span>, interfaceNamePtr);</div><div class="line">    <a class="code" href="le__cfg__interface_8h.html#a95f44c1e0d16eb48475465af63300a75">le_cfg_QuickDeleteNode</a>(pathBuffer);</div><div class="line">}</div></pre><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Because each read is independant, there's no guarantee of consistency between them. If another process changes one of the values while you read/write the other, the two values could be read out of sync.</dd></dl>
+<p>You'll also need to set <a class="el" href="howToConfigTreeTransactions.html#howToConfigTree_nonTxn">Read/Write Access</a>.</p>
 <hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

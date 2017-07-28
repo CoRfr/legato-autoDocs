@@ -132,6 +132,12 @@ Receiving a message</h1>
 <p>If a succession of messages is received, a new Message object is created for each, and the handler is called for each new message.</p>
 <p>Uninstall the handler function by calling <code><a class="el" href="le__sms__interface_8h.html#a2f474706ba6d7a40083fe1f50f530101">le_sms_RemoveRxMessageHandler()</a></code>. </p><dl class="section note"><dt>Note</dt><dd><code><a class="el" href="le__sms__interface_8h.html#a2f474706ba6d7a40083fe1f50f530101">le_sms_RemoveRxMessageHandler()</a></code> API does not delete the Message Object. The caller has to delete it.</dd></dl>
 <p>Please refer to <a class="el" href="c_smsSampleMT.html">Sample code for Mobile Terminated SMS message</a> page to get an example of SMS message reception handling.</p>
+<h1><a class="anchor" id="le_sms_ops_sms_storage"></a>
+Receiving a full SMS storage indication</h1>
+<p>To receive a SMS full storage status, the application has to register a handler function. Use <code><a class="el" href="le__sms__interface_8h.html#a1ae7c04f5de9245489956e62bd607430">le_sms_AddFullStorageEventHandler()</a></code> to register that handler.</p>
+<p>The handler must satisfy the following prototype: <code>typedef</code> void (*le_sms_FullStorageEventFunc_t)(le_sms_Storage_t storage).</p>
+<p>Uninstall the handler function by calling <code><a class="el" href="le__sms__interface_8h.html#a1b4c00f308ffab8c9828edc1631047d8">le_sms_RemoveFullStorageEventHandler()</a></code>.</p>
+<p>Please refer to <a class="el" href="c_smsSampleMT.html">Sample code for Mobile Terminated SMS message</a> page to get an example of SMS storage indication handling.</p>
 <h1><a class="anchor" id="le_sms_ops_listing"></a>
 Listing  messages recorded in storage area</h1>
 <p>Call <code><a class="el" href="le__sms__interface_8h.html#aee4328f9e417108fa16794cc135073d0">le_sms_CreateRxMsgList()</a></code> to create a List object that lists the received messages present in the storage area, which is referenced by <code>le_sms_MsgListRef_t</code> type.</p>
@@ -184,6 +190,9 @@ SMS Cell Broadcast configuration</h1>
 <h1><a class="anchor" id="le_sms_ops_configuration"></a>
 SMS configuration</h1>
 <p>Modem SMS Center Address can be set or get with <a class="el" href="le__sms__interface_8h.html#a5df138c515944ce955dd54689593b5df">le_sms_SetSmsCenterAddress()</a> and <a class="el" href="le__sms__interface_8h.html#aeef8f1ac8d2aa3f512e15c054e024bea">le_sms_GetSmsCenterAddress()</a> functions</p>
+<h1><a class="anchor" id="le_sms_ops_storage_configuration"></a>
+Preferred SMS storage configuration</h1>
+<p>Preferred SMS storage for incoming messages can be set or get with <a class="el" href="le__sms__interface_8h.html#a05e4196eb01d4d36ed2412c6eedc406e">le_sms_SetPreferredStorage()</a> and <a class="el" href="le__sms__interface_8h.html#a5275b917903dbd1d782867f42d256c55">le_sms_GetPreferredStorage()</a> functions.</p>
 <h1><a class="anchor" id="le_sms_ops_samples"></a>
 Sample codes</h1>
 <p>A sample code that implements a function for Mobile Originated SMS message can be found in <b>smsMO.c</b> file (please refer to <a class="el" href="c_smsSampleMO.html">Sample code for Mobile Originated SMS message</a> page).</p>

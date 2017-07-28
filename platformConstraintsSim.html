@@ -61,27 +61,24 @@
 <div class="headertitle">
 <h1 class="title">SIM </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><b>SIM command API</b></p>
-<p>The API le_sim_SendSimCommand() offers the possibility to send commands to the SIM. The parameters of this API depends on the platform.</p>
-<p>For AR755x, AR8652, and WP8548:</p><ul>
-<li>p1, p2, p3 parameters:</li>
-</ul>
+<div class="textblock"><p><a class="el" href="le__sim__interface_8h.html#acc0760cfa301adeb917b171b32973de3">le_sim_SendCommand()</a> supports sending commands to the SIM. The parameters of this API depend on the platform.</p>
+<p>For AR755x, AR8652, and WP8548, these are the p1, p2, p3 parameters:</p>
 <table class="doxtable">
 <tr>
-<th align="center">Command \ Parameters </th><th align="center">P1 </th><th align="center">P2 </th><th align="center">P3  </th></tr>
+<th>Command \ Parameters </th><th>P1 </th><th align="center">P2 </th><th align="center">P3  </th></tr>
 <tr>
-<td align="center">LE_SIM_READ_RECORD </td><td align="center">Record number to read </td><td align="center">Unused </td><td align="center">Unused </td></tr>
+<td>LE_SIM_READ_RECORD </td><td>Record number to read </td><td align="center">Unused </td><td align="center">Unused </td></tr>
 <tr>
-<td align="center">LE_SIM_READ_BINARY </td><td align="center">Offset to the first byte to read </td><td align="center">Unused </td><td align="center">Unused </td></tr>
+<td>LE_SIM_READ_BINARY </td><td>Offset to the first byte to read </td><td align="center">Unused </td><td align="center">Unused </td></tr>
 <tr>
-<td align="center">LE_SIM_UPDATE_RECORD </td><td align="center">Record number to write </td><td align="center">Unused </td><td align="center">Unused </td></tr>
+<td>LE_SIM_UPDATE_RECORD </td><td>Record number to write </td><td align="center">Unused </td><td align="center">Unused </td></tr>
 <tr>
-<td align="center">LE_SIM_UPDATE_BINARY </td><td align="center">Offset to the first byte to write </td><td align="center">Unused </td><td align="center">Unused </td></tr>
+<td>LE_SIM_UPDATE_BINARY </td><td>Offset to the first byte to write </td><td align="center">Unused </td><td align="center">Unused </td></tr>
 </table>
 <ul>
-<li>path parameter: it contains the path of the elementary file from the master file in hexadecimal (e.g. "3F007FFF", "3F007F20"). The path is mandatory for all commands.</li>
+<li>path parameter contains the path of the elementary file from the master file in hexadecimal (e.g. "3F007FFF", "3F007F20"). The path is mandatory for all commands.</li>
 </ul>
-<hr/>
+<p>See <a class="el" href="c_sim.html">SIM</a> API</p>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

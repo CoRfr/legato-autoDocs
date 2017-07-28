@@ -83,8 +83,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8fb341f11e0da2692453df997613cb8e"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a0a103d5cef5e83fc9088859d527bbd43"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__timer_8h.html#a0a103d5cef5e83fc9088859d527bbd43">le_timer_SetInterval</a> (<a class="el" href="le__timer_8h.html#a763fa6992488cdce3b5a820817094838">le_timer_Ref_t</a> timerRef, <a class="el" href="structle__clk___time__t.html">le_clk_Time_t</a> interval)</td></tr>
 <tr class="separator:a0a103d5cef5e83fc9088859d527bbd43"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ade7e32b4b0d014b84986c66053b529c6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__timer_8h.html#ade7e32b4b0d014b84986c66053b529c6">le_timer_SetMsInterval</a> (<a class="el" href="le__timer_8h.html#a763fa6992488cdce3b5a820817094838">le_timer_Ref_t</a> timerRef, size_t interval)</td></tr>
-<tr class="separator:ade7e32b4b0d014b84986c66053b529c6"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5c66591a4b8e90bbe8a4a72c500e194b"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__timer_8h.html#a5c66591a4b8e90bbe8a4a72c500e194b">le_timer_SetMsInterval</a> (<a class="el" href="le__timer_8h.html#a763fa6992488cdce3b5a820817094838">le_timer_Ref_t</a> timerRef, uint32_t interval)</td></tr>
+<tr class="separator:a5c66591a4b8e90bbe8a4a72c500e194b"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a292b0a7d6dc0796a36a54fd04c6a7eeb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__timer_8h.html#a292b0a7d6dc0796a36a54fd04c6a7eeb">le_timer_SetRepeat</a> (<a class="el" href="le__timer_8h.html#a763fa6992488cdce3b5a820817094838">le_timer_Ref_t</a> timerRef, uint32_t repeatCount)</td></tr>
 <tr class="separator:a292b0a7d6dc0796a36a54fd04c6a7eeb"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af6900bdb4653ff95f7f7be918b9e482d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__timer_8h.html#af6900bdb4653ff95f7f7be918b9e482d">le_timer_SetContextPtr</a> (<a class="el" href="le__timer_8h.html#a763fa6992488cdce3b5a820817094838">le_timer_Ref_t</a> timerRef, void *contextPtr)</td></tr>
@@ -151,7 +151,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Create the timer object.</p>
-<dl class="section return"><dt>Returns</dt><dd>Reference to the timer object. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the timer object. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">nameStr</td><td>Name of the timer. </td></tr>
@@ -202,7 +202,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>If an invalid timer object is given, the process exits. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Set interval for this timer object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Get context pointer for this timer object </td></tr>
 </table>
 </dd>
 </dl>
@@ -227,7 +227,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>If an invalid timer object is given, the process exits. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Set interval for this timer object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Get expiry count for this timer object </td></tr>
 </table>
 </dd>
 </dl>
@@ -313,7 +313,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>If an invalid timer object is given, the process exits. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Set interval for this timer object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Set context pointer for this timer object </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td>Context Pointer. </td></tr>
 </table>
 </dd>
@@ -400,7 +400,7 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ade7e32b4b0d014b84986c66053b529c6"></a>
+<a class="anchor" id="a5c66591a4b8e90bbe8a4a72c500e194b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -413,7 +413,7 @@ Functions</h2></td></tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">size_t </td>
+<td class="paramtype">uint32_t </td>
 <td class="paramname"><em>interval</em> </td>
 </tr>
 <tr>
@@ -473,7 +473,7 @@ Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>If an invalid timer object is given, the process exits. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Set interval for this timer object. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">timerRef</td><td>Set repeat count for this timer object </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">repeatCount</td><td>Number of times the timer will repeat (0 = forever). </td></tr>
 </table>
 </dd>
