@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -95,16 +95,25 @@ Operation modes</h1>
 </ul>
 <h1><a class="anchor" id="le_ecall_session"></a>
 eCall Session</h1>
-<p>Start an eCall session by creating an eCall object that calls <a class="el" href="le__ecall__interface_8h.html#aad7fa3b34d9d72a2f1d4baa681ba25cc">le_ecall_Create()</a>. Stop an eCall session with <a class="el" href="le__ecall__interface_8h.html#a85800c86f9709fb7baa7219cc762181c">le_ecall_End()</a>.</p>
-<p>The type of eCall and the kind of activation are specified using different functions to start the eCall session:</p><ul>
+<p>An eCall session is started by creating an eCall object with the <a class="el" href="le__ecall__interface_8h.html#aad7fa3b34d9d72a2f1d4baa681ba25cc">le_ecall_Create()</a> function. The eCall session can then be stopped with <a class="el" href="le__ecall__interface_8h.html#a85800c86f9709fb7baa7219cc762181c">le_ecall_End()</a>.</p>
+<p>The eCall type and the kind of activation are specified using different functions to start the eCall session:</p><ul>
 <li><a class="el" href="le__ecall__interface_8h.html#ab106c3ca87fc8dd8239d2849df932122">le_ecall_StartManual()</a>: initiate a manual eCall session (triggered by a passenger)</li>
 <li><a class="el" href="le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667">le_ecall_StartAutomatic()</a>: initiate an automatic eCall session (automatically triggered by the IVS in case of accident)</li>
 <li><a class="el" href="le__ecall__interface_8h.html#aa5d23a1bea370b1ae29fc52d7a89d947">le_ecall_StartTest()</a>: initiate a test eCall session (to test the communication between the IVS and the PSAP)</li>
 </ul>
-<dl class="section warning"><dt>Warning</dt><dd>An application must wait for <code>LE_ECALL_STATE_DISCONNECTED</code> event before calling again the <code>le_ecall_StartXxx()</code> functions.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>An application must wait for the end of the ongoing eCall before triggering another one with the <code>le_ecall_StartXxx()</code> functions. An eCall is ended when:<ul>
+<li>the application successfully ended it with <a class="el" href="le__ecall__interface_8h.html#a85800c86f9709fb7baa7219cc762181c">le_ecall_End()</a> returning <code>LE_OK</code> </li>
+<li>or the event <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda28740cfb795561c243501bff53343175">LE_ECALL_STATE_STOPPED</a> is received</li>
+<li>or the event <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda2b28ed16149c54b6b3d9c57dea4a748f">LE_ECALL_STATE_ALACK_RECEIVED_CLEAR_DOWN</a> is received</li>
+<li>or the event <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda085024eb3cca6b48f024f368c6b0f757">LE_ECALL_STATE_DISCONNECTED</a> is received and no redial is launched (see <a class="el" href="c_ecall.html#le_ecall_redial">Redial management</a> section for more information about the redial process).</li>
+</ul>
+</dd></dl>
 <p>When the eCall object is no longer needed, call <a class="el" href="le__ecall__interface_8h.html#af1221deb68c46912748f65505b3e4919">le_ecall_Delete()</a> to free all allocated resources associated with the object.</p>
 <p>The current state of an eCall session can be queried using <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a>. Alternatively, an application can register a handler be notified when the session state changes. The handler can be managed using <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a> and <a class="el" href="le__ecall__interface_8h.html#a6be1fd10666da25882a2c6f78c82664d">le_ecall_RemoveStateChangeHandler()</a>.</p>
-<p>An application can call <a class="el" href="le__ecall__interface_8h.html#a771b2ef399a8fbf3b80c4eb11152c06a">le_ecall_GetTerminationReason()</a> to know the reason of the call termination when call state is LE_ECALL_STATE_DISCONNECTED, and also <a class="el" href="le__ecall__interface_8h.html#a8ffb7fb207537ea4574823285ebb6ca1">le_ecall_GetPlatformSpecificTerminationCode()</a> to get platform specific termination code (refer to your platform documentation for further details).</p>
+<p>An application can also call <a class="el" href="le__ecall__interface_8h.html#a771b2ef399a8fbf3b80c4eb11152c06a">le_ecall_GetTerminationReason()</a> to retrieve the reason of the call termination when call state is <a class="el" href="le__ecall__interface_8h.html#a233609e4724e549a1405f9177c0a07dda085024eb3cca6b48f024f368c6b0f757">LE_ECALL_STATE_DISCONNECTED</a>, and also <a class="el" href="le__ecall__interface_8h.html#a8ffb7fb207537ea4574823285ebb6ca1">le_ecall_GetPlatformSpecificTerminationCode()</a> to get platform specific termination code (refer to your platform documentation for further details).</p>
+<h1><a class="anchor" id="le_ecall_concurrency"></a>
+Concurrency</h1>
+<p>If another application tries to use the eCall service while a session is already in progress, the <a class="el" href="le__ecall__interface_8h.html#ab106c3ca87fc8dd8239d2849df932122">le_ecall_StartManual()</a>, <a class="el" href="le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667">le_ecall_StartAutomatic()</a>, <a class="el" href="le__ecall__interface_8h.html#aa5d23a1bea370b1ae29fc52d7a89d947">le_ecall_StartTest()</a> functions will return a <code>LE_BUSY</code> error. The eCall session in progress won't be interrupted or disturbed. The application can follow the session progress with 'state' functions like <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a> and <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a>. A manual eCall can't interrupt an automatic eCall, and an automatic eCall can't interrupt a manual eCall.</p>
 <h1><a class="anchor" id="le_ecall_msd"></a>
 Minimum Set of Data (MSD)</h1>
 <p>The dynamic values of the MSD can be set with:</p><ul>
@@ -129,9 +138,6 @@ Minimum Set of Data (MSD)</h1>
 The imported MSD overwrites the control flags (automaticActivation and testCall) set by le_ecall_StartXxx() functions (Manual, Automatic, Test). The User App is in charge of their correct settings.</dd></dl>
 <p>The encoded MSD can be retrieved with <a class="el" href="le__ecall__interface_8h.html#aebdb7744c37081fda6398031d3ee1198">le_ecall_ExportMsd()</a> function.</p>
 <dl class="section note"><dt>Note</dt><dd>The User app must perform the MSD transmission by calling <a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd()</a> when the LE_ECALL_STATE_PSAP_START_IND_RECEIVED event is received. The MSD can be updated before calling <a class="el" href="le__ecall__interface_8h.html#a344e4c29208e576e81dda113f786529e">le_ecall_SendMsd()</a>, using the e_ecall_ImportMsd() function or the le_ecall_SetMsdXxx() functions.</dd></dl>
-<h1><a class="anchor" id="le_ecall_concurrency"></a>
-Concurrency</h1>
-<p>If another application tries to use the eCall service while a session is already in progress, the <a class="el" href="le__ecall__interface_8h.html#ab106c3ca87fc8dd8239d2849df932122">le_ecall_StartManual()</a>, <a class="el" href="le__ecall__interface_8h.html#aa25256eeacefcf00c14763ef294c7667">le_ecall_StartAutomatic()</a>, <a class="el" href="le__ecall__interface_8h.html#aa5d23a1bea370b1ae29fc52d7a89d947">le_ecall_StartTest()</a> functions will return a LE_BUSY error. The eCall session in progress won't be interrupted or disturbed. The application can follow the session progress with 'state' functions like <a class="el" href="le__ecall__interface_8h.html#a7881e794b9249222edde10f76d7663c9">le_ecall_GetState()</a> and <a class="el" href="le__ecall__interface_8h.html#a453b64579f2884f1d26981bca38a201c">le_ecall_AddStateChangeHandler()</a>. A manual eCall can't interrupt an automatic eCall, and an automatic eCall can't interrupt a manual eCall.</p>
 <h1><a class="anchor" id="le_ecall_eraglonass"></a>
 ERA-GLONASS compliancy</h1>
 <p>To perform an emergency call following the ERA-GLONASS requirements, the 'systemStandard' entry of the configuration database must be set to 'ERA-GLONASS'.</p>

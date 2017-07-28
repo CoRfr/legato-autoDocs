@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Tools.json"></script>
+<script src="tocs/Build_Apps_Tools.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,33 +61,76 @@
 <div class="headertitle">
 <h1 class="title">app </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>The <code>app</code> tool can be used to list and control apps installed on the target device.</p>
+<div class="textblock"><p>The Control Apps <code>app</code> tool is used to control and obtain info about apps installed on the target device.</p>
 <h1>Usage</h1>
-<p><b><code>app [start|stop|restart|remove|status|version|info] APP_NAME [ APP_NAME ... ] <br/>
- app [start|stop|restart|remove|status|version|info] '*' <br/>
- app [list|status|info] <br/>
- app help <br/>
+<p><b><code>app start &lt;appName&gt; [&lt;options&gt;] <br/>
+ app stop &lt;appName&gt; <br/>
+ app restart &lt;appName&gt; <br/>
+ app remove &lt;appName&gt; <br/>
+ app list <br/>
+ app status [&lt;appName&gt;] <br/>
+ app version &lt;appName&gt; <br/>
+ app info [&lt;appName&gt;] <br/>
+ app runProc &lt;appName&gt; &lt;procName&gt; [options] <br/>
+ app runProc &lt;appName&gt; [&lt;procName&gt;] --exe=&lt;exePath&gt; [options] <br/>
+ app --help <br/>
 </code></b></p>
-<pre class="fragment">app [start|stop|restart|remove|status|version|info] APP_NAME [ APP_NAME ... ]</pre> <blockquote class="doxtable">
-<p>Multiple app names can be specified. </p>
+<pre class="fragment">app start &lt;appName&gt; [&lt;options&gt;] </pre> <blockquote class="doxtable">
+<p>Runs an app in a modified manner by one or more of the following options: </p>
 </blockquote>
-<pre class="fragment">app [start|stop|restart|remove|status|version|info] '*'</pre> <blockquote class="doxtable">
-<p>A wildcard '*' can be used to apply action to all apps. </p>
+<blockquote class="doxtable">
+<p><code>--norun=&lt;procName1&gt;[,&lt;procName2&gt;,...]</code> <br/>
+ Don't start the specified configured processes. Names are separated by commas without spaces. </p>
 </blockquote>
-<dl class="section warning"><dt>Warning</dt><dd>Be careful not to accidentally remove system services apps that you might need (e.g., modemService app).</dd></dl>
-<pre class="fragment">app list</pre> <blockquote class="doxtable">
-<p>Lists apps. </p>
+<pre class="fragment">app stop &lt;appName&gt; </pre> <blockquote class="doxtable">
+<p>Stops the specified app. </p>
 </blockquote>
-<pre class="fragment">app status</pre> <blockquote class="doxtable">
-<p>List apps and their current status. </p>
+<pre class="fragment">app restart &lt;appName&gt; </pre> <blockquote class="doxtable">
+<p>Restarts the specified app. </p>
 </blockquote>
-<pre class="fragment">app info </pre> <blockquote class="doxtable">
-<p>Provides info on one or more apps' running state and processes' state (stopped or never started, running, paused). </p>
+<pre class="fragment">app remove &lt;appName&gt; </pre> <blockquote class="doxtable">
+<p>Removes the specified app. </p><dl class="section warning"><dt>Warning</dt><dd>Be careful not to accidentally remove system services apps that you might need (e.g., modemService app). </dd></dl>
 </blockquote>
-<pre class="fragment">app help </pre> <blockquote class="doxtable">
+<pre class="fragment">app list </pre> <blockquote class="doxtable">
+<p>List all installed apps. </p>
+</blockquote>
+<pre class="fragment">app status [&lt;appName&gt;] </pre> <blockquote class="doxtable">
+<p>If an appName is specified, provides status on that app. If no app is specified, provides status on all installed apps. Status can be <code>stopped</code>, <code>running</code>, <code>paused</code> or <code>not</code> installed. </p>
+</blockquote>
+<pre class="fragment">app version &lt;appName&gt; </pre> <blockquote class="doxtable">
+<p>Provides the version of the specified app. </p>
+</blockquote>
+<pre class="fragment">app info &lt;appName&gt; </pre> <blockquote class="doxtable">
+<p>If an appName is specified, provides info on that app. If no app is specified, provides info on all installed apps. </p>
+</blockquote>
+<pre class="fragment">app runProc &lt;appName&gt; &lt;procName&gt; [options]</pre><blockquote class="doxtable">
+<p>Runs a configured process inside an app using the process settings from the configuration database. If an <code>exePath</code> is provided as an option, the specified executable is used instead of the configured executable. </p>
+</blockquote>
+<pre class="fragment">app runProc &lt;appName&gt; [&lt;procName&gt;] --exe=&lt;exePath&gt; [options]</pre><blockquote class="doxtable">
+<p>Runs an executable inside an app. The <code>exePath</code> must be provided, and the optional process name must not match any configured processes for the app. </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>Unless specified through the options below, the executable will be run with default settings: </p>
+</blockquote>
+<blockquote class="doxtable">
+<p><code>--exe=&lt;exePath&gt;</code> <br/>
+ Use the executable at &lt;exePath&gt;. &lt;exePath&gt; is from the perspective of the app (e.g., <code>/exe</code> would be at the sandbox root if the app is sandboxed). </p>
+</blockquote>
+<blockquote class="doxtable">
+<p><code>--priority=&lt;priorityStr&gt;</code> <br/>
+ Sets the priority of the process. &lt;priorityStr&gt; can be either <code>idle</code>, <code>low</code>, <code>medium</code>, <code>high</code>, <code>rt1</code>, <code>rt2</code>, ... <code>rt32</code>. </p>
+</blockquote>
+<blockquote class="doxtable">
+<p><code>--faultAction=&lt;action&gt;</code> <br/>
+ Sets the fault action for the process. &lt;action&gt; can be either 'ignore', 'restartProc', 'restartApp', 'stopApp'. </p>
+</blockquote>
+<blockquote class="doxtable">
+<p><code>--[&lt;args&gt; ...]</code> <br/>
+ Specifies command line arguments to the process. Everything following the <code>--</code> option is taken as arguments for process to be started. The <code>--</code> option must be the last option to app runProc. If the <code>--</code> option is not used, then the configured arguments are used (if available). </p>
+</blockquote>
+<pre class="fragment">app --help</pre> <blockquote class="doxtable">
 <p>Prints help text to standard out and exits. </p>
 </blockquote>
-<hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

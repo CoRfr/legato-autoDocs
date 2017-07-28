@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,25 +61,19 @@
 <div class="headertitle">
 <h1 class="title">Supervisor </h1> </div>
 </div><div class="contents">
-<div class="textblock"><table class="doxtable">
+<div class="textblock"><p>Supervisor APIs provide services to monitor and/or control apps. These Supervisor Services are usually used in conjunction with running <a class="el" href="toolsHost_sbhelper.html">sbhelper</a>.</p>
+<p>These APIs are available:</p>
+<table class="doxtable">
 <tr>
 <th>Service </th><th>Description </th><th align="center">multi-app safe  </th></tr>
 <tr>
-<td><a class="el" href="legatoServicesSupervisorMonitoring.html">Supervisor Monitoring</a> </td><td>Monitor and control apps </td><td align="center"><div class="image">
-<img alt="green_dot.png" src="green_dot.png"/>
-</div>
-</td></tr>
+<td><a class="el" href="c_appCtrl.html">App Control API</a> </td><td>control Legato apps </td><td align="center">x </td></tr>
 <tr>
-<td><a class="el" href="c_appInfo.html">Application Information API</a> </td><td>Application information retrieval </td><td align="center"></td></tr>
+<td><a class="el" href="c_appInfo.html">Application Information API</a> </td><td>Legato app info retrieval </td><td align="center">x </td></tr>
 <tr>
-<td><a class="el" href="c_wdog.html">Watchdog Service</a> </td><td>Kickable timeout </td><td align="center"><div class="image">
-<img alt="green_dot.png" src="green_dot.png"/>
-</div>
-</td></tr>
+<td><a class="el" href="c_framework.html">Framework Control API</a> </td><td>control the Legato Framework </td><td align="center">x </td></tr>
 </table>
-<p><br/>
-</p>
-<hr/>
+<dl class="section warning"><dt>Warning</dt><dd>Beware of the security risks associated with granting an app access to these services. Apps that can control the state of other apps can seriously interfere with system operation. Sometimes, even knowledge about which apps are running can reveal a vulnerability.</dd></dl>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

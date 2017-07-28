@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,15 +61,18 @@
 <div class="headertitle">
 <h1 class="title">Sandboxes </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>Also see <a class="el" href="howToSecuritySandboxOverview.html">Sandbox Overview</a> and <a class="el" href="howToSecuritySandboxUse.html">Use Sandboxes</a>.</p>
-<p>Legato uses sandboxes to provide a security layer against untrusted apps running in the same system. Legato sandboxes isolate apps from the rest of the system. This allows both original equipment manufacturers (OEM) and independent software vendors (ISV) components to safely coexist on the same device without fear of interfering or breaking the stack.</p>
-<p>Access control for files is done using the underlying POSIX access control mechanisms, based on users, permissions, and SMACK labels.</p>
-<p>All sandboxes are created in RAM, which provides the benefit of automatically removing all sandboxes during system shutdown. Legato sandboxes use bind mounts to import files into sandboxes (defined using the <code></code>.adef and <code></code>.sdef <code>requires</code> section). Bind-mounted files are updated when the file is updated. Bind-mounted files aren't copied so memory requirements are minimal.</p>
-<p>A Legato sandboxed app can access services outside its sandbox. All available services are advertised by the Service Directory. Apps connect to services through a request to the Service Directory. The Service Directory grants access only if the app has been explicitly bound to a service (using the <code></code>.adef and <code></code>.sdef <code>bindings</code> section).</p>
-<p>Legato sandboxes use <em>chroot</em> to limit an app's view to its own file system only. Each app has its own unique user ID, group ID, and root directory. Files are bound into the chroot jail using bind mounts that change a process's root directory to a specified location. The process then only has access to files and directories under its root directory. Only processes with certain capabilities can find their way outside of their root directory.</p>
-<p>Legato sandboxes also provide <em>resource limitations</em>. Resource limitations place limits on the amount of system resources an app is allowed to consume. Without resource limits, an isolated app can still cause damage by consuming all available resources. </p>
-<hr/>
-<p class="copyright"> Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<div class="textblock"><p>Also see <br/>
+<a class="el" href="howToSecuritySandboxOverview.html">Sandbox Overview</a> <br/>
+<a class="el" href="howToSecuritySandboxConfigSample.html">Sandbox Config Sample</a> <br/>
+<a class="el" href="howToSecuritySandboxHelper.html">Sandbox Helper</a></p>
+<p>Legato uses sandboxes to provide a security layer between apps running in the same system. Legato sandboxes isolate apps from the rest of the system. This allows both original equipment manufacturer (OEM) and independent software vendor (ISV) apps to coexist safely on the same device without fear of interfering with each other or breaking the rest of the software stack.</p>
+<p>Each app has its own unique user ID, group ID, and root directory.</p>
+<p>Legato sandboxes use <em>chroot</em> to limit an app's view to its own section of the file system only. Files are bound into the chroot jail using bind mounts. The process then only has access to files and directories under its root directory. Only processes with certain capabilities can find their way outside of their root directory; processes belonging to sandboxed apps run as unprivileged users that don't have those capabilities.</p>
+<p>Legato sandboxes use bind mounts to import files into sandboxes (defined using the <code></code>.adef and <code></code>.sdef <code>requires</code> section). This works like a file system hard link, except that the link is only stored in RAM and can cross over to different file systems. Bind-mounting avoids copying so the overhead is minimal.</p>
+<p>Access control for files visible within the sandbox is done using a combination of standard POSIX discretionary access control (based on user and group permissions) and mandatory access control provided by Linux's SMACK.</p>
+<p>A Legato sandboxed app can access services outside its sandbox via inter-process communication (IPC). All available IPC services are advertised by the Service Directory. Apps connect to services through a request to the Service Directory. The Service Directory grants access only if the app has been explicitly bound to a service (using the <code></code>.adef and <code></code>.sdef <code>bindings</code> section). When access is granted, the connection to the client is passed to the server and all communication between the client and the server are direct from that point on. SMACK is also used to add another layer of security to the IPC, limiting the passing of IPC socket file descriptors from one app to another</p>
+<p>Legato sandboxes also provide <em>resource limitations</em>. Resource limitations place limits on the amount of system resources an app is allowed to consume. Without resource limits, an isolated app can still cause damage by consuming all available resources.</p>
+<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>
 </div>

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,7 +61,8 @@
 <div class="headertitle">
 <h1 class="title">Component Definition .cdef </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><code>Component.cdef</code> files can contain these sections:</p>
+<div class="textblock"><p>This topic provides details about Legato's Component Definition file.</p>
+<p><code>Component.cdef</code> files can contain these sections:</p>
 <h1><a class="anchor" id="defFilesCdef_assets"></a>
 assets</h1>
 <p>Used to describe collections of information (fields) that can be exchanged with cloud services like AirVantage.</p>
@@ -251,8 +252,7 @@ component</h2>
 sources</h1>
 <p>Contains a list of source code files.</p>
 <p>If C or C++ code, one source file must implement a <code>COMPONENT_INIT</code> function. The framework will automatically call that function at start-up.</p>
-<pre class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    foo.c</div><div class="line">    bar.c</div><div class="line">    init.c      <span class="comment">// This one implements the COMPONENT_INIT</span></div><div class="line">}</div></pre><!-- fragment --><hr/>
-<p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
+<pre class="fragment"><div class="line">sources:</div><div class="line">{</div><div class="line">    foo.c</div><div class="line">    bar.c</div><div class="line">    init.c      <span class="comment">// This one implements the COMPONENT_INIT</span></div><div class="line">}</div></pre><!-- fragment --><p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>
 </div>

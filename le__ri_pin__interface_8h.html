@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -104,7 +104,8 @@ Functions</h2></td></tr>
 <p>Check whether the application core is the current owner of the Ring Indicator signal.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK The function succeeded.</li>
-<li>LE_FAULT The function failed. </li>
+<li>LE_FAULT The function failed.</li>
+<li>LE_UNSUPPORTED The platform does not support this operation. </li>
 </ul>
 </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -188,8 +189,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Release control of the Ring Indicator signal.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
-<li>LE_OK Function succeeded.</li>
-<li>LE_FAULT Function failed. </li>
+<li>LE_OK The function succeeded.</li>
+<li>LE_FAULT The function failed.</li>
+<li>LE_UNSUPPORTED The platform does not support this operation. </li>
 </ul>
 </dd></dl>
 </div>
@@ -209,8 +211,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Take control of the Ring Indicator signal.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
-<li>LE_OK Function succeeded.</li>
-<li>LE_FAULT Function failed. </li>
+<li>LE_OK The function succeeded.</li>
+<li>LE_FAULT The function failed.</li>
+<li>LE_UNSUPPORTED The platform does not support this operation. </li>
 </ul>
 </dd></dl>
 </div>

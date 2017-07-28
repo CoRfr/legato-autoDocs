@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -69,6 +69,25 @@ LE_MEM_TRACE</h1>
 <h1><a class="anchor" id="bld_cfg_mem_valgrind"></a>
 LE_MEM_VALGRIND</h1>
 <p>When <code>LE_MEM_VALGRIND</code> is enabled the memory system doesn't use pools anymore but in fact switches to use malloc/free per-block. This way, tools like valgrind can be used on a Legato executable.</p>
+<h1><a class="anchor" id="bld_cfg_disable_SMACK"></a>
+LE_SMACK_DISABLE</h1>
+<p>Legato provides the ability to disable the SMACK API. We don’t recommend disabling SMACK: users do so at their own risk.</p>
+<p>By disabling SMACK, you essentially render the SMACK APIs to do nothing; SMACK labels aren’t set during Legato runtime. On the Yocto side, disabling SMACK will not apply SMACK labels on certain processes, files, and directories.</p>
+<p>If Legato's SMACK API is disabled, users must set SMACK labels for their own runtime environment if they want to use SMACK security.</p>
+<p>To disable SMACK, follow these steps:</p><ul>
+<li>Edit "framework/c/inc/le_build_config.h" and uncomment "//#define LE_SMACK_DISABLE".</li>
+<li>Build Legato.</li>
+<li>Flash the resulting legato.cwe or legatoz.cwe with the fwupdate tool. Do not install Legato with "instlegato".</li>
+<li>After the target reboots, it should have the file "/legato/SMACK_DISABLED".</li>
+<li>Reboot the target again.</li>
+</ul>
+<p>To re-enable SMACK, follow these steps:</p><ul>
+<li>Edit "framework/c/inc/le_build_config.h" and comment "#define LE_SMACK_DISABLE".</li>
+<li>Build Legato.</li>
+<li>Flash the resulting legato.cwe or legatoz.cwe with the fwupdate tool. Do not install Legato with "instlegato".</li>
+<li>After the target reboots, it should <b>not</b> have the file "/legato/SMACK_DISABLED".</li>
+<li>Reboot the target again.</li>
+</ul>
 <hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

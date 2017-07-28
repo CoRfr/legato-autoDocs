@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,7 +61,9 @@
 <div class="headertitle">
 <h1 class="title">SIM </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__sim__interface_8h.html#acc0760cfa301adeb917b171b32973de3">le_sim_SendCommand()</a> supports sending commands to the SIM. The parameters of this API depend on the platform.</p>
+<div class="textblock"><h1><a class="anchor" id="platformConstraintsSim_sendCmd"></a>
+Sending commands</h1>
+<p><a class="el" href="le__sim__interface_8h.html#acc0760cfa301adeb917b171b32973de3">le_sim_SendCommand()</a> supports sending commands to the SIM. The parameters of this API depend on the platform.</p>
 <p>For AR755x, AR8652, and WP8548, these are the p1, p2, p3 parameters:</p>
 <table class="doxtable">
 <tr>
@@ -78,6 +80,25 @@
 <ul>
 <li>path parameter contains the path of the elementary file from the master file in hexadecimal (e.g. "3F007FFF", "3F007F20"). The path is mandatory for all commands.</li>
 </ul>
+<h1><a class="anchor" id="platformConstraintsSim_swap"></a>
+Hot-swap</h1>
+<p>Your platform might need a reboot to detect a SIM card insertion or removal.</p>
+<h2><a class="anchor" id="platformConstraintsSim_swapMangOH"></a>
+mangOH™</h2>
+<p>As indicated in the mangOH™ <a href="http://mangoh.io/documentation/user-developer-guide.html">User Guide</a>:</p>
+<table class="doxtable">
+<tr>
+<th>SIM slot </th><th>Detection  </th></tr>
+<tr>
+<td>LE_SIM_EXTERNAL_SLOT_1 (Mini-SIM) </td><td>Hot-swappable </td></tr>
+<tr>
+<td>LE_SIM_EXTERNAL_SLOT_2 (Micro-SIM)</td><td>Not hot-swappable </td></tr>
+</table>
+<h2><a class="anchor" id="platformConstraintsSim_swapOtherPlatforms"></a>
+Other platforms</h2>
+<p>Refer to your platform documentation.</p>
+<h1><a class="anchor" id="References"></a>
+References</h1>
 <p>See <a class="el" href="c_sim.html">SIM</a> API</p>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

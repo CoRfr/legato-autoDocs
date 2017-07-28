@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,16 +61,15 @@
 <div class="headertitle">
 <h1 class="title">Syntax </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>Legato API files support defining functions, events, handlers (callback functions) and user-defined types.</p>
-<p><a class="el" href="apiFilesSyntax.html#apiFilesSyntax_function">Functions</a> are similar to C functions. They can take input and output parameters, and can return a result.</p>
-<p>A <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_handler">handler</a> is a callback function, which can be passed as a parameter to a function and can be registered to be called when <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_event">events</a> occur.</p>
+<div class="textblock"><p>Legato API files support defining functions, events, handlers as well as custom user-defined types.</p>
+<p><a class="el" href="apiFilesSyntax.html#apiFilesSyntax_function">Functions</a> are similar to C functions. They take input and output parameters, and return a result.</p>
 <p>The API file currently supports:</p><ul>
-<li>a limited number of pre-defined types</li>
-<li>a number of different user-defined types.</li>
+<li>pre-defined types</li>
+<li>user-defined types</li>
 </ul>
 <h1><a class="anchor" id="apiFilesSyntax_types"></a>
 Type Support</h1>
-<p>The API file currently supports a limited number of pre-defined types. These are:</p>
+<p>Pre-defined Types:</p>
 <pre class="fragment">uint8
 uint16
 uint32
@@ -81,11 +80,19 @@ int16
 int32
 int64
 
+double 
+
 string
+
 file
+
 handler
-</pre><p>The unsigned and signed integer types are self-explanatory. See <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_function">Specifying a Function</a> for details on the <code>string</code> type. The <code>file</code> type is used to pass an open file descriptor (fd) as a parameter. This is used for passing an fd between a client and server. The <code>handler</code> type is used for passing a handler as a parameter.</p>
-<p>The following user-defined types are supported:</p>
+</pre><p>The <code>uint</code> and <code>int</code> types are basic data integer types.</p>
+<p>The <code>double</code> type is an 8 byte floating-point data type.</p>
+<p>The <code>string</code> type is a data type used to store text.</p>
+<p>The <code>file</code> type is used to pass an open file descriptor as a parameter between a client and server.</p>
+<p>A <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_handler">handler</a> is a callback function used when <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_event">events</a> occur.</p>
+<p>User-defined types:</p>
 <ul>
 <li>DEFINE</li>
 <li>ENUM</li>
@@ -159,7 +166,7 @@ Specifying a Function</h1>
 <li>string should be large enough to store <code>minSize</code> characters; if supported by the function implemention, a shorter OUT string can be used.</li>
 <li>string length is given as number of characters, excluding any terminating characters</li>
 </ul>
-<p><code> "handler" &lt;name&gt; "</code></p><ul>
+<pre class="fragment"><div class="line">&lt;handlerType&gt; &lt;name&gt; </div></pre><!-- fragment --><ul>
 <li>a handler (callback) function.</li>
 <li>see <a class="el" href="apiFilesSyntax.html#apiFilesSyntax_handler">Specifying a Handler</a> for info on how to declare a handler.</li>
 </ul>

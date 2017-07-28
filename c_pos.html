@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -104,8 +104,13 @@ Fix On Demand</h1>
 <li>horizontal speed is in m/sec.</li>
 <li>vertical speed is in m/sec, positive up.</li>
 </ul>
-<p>The <code><a class="el" href="le__pos__interface_8h.html#ae06eaad71c152ade96d9b3f2e87a2053">le_pos_GetHeading()</a></code> function gets the last updated heading value in degrees (where 0 is True North) and its associated accuracy value. Heading is the direction that the vehicle/person is facing.</p>
-<p>The <code><a class="el" href="le__pos__interface_8h.html#a2b5b4e4ce66c4f1653d6f0982bbd5feb">le_pos_GetDirection()</a></code> function gets the last updated direction value in degrees (where 0 is True North) and its associated accuracy value. Direction of movement is the direction that the vehicle/person is actually moving.</p>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a4cba07c976294e4e7d8491eb1c03227c">le_pos_GetHeading()</a></code> function gets the last updated heading value in degrees and its associated accuracy value:</p><ul>
+<li>Heading in degrees, ranges from 0 to 359, 0 being True North. Heading is the direction that the vehicle or person is facing.</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#a9e2dcdd5ed75400f3de79f3bc314d5ed">le_pos_GetDirection()</a></code> function gets the last updated direction value in degrees and its associated accuracy value:</p><ul>
+<li>Direction in degrees, ranges from 0 to 359, 0 being True North. Direction of movement is the direction that the vehicle or person is actually moving.</li>
+</ul>
+<p>The <code><a class="el" href="le__pos__interface_8h.html#adb32cc255e6043f7130a4270542db3b8">le_pos_GetFixState()</a></code> function gets the position fix state. The fix state allows the user to determine if it is a 2-Dimensional or a 3-Dimensional position fix.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_posSampleCodeFixOnDemand.html">Sample code for Fix On Demand</a></li>
 </ul>
@@ -120,8 +125,9 @@ Navigation</h1>
 <li><a class="el" href="le__pos__interface_8h.html#ac6c6868fdc51ce14492adfcd0d7274c0">le_pos_sample_GetAltitude()</a></li>
 <li><a class="el" href="le__pos__interface_8h.html#abfb72f3deaf2a9d764e6933968e902fd">le_pos_sample_GetHorizontalSpeed()</a></li>
 <li><a class="el" href="le__pos__interface_8h.html#a18162e15ad9a61696312745ec0bec1fd">le_pos_sample_GetVerticalSpeed()</a></li>
-<li><a class="el" href="le__pos__interface_8h.html#a181f453d46f8b5440d91f2af1b4ebbfb">le_pos_sample_GetHeading()</a></li>
-<li><a class="el" href="le__pos__interface_8h.html#ae42d09bb5146b52dd1f628a93611bc31">le_pos_sample_GetDirection()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#ab586a6fe22d7299e367033423e26b58a">le_pos_sample_GetHeading()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a86df9f69d78e98b97a159fb8d9b04dd2">le_pos_sample_GetDirection()</a></li>
+<li><a class="el" href="le__pos__interface_8h.html#a41f32dfe995a72eb60d872b4f1c88bdd">le_pos_sample_GetFixState()</a></li>
 </ul>
 <p><code><a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release()</a></code> releases the object.</p>
 <p>You can uninstall the handler function by calling the <a class="el" href="le__pos__interface_8h.html#a3c1b616489fc29fc578e58c6b570f14b">le_pos_RemoveMovementHandler()</a> API. </p><dl class="section note"><dt>Note</dt><dd>The <a class="el" href="le__pos__interface_8h.html#a3c1b616489fc29fc578e58c6b570f14b">le_pos_RemoveMovementHandler()</a> API does not delete the Position Object. The caller has to delete it by calling the <a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release()</a> function.</dd></dl>

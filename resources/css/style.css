@@ -125,6 +125,7 @@ input.modal-closing-trick:checked ~ div#nojs {
     font-size: 24px;
     cursor: pointer;
 }
+
 #menu-trigger:hover {
     color: #43E6E6;
 }
@@ -879,6 +880,23 @@ div#sh_options {
     #top {
         overflow-y: auto;
     }
+    #menu-trigger.trigger-open {
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0);
+        font-size: 39px;
+    }
+    #menu-trigger:hover {
+        color: #7395A0;
+    }
+     #menu-trigger {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+        top:0;
+        left:0;
+        font-size: 20px;
+        background: #ffffff;
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, .28);
+        transition: box-shadow 0.3s, font-size 0.3s;
+     }
 }
 
 /* doc landing page*/

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -114,7 +114,8 @@ size    = integer = Number of bytes of payload associated with this task.
     "md5":"098843325eef6af82cdc15a294c39824",
     "size":5534
 }
-</pre><h2><a class="anchor" id="updatePack_removeApp"></a>
+</pre><dl class="section note"><dt>Note</dt><dd>It's <b>strongly</b> recommended to use system updates be used instead of individual app changes. System updates are applied atomically preventing problems that can result from a multi-app update being interrupted before all the changes could be applied (e.g., by a power loss, reset, or loss of connectivity).</dd></dl>
+<h2><a class="anchor" id="updatePack_removeApp"></a>
 Remove App</h2>
 <p>Removes an app from the system.</p>
 <p>Carries no payload.</p>
@@ -128,7 +129,8 @@ name    = string = App's name.
     "command":"removeApp",
     "name":"helloWorld"
 }
-</pre><h2><a class="anchor" id="updatePack_updateFirmware"></a>
+</pre><dl class="section note"><dt>Note</dt><dd>It's <b>strongly</b> recommended to use system updates be used instead of individual app changes. System updates are applied atomically preventing problems that can result from a multi-app update being interrupted before all the changes could be applied (e.g., by a power loss, reset, or loss of connectivity).</dd></dl>
+<h2><a class="anchor" id="updatePack_updateFirmware"></a>
 Update Firmware</h2>
 <p>Updates firmware in the module. The task payload is a firmware update file that is to be passed to <a class="el" href="toolsTarget_fwUpdate.html">fwupdate</a>.</p>
 <p>The only description field other than the command is the payload (firmware file) size:</p>
@@ -141,12 +143,7 @@ size    = unsigned integer = Number of bytes of payload associated with this tas
     "command":"updateFirmware",
     "size":42043458
 }
-</pre><h1><a class="anchor" id="updatePack_Concatenation"></a>
-App Updates Concatenation</h1>
-<p>App removal and app install update packs can be combined together by concatenating their files together into a single file.</p>
-<p>Code sample:</p>
-<pre class="fragment"><div class="line">$ cat app1.remove.update app2.wp85.update app3.wp85.update &gt; myMultiAppChanges.update</div></pre><!-- fragment --><p>It's <b>strongly</b> recommended that system updates be used instead of concatenated app changes. System updates are applied atomically preventing problems that can result from a multi-app update being interrupted before all the changes could be applied (e.g., by a power loss, reset, or loss of connectivity.</p>
-<hr/>
+</pre><hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

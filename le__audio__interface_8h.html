@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -219,6 +219,10 @@ Functions</h2></td></tr>
 <tr class="separator:a54df27e4ab733a1f50e17903d7a9ae88"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:afc413a569b1e7eb877a3f98c2b52b05d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#afc413a569b1e7eb877a3f98c2b52b05d">le_audio_DisableEchoCanceller</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
 <tr class="separator:afc413a569b1e7eb877a3f98c2b52b05d"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ad121a74079c620ec9195d03523a704a4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ad121a74079c620ec9195d03523a704a4">le_audio_IsNoiseSuppressorEnabled</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, bool *statusPtr)</td></tr>
+<tr class="separator:ad121a74079c620ec9195d03523a704a4"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:af1e969b6b4bd81654a3e854219c8e9db"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#af1e969b6b4bd81654a3e854219c8e9db">le_audio_IsEchoCancellerEnabled</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef, bool *statusPtr)</td></tr>
+<tr class="separator:af1e969b6b4bd81654a3e854219c8e9db"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:adedb3bb7e372fffa406f001bdb353e96"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#adedb3bb7e372fffa406f001bdb353e96">le_audio_EnableFirFilter</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
 <tr class="separator:adedb3bb7e372fffa406f001bdb353e96"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae5be820a7a167c307d64ea2c15b0abb4"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__audio__interface_8h.html#ae5be820a7a167c307d64ea2c15b0abb4">le_audio_DisableFirFilter</a> (<a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> streamRef)</td></tr>
@@ -1604,6 +1608,84 @@ LE_OK Function succeeded.</dd></dl>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>File descriptor. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="af1e969b6b4bd81654a3e854219c8e9db"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_audio_IsEchoCancellerEnabled </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> </td>
+<td class="paramname"><em>streamRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool * </td>
+<td class="paramname"><em>statusPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the status of Echo Canceller.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed. </dd>
+<dd>
+LE_BAD_PARAMETER If streamRef contains an invalid audioInterface. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid audio stream reference is given. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">statusPtr</td><td>true if EC is enabled, false otherwise </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ad121a74079c620ec9195d03523a704a4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_audio_IsNoiseSuppressorEnabled </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__audio__interface_8h.html#a9a46ff5a5afa61f1bc76120ab9e4da0a">le_audio_StreamRef_t</a> </td>
+<td class="paramname"><em>streamRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool * </td>
+<td class="paramname"><em>statusPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>This function must be called to get the status of Noise Suppressor.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed. </dd>
+<dd>
+LE_BAD_PARAMETER If streamRef contains an invalid audioInterface. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid audio stream reference is given. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">streamRef</td><td>Audio stream reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">statusPtr</td><td>true if NS is enabled, false otherwise </td></tr>
 </table>
 </dd>
 </dl>

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,8 +61,11 @@
 <div class="headertitle">
 <h1 class="title">GNSS </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><a class="el" href="le__gnss__interface_8h.html">API Reference</a></p>
-<p><a class="el" href="howToGNSS.html">Manage GNSS</a></p>
+<div class="textblock"><p><a class="el" href="le__gnss__interface_8h.html">API Reference</a> <br/>
+<a class="el" href="platformConstraintsGnss.html">GNSS platform constraints</a> <br/>
+<a class="el" href="howToGNSS.html">How To Use GNSS</a> <br/>
+<a class="el" href="toolsTarget_gnss.html">GNSS target tool</a> <br/>
+</p>
 <hr/>
 <p>This API provides access to the GNSS device.</p>
 <p>GNSS or Global Navigation Satellite System is a satellite navigation system with global coverage.</p>
@@ -131,7 +134,7 @@ Force FACTORY restart</h3>
 <p>The <a class="el" href="le__gnss__interface_8h.html#a18219097f3e8c8e6e613462a5467f546">le_gnss_ForceFactoryRestart()</a> function performs a "FACTORY" restart of the GNSS device. The current GNSS session is stopped, then started using the available <a class="el" href="c_gnss.html#le_gnss_Data">GNSS data</a>. Please refer to <a class="el" href="c_gnss.html#le_gnss_APIcallsRequirements">API calls Requirements</a>. Also see <a class="el" href="howToGNSS.html">Manage GNSS</a>.</p>
 <h2><a class="anchor" id="le_gnss_AcquisitionRate"></a>
 Acquisition rate</h2>
-<p>The GNSS position is computed and delivered each acquisition rate. Default value is 1 second. The application can configure/retreive the GNSS device acquisition rate with the <a class="el" href="le__gnss__interface_8h.html#a75d96ec7ac6e0d6b58525e4c523d3b2c">le_gnss_SetAcquisitionRate()</a> / <a class="el" href="le__gnss__interface_8h.html#acfa9b25ac13f601921bd9123a1d0daba">le_gnss_GetAcquisitionRate()</a> functions.</p>
+<p>The GNSS position is computed and delivered each acquisition rate. Default value is 1 second. The application can configure/retrieve the GNSS device acquisition rate with the <a class="el" href="le__gnss__interface_8h.html#a75d96ec7ac6e0d6b58525e4c523d3b2c">le_gnss_SetAcquisitionRate()</a> / <a class="el" href="le__gnss__interface_8h.html#acfa9b25ac13f601921bd9123a1d0daba">le_gnss_GetAcquisitionRate()</a> functions.</p>
 <p>Please refer to <a class="el" href="c_gnss.html#le_gnss_APIcallsRequirements">API calls Requirements</a>.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_gnssSampleCodeAcquisitionRate.html">Sample code for GNSS acquisition rate configuration</a></li>
@@ -147,6 +150,16 @@ GNSS constellation selection</h2>
 <p>All supported GNSS constellations are enabled by default. The <a class="el" href="le__gnss__interface_8h.html#a150835481ab3751e3ab1821362e34e84">le_gnss_GetConstellation()</a> function gets the GNSS constellation(s) enabled to be used in solution.</p>
 <p>A sample code can be seen in the following page:</p><ul>
 <li><a class="el" href="c_gnssSampleCodeConstellation.html">Sample code for GNSS constellation selection</a></li>
+</ul>
+<h2><a class="anchor" id="le_gnss_NmeaSentences"></a>
+NMEA sentences selection</h2>
+<p>The <a class="el" href="le__gnss__interface_8h.html#ab9253e29d74cae6e962dcc8b94f0e3c1">le_gnss_SetNmeaSentences()</a> function selects the enabled NMEA sentences in the <a class="el" href="c_gnss.html#le_gnss_NMEA">NMEA Flow</a> with a bit mask. The supported values are listed in <a class="el" href="le__gnss__interface_8h.html#a5949bae89e9510d51fc15eb400e345d4">le_gnss_NmeaBitMask_t</a>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Your GNSS device may require a restart to take into account this change. Please refer to your platform documentation for further details.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>All supported NMEA sentences are enabled by default.</dd></dl>
+<p>The <a class="el" href="le__gnss__interface_8h.html#a985845ac33d35c34ac3099b6557ca8ea">le_gnss_GetNmeaSentences()</a> function gets the bit mask of the enabled NMEA sentences in the <a class="el" href="c_gnss.html#le_gnss_NMEA">NMEA Flow</a>.</p>
+<p>Please refer to <a class="el" href="c_gnss.html#le_gnss_APIcallsRequirements">API calls Requirements</a>.</p>
+<p>A sample code can be seen in the following page:</p><ul>
+<li><a class="el" href="c_gnssSampleCodeNmeaSentences.html">Sample code for GNSS NMEA sentences selection</a></li>
 </ul>
 <h2><a class="anchor" id="le_gnss_APIcallsRequirements"></a>
 API calls Requirements</h2>
@@ -179,6 +192,10 @@ API calls Requirements</h2>
 <td><a class="el" href="le__gnss__interface_8h.html#a75d96ec7ac6e0d6b58525e4c523d3b2c">le_gnss_SetAcquisitionRate()</a> </td><td>LE_NOT_PERMITTED </td><td>LE_OK or error code </td><td>LE_NOT_PERMITTED </td><td>LE_NOT_PERMITTED </td></tr>
 <tr>
 <td><a class="el" href="le__gnss__interface_8h.html#acfa9b25ac13f601921bd9123a1d0daba">le_gnss_GetAcquisitionRate()</a> </td><td>LE_NOT_PERMITTED </td><td>LE_OK or error code </td><td>LE_NOT_PERMITTED </td><td>LE_NOT_PERMITTED </td></tr>
+<tr>
+<td><a class="el" href="le__gnss__interface_8h.html#ab9253e29d74cae6e962dcc8b94f0e3c1">le_gnss_SetNmeaSentences()</a> </td><td>LE_NOT_PERMITTED </td><td>LE_OK or error code </td><td>LE_NOT_PERMITTED </td><td>LE_NOT_PERMITTED </td></tr>
+<tr>
+<td><a class="el" href="le__gnss__interface_8h.html#a985845ac33d35c34ac3099b6557ca8ea">le_gnss_GetNmeaSentences()</a> </td><td>LE_NOT_PERMITTED </td><td>LE_OK or error code </td><td>LE_NOT_PERMITTED </td><td>LE_NOT_PERMITTED </td></tr>
 </table>
 <p>Also see <a class="el" href="howToGNSS.html">Manage GNSS</a>.</p>
 <h1><a class="anchor" id="le_gnss_Information"></a>
@@ -204,11 +221,12 @@ Get position information</h2>
 <li><a class="el" href="le__gnss__interface_8h.html#ad41698ff4a68651b9fb81b862d4274f6">le_gnss_GetTimeAccuracy()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a483fba8fc6b0fa116bcbd889af95fc4f">le_gnss_GetHorizontalSpeed()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a37a370cec19610be1f99d9c9db291a1e">le_gnss_GetVerticalSpeed()</a></li>
-<li><a class="el" href="le__gnss__interface_8h.html#a86f3e812fa009379b3e7e49011e6a229">le_gnss_GetDirection()</a></li>
+<li><a class="el" href="le__gnss__interface_8h.html#aabc2432ec207a1e6cb74d444407aad11">le_gnss_GetDirection()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#adfb931e0da0a15eb5ce46d26dc525727">le_gnss_GetSatellitesInfo()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a5ae945ad1921b621e9631e4286f40784">le_gnss_GetSatellitesStatus()</a></li>
 <li><a class="el" href="le__gnss__interface_8h.html#a70504e7c542d626aa07948d8330020c7">le_gnss_GetDop()</a></li>
-<li><a class="el" href="le__gnss__interface_8h.html#adadd768a9b74c8ba785c7f20ce0d2f08">le_gnss_GetSatellitesLatency()</a></li>
+<li><a class="el" href="le__gnss__interface_8h.html#a59727ef079dc93dfadef75dd6a021cd0">le_gnss_GetAltitudeOnWgs84()</a></li>
+<li><a class="el" href="le__gnss__interface_8h.html#a0f47ace8d52f0a525a6abfccc24a11ec">le_gnss_GetMagneticDeviation()</a></li>
 </ul>
 <p>The handler can be managed using <a class="el" href="le__gnss__interface_8h.html#ac300457f532757caf79d60b6dba60d67">le_gnss_AddPositionHandler()</a> and <a class="el" href="le__gnss__interface_8h.html#a3fc94954cc139340f447ae0ae87e8c2d">le_gnss_RemovePositionHandler()</a>. When a position is computed, the handler is called.</p>
 <p>The application has to release each position sample object received by the handler, using the <a class="el" href="le__gnss__interface_8h.html#a89cdf0fb25e8204befc65db7aa6837db">le_gnss_ReleaseSampleRef()</a>.</p>

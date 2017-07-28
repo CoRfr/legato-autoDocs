@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -71,18 +71,18 @@ Sandboxed App</h1>
 <li>Create an <a class="el" href="defFilesAdef.html">.adef file</a> for your app.</li>
 <li>Leave the <code>executables:</code> section in <code> .adef </code> empty (or omit that section entirely).</li>
 <li>Include files to be installed as part of the app (executables, libraries, configuration files, devices, etc.) in the <code>files:</code> subsection of the <a class="el" href="defFilesAdef.html#defFilesAdef_bundles">bundles: section of the .adef file</a>.</li>
-<li>Use the <a class="el" href="defFilesAdef.html#defFilesAdef_requiresFile">extern: section of the .adef file</a> to include files and directories that need to be imported into the sandbox from the target’s file system.</li>
+<li>Use the <a class="el" href="defFilesAdef.html#defFilesAdef_requiresFile">requires: section of the .adef file</a> to include files and directories that need to be imported into the sandbox from the target’s file system.</li>
 <li>Add <a class="el" href="defFilesAdef.html#defFilesAdef_processRun">run: lines in the <code>processes</code>: section in the .adef</a> to define processes that should run in the app.</li>
-<li>Run <a class="el" href="buildToolsmkapp.html">mkapp</a> on the <code> .adef </code> file to create the app bundle (e.g., .wp85 file) to be installed on the target.</li>
+<li>Run <a class="el" href="buildToolsmkapp.html">mkapp</a> on the <code> .adef </code> file to create the app bundle (i.e., <code></code>.update file) to be installed on the target.</li>
 </ul>
-<p>An app bundle produced like this can be installed exactly the same as any other Legato app bundle.</p>
+<p>An app bundle (<code></code>.update file) produced like this can be installed exactly the same as any other Legato app bundle.</p>
 <p>Detailed info:</p>
 <p><a class="el" href="defFiles.html">Definition Files</a> <br/>
 <a class="el" href="basicAppsCreate.html">Create Apps</a> <br/>
 <a class="el" href="howToPortLegacyC.html">Port Legacy C App</a></p>
 <p>Here's a <code>foo.adef</code> sample (for application foo) with executables bar1 and bar2 needing library lib1. The application name should be the same as the .adef file name:</p>
 <pre class="fragment"><div class="line">bundles:</div><div class="line">{</div><div class="line">    file:</div><div class="line">    {</div><div class="line">        [x] bar1    /bin/</div><div class="line">        [x] bar2    /bin/</div><div class="line">        [r] lib1    /lib/</div><div class="line">    }</div><div class="line">}</div><div class="line"> </div><div class="line">processes:</div><div class="line">{</div><div class="line">    run:</div><div class="line">    {</div><div class="line">        (bar1)</div><div class="line">        (bar2)</div><div class="line">    }</div><div class="line">}</div></pre><!-- fragment --><p>To bundle everything into an app, run: </p><pre class="fragment"><div class="line">mkapp foo.adef -t [target] </div></pre><!-- fragment --><p> where [target] is something like "ar7" or "wp85".</p>
-<p>The app bundle file can be installed using the <code>instapp</code> tool.</p>
+<p>The app bundle file can be installed using the <code>update</code> tool.</p>
 <dl class="section note"><dt>Note</dt><dd>Other app settings (e.g., <code>faultAction</code>) can also be set in the .adef files. See <a class="el" href="defFilesAdef.html">Application Definition .adef</a>.</dd></dl>
 <h1><a class="anchor" id="howToPortLegacyGen_portRootAccess"></a>
 Porting Apps with Root Access</h1>

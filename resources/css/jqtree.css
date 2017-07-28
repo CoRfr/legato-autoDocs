@@ -31,12 +31,12 @@ ul.jqtree-tree {
     font-family:monospace;
      }
     ul.jqtree-tree .jqtree-toggler:hover {
-      color: #000;
+      color: #43E6E6;
       text-decoration: none; }
     ul.jqtree-tree .jqtree-toggler.jqtree-closed {
       background-position: 0 0; }
   ul.jqtree-tree .jqtree-element {
-    margin-bottom: 0.3em;
+    padding-bottom: 0.2em;
     position: relative;
    display:inline-block;
 

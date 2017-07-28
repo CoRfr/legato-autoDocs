@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,7 +61,7 @@
 <div class="headertitle">
 <h1 class="title">Connect to AirVantage </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p>Also see <a class="el" href="howToAVInstallApp.html">Install apps</a></p>
+<div class="textblock"><p>Also see <a class="el" href="howToAVInstallApp.html">install app using AirVantage</a></p>
 <hr/>
 <p>This topic covers how to create an AirVantage connection to your Legato device.</p>
 <p>Detailed AirVantage documentation: <a href="https://doc.airvantage.net/display/USERGUIDE/Getting+Started">AirVantage Getting Started</a></p>
@@ -70,14 +70,12 @@
 <h1><a class="anchor" id="howToAVConnect_createSys"></a>
 Create System</h1>
 <p>Create a new System in AirVantage Server:</p><ul>
-<li>From the <code>Inventory menu</code>, choose <code>Systems</code>.</li>
-<li>Click the Create button (+ symbol): enter a Name (used for retrieval).</li>
-<li>In the <code>Gateway</code> tab, click Create a New Gateway (+ symbol), a new windows will appear: enter your device's IMEI and Serial Number.</li>
-<li>Click <code>Create</code>.</li>
-<li>After you return to the system creation window, click the Application field and select the ‘Legato_LWM2M’ (firmware and application update over the air) application model. An application model is an XML file defining the communication contract between AirVantage and the embedded app.</li>
-<li>Select "I want to activate my system after creating it".</li>
-<li>Click <code>Create</code>.</li>
+<li>Click "Register".</li>
+<li>Enter in the Serial Number "FSN" and IMEI/ESN numbers. (Find them by typing <code>cm</code> info on the target)</li>
+<li>Click "Register".</li>
 </ul>
+<dl class="section note"><dt>Note</dt><dd>if you are Registering a device that is not a WP85 click "Select System Type" on the top left hand corner of the screen and choose your device.</dd></dl>
+<p>Once your device is registered, it will appear in the list, make note of the "Type" as that will need to be entered when you are building system bundles for updating your device. See howToAvInstallSys</p>
 <h1><a class="anchor" id="howToAVConnect_lwm2m"></a>
 LWM2M</h1>
 <p>Legato provides LWM2M support to connect to AirVantage.</p>
@@ -90,7 +88,8 @@ Device Status</h1>
 <li>Browse to your device (by the name you created or the IMEI).</li>
 <li>Click Details.</li>
 </ul>
-<p>The <code>Last seen</code> field should be updated with a recent date. You can also see the initial data exchange in the Timeline screen.</p>
+<p>The <code>Last seen</code> field should be updated with a recent date. To see the details of the device click the "Monitor" menu. To set up new monitors and alerts for the device see howToUploadApp.</p>
+<p>Once the target is registered, it is then ready to have apps and systems updated over the air. See <a class="el" href="howToAVInstallApp.html">Create App Bundles</a> and howToAVInstallSys for details on installing App and System updates over the air.</p>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -87,7 +87,8 @@ Enumerations</h2></td></tr>
 <a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3a0008bf93afedf4cfc30fbdc5fd5c91be">LE_CELLNET_REG_HOME</a> = 2, 
 <a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3ab3ad1a505efad881cc4ef0d18a400875">LE_CELLNET_REG_ROAMING</a> = 3, 
 <br/>
-  <a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3aa7b18dfa0b377e2d837802691f3e97a8">LE_CELLNET_REG_UNKNOWN</a> = 4
+  <a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3aa7b18dfa0b377e2d837802691f3e97a8">LE_CELLNET_REG_UNKNOWN</a> = 4, 
+<a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3a75df2493faad8789ed5501009e2ff350">LE_CELLNET_SIM_ABSENT</a> = 5
 <br/>
  }</td></tr>
 <tr class="separator:abead6b673a155b6f9e0001f129759fc3"><td class="memSeparator" colspan="2"> </td></tr>
@@ -112,6 +113,8 @@ Functions</h2></td></tr>
 <tr class="separator:a0cfdcf5974f6268b99f96815c2eb4def"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:add211749ae33cff8bf6bb48f6945b93c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cellnet__interface_8h.html#add211749ae33cff8bf6bb48f6945b93c">le_cellnet_GetSimPinCode</a> (<a class="el" href="le__sim__interface_8h.html#aace49df88426119626fb1ef4e544ccdd">le_sim_Id_t</a> simId, char *pinCode, size_t pinCodeNumElements)</td></tr>
 <tr class="separator:add211749ae33cff8bf6bb48f6945b93c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae9c76bc533ec41c91d7915b11ae9c5d6"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__cellnet__interface_8h.html#ae9c76bc533ec41c91d7915b11ae9c5d6">le_cellnet_GetNetworkState</a> (<a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3">le_cellnet_State_t</a> *statePtr)</td></tr>
+<tr class="separator:ae9c76bc533ec41c91d7915b11ae9c5d6"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_le_cellnet.html">Cellular Network</a> include file.</p>
@@ -173,10 +176,10 @@ Functions</h2></td></tr>
 <p>Cellular Network states. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="abead6b673a155b6f9e0001f129759fc3aacb3fea4033900e7b919915b4315e575"></a>LE_CELLNET_RADIO_OFF </td><td class="fielddoc">
-<p>The radio is Off. </p>
+<p>The radio is switched-off. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="abead6b673a155b6f9e0001f129759fc3aa43e5e0f7f510780f958d32a55a9e459"></a>LE_CELLNET_REG_EMERGENCY </td><td class="fielddoc">
-<p>Only Emergency calls are allowed. </p>
+<p>Only emergency calls are allowed. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="abead6b673a155b6f9e0001f129759fc3a0008bf93afedf4cfc30fbdc5fd5c91be"></a>LE_CELLNET_REG_HOME </td><td class="fielddoc">
 <p>Registered, home network. </p>
@@ -186,6 +189,9 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="abead6b673a155b6f9e0001f129759fc3aa7b18dfa0b377e2d837802691f3e97a8"></a>LE_CELLNET_REG_UNKNOWN </td><td class="fielddoc">
 <p>Unknown state. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="abead6b673a155b6f9e0001f129759fc3a75df2493faad8789ed5501009e2ff350"></a>LE_CELLNET_SIM_ABSENT </td><td class="fielddoc">
+<p>No SIM card available. </p>
 </td></tr>
 </table>
 </div>
@@ -261,6 +267,35 @@ Functions</h2></td></tr>
 <p>This function is created automatically. </p>
 </div>
 </div>
+<a class="anchor" id="ae9c76bc533ec41c91d7915b11ae9c5d6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_cellnet_GetNetworkState </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__cellnet__interface_8h.html#abead6b673a155b6f9e0001f129759fc3">le_cellnet_State_t</a> * </td>
+<td class="paramname"><em>statePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Retrieve the current cellular network state.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK The function succeeded.</li>
+<li>LE_FAILED The function failed</li>
+<li>LE_BAD_PARAMETER A bad parameter was passed.</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller passes a null pointer to this function, this is a fatal error and the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">statePtr</td><td>Cellular network state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="add211749ae33cff8bf6bb48f6945b93c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -290,9 +325,10 @@ Functions</h2></td></tr>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Retreive the PIN code from the config tree.</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_OUT_OF_RANGE Invalid simId<ul>
-<li>LE_NOT_FOUND PIN code is not found in the config tree.</li>
+<p>Retrieve the PIN code from the secure storage.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OUT_OF_RANGE Invalid simId</li>
+<li>LE_NOT_FOUND PIN code is not found in the secure storage.</li>
 <li>LE_OVERFLOW PIN code exceeds the maximum length of 8 digits.</li>
 <li>LE_UNDERFLOW The PIN code is not long enough (min 4 digits).</li>
 <li>LE_OK The function succeeded. </li>
@@ -301,7 +337,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">simId</td><td>SIM identifier. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">pinCode</td><td>Read the PIN code from the config tree. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">pinCode</td><td>Read the PIN code from the secure storage. </td></tr>
 <tr><td class="paramdir">[in]</td><td class="paramname">pinCodeNumElements</td><td></td></tr>
 </table>
 </dd>
@@ -396,8 +432,9 @@ Functions</h2></td></tr>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the PIN code in the config tree.</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_OUT_OF_RANGE Invalid simId<ul>
+<p>Set the PIN code in the secure storage.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OUT_OF_RANGE Invalid simId</li>
 <li>LE_FORMAT_ERROR PIN code is not in string format.</li>
 <li>LE_UNDERFLOW The PIN code is not long enough (min 4 digits).</li>
 <li>LE_OK The function succeeded.</li>
@@ -408,7 +445,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">simId</td><td>SIM identifier. </td></tr>
-<tr><td class="paramdir">[in]</td><td class="paramname">pinCode</td><td>PIN code to insert in the config tree. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">pinCode</td><td>PIN code to insert in the secure storage. </td></tr>
 </table>
 </dd>
 </dl>

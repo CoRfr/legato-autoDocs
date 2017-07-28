@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -113,7 +113,7 @@ Queues and Stacks</h1>
 <p>To use the list as a stack, restrict additions to the list to <code><a class="el" href="le__singly_linked_list_8h.html#aca4266a87d4c5e3dca130cd5d48b99af">le_sls_Stack()</a></code> and removals from the list to <code><a class="el" href="le__singly_linked_list_8h.html#a85f5132147870e260b3b142665ec587e">le_sls_Pop()</a></code>.</p>
 <h1><a class="anchor" id="sls_synch"></a>
 Thread Safety and Re-Entrancy</h1>
-<p>All linked list function calls are re-entrant and thread safe. But if the nodes and/or list object is shared by multiple threads, then explicit steps must be taken to maintain mutual exclusion of access.</p>
+<p>All linked list function calls are re-entrant and thread safe themselves, but if the nodes and/or list object are shared by multiple threads, then explicit steps must be taken to maintain mutual exclusion of access. If you're accessing the same list from multiple threads, you <em>must</em> use a <a class="el" href="c_mutex.html">mutex</a> or some other form of thread synchronization to ensure only one thread accesses the list at a time.</p>
 <hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

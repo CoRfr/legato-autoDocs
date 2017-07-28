@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -61,7 +61,9 @@
 <div class="headertitle">
 <h1 class="title">System Definition .sdef </h1> </div>
 </div><div class="contents">
-<div class="textblock"><p><code>.sdef</code> files can contain these sections:</p>
+<div class="textblock"><p>This topic provides details about Legato's System Definition files.</p>
+<p>See <a class="el" href="howToSecurity.html">Manage Sandboxes and Security</a> for details on how to <a class="el" href="howToSecuritySandboxConfigSample.html">Sandbox Config Sample</a> and understand <a class="el" href="howToSecuritySandboxLimits.html#howToSecuritySandboxLimits_app">app</a> and <a class="el" href="howToSecuritySandboxLimits.html#howToSecuritySandboxLimits_process">process</a> limits.</p>
+<p><code>.sdef</code> files can contain these sections:</p>
 <h1><a class="anchor" id="defFilesSdef_apps"></a>
 apps</h1>
 <p>An <code>apps:</code> section declares one or more apps to be deployed to the target system.</p>
@@ -169,8 +171,7 @@ commands</h1>
 <p>Each entry in the commands section looks like this:</p>
 <pre class="fragment"><div class="line">commandName = appName:/path/to/exe</div></pre><!-- fragment --><p>The path to the executable must be an absolute path within the application's read-only installed files. For example, if the executable is a script that was bundled into the app "myApp" to appear at "/usr/share/exe" inside the myApp's sandbox at runtime, then the command would be specified as</p>
 <pre class="fragment"><div class="line">commandName = myApp:/usr/share/exe</div></pre><!-- fragment --><p>If the executable is built using an "executables" section in a .adef file, then the executable will appear in the app's bin directory. For example,</p>
-<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    myTools <span class="comment">// This app's .adef builds an exe called "led" that can be used to turn LEDs on and off.</span></div><div class="line">}</div><div class="line"> </div><div class="line">commands:</div><div class="line">{</div><div class="line">    led = myTools:/bin/led  <span class="comment">// When I login via ssh, I can run "led 1 on" to turn on LED 1.</span></div><div class="line">}</div></pre><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>When the command runs, it runs with the full privileges of the user that runs it. So, if you login as root and run a command, the command runs as root.</dd></dl>
-<hr/>
+<pre class="fragment"><div class="line">apps:</div><div class="line">{</div><div class="line">    myTools <span class="comment">// This app's .adef builds an exe called "led" that can be used to turn LEDs on and off.</span></div><div class="line">}</div><div class="line"> </div><div class="line">commands:</div><div class="line">{</div><div class="line">    led = myTools:/bin/led  <span class="comment">// When I login via ssh, I can run "led 1 on" to turn on LED 1.</span></div><div class="line">}</div></pre><!-- fragment --><dl class="section warning"><dt>Warning</dt><dd>When the command runs, it runs with the full privileges of the user that runs it. If you login as root and run a command, the command executes with root user privileges.</dd></dl>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

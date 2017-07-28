@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Platform Yocto Info.json"></script>
+<script src="tocs/Build_Platform_Yocto_Info.json"></script>
 </head>
 <body>
 <noscript>
@@ -66,7 +66,7 @@
 <p>Also see <a class="el" href="defFilesMdef.html">Kernel Module Definition .mdef</a></p>
 <h1><a class="anchor" id="howToAddKernelDriver_installToolchain"></a>
 Install Latest Toolchain</h1>
-<p>Create an install directory and open a Linux shell to ensure the top directory is known like this: </p><pre class="fragment"><div class="line">mkdir yocto-install</div><div class="line">cd yocto-install</div><div class="line">export TOPDIR=${PWD}</div></pre><!-- fragment --><p>Then download the appropriate toolchain for your environment from the <a href="http://downloads.sierrawireless.com/legato">Legato Downloads</a> page. You can use <code>wget</code> after you know the filename.</p>
+<p>Create an install directory and open a Linux shell to ensure the top directory is known like this: </p><pre class="fragment"><div class="line">mkdir yocto-install</div><div class="line">cd yocto-install</div><div class="line">export TOPDIR=${PWD}</div></pre><!-- fragment --><p>Then download the appropriate toolchain for your environment from the <a href="http://source.sierrawireless.com/resources/legato/downloads/">Legato Downloads</a> page. You can use <code>wget</code> after you know the filename.</p>
 <p>Ensure you have appropriate access to run the toolchain install script: </p><pre class="fragment"><div class="line">chmod 755 &lt;toolchain filename&gt;</div></pre><!-- fragment --><p>Start installation: </p><pre class="fragment"><div class="line">./poky-swi-ext-glibc-x86_64-meta-toolchain-swi-ext-armv7a-vfp-neon-toolchain-swi-ext-1.7.3.sh</div></pre><!-- fragment --><p>When asked <code>type</code>, enter this: </p><pre class="fragment"><div class="line">type: ./y17-ext</div></pre><!-- fragment --><p>Then press &lt;ENTER&gt; twice:</p><ul>
 <li>once to confirm the command</li>
 <li>once to answer "Y" to the following question.</li>
@@ -90,9 +90,17 @@ Build Kernel</h2>
 <dl class="section note"><dt>Note</dt><dd>The <code>y17-ext</code> directory could be relocated to directory of your choice. If relocated, <code>PATH</code> and <code>B_KDIR</code> variables must be changed accordingly.</dd></dl>
 <h1><a class="anchor" id="howToAddKernelDriver_loadDriver"></a>
 Load Driver</h1>
-<p>This is how to load the custom kernel module (driver) onto a target device using Legato.</p>
-<h2><a class="anchor" id="howToAddKernelDriver_loadDriver_mDefFile"></a>
-mdef File</h2>
+<p>You can load the driver onto the target device <a class="el" href="yoctoOutofTreeKernelModule.html#howToAddKernelDriver_loadDriver_manualLoad">manually</a> or use Legato's <a class="el" href="yoctoOutofTreeKernelModule.html#howToAddKernelDriver_loadDriver_mDefFile">mdef File Load</a>.</p>
+<h2><a class="anchor" id="howToAddKernelDriver_loadDriver_manualLoad"></a>
+Manual Load</h2>
+<p>This section shows how to:</p><ul>
+<li>copy a module to a target</li>
+<li>manually install a module on a target</li>
+<li>remove a module from a target</li>
+</ul>
+<p>This is how to use <code>scp</code> to copy a kernel module (driver) onto the target: </p><pre class="fragment"><div class="line">scp ktest_module.ko root@$target_IP:/home/root/ktest_dir</div></pre><!-- fragment --><p>This is how to install a module, and check it installed: </p><pre class="fragment"><div class="line">root@swi-mdm9x15:~/ktest_dir# insmod ktest_module.ko</div><div class="line">root@swi-mdm9x15:~/ktest_dir# lsmod |grep ktest</div><div class="line">ktest_module 648 0 - Live 0xbf0eb000 (PO)</div></pre><!-- fragment --><p>This is how to check the log file: </p><pre class="fragment"><div class="line">root@swi-mdm9x15:~/ktest_dir# logread |tail -n 2</div><div class="line">Nov 10 18:16:30 swi-mdm9x15 user.info kernel: [88600.728022] Driver version 1.0.0</div><div class="line">Nov 10 18:16:30 swi-mdm9x15 user.info kernel: [88600.728053] Buona Sera :)</div></pre><!-- fragment --><p>This is how to remove the module, and check the log that it was removed: </p><pre class="fragment"><div class="line">root@swi-mdm9x15:~/ktest_dir# rmmod ktest_module.ko</div><div class="line">root@swi-mdm9x15:~/ktest_dir# logread |tail -n 2</div><div class="line">Nov 10 18:16:30 swi-mdm9x15 user.info kernel: [88600.728053] Buona Sera :)</div><div class="line">Nov 10 18:19:38 swi-mdm9x15 user.info kernel: [88789.028495] Ciao!</div><div class="line">root@swi-mdm9x15:~/ktest_dir#</div></pre><!-- fragment --><h2><a class="anchor" id="howToAddKernelDriver_loadDriver_mDefFile"></a>
+mdef File Load</h2>
+<p>You can also use Legato's <code>mdef</code> to load the pre-built kernel module.</p>
 <p>Create <a class="el" href="defFilesMdef.html">Kernel Module Definition .mdef</a> <code>hello.mdef</code> file in any location with this <code>preBuilt</code> section: </p><pre class="fragment"><div class="line">preBuilt: /path/to/kernel/module/ktest_module.ko</div></pre><!-- fragment --><p>Modify <code>$LEGATO_ROOT/system</code>.sdef (in Legato root dir) to include the <code>kernelModule</code> path: </p><pre class="fragment"><div class="line">kernelModules:</div><div class="line">{ &lt;path_to_hello.mdef&gt; }</div></pre><!-- fragment --><h2><a class="anchor" id="howToAddKernelDriver_loadDriver_buildInstall"></a>
 Build and Install</h2>
 <p>Then <a class="el" href="basicAppsCreate.html#basicAppsCreate_buildApp">build</a> and <a class="el" href="basicAppsCreate.html#basicAppsCreate_instTarget">install</a> Legato on a WP85 module.</p>

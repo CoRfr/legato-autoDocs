@@ -193,7 +193,7 @@ $(document).ready(function() {
 function performSearch() {
     ctx = $('html').data('context'); // e.g. "Build Apps"
     var domain = "";
-    var invoke_url = "https://x6khds7mia.execute-api.us-west-2.amazonaws.com/prod";
+    var invoke_url = "https://3ii0k3e3cb.execute-api.us-west-2.amazonaws.com/prod";
     if (ctx == "Legato Documentation")
         ctx = "";
     var keyword = $('#searchbox').val();

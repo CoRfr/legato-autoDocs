@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -66,20 +66,24 @@
 <ul>
 <li><a class="el" href="howToLogs.html">Use Logs</a> to set filters, tracing, etc.</li>
 <li><a class="el" href="howToDebug.html#howToDebug_appStatus">Check App Status</a> for current app info.</li>
-<li><a class="el" href="howToDebug.html#howToDebug_sdir">Run sdir</a> to check if your is app connected.</li>
-<li><a class="el" href="howToDebug.html#howToDebug_execInApp">Run exeInApp</a> to rerun the app.</li>
+<li><a class="el" href="howToDebug.html#howToDebug_sdir">Run sdir</a> to check if your app is connected.</li>
+<li><a class="el" href="howToDebug.html#howToDebug_appRunProc">Run Process in App</a> to run or rerun a process in an app.</li>
 <li><a class="el" href="howToDebug.html#howToDebug_inspect">Inspect App</a> to review memory pool details.</li>
+<li><a class="el" href="howToDebug.html#howToDebug_appCrashLogs">Check App Crash Logs</a> to analysis system crash logs or core dumps.</li>
 <li><a class="el" href="howToDebug.html#howToDebug_openTools">Use Open Source Tools</a> can help, too.</li>
 </ul>
 <h1><a class="anchor" id="howToDebug_appStatus"></a>
 Check App Status</h1>
 <p>Run <code>app status</code> on the target to list all apps and their current status. See <a class="el" href="toolsTarget_app.html">app</a></p>
+<h1><a class="anchor" id="howToDebug_appCrashLogs"></a>
+Check App Crash Logs</h1>
+<p>Check the latest app crash logs or core dumps in either persistent or non-persistent location. See <a class="el" href="c_logging.html#c_log_debugFiles">App Crash Logs</a></p>
 <h1><a class="anchor" id="howToDebug_sdir"></a>
 Run sdir</h1>
 <p>Run <code>sdir list</code> on the target to determine if the app is failing because it's unbound (IPC failing) or the server isn't running (not connecting). This helps if your client is waiting for a service to appear or a binding to be created. <code>sdir</code> can also list apps or users offering services. See <a class="el" href="toolsTarget_sdir.html">sdir</a></p>
-<h1><a class="anchor" id="howToDebug_execInApp"></a>
-Run exeInApp</h1>
-<p>Run <code> execInApp [procName=NAME] execPath [ARGS]</code> to execute a specific process in a running app's sandbox. <code>execInApp</code> can also set process priority. See <a class="el" href="toolsTarget_execInApp.html">execInApp</a></p>
+<h1><a class="anchor" id="howToDebug_appRunProc"></a>
+Run Process in App</h1>
+<p>Run <code>app runProc &lt;appName&gt; &lt;procName&gt; [options]</code> or <code>app runProc &lt;appName&gt; [&lt;procName&gt;] --exe=&lt;exePath&gt; [options]</code> to execute a specific process in a running app's sandbox. <code>app runProc</code> can also set process priority. See <a class="el" href="toolsTarget_app.html">app</a></p>
 <h1><a class="anchor" id="howToDebug_inspect"></a>
 Inspect App</h1>
 <p>Run <code>inspect [interval=SECONDS]</code> to set memory usage updates to help narrow any memory leaks causing failure. See <a class="el" href="toolsTarget_inspect.html">inspect</a></p>
@@ -87,10 +91,9 @@ Inspect App</h1>
 Use Open Source Tools</h1>
 <p>You can also try some standard, open source debugging tools like:</p><ul>
 <li><code>strace</code> - a system call tracer good for low level code examination.</li>
-<li><code>GDB</code> - the GNU project debugger good for setting breakpoints.</li>
+<li><a class="el" href="howToDebugGDB.html">GDB</a> - the GNU project debugger good for setting breakpoints.</li>
 </ul>
 <p>Run the -help option for documentation.</p>
-<hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -209,12 +209,11 @@ App Crash Logs</h1>
 <p>When a process within an app faults or exits in error, a copy of the current syslog buffer is captured along with a core file of the process crash (if generated).</p>
 <p>The core file maximum size is determined by the process settings <code>maxCoreDumpFileBytes</code> and <code>maxFileBytes</code> found in the processes section of your app's <code></code>.adef file. By default, the <code>maxCoreDumpFileBytes</code> is set to 0, do not create a core file.</p>
 <p>To help save the target from flash burnout, the syslog and core files are stored in the RAM FS under /tmp. When a crash occurs, this directory is created:</p>
-<pre class="fragment"> /tmp/legato_logs/&lt;app-name&gt;/&lt;exe-name&gt;/</pre><p>The path for myApp and myExe would be:</p>
-<pre class="fragment"> /tmp/legato_logs/myApp/myExe/</pre><p>The files in that directory look like this:</p>
-<pre class="fragment"> core-myExe-1418694851
- syslog-1418694851</pre><p>If the fault action for that app's process is to reboot the target, the output location is changed to this (and is preserved across reboots):</p>
-<pre class="fragment"> /mnt/flash/legato_logs/&lt;app-name&gt;/&lt;exe-name&gt;/</pre><p>To save on RAM and flash space, only the most recent 4 copies of each file are preserved.</p>
-<hr/>
+<pre class="fragment"> /tmp/legato_logs/</pre><p>The files in that directory look like this:</p>
+<pre class="fragment"> core-myProc-1418694851
+ syslog-myApp-myProc-1418694851</pre><p>To save on RAM space, only the most recent 4 copies of each file are preserved.</p>
+<p>If the fault action for that app's process is to reboot the target, the output location is changed to this (and the most recent files in RAM space are preserved across reboots):</p>
+<pre class="fragment"> /mnt/flash/legato_logs/</pre><hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

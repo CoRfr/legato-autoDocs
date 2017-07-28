@@ -2,7 +2,7 @@
 <html data-context="Build Apps" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>SMS Inbox Service  - Legato Docs</title>
+<title>SMS Inbox  - Legato Docs</title>
 <meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description"/>
 <meta content="legato, iot" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -59,7 +59,7 @@
 <div class="content">
 <div class="header">
 <div class="headertitle">
-<h1 class="title">SMS Inbox Service </h1> </div>
+<h1 class="title">SMS Inbox </h1> </div>
 </div><div class="contents">
 <div class="textblock"><p><a class="el" href="le__sms_inbox1__interface_8h.html">API Reference</a></p>
 <hr/>
@@ -120,7 +120,7 @@ Close a message box</h1>
 <p>Use the API <a class="el" href="le__sms_inbox1__interface_8h.html#a2c3b0118016949b77df6bab31c3a986e">le_smsInbox1_Close()</a> to close a message box (the message box is still exist and can be re-opened and retrieve later all the messages).</p>
 <h1><a class="anchor" id="le_smsInbox_configdb"></a>
 Configuration tree</h1>
-<p>The configuration database path for the SMS Inbox Service is: </p><pre class="fragment">/
+<p>The configuration database for the SMS Inbox Service is stored in the <code>smsInboxService</code> config tree: </p><pre class="fragment">smsInboxService:/
     smsInbox/
         apps/
             appA&lt;uint&gt; = &lt;# of messages&gt;

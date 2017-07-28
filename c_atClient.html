@@ -2,7 +2,7 @@
 <html data-context="Build Apps" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>AT commands client  - Legato Docs</title>
+<title>AT Commands Client  - Legato Docs</title>
 <meta content="legato™ is an open source Linux-based embedded platform designed to simplify connected IoT application development" name="description"/>
 <meta content="legato, iot" name="keywords"/>
 <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -59,60 +59,46 @@
 <div class="content">
 <div class="header">
 <div class="headertitle">
-<h1 class="title">AT commands client </h1> </div>
+<h1 class="title">AT Commands Client </h1> </div>
 </div><div class="contents">
 <div class="textblock"><p><a class="el" href="le__at_client__interface_8h.html">API Reference</a></p>
-<hr/>
-<p>The ATClient service handles the AT commands sending to the modem on a specified serial device. It permits also to get the AT commands responses (intermediate, final or unsolicited responses). This service can be subscribed by several application simultaneously.</p>
-<h1><a class="anchor" id="binding"></a>
-Device binding</h1>
-<p><a class="el" href="le__at_client__interface_8h.html#a0fd1e07720bfa834ba8f81af339a7e0c">le_atClient_Start()</a> API must be called to bind a specific device with the ATClient. Multiple devices can be binded. The application has to configured the device before using it with the ATClient. A device can be unbinded using <a class="el" href="le__at_client__interface_8h.html#a1cf248c81134ae44639ab62e3c501cf1">le_atClient_Stop()</a> API.</p>
-<p>A samples code can be seen in the following page:</p><ul>
-<li><a class="el" href="c_AtCommandBinding.html">AT command client binding</a></li>
-</ul>
-<h1><a class="anchor" id="Create"></a>
-AT commands statement</h1>
+<dl class="section warning"><dt>Warning</dt><dd>Some AT commands may conflict with Legato APIs; using both may cause problems that can be difficult to diagnose. AT commands should be avoided whenever possible, and should only be used with great care.</dd></dl>
+<p>The AT Client Service handles the AT commands sent to the modem on a specified serial device. It also supports getting AT command responses (intermediate, final or unsolicited responses). This service can be subscribed to by several apps simultaneously.</p>
+<h1><a class="anchor" id="atClient_binding"></a>
+Device Binding</h1>
+<p><a class="el" href="le__at_client__interface_8h.html#a58f48ecb3c1569a4b68be4006a751f36">le_atClient_Start()</a> must be called to bind a specific device with the ATClient. Multiple devices can be bound. The app has to configured the device before using it with the ATClient. A device can be unbound using <a class="el" href="le__at_client__interface_8h.html#a1cf248c81134ae44639ab62e3c501cf1">le_atClient_Stop()</a>.</p>
+<h1><a class="anchor" id="atClient_statement"></a>
+Statement</h1>
 <p>An AT command statement is requested before sending it. The following steps have to be done for its declaration:</p>
 <ul>
-<li>An AT command reference has to be created using <a class="el" href="le__at_client__interface_8h.html#aead1c543cd8e65d1ad531233af2c7529">le_atClient_Create()</a> API.</li>
-<li><a class="el" href="le__at_client__interface_8h.html#a2718049682cf17677a0bec259129d26f">le_atClient_SetCommand()</a> API is used to set the AT command to be sent to the modem.</li>
-<li>The sending port has to be set using <a class="el" href="le__at_client__interface_8h.html#a44588125903f97d422ea14c5fd534683">le_atClient_SetDevice()</a> API.</li>
-<li>A timeout value may be set using <a class="el" href="le__at_client__interface_8h.html#ae6cabb33a5093aeab2019f12dde27bdb">le_atClient_SetTimeout()</a> API. The default value is 30s.</li>
-<li>The expected final responses are requested and have to be set using <a class="el" href="le__at_client__interface_8h.html#a0e7388c7e630a194fe1d9eb60f8b2871">le_atClient_SetFinalResponse()</a> API. Given the possible final responses is mandatory to detect the end of the AT command execution. If an AT command is answering with a final response which doesn't belong to the final responses set, the AT command execution will be over by the timeout.</li>
-<li><a class="el" href="le__at_client__interface_8h.html#a913fa8cc267182ab653da563c1c9d837">le_atClient_SetIntermediateResponse()</a> API may be called to set the intermediate responses filters. This API is optional.</li>
+<li>create an AT command reference using <a class="el" href="le__at_client__interface_8h.html#aead1c543cd8e65d1ad531233af2c7529">le_atClient_Create()</a>.</li>
+<li>use <a class="el" href="le__at_client__interface_8h.html#a2718049682cf17677a0bec259129d26f">le_atClient_SetCommand()</a> to set the AT command to be sent to the modem.</li>
+<li>set the sending port to use <a class="el" href="le__at_client__interface_8h.html#a44588125903f97d422ea14c5fd534683">le_atClient_SetDevice()</a>.</li>
+<li>can set a timeout value using <a class="el" href="le__at_client__interface_8h.html#ae6cabb33a5093aeab2019f12dde27bdb">le_atClient_SetTimeout()</a>; default value is <code>30s</code>.</li>
+<li>request expected final responses and set using <a class="el" href="le__at_client__interface_8h.html#a0e7388c7e630a194fe1d9eb60f8b2871">le_atClient_SetFinalResponse()</a>.The final response is mandatory to detect the end of the AT command execution. If an AT command answers with a final response that doesn't belong to the final responses set, the AT command execution will end by timeout.</li>
+<li>can call <a class="el" href="le__at_client__interface_8h.html#a913fa8cc267182ab653da563c1c9d837">le_atClient_SetIntermediateResponse()</a> to set the intermediate responses filters. This is optional.</li>
 </ul>
-<p>Command responses given in <a class="el" href="le__at_client__interface_8h.html#a913fa8cc267182ab653da563c1c9d837">le_atClient_SetIntermediateResponse()</a> and <a class="el" href="le__at_client__interface_8h.html#a0e7388c7e630a194fe1d9eb60f8b2871">le_atClient_SetFinalResponse()</a> are the first characters of the response lines, they are used as a filter of the received lines (a line is the characters received between two reception of &lt;CR&gt;&lt;LF&gt;). Other lines are dropped.</p>
+<p>Command responses given in <a class="el" href="le__at_client__interface_8h.html#a913fa8cc267182ab653da563c1c9d837">le_atClient_SetIntermediateResponse()</a> and <a class="el" href="le__at_client__interface_8h.html#a0e7388c7e630a194fe1d9eb60f8b2871">le_atClient_SetFinalResponse()</a> are the first characters of the response lines. They are used as a filter of the received lines (a line are the characters received between receiving a &lt;CR&gt; and an &lt;LF&gt;). Other lines are dropped.</p>
 <ul>
-<li>A text can be set using <a class="el" href="le__at_client__interface_8h.html#a267068d1fff5ad9687b4e4024fd626ff">le_atClient_SetText()</a> API. This is used for commands which answers a '&gt;' character to receive additional information. The given text is sent to the modem when '&gt;' is detected. The character CTRL-Z is automatically sent.</li>
+<li>text can be set using <a class="el" href="le__at_client__interface_8h.html#a267068d1fff5ad9687b4e4024fd626ff">le_atClient_SetText()</a>. This is used for commands that answers a '&gt;' character to receive additional information. The given text is sent to the modem when '&gt;' is detected. The character <code>CTRL-Z</code> is automatically sent.</li>
 </ul>
-<h1><a class="anchor" id="send"></a>
-AT commands sending</h1>
-<p>When the AT command declaration is done, it can be sent using <a class="el" href="le__at_client__interface_8h.html#aaf39cf9ae5ffb4c76a6eefc8be030e7c">le_atClient_Send()</a>. This API is synchronous (blocking until final response is detected, or timeout reached).</p>
-<p><a class="el" href="le__at_client__interface_8h.html#aba7114dff1addaedba5535b6cbab0091">le_atClient_SetCommandAndSend()</a> is equivalent to <a class="el" href="le__at_client__interface_8h.html#a0fd1e07720bfa834ba8f81af339a7e0c">le_atClient_Start()</a>, <a class="el" href="le__at_client__interface_8h.html#a2718049682cf17677a0bec259129d26f">le_atClient_SetCommand()</a>, <a class="el" href="le__at_client__interface_8h.html#a44588125903f97d422ea14c5fd534683">le_atClient_SetDevice()</a>, <a class="el" href="le__at_client__interface_8h.html#ae6cabb33a5093aeab2019f12dde27bdb">le_atClient_SetTimeout()</a>, <a class="el" href="le__at_client__interface_8h.html#a913fa8cc267182ab653da563c1c9d837">le_atClient_SetIntermediateResponse()</a> and <a class="el" href="le__at_client__interface_8h.html#a0e7388c7e630a194fe1d9eb60f8b2871">le_atClient_SetFinalResponse()</a> in one API call.</p>
-<p>Samples code can be seen in the following pages:</p><ul>
-<li><a class="el" href="c_AtCommandDeclaration.html">First sample code for AT command declaration and send</a></li>
-<li><a class="el" href="c_AtCommandDeclarationSimple.html">Second sample code for AT command declaration and send</a></li>
-<li><a class="el" href="c_AtCommandDeclarationText.html">Sample code for AT command declaration using text command</a></li>
-</ul>
-<h1><a class="anchor" id="responses"></a>
-AT commands responses</h1>
-<p>When the AT command has been correctly sent (i.e. <a class="el" href="le__at_client__interface_8h.html#aaf39cf9ae5ffb4c76a6eefc8be030e7c">le_atClient_Send()</a> or <a class="el" href="le__at_client__interface_8h.html#aba7114dff1addaedba5535b6cbab0091">le_atClient_SetCommandAndSend()</a> execution is successful), the application can get the AT command responses:</p><ul>
+<h1><a class="anchor" id="atClient_send"></a>
+Sending</h1>
+<p>When the AT command declaration is complete, it can be sent using <a class="el" href="le__at_client__interface_8h.html#aaf39cf9ae5ffb4c76a6eefc8be030e7c">le_atClient_Send()</a>. This API is synchronous (blocking until final response is detected, or timeout reached).</p>
+<p><a class="el" href="le__at_client__interface_8h.html#aba7114dff1addaedba5535b6cbab0091">le_atClient_SetCommandAndSend()</a> is equivalent to <a class="el" href="le__at_client__interface_8h.html#aead1c543cd8e65d1ad531233af2c7529">le_atClient_Create()</a>, <a class="el" href="le__at_client__interface_8h.html#a2718049682cf17677a0bec259129d26f">le_atClient_SetCommand()</a>, <a class="el" href="le__at_client__interface_8h.html#a44588125903f97d422ea14c5fd534683">le_atClient_SetDevice()</a>, <a class="el" href="le__at_client__interface_8h.html#ae6cabb33a5093aeab2019f12dde27bdb">le_atClient_SetTimeout()</a>, <a class="el" href="le__at_client__interface_8h.html#a913fa8cc267182ab653da563c1c9d837">le_atClient_SetIntermediateResponse()</a> and <a class="el" href="le__at_client__interface_8h.html#a0e7388c7e630a194fe1d9eb60f8b2871">le_atClient_SetFinalResponse()</a>, in case of an Error <a class="el" href="le__at_client__interface_8h.html#a8bd3f6ec64a7a700460e4d66b39ec4ed">le_atClient_Delete()</a>, in one API call. The AT command reference is created and returned by this API. When an error occurs the command reference is deleted and is not a valid reference anymore</p>
+<h1><a class="anchor" id="atClient_responses"></a>
+Responses</h1>
+<p>When the AT command has been sent correctly (i.e., <a class="el" href="le__at_client__interface_8h.html#aaf39cf9ae5ffb4c76a6eefc8be030e7c">le_atClient_Send()</a> or <a class="el" href="le__at_client__interface_8h.html#aba7114dff1addaedba5535b6cbab0091">le_atClient_SetCommandAndSend()</a> execution is successful), the app gets these AT command responses:</p><ul>
 <li><a class="el" href="le__at_client__interface_8h.html#a8f65083c97050a65fee9cb8811be7bae">le_atClient_GetFinalResponse()</a> is used to get the final responses</li>
-<li><a class="el" href="le__at_client__interface_8h.html#a1e8a18858d48c723c2cf7feb190e10d3">le_atClient_GetFirstIntermediateResponse()</a> is used to get the first intermediate result code. Then, other intermediate result codes can be got calling <a class="el" href="le__at_client__interface_8h.html#a77cd1ddd515fff2f9b2783b467d38067">le_atClient_GetNextIntermediateResponse()</a>. There's no more result to get when one of both APIs returns LE_NOT_FOUND.</li>
+<li><a class="el" href="le__at_client__interface_8h.html#a1e8a18858d48c723c2cf7feb190e10d3">le_atClient_GetFirstIntermediateResponse()</a> is used to get the first intermediate result code. Other intermediate result codes can be obtained by calling <a class="el" href="le__at_client__interface_8h.html#a77cd1ddd515fff2f9b2783b467d38067">le_atClient_GetNextIntermediateResponse()</a>.Returns LE_NOT_FOUND when there are no further results.</li>
 </ul>
-<p>When a response has been set in the AT command declaration, the AT command response returned by these API starts by the given patterns, and ends when a &lt;CR&gt;&lt;LF&gt; is detected.</p>
-<p>A samples code can be seen in the following page:</p><ul>
-<li><a class="el" href="c_AtCommandResponse.html">Sample code for AT command responses</a></li>
-</ul>
-<h1><a class="anchor" id="Delete"></a>
-AT commands</h1>
-<p>When the AT command is over, the reference has to be deleted calling <a class="el" href="le__at_client__interface_8h.html#a8bd3f6ec64a7a700460e4d66b39ec4ed">le_atClient_Delete()</a> API.</p>
-<p>A samples code can be seen in the following page:</p><ul>
-<li><a class="el" href="c_AtCommandDelete.html">Sample code for deleting an AT command</a></li>
-</ul>
-<h1><a class="anchor" id="unsolicited"></a>
-Unsolicited responses</h1>
-<p>An application can subscribe to a specific unsolicited response using <a class="el" href="le__at_client__interface_8h.html#a5b4f15c9df80900b845540decbd299b0">le_atClient_AddUnsolicitedResponseHandler()</a> (and can be removed using <a class="el" href="le__at_client__interface_8h.html#aca923ad42f7ebb87eb9b05adfed79c48">le_atClient_RemoveUnsolicitedResponseHandler()</a>). The subscribed handler is called when the given pattern is detected. The handler receives in parameter the complete line of the unsolicited response. The parameter "lineCount" is used to set the unsolicited lines number. For instance, +CMT unsolicited response has the following syntax: +CMT: ...&lt;CR&gt;&lt;LF&gt; &lt;sms text&gt;=""&gt; In this case, lineCount has to be set to 2 to receive both lines into the handler. +CREG unsolicited response is sent one only one line, so lineCount is set to 1.</p>
+<p>When a response has been set in the AT command declaration, the AT command response returned by these APIs start with the given pattern, and ends when a &lt;CR&gt;&lt;LF&gt; is detected.</p>
+<h1><a class="anchor" id="atClient__delete"></a>
+Deleting</h1>
+<p>When the AT command is over, the reference has to be deleted by calling <a class="el" href="le__at_client__interface_8h.html#a8bd3f6ec64a7a700460e4d66b39ec4ed">le_atClient_Delete()</a>.</p>
+<h1><a class="anchor" id="atClient_unsolicited"></a>
+Unsolicited Responses</h1>
+<p>An app can subscribe to a specific, unsolicited response using <a class="el" href="le__at_client__interface_8h.html#a5b4f15c9df80900b845540decbd299b0">le_atClient_AddUnsolicitedResponseHandler()</a>, and can be removed using <a class="el" href="le__at_client__interface_8h.html#aca923ad42f7ebb87eb9b05adfed79c48">le_atClient_RemoveUnsolicitedResponseHandler()</a>. The subscribed handler is called when the given pattern is detected. The handler receives a parameter with the complete line of the unsolicited response. The parameter <code>lineCount</code> is used to set the unsolicited lines number. For example, <code>+CMT</code> unsolicited response has the following syntax: </p><pre class="fragment"><div class="line">+CMT: ...&lt;CR&gt;&lt;LF&gt;</div><div class="line">&lt;sms text&gt;</div></pre><!-- fragment --><p> In this case, <code>lineCount</code> has to be set to <code>2</code> to receive both lines into the handler. <code>+CREG</code> unsolicited response is sent only one line, so <code>lineCount</code> is set to <code>1</code>.</p>
 <hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>

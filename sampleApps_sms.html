@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -66,12 +66,11 @@
 <p>Go to the <a href="https://github.com/legatoproject/legato-af/tree/master/apps/sample/sms">sample app code</a>.</p>
 <p>Run this to install the sample app: </p><pre class="fragment">$ cd apps/sample/sms
 $ make wp85
-$ instapp sms.wp85.update &lt;ip address&gt;
-</pre><p>If you're using an AR7 module in your target, substitute <code>ar7</code> for <code>wp85</code>.</p>
+$ update sms.wp85.update &lt;ip address&gt;
+</pre><p>If you're not using a Sierra Wireless WP85xx module, replace <code>wp85</code> with the appropriate identifier for your target.</p>
 <p><a class="el" href="sampleApps.html#sampleApps_startApp">Start App</a></p>
 <p>See <br/>
 <a class="el" href="c_sms.html">SMS</a></p>
-<hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

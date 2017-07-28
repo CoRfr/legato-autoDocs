@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -1671,7 +1671,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Get Profile Reference for index</p>
 <dl class="section note"><dt>Note</dt><dd>Create a new profile if the profile's index can't be found.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Ensure to check the list of supported data profiles for your specific platform.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>0 is not a valid index.</dd>
+<dd>
+Ensure to check the list of supported data profiles for your specific platform.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>Reference to the data profile</li>
 <li>NULL if the profile index does not exist </li>
@@ -2071,14 +2073,14 @@ Both PAP and CHAP authentification can be set for 3GPP network: in this case, th
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the Access Point Name (APN) for the given profile according to the home network mcc/mnc.</p>
+<p>Set the Access Point Name (APN) for the given profile according to the SIM identification number (ICCID). If no APN is found using the ICCID, fall back on the home network (MCC/MNC) to determine the default APN.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
 <li>LE_BAD_PARAMETER if an input parameter is not valid</li>
 <li>LE_FAULT for all other errors</li>
 </ul>
 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>The process exits, if an invalid profile object is given </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The process exits if an invalid profile object is given </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">profileRef</td><td>Query this profile object </td></tr>

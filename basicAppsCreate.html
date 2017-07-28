@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -113,12 +113,12 @@ Create App</h1>
 Build App</h1>
 <p><code>5</code>. Run <code>mkapp</code> to build the executable and bundle it into an app:</p>
 <p>Use the <code>-t</code> option to build for a target other than the default "localhost" target.</p>
-<p>This is how to build the helloWorld app to install on the Sierra Wireless WP85 module:</p>
+<p>This is how to build the helloWorld app to install on the Sierra Wireless WP85xx module:</p>
 <pre class="fragment"><div class="line">$ mkapp -t wp85 helloWorld.adef</div></pre><!-- fragment --><dl class="section note"><dt>Note</dt><dd>If you're building an AR7, substitute <code>ar7</code> in the mkapp run command.</dd></dl>
 <h1><a class="anchor" id="basicAppsCreate_instTarget"></a>
 Install App to Target</h1>
-<p><code>6</code>. Use <code>instapp</code> to install the app on your target:</p>
-<pre class="fragment"><div class="line">$ instapp helloWorld.wp85.update &lt;ip addr&gt;</div></pre><!-- fragment --><p>The second argument is the target device's IP address where to install the app. This will connect to the target and install the app.</p>
+<p><code>6</code>. Use <code>update</code> to install the app on your target:</p>
+<pre class="fragment"><div class="line">$ update helloWorld.wp85.update &lt;ip addr&gt;</div></pre><!-- fragment --><p>The second argument is the target device's IP address where to install the app. This will connect to the target and install the app.</p>
 <h1><a class="anchor" id="basicAppsCreate_usage"></a>
 Usage</h1>
 <p>These usage tips are based on running a secure shell (SSH) to interface with the target. See <a href="http://www.mangoh.io/getting-started.html">mangoh.io</a> if you need to setup your target device.</p>
@@ -135,11 +135,11 @@ View Logs</h2>
 <pre class="fragment"><div class="line"><span class="preprocessor"># logread</span></div></pre><!-- fragment --><p>Use logread's <em>-f</em> option to start monitoring the logs and display messages as they are logged.</p>
 <pre class="fragment"><div class="line"><span class="preprocessor"># logread -f</span></div></pre><!-- fragment --><p>Here's a code sample accessing the logs on a target device with IP address 192.168.2.2 through an ssh connection: </p><pre class="fragment"><div class="line">$ ssh root@192.168.2.2 <span class="stringliteral">'/sbin/logread -f'</span></div></pre><!-- fragment --><h2><a class="anchor" id="basicAppsCreate_usageRmApp"></a>
 Remove App</h2>
-<p>From the host PC, run <code>rmapp</code> to uninstall the app:</p>
-<pre class="fragment"><div class="line">$ rmapp helloWorld.wp85 &lt;ip addr&gt;</div></pre><!-- fragment --><p>From the target run: </p><pre class="fragment"><div class="line"><span class="preprocessor"># app remove &lt;app name&gt;</span></div></pre><!-- fragment --><h2><a class="anchor" id="basicAppsCreate_usageLsApp"></a>
+<p>From the host PC, run <code>app remove</code> to uninstall the app:</p>
+<pre class="fragment"><div class="line">$ app <span class="keyword">remove</span> helloWorld.wp85 &lt;ip addr&gt;</div></pre><!-- fragment --><p>From the target run: </p><pre class="fragment"><div class="line"><span class="preprocessor"># app remove &lt;app name&gt;</span></div></pre><!-- fragment --><h2><a class="anchor" id="basicAppsCreate_usageLsApp"></a>
 List App</h2>
-<p>Use <code>lsapp</code> to list the apps installed on a target.</p>
-<pre class="fragment"><div class="line">$ lsapp &lt;ip addr&gt;</div></pre><!-- fragment --><hr/>
+<p>Use <code>app list</code> to list the apps installed on a target.</p>
+<pre class="fragment"><div class="line">$ app list &lt;ip addr&gt;</div></pre><!-- fragment --><hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

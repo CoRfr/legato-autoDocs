@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -63,15 +63,22 @@
 </div><div class="contents">
 <div class="textblock"><p><br/>
 </p>
-<p>Here are some parameters for modem services config trees:</p>
-<h1><a class="anchor" id="cellnetConfigTree"></a>
-Cellular Network Service</h1>
-<p>Configuration for the <a class="el" href="c_le_cellnet.html">Cellular Network</a> Service. <br/>
+<p>Here are some parameters for services config trees:</p>
+<h1><a class="anchor" id="dcsConfigTree"></a>
+Data Connection Service</h1>
+<p>Configuration for the <a class="el" href="c_le_data.html">Data Connection</a> Service. <br/>
+ The configuration of the Wi-Fi access point is stored in the configuration database of the <code>dataConnectionService</code> under the following path: </p><pre class="fragment"> dataConnectionService:/
+     wifi/
+         SSID&lt;string&gt; == TestSsid
+         secProtocol&lt;int&gt; == 3
+         passphrase&lt;string&gt; == Passw0rd
+</pre><dl class="section note"><dt>Note</dt><dd>The security protocol is one of the supported protocols defined in the <a class="el" href="le__wifi_client__interface_8h.html#a3acda5a68db1e0d601ee840a94542304">le_wifiClient_SecurityProtocol_t</a> enumerator.</dd></dl>
+<p><br/>
 </p>
 <h1><a class="anchor" id="mbxConfigTree"></a>
 SMS Inbox Service</h1>
-<p>Configuration for the <a class="el" href="c_smsInbox.html">SMS Inbox Service</a> Service. <br/>
- The configuration database path for the SMS Inbox Service is: </p><pre class="fragment">/
+<p>Configuration for the <a class="el" href="c_smsInbox.html">SMS Inbox</a> Service. <br/>
+ The configuration database for the SMS Inbox Service is stored in the <code>smsInboxService</code> config tree: </p><pre class="fragment">smsInboxService:/
     smsInbox/
         apps/
             appA&lt;uint&gt; = &lt;# of messages&gt;
@@ -79,16 +86,6 @@ SMS Inbox Service</h1>
 </pre><p>Each app have its own inbox, containing its own list of messages. The maximum number of messages is specified for each inbox. If the message box is not configured, a default number of 10 messages is applied (only for message boxes configured in le_smsInbox_mboxName[] area).</p>
 <p>The application name is given by the API name provided into the Components.cdef, both must be the same.</p>
 <p><br/>
-</p>
-<h1><a class="anchor" id="ecallConfigTree"></a>
-eCall</h1>
-<p>Configuration for the <a class="el" href="c_ecall.html">eCall</a> Service. <br/>
-<br/>
-</p>
-<h1><a class="anchor" id="posConfigTree"></a>
-Positioning</h1>
-<p>Configuration for the <a class="el" href="c_pos.html">Positioning</a> Service. <br/>
-<br/>
 </p>
 <h1><a class="anchor" id="avcServiceConfigTree"></a>
 AirVantage Service</h1>

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps Concepts.json"></script>
+<script src="tocs/Build_Apps_Concepts.json"></script>
 </head>
 <body>
 <noscript>
@@ -62,20 +62,22 @@
 <h1 class="title">Sandbox Overview </h1> </div>
 </div><div class="contents">
 <div class="textblock"><p>To understand how Legato sandboxes are implemented, see <a class="el" href="basicSecuritySandbox.html">Sandboxes</a> basics. <br/>
- There's also an topic on how to <a class="el" href="howToSecuritySandboxUse.html">Use Sandboxes</a>.</p>
+ There's also an topic on how to <a class="el" href="howToSecuritySandboxConfigSample.html">Sandbox Config Sample</a>.</p>
 <h1><a class="anchor" id="howToSecuritySandbox_oveview"></a>
 Overview</h1>
 <p>Sandboxes are configured through the <a class="el" href="defFiles.html">Definition Files</a> :</p><ul>
 <li><a class="el" href="defFilesAdef.html">Application Definition .adef</a></li>
 <li><a class="el" href="defFilesSdef.html">System Definition .sdef</a></li>
 </ul>
-<p>This is what a sandboxed app <a class="el" href="howToConfigTreeSchema.html">Config Tree Schema</a> looks like.</p>
+<p>App configuration is provided to the on-target framework through <a class="el" href="howToConfigTreeSchema.html">system config tree</a> settings.</p>
 <h1><a class="anchor" id="howToSecuritySandbox_probs"></a>
 Common Problems</h1>
-<p>Often, when sandbox problems occur, it's because either:</p><ul>
-<li>the permissions are set incorrectly: check the <code></code>.sdef bundles section to ensure permissions are valid.</li>
-<li>there's a file missing from the file system within the sandbox: check that the <code>def</code> files' requires sections include all required files.</li>
+<p>These are some common reasons for sandbox problems:</p><ul>
+<li>permissions are set incorrectly: check the <a class="el" href="defFilesCdef.html#defFilesCdef_bundles">.cdef bundles</a> section to ensure permissions are valid.</li>
+<li>a file is missing from the file system within the sandbox: check that the files in <a class="el" href="defFilesCdef.html#defFilesCdef_requires">.cdef requires</a> and <a class="el" href="defFilesAdef.html#defFilesAdef_requires">.adef requires</a> sections include all required files.</li>
+<li>you've reached a sanboxed app <a class="el" href="howToSecuritySandboxLimits.html">limit</a>.</li>
 </ul>
+<p><a class="el" href="howToSecuritySandboxConfigSample.html">Sandbox Config Sample</a> contains detailed instructions on how to troubleshoot sandbox problems.</p>
 <h1><a class="anchor" id="howToSecuritySandbox_sampleApps"></a>
 Sandbox Sample Apps</h1>
 <p>Legato provides sample apps that use sandboxes: <br/>
@@ -122,7 +124,6 @@ Access Services Outside</h1>
 <h1><a class="anchor" id="howToSandbox_unsandbox"></a>
 Unsandbox</h1>
 <p>Although it's not recommended, you can turn-off sandboxing by setting <a class="el" href="defFilesAdef.html#defFilesAdef_sandboxed">sandboxed</a> to <code>false</code>.</p>
-<hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

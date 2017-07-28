@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -118,6 +118,12 @@ Macros</h2></td></tr>
 <tr class="separator:aab6506ff3345e8394420c9c6a7d95b42"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a4973cb81db0e55be350d3cfee7e75772"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a4973cb81db0e55be350d3cfee7e75772">LE_INFO_MAX_PSN_BYTES</a>   15</td></tr>
 <tr class="separator:a4973cb81db0e55be350d3cfee7e75772"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae398db98a69c6f18c29db758017e525c"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#ae398db98a69c6f18c29db758017e525c">LE_INFO_RF_DEVICES_STATUS_MAX</a>   10</td></tr>
+<tr class="separator:ae398db98a69c6f18c29db758017e525c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a230b59565f67e3f050a58fa71f489425"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a230b59565f67e3f050a58fa71f489425">LE_INFO_MAX_SKU_LEN</a>   32</td></tr>
+<tr class="separator:a230b59565f67e3f050a58fa71f489425"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a912463aab1cd8c4f02058e84061efbd7"><td align="right" class="memItemLeft" valign="top">#define </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a912463aab1cd8c4f02058e84061efbd7">LE_INFO_MAX_SKU_BYTES</a>   33</td></tr>
+<tr class="separator:a912463aab1cd8c4f02058e84061efbd7"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -155,6 +161,10 @@ Functions</h2></td></tr>
 <tr class="separator:a18940ac413b3df2bac02892d243d6bd4"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a23d1f0f22d275ae334c4124e56f1d7e5"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a23d1f0f22d275ae334c4124e56f1d7e5">le_info_GetPlatformSerialNumber</a> (char *platformSerialNumberStr, size_t platformSerialNumberStrNumElements)</td></tr>
 <tr class="separator:a23d1f0f22d275ae334c4124e56f1d7e5"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a26eb89e0906270ece870423f9e0059fc"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a26eb89e0906270ece870423f9e0059fc">le_info_GetRfDeviceStatus</a> (uint16_t *manufacturedIdPtr, size_t *manufacturedIdNumElementsPtr, uint8_t *productIdPtr, size_t *productIdNumElementsPtr, bool *statusPtr, size_t *statusNumElementsPtr)</td></tr>
+<tr class="separator:a26eb89e0906270ece870423f9e0059fc"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a1fdd9ae3406e8990811612861b8336b8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__info__interface_8h.html#a1fdd9ae3406e8990811612861b8336b8">le_info_GetSku</a> (char *skuIdStr, size_t skuIdStrNumElements)</td></tr>
+<tr class="separator:a1fdd9ae3406e8990811612861b8336b8"><td class="memSeparator" colspan="2"> </td></tr>
 </table>
 <a id="details" name="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Legato <a class="el" href="c_info.html">Modem Information</a> include file.</p>
@@ -409,7 +419,7 @@ Functions</h2></td></tr>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Maximum length of an Platform Serial Number (PSN) string. One extra byte is added for the null character. </p>
+<p>Maximum length of the Platform Serial Number (PSN) string. One extra byte is added for the null character. </p>
 </div>
 </div>
 <a class="anchor" id="aab6506ff3345e8394420c9c6a7d95b42"></a>
@@ -422,6 +432,30 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Maximum length of an Platform Serial Number (PSN) string, excluding any termination character. </p>
+</div>
+</div>
+<a class="anchor" id="a912463aab1cd8c4f02058e84061efbd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_MAX_SKU_BYTES   33</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the product stock keeping unit number (SKU) string. One extra byte is added for the null character. </p>
+</div>
+</div>
+<a class="anchor" id="a230b59565f67e3f050a58fa71f489425"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_MAX_SKU_LEN   32</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum length of the product stock keeping unit number (SKU) string, excluding any termination character. </p>
 </div>
 </div>
 <a class="anchor" id="a214fcb5985494789b621216e108b1617"></a>
@@ -446,6 +480,18 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Maximum length of a version string, excluding any termination character. </p>
+</div>
+</div>
+<a class="anchor" id="ae398db98a69c6f18c29db758017e525c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">#define LE_INFO_RF_DEVICES_STATUS_MAX   10</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Maximum fields for the RF devices status request. </p>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -672,7 +718,7 @@ Functions</h2></td></tr>
 LE_OVERFLOW IMEI length exceed the maximum length. </dd>
 <dd>
 LE_OK Function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the caller passes a bad pointer into this function, it's a fatal error; the function will not return. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller passes a bad pointer into this function, it's a fatal error the function will not return. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">imei</td><td>IMEI string. </td></tr>
@@ -1020,6 +1066,113 @@ LE_OK Function succeeded.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">prlVersionPtr</td><td>The Preferred Roaming List (PRL) version. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a26eb89e0906270ece870423f9e0059fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_info_GetRfDeviceStatus </td>
+<td>(</td>
+<td class="paramtype">uint16_t * </td>
+<td class="paramname"><em>manufacturedIdPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>manufacturedIdNumElementsPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">uint8_t * </td>
+<td class="paramname"><em>productIdPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>productIdNumElementsPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">bool * </td>
+<td class="paramname"><em>statusPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t * </td>
+<td class="paramname"><em>statusNumElementsPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the RF devices working status (i.e. working or broken) of modem's RF devices such as power amplifier, antenna switch and transceiver. That status is updated every time the module power on.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_UNSUPPORTED request not supported</li>
+<li>LE_FAULT function failed to get the RF devices working status</li>
+<li>LE_OVERFLOW the number of statuses exceeds the maximum size (LE_INFO_RF_DEVICES_STATUS_MAX) </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">manufacturedIdPtr</td><td>Manufactured identifier (MID) </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">manufacturedIdNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">productIdPtr</td><td>Product identifier (PID) </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">productIdNumElementsPtr</td><td></td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">statusPtr</td><td>Status of the RF device (MID,PID): 0 means something wrong 1 means no error found </td></tr>
+<tr><td class="paramdir">[in,out]</td><td class="paramname">statusNumElementsPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a1fdd9ae3406e8990811612861b8336b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_info_GetSku </td>
+<td>(</td>
+<td class="paramtype">char * </td>
+<td class="paramname"><em>skuIdStr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">size_t </td>
+<td class="paramname"><em>skuIdStrNumElements</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the product stock keeping unit number (SKU) string in ASCII text.</p>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK The function succeeded.</li>
+<li>LE_FAULT The function failed to get the value.</li>
+<li>LE_OVERFLOW The SKU number string length exceeds the maximum length. </li>
+</ul>
+</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">skuIdStr</td><td>Product SKU ID string. </td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">skuIdStrNumElements</td><td></td></tr>
 </table>
 </dd>
 </dl>

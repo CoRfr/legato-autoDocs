@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -60,6 +60,7 @@
 <div class="header">
 <div class="summary">
 <a href="#typedef-members">Typedefs</a> |
+<a href="#enum-members">Enumerations</a> |
 <a href="#func-members">Functions</a> </div>
 <div class="headertitle">
 <h1 class="title">le_pos_interface.h File Reference</h1> </div>
@@ -76,6 +77,19 @@ Typedefs</h2></td></tr>
 <tr class="separator:a5a6f639c1293ba027109b40be3ab21bd"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a52ec35470a43299a2c6850927c2c5090"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a52ec35470a43299a2c6850927c2c5090">le_pos_MovementHandlerFunc_t</a>) (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, void *contextPtr)</td></tr>
 <tr class="separator:a52ec35470a43299a2c6850927c2c5090"><td class="memSeparator" colspan="2"> </td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ac0e93744e5d09ba6d49a578836459985"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985">le_pos_FixState_t</a> { <br/>
+  <a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985a2fdca144e652ff746f09db26b820b570">LE_POS_STATE_NO_FIX</a> = 0, 
+<a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985af1dcf35e812c699c5e041c2d4aeb72c0">LE_POS_STATE_FIX_2D</a> = 1, 
+<a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985a251c33941b280253e15dda9a9d502e56">LE_POS_STATE_FIX_3D</a> = 2, 
+<a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985af8c2f8a47709e20ac39bc17d3d467929">LE_POS_STATE_FIX_ESTIMATED</a> = 3, 
+<br/>
+  <a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985a951ca1a514a3924cb1ad2efd9941f4ae">LE_POS_STATE_UNKNOWN</a> = 4
+<br/>
+ }</td></tr>
+<tr class="separator:ac0e93744e5d09ba6d49a578836459985"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -99,10 +113,12 @@ Functions</h2></td></tr>
 <tr class="separator:a190d242995bb06518b5a064df5578c85"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a13b45e58c20926145e35f70d97835f47"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a13b45e58c20926145e35f70d97835f47">le_pos_GetMotion</a> (uint32_t *hSpeedPtr, uint32_t *hSpeedAccuracyPtr, int32_t *vSpeedPtr, int32_t *vSpeedAccuracyPtr)</td></tr>
 <tr class="separator:a13b45e58c20926145e35f70d97835f47"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae06eaad71c152ade96d9b3f2e87a2053"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae06eaad71c152ade96d9b3f2e87a2053">le_pos_GetHeading</a> (int32_t *headingPtr, int32_t *headingAccuracyPtr)</td></tr>
-<tr class="separator:ae06eaad71c152ade96d9b3f2e87a2053"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a2b5b4e4ce66c4f1653d6f0982bbd5feb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a2b5b4e4ce66c4f1653d6f0982bbd5feb">le_pos_GetDirection</a> (int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
-<tr class="separator:a2b5b4e4ce66c4f1653d6f0982bbd5feb"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a4cba07c976294e4e7d8491eb1c03227c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a4cba07c976294e4e7d8491eb1c03227c">le_pos_GetHeading</a> (uint32_t *headingPtr, uint32_t *headingAccuracyPtr)</td></tr>
+<tr class="separator:a4cba07c976294e4e7d8491eb1c03227c"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a9e2dcdd5ed75400f3de79f3bc314d5ed"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a9e2dcdd5ed75400f3de79f3bc314d5ed">le_pos_GetDirection</a> (uint32_t *directionPtr, uint32_t *directionAccuracyPtr)</td></tr>
+<tr class="separator:a9e2dcdd5ed75400f3de79f3bc314d5ed"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:adb32cc255e6043f7130a4270542db3b8"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#adb32cc255e6043f7130a4270542db3b8">le_pos_GetFixState</a> (<a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985">le_pos_FixState_t</a> *statePtr)</td></tr>
+<tr class="separator:adb32cc255e6043f7130a4270542db3b8"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:ae7b3b16601465b663b468f12c63ea485"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae7b3b16601465b663b468f12c63ea485">le_pos_sample_Get2DLocation</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *latitudePtr, int32_t *longitudePtr, int32_t *horizontalAccuracyPtr)</td></tr>
 <tr class="separator:ae7b3b16601465b663b468f12c63ea485"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a47171bf14bf4f249d3b76a8ed204f13c"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a47171bf14bf4f249d3b76a8ed204f13c">le_pos_sample_GetTime</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint16_t *hoursPtr, uint16_t *minutesPtr, uint16_t *secondsPtr, uint16_t *millisecondsPtr)</td></tr>
@@ -115,10 +131,12 @@ Functions</h2></td></tr>
 <tr class="separator:abfb72f3deaf2a9d764e6933968e902fd"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a18162e15ad9a61696312745ec0bec1fd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a18162e15ad9a61696312745ec0bec1fd">le_pos_sample_GetVerticalSpeed</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *vspeedPtr, int32_t *vspeedAccuracyPtr)</td></tr>
 <tr class="separator:a18162e15ad9a61696312745ec0bec1fd"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:a181f453d46f8b5440d91f2af1b4ebbfb"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a181f453d46f8b5440d91f2af1b4ebbfb">le_pos_sample_GetHeading</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *headingPtr, int32_t *headingAccuracyPtr)</td></tr>
-<tr class="separator:a181f453d46f8b5440d91f2af1b4ebbfb"><td class="memSeparator" colspan="2"> </td></tr>
-<tr class="memitem:ae42d09bb5146b52dd1f628a93611bc31"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ae42d09bb5146b52dd1f628a93611bc31">le_pos_sample_GetDirection</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, int32_t *directionPtr, int32_t *directionAccuracyPtr)</td></tr>
-<tr class="separator:ae42d09bb5146b52dd1f628a93611bc31"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ab586a6fe22d7299e367033423e26b58a"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#ab586a6fe22d7299e367033423e26b58a">le_pos_sample_GetHeading</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint32_t *headingPtr, uint32_t *headingAccuracyPtr)</td></tr>
+<tr class="separator:ab586a6fe22d7299e367033423e26b58a"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a86df9f69d78e98b97a159fb8d9b04dd2"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a86df9f69d78e98b97a159fb8d9b04dd2">le_pos_sample_GetDirection</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, uint32_t *directionPtr, uint32_t *directionAccuracyPtr)</td></tr>
+<tr class="separator:a86df9f69d78e98b97a159fb8d9b04dd2"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a41f32dfe995a72eb60d872b4f1c88bdd"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a41f32dfe995a72eb60d872b4f1c88bdd">le_pos_sample_GetFixState</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef, <a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985">le_pos_FixState_t</a> *statePtr)</td></tr>
+<tr class="separator:a41f32dfe995a72eb60d872b4f1c88bdd"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af2999e2e4f7eca899b2af1125547e3ea"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#af2999e2e4f7eca899b2af1125547e3ea">le_pos_sample_Release</a> (<a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> positionSampleRef)</td></tr>
 <tr class="separator:af2999e2e4f7eca899b2af1125547e3ea"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a47c4a150c765b1e24f6b00f3bc722d3d"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__pos__interface_8h.html#a47c4a150c765b1e24f6b00f3bc722d3d">le_pos_SetAcquisitionRate</a> (uint32_t acquisitionRate)</td></tr>
@@ -171,6 +189,36 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Reference type for dealing with Position samples. </p>
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ac0e93744e5d09ba6d49a578836459985"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985">le_pos_FixState_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Fix position states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ac0e93744e5d09ba6d49a578836459985a2fdca144e652ff746f09db26b820b570"></a>LE_POS_STATE_NO_FIX </td><td class="fielddoc">
+<p>The position is not fixed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac0e93744e5d09ba6d49a578836459985af1dcf35e812c699c5e041c2d4aeb72c0"></a>LE_POS_STATE_FIX_2D </td><td class="fielddoc">
+<p>2-Dimensional position fix. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac0e93744e5d09ba6d49a578836459985a251c33941b280253e15dda9a9d502e56"></a>LE_POS_STATE_FIX_3D </td><td class="fielddoc">
+<p>3-Dimensional position fix. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac0e93744e5d09ba6d49a578836459985af8c2f8a47709e20ac39bc17d3d467929"></a>LE_POS_STATE_FIX_ESTIMATED </td><td class="fielddoc">
+<p>Estimated (i.e. forward predicted) position fix. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ac0e93744e5d09ba6d49a578836459985a951ca1a514a3924cb1ad2efd9941f4ae"></a>LE_POS_STATE_UNKNOWN </td><td class="fielddoc">
+<p>Unknow state. </p>
+</td></tr>
+</table>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
@@ -426,20 +474,20 @@ LE_OK Function succeeded. </dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a2b5b4e4ce66c4f1653d6f0982bbd5feb"></a>
+<a class="anchor" id="a9e2dcdd5ed75400f3de79f3bc314d5ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetDirection </td>
 <td>(</td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>directionPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>directionAccuracyPtr</em> </td>
 </tr>
 <tr>
@@ -449,36 +497,64 @@ LE_OK Function succeeded. </dd></dl>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the direction indication. Direction of movement is the direction that the vehicle/person is actually moving.</p>
+<p>Get the direction indication. Direction of movement is the direction that the vehicle or person is actually moving.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to get the direction indication. </dd>
 <dd>
-LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX). </dd>
+LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to UINT32_MAX). </dd>
 <dd>
 LE_OK Function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>directionPtr, directionAccuracyPtr can be set to NULL if not needed. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Direction is given in degrees. Direction ranges from 0 to 359 degrees, where 0 is True North.</dd>
+<dd>
+directionPtr, directionAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[out]</td><td class="paramname">directionPtr</td><td>Direction indication in degrees (where 0 is True North). </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">directionPtr</td><td>Direction indication in degrees. Range: 0 to 359, where 0 is True North. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">directionAccuracyPtr</td><td>Direction's accuracy estimate in degrees. </td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ae06eaad71c152ade96d9b3f2e87a2053"></a>
+<a class="anchor" id="adb32cc255e6043f7130a4270542db3b8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetFixState </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985">le_pos_FixState_t</a> * </td>
+<td class="paramname"><em>statePtr</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position fix state</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to get the position fix state. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>In case the function fails to get the position fix state, a fatal error occurs, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[out]</td><td class="paramname">statePtr</td><td>Position fix state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a4cba07c976294e4e7d8491eb1c03227c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
 <tr>
 <td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_GetHeading </td>
 <td>(</td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>headingPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>headingAccuracyPtr</em> </td>
 </tr>
 <tr>
@@ -491,13 +567,15 @@ LE_OK Function succeeded.</dd></dl>
 <p>Get the heading indication.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to get the heading indication. </dd>
 <dd>
-LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX). </dd>
+LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to UINT32_MAX). </dd>
 <dd>
 LE_OK Function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>headingPtr, headingAccuracyPtr can be set to NULL if not needed. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Heading is given in degrees. Heading ranges from 0 to 359 degrees, where 0 is True North.</dd>
+<dd>
+headingPtr, headingAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
-<tr><td class="paramdir">[out]</td><td class="paramname">headingPtr</td><td>Heading in degrees (where 0 is True North). </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">headingPtr</td><td>Heading in degrees. Range: 0 to 359, where 0 is True North. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">headingAccuracyPtr</td><td>Heading's accuracy in degrees. </td></tr>
 </table>
 </dd>
@@ -786,7 +864,7 @@ LE_OK Function succeeded. </dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="ae42d09bb5146b52dd1f628a93611bc31"></a>
+<a class="anchor" id="a86df9f69d78e98b97a159fb8d9b04dd2"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -799,13 +877,13 @@ LE_OK Function succeeded. </dd></dl>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>directionPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>directionAccuracyPtr</em> </td>
 </tr>
 <tr>
@@ -815,26 +893,65 @@ LE_OK Function succeeded. </dd></dl>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the position sample's direction. Direction of movement is the direction that the vehicle/person is actually moving.</p>
+<p>Get the position sample's direction. Direction of movement is the direction that the vehicle or person is actually moving.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to find the positionSample. </dd>
 <dd>
-LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX). </dd>
+LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to UINT32_MAX). </dd>
 <dd>
 LE_OK Function succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position reference into this function, it is a fatal error, the function will not return.</dd>
+<dl class="section note"><dt>Note</dt><dd>Direction is given in degrees. Direction ranges from 0 to 359 degrees, where 0 is True North.</dd>
+<dd>
+If the caller is passing an invalid Position reference into this function, it is a fatal error, the function will not return.</dd>
 <dd>
 directionPtr, directionAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">directionPtr</td><td>Direction in degrees (where 0 is True North). </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">directionPtr</td><td>Direction indication in degrees. Range: 0 to 359, where 0 is True North. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">directionAccuracyPtr</td><td>Direction's accuracy estimate in degrees. </td></tr>
 </table>
 </dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a181f453d46f8b5440d91f2af1b4ebbfb"></a>
+<a class="anchor" id="a41f32dfe995a72eb60d872b4f1c88bdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> le_pos_sample_GetFixState </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#a69a38f7e650f581bb5e2b5ce7e339202">le_pos_SampleRef_t</a> </td>
+<td class="paramname"><em>positionSampleRef</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype"><a class="el" href="le__pos__interface_8h.html#ac0e93744e5d09ba6d49a578836459985">le_pos_FixState_t</a> * </td>
+<td class="paramname"><em>statePtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Get the position sample's fix state.</p>
+<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to get the position sample's fix state. </dd>
+<dd>
+LE_OK Function succeeded.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position reference into this function, it is a fatal error, the function will not return. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">statePtr</td><td>Position fix state. </td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="ab586a6fe22d7299e367033423e26b58a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="memname">
@@ -847,13 +964,13 @@ directionPtr, directionAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>headingPtr</em>, </td>
 </tr>
 <tr>
 <td class="paramkey"></td>
 <td></td>
-<td class="paramtype">int32_t * </td>
+<td class="paramtype">uint32_t * </td>
 <td class="paramname"><em>headingAccuracyPtr</em> </td>
 </tr>
 <tr>
@@ -863,19 +980,21 @@ directionPtr, directionAccuracyPtr can be set to NULL if not needed. </dd></dl>
 </tr>
 </table>
 </div><div class="memdoc">
-<p>Get the position sample's heading. Heading is the direction that the vehicle/person is facing.</p>
+<p>Get the position sample's heading. Heading is the direction that the vehicle or person is facing.</p>
 <dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed to find the positionSample. </dd>
 <dd>
-LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to INT32_MAX). </dd>
+LE_OUT_OF_RANGE One of the retrieved parameter is invalid (set to UINT32_MAX). </dd>
 <dd>
 LE_OK TFunction succeeded.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If the caller is passing an invalid Position reference into this function, it is a fatal error, the function will not return.</dd>
+<dl class="section note"><dt>Note</dt><dd>Heading is given in degrees. Heading ranges from 0 to 359 degrees, where 0 is True North.</dd>
+<dd>
+If the caller is passing an invalid Position reference into this function, it is a fatal error, the function will not return.</dd>
 <dd>
 headingPtr, headingAccuracyPtr can be set to NULL if not needed. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[in]</td><td class="paramname">positionSampleRef</td><td>Position sample's reference. </td></tr>
-<tr><td class="paramdir">[out]</td><td class="paramname">headingPtr</td><td>Heading in degrees (where 0 is True North). </td></tr>
+<tr><td class="paramdir">[out]</td><td class="paramname">headingPtr</td><td>Heading in degrees. Range: 0 to 359, where 0 is True North. </td></tr>
 <tr><td class="paramdir">[out]</td><td class="paramname">headingAccuracyPtr</td><td>Heading's accuracy estimate in degrees. </td></tr>
 </table>
 </dd>

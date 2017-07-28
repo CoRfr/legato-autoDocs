@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Platform Yocto Info.json"></script>
+<script src="tocs/Build_Platform_Yocto_Info.json"></script>
 </head>
 <body>
 <noscript>
@@ -78,21 +78,30 @@ ELSE setup default composition
 </pre><p>The actions taken are described in the rest of this topic.</p>
 <h1><a class="anchor" id="howToCustomizeUSB_defaultEndpoints"></a>
 Default Endpoints</h1>
-<p>The table shows all the possible USB interfaces available on the AR7 family.</p>
+<p>This table shows all the possible USB interfaces available on the AR7 family:</p>
 <div class="image">
 <img alt="USB_interfaces_AR7.png" src="USB_interfaces_AR7.png"/>
 </div>
-<p>These endpoints are grouped into compositions, and a fixed set of compositions is provided as shown in the next table. Switching between these compositions is done using the <code>AT!USBCOMP</code> command. The default composition for the AR7 is composition 2.</p>
+<p>On AR7 products, these endpoints are grouped into compositions. A fixed set of compositions is shown in the table below. You switch between these compositions using the <code>AT!UDUSBCOMP</code> command with this format:</p>
+<pre class="fragment"><div class="line">AT!UDUSBCOMP=&lt;Composition&gt;</div></pre><!-- fragment --><p> Where <code></code> &lt;Composition&gt; is one of the composition numbers defined in this table (composition 2 is default):</p>
 <div class="image">
 <img alt="USB_endpointCompositions_AR7.png" src="USB_endpointCompositions_AR7.png"/>
 </div>
-<h1><a class="anchor" id="howToCustomizeUSB_customizeEndpoints"></a>
+<p>USB composition on WP75 and WP85 modules is set through the <code>AT!USBCOMP</code> command with this format: </p><pre class="fragment"><div class="line">AT!USBCOMP=&lt;Config Index&gt;,&lt;Config Type&gt;,&lt;Interface Bitmask&gt;</div></pre><!-- fragment --><p> Where:</p>
+<p><code>&lt;Config</code> <code>Index&gt;</code> Configuration index to which the composition applies (valid value: 1)</p>
+<p><code>&lt;Config</code> <code>Type&gt;</code> Configuration type (valid value: 1 -- Generic)</p>
+<p><code>&lt;Interface</code> <code>Bitmask&gt;</code> Bit field defining which interfaces/endpoints are enabled. To obtain a list of possible compositions for your target device, use <code>AT!USBCOMP=</code>?.</p>
+<p>Use <code>AT!USBCOMP</code>? to retrieve the current USB composition.</p>
+<p>The response format should be: </p><pre class="fragment"><div class="line">at!usbcomp?</div><div class="line">Config Index: 1</div><div class="line">Config Type:  1 (Generic)</div><div class="line">Interface bitmask: 0008011E (adb,nmea,modem,at,rmnet0,ecm)</div></pre><!-- fragment --><h1><a class="anchor" id="howToCustomizeUSB_customizeEndpoints"></a>
 Customize Endpoints</h1>
-<p>If none of the provided compositions meet your needs it's possible to fine-tune the USB configuration using a mechanism built into Legato. The first step is to create <code>/etc/legato/usbmode</code>. An example file is shipped in this directory in the default distribution, called <code>usbmode.ex</code>. <code>usbmode</code> contains a list, one per line, of the endpoints you wish to enumerate. For example, the default file contains</p>
-<pre class="fragment">ecm
-acm
-nmea
-</pre><p>The full list of supported modes is:</p>
+<p>If none of the provided compositions meet your needs, it's possible to override the USB configuration using a mechanism built into Legato. These are the steps:</p>
+<ul>
+<li>create or edit a <code>usbmode</code> file in the <code>/etc/legato</code> folder.</li>
+<li>add one interface configuration per line</li>
+<li>save the file and reboot.</li>
+</ul>
+<p>A sample file called <code>usbmode.ex</code> is provided in <code>/etc/legato</code> in the default Legato distribution with a list of sample endpoints, like this:</p>
+<pre class="fragment"><div class="line">ecm</div><div class="line">acm</div><div class="line">nmea</div></pre><!-- fragment --><p>This is the full list of supported modes:</p>
 <table class="doxtable">
 <tr>
 <th>Name </th><th>Interface Type </th><th>Description </th><th>Target endpoint </th><th>Sample host endpoint  </th></tr>
@@ -109,12 +118,7 @@ nmea
  pcmC2D0p </td></tr>
 <tr>
 <td>serial </td><td>serial </td><td>A serial interface to the embedded Linux </td><td>/dev/ttyGS0 </td><td>/dev/ttyUSB0 </td></tr>
-<tr>
-<td>usb_mbim </td><td>CDC-MBIM </td><td>Mobile Broadband Interface Model <br/>
- (an extension of CDC-NCM) </td><td>N/A </td><td>NIC (eg wwp0s20u6i12) <br/>
- + cdc-wdm0 </td></tr>
 </table>
-<hr/>
 <p class="copyright">Copyright (C) Sierra Wireless Inc. Use of this work is subject to license. </p>
 </div></div>
 <br clear="left"/>

@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -94,10 +94,14 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:aa4848ef1adefe1f273d67d4211233a1f"><td align="right" class="memItemLeft" valign="top">typedef struct le_avc_StatusEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a></td></tr>
 <tr class="separator:aa4848ef1adefe1f273d67d4211233a1f"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:ae6aaecc94a7758cd113ddf2a7c19fa28"><td align="right" class="memItemLeft" valign="top">typedef struct le_avc_SessionRequestEventHandler * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#ae6aaecc94a7758cd113ddf2a7c19fa28">le_avc_SessionRequestEventHandlerRef_t</a></td></tr>
+<tr class="separator:ae6aaecc94a7758cd113ddf2a7c19fa28"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af331b7d2433e312ee2b6fde1c93c2979"><td align="right" class="memItemLeft" valign="top">typedef struct le_avc_BlockRequest * </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#af331b7d2433e312ee2b6fde1c93c2979">le_avc_BlockRequestRef_t</a></td></tr>
 <tr class="separator:af331b7d2433e312ee2b6fde1c93c2979"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aafeac33fdfce140b8bf33683cd7d9d18"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aafeac33fdfce140b8bf33683cd7d9d18">le_avc_StatusHandlerFunc_t</a>) (<a class="el" href="le__avc__interface_8h.html#ae45dee5277c9340c8bb083a09ef30cff">le_avc_Status_t</a> updateStatus, int32_t totalNumBytes, int32_t dloadProgress, void *contextPtr)</td></tr>
 <tr class="separator:aafeac33fdfce140b8bf33683cd7d9d18"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a5e7d6706e26a01fb7433a6e2df00931e"><td align="right" class="memItemLeft" valign="top">typedef void(* </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a5e7d6706e26a01fb7433a6e2df00931e">le_avc_SessionRequestHandlerFunc_t</a>) (<a class="el" href="le__avc__interface_8h.html#a8b532a08ec27ccb68f019a78fedd4dcc">le_avc_SessionRequest_t</a> request, void *contextPtr)</td></tr>
+<tr class="separator:a5e7d6706e26a01fb7433a6e2df00931e"><td class="memSeparator" colspan="2"> </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -123,6 +127,10 @@ Enumerations</h2></td></tr>
 <br/>
  }</td></tr>
 <tr class="separator:ae45dee5277c9340c8bb083a09ef30cff"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a8b532a08ec27ccb68f019a78fedd4dcc"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a8b532a08ec27ccb68f019a78fedd4dcc">le_avc_SessionRequest_t</a> { <a class="el" href="le__avc__interface_8h.html#a8b532a08ec27ccb68f019a78fedd4dcca8c9c1138fd416868ae67e832bd8b1588">LE_AVC_SESSION_ACQUIRE</a> = 0, 
+<a class="el" href="le__avc__interface_8h.html#a8b532a08ec27ccb68f019a78fedd4dccac7da75431017af067ccc7c3f72500bfe">LE_AVC_SESSION_RELEASE</a> = 1
+ }</td></tr>
+<tr class="separator:a8b532a08ec27ccb68f019a78fedd4dcc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:af541450f0cbf512f28be786d79a61865"><td align="right" class="memItemLeft" valign="top">enum  </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#af541450f0cbf512f28be786d79a61865">le_avc_UpdateType_t</a> { <b>LE_AVC_UNKNOWN_UPDATE</b> = 0, 
 <b>LE_AVC_FIRMWARE_UPDATE</b> = 1, 
 <b>LE_AVC_FRAMEWORK_UPDATE</b> = 2, 
@@ -153,6 +161,10 @@ Functions</h2></td></tr>
 <tr class="separator:ac5443791a6e4b8db75342f45fa2f91dc"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a11e325085dadb01bbefffd0b899eb207"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a11e325085dadb01bbefffd0b899eb207">le_avc_RemoveStatusEventHandler</a> (<a class="el" href="le__avc__interface_8h.html#aa4848ef1adefe1f273d67d4211233a1f">le_avc_StatusEventHandlerRef_t</a> addHandlerRef)</td></tr>
 <tr class="separator:a11e325085dadb01bbefffd0b899eb207"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a14f4e6b17bc2343a9e84fa0b0951fe77"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__avc__interface_8h.html#ae6aaecc94a7758cd113ddf2a7c19fa28">le_avc_SessionRequestEventHandlerRef_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a14f4e6b17bc2343a9e84fa0b0951fe77">le_avc_AddSessionRequestEventHandler</a> (<a class="el" href="le__avc__interface_8h.html#a5e7d6706e26a01fb7433a6e2df00931e">le_avc_SessionRequestHandlerFunc_t</a> handlerPtr, void *contextPtr)</td></tr>
+<tr class="separator:a14f4e6b17bc2343a9e84fa0b0951fe77"><td class="memSeparator" colspan="2"> </td></tr>
+<tr class="memitem:a2ee0045a21525bade371aa4c0a4ceec9"><td align="right" class="memItemLeft" valign="top">void </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a2ee0045a21525bade371aa4c0a4ceec9">le_avc_RemoveSessionRequestEventHandler</a> (<a class="el" href="le__avc__interface_8h.html#ae6aaecc94a7758cd113ddf2a7c19fa28">le_avc_SessionRequestEventHandlerRef_t</a> addHandlerRef)</td></tr>
+<tr class="separator:a2ee0045a21525bade371aa4c0a4ceec9"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:aee17b1de43cf946b59a965e6077e7b03"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#aee17b1de43cf946b59a965e6077e7b03">le_avc_StartSession</a> (void)</td></tr>
 <tr class="separator:aee17b1de43cf946b59a965e6077e7b03"><td class="memSeparator" colspan="2"> </td></tr>
 <tr class="memitem:a5b3e21858181bb972e982046bced1182"><td align="right" class="memItemLeft" valign="top"><a class="el" href="le__basics_8h.html#a1cca095ed6ebab24b57a636382a6c86c">le_result_t</a> </td><td class="memItemRight" valign="bottom"><a class="el" href="le__avc__interface_8h.html#a5b3e21858181bb972e982046bced1182">le_avc_StopSession</a> (void)</td></tr>
@@ -309,6 +321,37 @@ Functions</h2></td></tr>
 <p>Reference returned by BlockInstall function and used by UnblockInstall function </p>
 </div>
 </div>
+<a class="anchor" id="ae6aaecc94a7758cd113ddf2a7c19fa28"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef struct le_avc_SessionRequestEventHandler* <a class="el" href="le__avc__interface_8h.html#ae6aaecc94a7758cd113ddf2a7c19fa28">le_avc_SessionRequestEventHandlerRef_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Reference type used by Add/Remove functions for EVENT 'le_avc_SessionRequestEvent' </p>
+</div>
+</div>
+<a class="anchor" id="a5e7d6706e26a01fb7433a6e2df00931e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">typedef void(* le_avc_SessionRequestHandlerFunc_t) (<a class="el" href="le__avc__interface_8h.html#a8b532a08ec27ccb68f019a78fedd4dcc">le_avc_SessionRequest_t</a> request, void *contextPtr)</td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Handler for receiving session open or close request.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramname">request</td><td>Request to open or close AV session </td></tr>
+<tr><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="aa4848ef1adefe1f273d67d4211233a1f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -366,6 +409,26 @@ Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a9c0a79ba754f64f270821246337c4ce9a891ff0af5c14411c8c9f894212948f5a"></a>LE_AVC_ERR_SECURITY_FAILURE </td><td class="fielddoc">
 <p>Security check failure while installing the package. </p>
+</td></tr>
+</table>
+</div>
+</div>
+<a class="anchor" id="a8b532a08ec27ccb68f019a78fedd4dcc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">enum <a class="el" href="le__avc__interface_8h.html#a8b532a08ec27ccb68f019a78fedd4dcc">le_avc_SessionRequest_t</a></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Request to open or close avms session. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a8b532a08ec27ccb68f019a78fedd4dcca8c9c1138fd416868ae67e832bd8b1588"></a>LE_AVC_SESSION_ACQUIRE </td><td class="fielddoc">
+<p>Request by user app to open AV session. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a8b532a08ec27ccb68f019a78fedd4dccac7da75431017af067ccc7c3f72500bfe"></a>LE_AVC_SESSION_RELEASE </td><td class="fielddoc">
+<p>Request by user app to close AV session. </p>
 </td></tr>
 </table>
 </div>
@@ -527,6 +590,40 @@ Functions</h2></td></tr>
 <li>LE_FAULT on failure </li>
 </ul>
 </dd></dl>
+</div>
+</div>
+<a class="anchor" id="a14f4e6b17bc2343a9e84fa0b0951fe77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname"><a class="el" href="le__avc__interface_8h.html#ae6aaecc94a7758cd113ddf2a7c19fa28">le_avc_SessionRequestEventHandlerRef_t</a> le_avc_AddSessionRequestEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__avc__interface_8h.html#a5e7d6706e26a01fb7433a6e2df00931e">le_avc_SessionRequestHandlerFunc_t</a> </td>
+<td class="paramname"><em>handlerPtr</em>, </td>
+</tr>
+<tr>
+<td class="paramkey"></td>
+<td></td>
+<td class="paramtype">void * </td>
+<td class="paramname"><em>contextPtr</em> </td>
+</tr>
+<tr>
+<td></td>
+<td>)</td>
+<td></td><td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Add handler function for EVENT 'le_avc_SessionRequestEvent'</p>
+<p>This event provides information on session open or close request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">handlerPtr</td><td></td></tr>
+<tr><td class="paramdir">[in]</td><td class="paramname">contextPtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
 </div>
 </div>
 <a class="anchor" id="ac5443791a6e4b8db75342f45fa2f91dc"></a>
@@ -954,6 +1051,28 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
 <tr><td class="paramdir">[out]</td><td class="paramname">updateTypePtr</td><td></td></tr>
+</table>
+</dd>
+</dl>
+</div>
+</div>
+<a class="anchor" id="a2ee0045a21525bade371aa4c0a4ceec9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="memname">
+<tr>
+<td class="memname">void le_avc_RemoveSessionRequestEventHandler </td>
+<td>(</td>
+<td class="paramtype"><a class="el" href="le__avc__interface_8h.html#ae6aaecc94a7758cd113ddf2a7c19fa28">le_avc_SessionRequestEventHandlerRef_t</a> </td>
+<td class="paramname"><em>addHandlerRef</em></td><td>)</td>
+<td></td>
+</tr>
+</table>
+</div><div class="memdoc">
+<p>Remove handler function for EVENT 'le_avc_SessionRequestEvent' </p>
+<dl class="params"><dt>Parameters</dt><dd>
+<table class="params">
+<tr><td class="paramdir">[in]</td><td class="paramname">addHandlerRef</td><td></td></tr>
 </table>
 </dd>
 </dl>

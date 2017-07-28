@@ -18,7 +18,7 @@
         <![endif]-->
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="resources/js/main.js"></script>
-<script src="tocs/Build Apps API Guides.json"></script>
+<script src="tocs/Build_Apps_API_Guides.json"></script>
 </head>
 <body>
 <noscript>
@@ -877,13 +877,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Add a preferred operator by specifying the MCC/MNC and the Radio Access Technology.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
-<li>LE_NOT_FOUND User Preferred operator list is not available.</li>
+<li>LE_UNSUPPORTED List of User Preferred operators not available.</li>
 <li>LE_FAULT Function failed.</li>
 <li>LE_BAD_PARAMETER RAT mask is invalid.</li>
 <li>LE_OK Function succeeded.</li>
 </ul>
 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits), it's a fatal error, the function won't return.</dd>
+<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits) or not set, it's a fatal error and the function won't return.</dd>
 <dd>
 <b>NOT multi-app safe</b> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1293,7 +1293,7 @@ Functions</h2></td></tr>
 <p>This function must be called to get the Cellular Network Code [mcc:mnc]</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>LE_OK on success</li>
-<li>LE_OVERFLOW if the mcc or mnc would not fit in buffer</li>
+<li>LE_OVERFLOW if the MCC or MNC would not fit in buffer</li>
 <li>LE_FAULT for all other errors</li>
 </ul>
 </dd></dl>
@@ -2174,9 +2174,12 @@ le_mrc_CellInfoRef_t Cell information object reference.</dd></dl>
 </table>
 </div><div class="memdoc">
 <p>This function must be called to get the Operator information details.</p>
-<dl class="section return"><dt>Returns</dt><dd>LE_FAULT Function failed. </dd>
-<dd>
-LE_OK Function succeeded.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><ul>
+<li>LE_OK on success</li>
+<li>LE_OVERFLOW if the MCC or MNC would not fit in buffer</li>
+<li>LE_FAULT for all other errors</li>
+</ul>
+</dd></dl>
 <dl class="section note"><dt>Note</dt><dd><b>multi-app safe</b> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
 <table class="params">
@@ -2840,12 +2843,13 @@ NULL if no signal metrics are available.</dd></dl>
 </div><div class="memdoc">
 <p>Remove a preferred operator by specifying the MCC/MNC.</p>
 <dl class="section return"><dt>Returns</dt><dd><ul>
-<li>LE_NOT_FOUND User Preferred operator list is not available.</li>
+<li>LE_UNSUPPORTED List of User Preferred operators not available.</li>
+<li>LE_NOT_FOUND Operator not found in the User Preferred operators list.</li>
 <li>LE_FAULT Function failed.</li>
 <li>LE_OK Function succeeded.</li>
 </ul>
 </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits), it's a fatal error, the function won't return.</dd>
+<dl class="section note"><dt>Note</dt><dd>If one code is too long (max LE_MRC_MCC_LEN/LE_MRC_MNC_LEN digits) or not set, it's a fatal error and the function won't return.</dd>
 <dd>
 <b>NOT multi-app safe</b> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
